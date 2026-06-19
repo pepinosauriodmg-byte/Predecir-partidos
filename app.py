@@ -98,7 +98,7 @@ with col_principal:
             # Invertimos el orden para ver los últimos registros hasta arriba
             df_recientes = df_partidos.iloc[::-1]
             st.dataframe(
-                df_recientes[['local', 'goles_local', 'goles_visitante', 'visitante']], 
+                df_recientes,
                 use_container_width=True, 
                 hide_index=True
             )
