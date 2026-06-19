@@ -253,7 +253,7 @@ with col_principal:
             ('USA', 'Australia'), 
             ('Scotland', 'Morocco'),     
             ('Brazil', 'Haiti'),
-            ('Türkiye', 'Paraguay)
+            ('Türkiye', 'Paraguay')
         ]
         
         for eq_l, eq_v in partidos_manana:
