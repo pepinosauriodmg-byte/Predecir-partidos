@@ -110,16 +110,17 @@ with col_principal:
 
     # --- PESTAÑA 3: PRÓXIMA JORNADA ---
     with tab3:
-        st.subheader("🔮 Predicciones de la IA para Mañana")
+        st.subheader("Predicciones para hoy")
         st.caption("Actualización diaria.")
         
         # ========================================================
         # AQUÍ PONES LOS PARTIDOS MANUALMENTE (ASEGÚRATE DE QUE ESTÉN EN INGLÉS)
         # ========================================================
         partidos_manana = [
-            ('Argentina', 'Brazil'),  # <- Cambia por tu partido real 1
-            ('France', 'Spain'),      # <- Cambia por tu partido real 2
-            ('Germany', 'England')    # <- Cambia por tu partido real 3
+            ('USA', 'Australia'),  # <- Cambia por tu partido real 1
+            ('Scotland', 'Morocco'),      # <- Cambia por tu partido real 2
+            ('Brazil', 'Haiti'),
+            ('Türkiye', 'Paraguay')  
         ]
         
         for eq_l, eq_v in partidos_manana:
