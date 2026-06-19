@@ -9,7 +9,18 @@ st.set_page_config(page_title="AI Football Predictor 2026", layout="wide", page_
 st.title("⚽ Plataforma Predictiva Híbrida - Mundial 2026")
 
 # ==========================================
-# 2. MOTOR DE POWER RANKING (SUAVIZADO DE LAPLACE)
+# 2. FUNCIÓN DE EXTRACCIÓN SEGURA (EL FIX)
+# ==========================================
+def safe_float(val):
+    # Si viene como un arreglo de NumPy (ej. [0.45]), extraemos el primer elemento.
+    # Si ya es un número, lo convierte directo a float.
+    try:
+        return float(val)
+    except TypeError:
+        return float(val[0])
+
+# ==========================================
+# 3. MOTOR DE POWER RANKING
 # ==========================================
 @st.cache_data(ttl=3600)
 def calcular_power_ranking():
@@ -22,7 +33,6 @@ def calcular_power_ranking():
         except KeyError:
             partidos_jugados = 0
             
-        # Filtro de 15 partidos para limpiar selecciones pequeñas
         if partidos_jugados < 15:
             continue
             
@@ -44,7 +54,7 @@ def calcular_power_ranking():
     return df_ranking
 
 # ==========================================
-# 3. MAQUETACIÓN PRINCIPAL
+# 4. MAQUETACIÓN PRINCIPAL
 # ==========================================
 col_principal, col_ranking = st.columns([2, 1])
 
@@ -73,10 +83,10 @@ with col_principal:
         if st.button("Predecir", use_container_width=True):
             p_local, p_empate, p_visita = mh.predecir_partido(local, visitante)
             
-            # EL FIX DE INGENIERÍA: Forzamos la matriz a convertirse en número Float
-            p_local = float(p_local)
-            p_empate = float(p_empate)
-            p_visita = float(p_visita)
+            # Limpiamos los números para que Streamlit no colapse
+            p_local = safe_float(p_local)
+            p_empate = safe_float(p_empate)
+            p_visita = safe_float(p_visita)
             
             st.success("Análisis Completado")
             
@@ -102,7 +112,6 @@ with col_principal:
     # --- PESTAÑA 3: PRÓXIMA JORNADA ---
     with tab3:
         st.subheader("🔮 Predicciones de la IA para Mañana")
-        st.caption("Procesamiento automático por lotes.")
         
         partidos_manana = [
             ('Germany', 'Spain'),
@@ -115,8 +124,10 @@ with col_principal:
                 with st.expander(f"🏟️ {eq_l} vs {eq_v}"):
                     p_l, p_e, p_v = mh.predecir_partido(eq_l, eq_v)
                     
-                    # EL FIX DE INGENIERÍA: Forzamos a Float para que Streamlit pueda imprimirlos
-                    p_l, p_e, p_v = float(p_l), float(p_e), float(p_v)
+                    # Limpiamos los números aquí también
+                    p_l = safe_float(p_l)
+                    p_e = safe_float(p_e)
+                    p_v = safe_float(p_v)
                     
                     m1, m2, m3 = st.columns(3)
                     m1.metric(label=f"Gana {eq_l}", value=f"{p_l*100:.1f}%")
