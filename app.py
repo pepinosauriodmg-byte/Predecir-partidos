@@ -15,11 +15,10 @@ HEADERS = {
     "x-rapidapi-key": API_KEY
 }
 
-# --- ALGORITMO: TOP 5 PROBABLES GANADORES (POWER INDEX CORREGIDO) ---
+# --- ALGORITMO: TOP 5 PROBABLES GANADORES (POWER INDEX V3 - LAPLACE) ---
 @st.cache_data(ttl=3600)
 def calcular_power_ranking():
     ranking = []
-    # Accedemos al DataFrame de tu motor para ver cuántos partidos reales ha jugado cada equipo
     stats_df = mh.estadisticas.set_index('equipo')
     
     for equipo in mh.dict_fa.keys():
@@ -28,21 +27,27 @@ def calcular_power_ranking():
         except KeyError:
             partidos_jugados = 0
             
-        # FILTRO DE FIABILIDAD: Ignorar "espejismos" de equipos con menos de 5 partidos históricos
-        if partidos_jugados < 5:
+        # Aumentamos el filtro a 15 partidos para limpiar selecciones pequeñas
+        if partidos_jugados < 15:
             continue
             
         fa = mh.dict_fa.get(equipo, 1.0)
-        fd = mh.dict_fa.get(equipo, 1.0) # Usamos un fallback seguro
+        fd = mh.dict_fd.get(equipo, 1.0) 
         atq = mh.dict_plantilla_atq.get(equipo, 50.0)
         dfn = mh.dict_plantilla_def.get(equipo, 50.0)
         
-        # Ecuación balanceada: (Poder Ofensivo Total) dividido entre (Fragilidad Defensiva Total)
-        # Sumamos 0.1 para evitar divisiones entre cero si un equipo defiende perfecto
+        # EL SUAVIZADO: 
+        # 1. Multiplicamos la historia por el nivel de los jugadores actuales.
         poder_ofensivo = fa * atq
-        fragilidad_defensiva = max(0.1, (mh.dict_fd.get(equipo, 1.0) * dfn))
         
+        # 2. Invertimos la defensa (100 - dfn = vulnerabilidad) y aplicamos Suavizado de Laplace (+1.0)
+        # Esto destruye el "Efecto Oceanía" porque impide que el divisor sea cero.
+        vulnerabilidad_plantilla = max(1.0, (100.0 - dfn))
+        fragilidad_defensiva = (fd + 1.0) * vulnerabilidad_plantilla
+        
+        # Ecuación de Índice de Poder final
         power_index = (poder_ofensivo / fragilidad_defensiva) * 100
+        
         ranking.append({'Equipo': equipo, 'Power Index': round(power_index, 2)})
         
     df_ranking = pd.DataFrame(ranking).sort_values(by='Power Index', ascending=False).head(5)
