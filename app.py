@@ -71,13 +71,13 @@ with col_principal:
             visitante = st.selectbox("Selecciona Equipo Visitante:", equipos, index=idx_visita)
             
         if st.button("Predecir", use_container_width=True):
-            # EL ORDEN EXACTO REVELADO POR TUS CAPTURAS: xg_local, xg_visita, probabilidades
             xg_l, xg_v, paquete_probs = mh.predecir_partido(local, visitante)
-            
             probs_flat = np.array(paquete_probs).flatten()
-            p_local = float(probs_flat[0])
+            
+            # EL FIX: Invertimos el mapeo para respetar el orden del clasificador ML
+            p_visita = float(probs_flat[0]) 
             p_empate = float(probs_flat[1])
-            p_visita = float(probs_flat[2])
+            p_local = float(probs_flat[2])
             
             st.success("Análisis Completado")
             
@@ -117,13 +117,13 @@ with col_principal:
         for eq_l, eq_v in partidos_manana:
             if eq_l in equipos and eq_v in equipos:
                 with st.expander(f"🏟️ {eq_l} vs {eq_v}"):
-                    # Aplicamos el mismo orden maestro aquí
                     xg_l, xg_v, paquete_probs = mh.predecir_partido(eq_l, eq_v)
-                    
                     probs_flat = np.array(paquete_probs).flatten()
-                    p_l = float(probs_flat[0])
+                    
+                    # EL FIX APLICADO TAMBIÉN A LA JORNADA AUTOMÁTICA
+                    p_v = float(probs_flat[0])
                     p_e = float(probs_flat[1])
-                    p_v = float(probs_flat[2])
+                    p_l = float(probs_flat[2])
                     
                     st.markdown(f"<div style='text-align: center; margin-bottom: 10px;'><b>xG Estimado:</b> {float(xg_l):.2f} - {float(xg_v):.2f}</div>", unsafe_allow_html=True)
                     
