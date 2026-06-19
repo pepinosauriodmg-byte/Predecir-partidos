@@ -76,17 +76,13 @@ with col_principal:
             visitante = st.selectbox("Selecciona Equipo Visitante:", equipos, index=idx_visita)
             
         if st.button("Predecir", use_container_width=True):
-            p_local, p_empate, p_visita, xg_l, xg_v = mh.predecir_partido(local, visitante)
-            
+            p_local, p_empate, p_visita = mh.predecir_partido(local, visitante)
             st.success("Análisis Completado")
-            st.write(f"**xG (Goles Esperados):** {local} ({xg_l:.2f}) - ({xg_v:.2f}) {visitante}")
             
             st.write(f"**Victoria {local}: {p_local*100:.1f}%**")
             st.progress(float(p_local))
-            
             st.write(f"**Empate: {p_empate*100:.1f}%**")
             st.progress(float(p_empate))
-            
             st.write(f"**Victoria {visitante}: {p_visita*100:.1f}%**")
             st.progress(float(p_visita))
 
@@ -119,11 +115,8 @@ with col_principal:
         
         for eq_l, eq_v in partidos_manana:
             if eq_l in equipos and eq_v in equipos:
-                # El expander crea cajas desplegables elegantes para no saturar la pantalla
-                with st.expander(f"🏟️ {eq_l} vs {eq_v}"):
-                    p_l, p_e, p_v, xgl, xgv = mh.predecir_partido(eq_l, eq_v)
-                    
-                    st.write(f"**xG Estimado:** {xgl:.2f} - {xgv:.2f}")
+               with st.expander(f"🏟️ {eq_l} vs {eq_v}"):
+                    p_l, p_e, p_v = mh.predecir_partido(eq_l, eq_v)
                     
                     m1, m2, m3 = st.columns(3)
                     m1.metric(label=f"Gana {eq_l}", value=f"{p_l*100:.1f}%")
