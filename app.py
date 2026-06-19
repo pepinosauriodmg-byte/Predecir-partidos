@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 import motor_hibrido as mh
 
 # ==========================================
@@ -9,24 +10,7 @@ st.set_page_config(page_title="AI Football Predictor 2026", layout="wide", page_
 st.title("⚽ Plataforma Predictiva Híbrida - Mundial 2026")
 
 # ==========================================
-# 2. FUNCIÓN DE NORMALIZACIÓN MATEMÁTICA
-# ==========================================
-def normalizar_probs(val_l, val_e, val_v):
-    def extraer(v):
-        try: return float(v)
-        except TypeError: return float(v[0])
-    
-    pl = max(0.0, extraer(val_l))
-    pe = max(0.0, extraer(val_e))
-    pv = max(0.0, extraer(val_v))
-    
-    total = pl + pe + pv
-    if total > 0:
-        return pl/total, pe/total, pv/total
-    return 0.33, 0.34, 0.33
-
-# ==========================================
-# 3. MOTOR DE POWER RANKING
+# 2. MOTOR DE POWER RANKING
 # ==========================================
 @st.cache_data(ttl=3600)
 def calcular_power_ranking():
@@ -60,7 +44,7 @@ def calcular_power_ranking():
     return df_ranking
 
 # ==========================================
-# 4. MAQUETACIÓN PRINCIPAL
+# 3. MAQUETACIÓN PRINCIPAL
 # ==========================================
 col_principal, col_ranking = st.columns([2, 1])
 
@@ -80,21 +64,34 @@ with col_principal:
         
         c1, c2 = st.columns(2)
         with c1:
-            idx_local = equipos.index('Mexico') if 'Mexico' in equipos else 0
+            idx_local = equipos.index('Scotland') if 'Scotland' in equipos else 0
             local = st.selectbox("Selecciona Equipo Local:", equipos, index=idx_local)
         with c2:
-            idx_visita = equipos.index('South Korea') if 'South Korea' in equipos else 1
+            idx_visita = equipos.index('Morocco') if 'Morocco' in equipos else 1
             visitante = st.selectbox("Selecciona Equipo Visitante:", equipos, index=idx_visita)
             
         if st.button("Predecir", use_container_width=True):
-            p_l_crudo, p_e_crudo, p_v_crudo = mh.predecir_partido(local, visitante)
-            p_local, p_empate, p_visita = normalizar_probs(p_l_crudo, p_e_crudo, p_v_crudo)
+            # EL DESEMPACADO CORRECTO DE TU MOTOR
+            paquete_probs, xg_l, xg_v = mh.predecir_partido(local, visitante)
+            
+            # Aplanamos el arreglo de numpy para extraer los 3 porcentajes exactos de tu modelo
+            probs_flat = np.array(paquete_probs).flatten()
+            p_local = float(probs_flat[0])
+            p_empate = float(probs_flat[1])
+            p_visita = float(probs_flat[2])
             
             st.success("Análisis Completado")
+            
+            # RECUPERAMOS LOS GOLES ESPERADOS EN EL DISEÑO
+            st.markdown(f"<h4 style='text-align: center; color: #E0E0E0;'>xG Estimado: {local} ({float(xg_l):.2f}) - ({float(xg_v):.2f}) {visitante}</h4>", unsafe_allow_html=True)
+            st.write("---")
+            
             st.write(f"**Victoria {local}: {p_local*100:.1f}%**")
             st.progress(p_local)
+            
             st.write(f"**Empate: {p_empate*100:.1f}%**")
             st.progress(p_empate)
+            
             st.write(f"**Victoria {visitante}: {p_visita*100:.1f}%**")
             st.progress(p_visita)
 
@@ -110,24 +107,27 @@ with col_principal:
 
     # --- PESTAÑA 3: PRÓXIMA JORNADA ---
     with tab3:
-        st.subheader("Predicciones para hoy")
+        st.subheader("🔮 Predicciones de la IA para Mañana")
         st.caption("Actualización diaria.")
         
-        # ========================================================
-        # AQUÍ PONES LOS PARTIDOS MANUALMENTE (ASEGÚRATE DE QUE ESTÉN EN INGLÉS)
-        # ========================================================
+        # Aquí pon los enfrentamientos reales del día
         partidos_manana = [
-            ('USA', 'Australia'),  # <- Cambia por tu partido real 1
-            ('Scotland', 'Morocco'),      # <- Cambia por tu partido real 2
-            ('Brazil', 'Haiti'),
-            ('Türkiye', 'Paraguay')  
+            ('Argentina', 'Brazil'), 
+            ('France', 'Spain'),     
+            ('Germany', 'England')   
         ]
         
         for eq_l, eq_v in partidos_manana:
             if eq_l in equipos and eq_v in equipos:
                 with st.expander(f"🏟️ {eq_l} vs {eq_v}"):
-                    p_l_crudo, p_e_crudo, p_v_crudo = mh.predecir_partido(eq_l, eq_v)
-                    p_l, p_e, p_v = normalizar_probs(p_l_crudo, p_e_crudo, p_v_crudo)
+                    # Aplicamos el mismo desempacado correcto aquí
+                    paquete_probs, xg_l, xg_v = mh.predecir_partido(eq_l, eq_v)
+                    probs_flat = np.array(paquete_probs).flatten()
+                    p_l = float(probs_flat[0])
+                    p_e = float(probs_flat[1])
+                    p_v = float(probs_flat[2])
+                    
+                    st.markdown(f"<div style='text-align: center; margin-bottom: 10px;'><b>xG Estimado:</b> {float(xg_l):.2f} - {float(xg_v):.2f}</div>", unsafe_allow_html=True)
                     
                     m1, m2, m3 = st.columns(3)
                     m1.metric(label=f"Gana {eq_l}", value=f"{p_l*100:.1f}%")
