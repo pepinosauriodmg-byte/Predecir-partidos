@@ -9,15 +9,23 @@ st.set_page_config(page_title="AI Football Predictor 2026", layout="wide", page_
 st.title("⚽ Plataforma Predictiva Híbrida - Mundial 2026")
 
 # ==========================================
-# 2. FUNCIÓN DE EXTRACCIÓN SEGURA (EL FIX)
+# 2. FUNCIÓN DE NORMALIZACIÓN MATEMÁTICA (EL FIX)
 # ==========================================
-def safe_float(val):
-    # Si viene como un arreglo de NumPy (ej. [0.45]), extraemos el primer elemento.
-    # Si ya es un número, lo convierte directo a float.
-    try:
-        return float(val)
-    except TypeError:
-        return float(val[0])
+def normalizar_probs(val_l, val_e, val_v):
+    # Extraemos el número, ya sea escalar o matriz
+    def extraer(v):
+        try: return float(v)
+        except TypeError: return float(v[0])
+    
+    pl = max(0.0, extraer(val_l))
+    pe = max(0.0, extraer(val_e))
+    pv = max(0.0, extraer(val_v))
+    
+    # Forzamos a que los 3 valores sumen exactamente 1.0 (100%)
+    total = pl + pe + pv
+    if total > 0:
+        return pl/total, pe/total, pv/total
+    return 0.33, 0.34, 0.33
 
 # ==========================================
 # 3. MOTOR DE POWER RANKING
@@ -81,12 +89,10 @@ with col_principal:
             visitante = st.selectbox("Selecciona Equipo Visitante:", equipos, index=idx_visita)
             
         if st.button("Predecir", use_container_width=True):
-            p_local, p_empate, p_visita = mh.predecir_partido(local, visitante)
+            p_l_crudo, p_e_crudo, p_v_crudo = mh.predecir_partido(local, visitante)
             
-            # Limpiamos los números para que Streamlit no colapse
-            p_local = safe_float(p_local)
-            p_empate = safe_float(p_empate)
-            p_visita = safe_float(p_visita)
+            # Aplicamos la normalización para proteger la interfaz
+            p_local, p_empate, p_visita = normalizar_probs(p_l_crudo, p_e_crudo, p_v_crudo)
             
             st.success("Análisis Completado")
             
@@ -122,12 +128,10 @@ with col_principal:
         for eq_l, eq_v in partidos_manana:
             if eq_l in equipos and eq_v in equipos:
                 with st.expander(f"🏟️ {eq_l} vs {eq_v}"):
-                    p_l, p_e, p_v = mh.predecir_partido(eq_l, eq_v)
+                    p_l_crudo, p_e_crudo, p_v_crudo = mh.predecir_partido(eq_l, eq_v)
                     
-                    # Limpiamos los números aquí también
-                    p_l = safe_float(p_l)
-                    p_e = safe_float(p_e)
-                    p_v = safe_float(p_v)
+                    # Aplicamos la normalización aquí también
+                    p_l, p_e, p_v = normalizar_probs(p_l_crudo, p_e_crudo, p_v_crudo)
                     
                     m1, m2, m3 = st.columns(3)
                     m1.metric(label=f"Gana {eq_l}", value=f"{p_l*100:.1f}%")
