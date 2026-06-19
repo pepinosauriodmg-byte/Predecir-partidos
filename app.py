@@ -213,7 +213,7 @@ with col_principal:
             st.progress(p_visita)
         st.markdown("</div>", unsafe_allow_html=True)
 
-    # --- PESTAÑA 2: RESULTADOS RECIENTES (DISEÑO TOTALMENTE GRÁFICO) ---
+# --- PESTAÑA 2: RESULTADOS RECIENTES ---
     with tab2:
         st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
         st.subheader("🏁 Historial de Partidos Jugados (Control Manual)")
@@ -221,12 +221,15 @@ with col_principal:
             df_partidos = pd.read_csv('partidos_manuales.csv')
             df_recientes = df_partidos.iloc[::-1]
             
-            # Renderizamos cada partido como una fila gráfica en lugar de una base de datos plana
+            # Renderizamos cada partido como una fila gráfica
             for _, row in df_recientes.iterrows():
                 loc = row['local']
-                vis = row['visitante']
+                
+                # --- EL FIX ESTÁ AQUÍ (visita y goles_visita) ---
+                vis = row['visita']
                 gl = row['goles_local']
-                gv = row['goles_visitante']
+                gv = row['goles_visita']
+                # ------------------------------------------------
                 
                 st.markdown(f"""
                 <div class='match-row'>
