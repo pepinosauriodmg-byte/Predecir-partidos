@@ -25,9 +25,12 @@ def obtener_partidos_manana():
     
     lista_partidos = []
     
-    try:
+   try:
         response = requests.get(url, headers=headers, params=querystring, timeout=10)
         datos = response.json()
+        
+        # --- LÍNEA ESPÍA PARA DIAGNÓSTICO ---
+        st.write("🔍 DEBUG API:", datos) 
         
         # 3. Filtramos la respuesta para sacar los nombres de los equipos
         for partido in datos.get("response", []):
