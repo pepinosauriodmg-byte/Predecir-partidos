@@ -71,10 +71,9 @@ with col_principal:
             visitante = st.selectbox("Selecciona Equipo Visitante:", equipos, index=idx_visita)
             
         if st.button("Predecir", use_container_width=True):
-            # EL DESEMPACADO CORRECTO DE TU MOTOR
-            paquete_probs, xg_l, xg_v = mh.predecir_partido(local, visitante)
+            # EL ORDEN EXACTO REVELADO POR TUS CAPTURAS: xg_local, xg_visita, probabilidades
+            xg_l, xg_v, paquete_probs = mh.predecir_partido(local, visitante)
             
-            # Aplanamos el arreglo de numpy para extraer los 3 porcentajes exactos de tu modelo
             probs_flat = np.array(paquete_probs).flatten()
             p_local = float(probs_flat[0])
             p_empate = float(probs_flat[1])
@@ -82,7 +81,6 @@ with col_principal:
             
             st.success("Análisis Completado")
             
-            # RECUPERAMOS LOS GOLES ESPERADOS EN EL DISEÑO
             st.markdown(f"<h4 style='text-align: center; color: #E0E0E0;'>xG Estimado: {local} ({float(xg_l):.2f}) - ({float(xg_v):.2f}) {visitante}</h4>", unsafe_allow_html=True)
             st.write("---")
             
@@ -110,7 +108,6 @@ with col_principal:
         st.subheader("🔮 Predicciones de la IA para Mañana")
         st.caption("Actualización diaria.")
         
-        # Aquí pon los enfrentamientos reales del día
         partidos_manana = [
             ('Argentina', 'Brazil'), 
             ('France', 'Spain'),     
@@ -120,8 +117,9 @@ with col_principal:
         for eq_l, eq_v in partidos_manana:
             if eq_l in equipos and eq_v in equipos:
                 with st.expander(f"🏟️ {eq_l} vs {eq_v}"):
-                    # Aplicamos el mismo desempacado correcto aquí
-                    paquete_probs, xg_l, xg_v = mh.predecir_partido(eq_l, eq_v)
+                    # Aplicamos el mismo orden maestro aquí
+                    xg_l, xg_v, paquete_probs = mh.predecir_partido(eq_l, eq_v)
+                    
                     probs_flat = np.array(paquete_probs).flatten()
                     p_l = float(probs_flat[0])
                     p_e = float(probs_flat[1])
