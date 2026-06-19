@@ -160,7 +160,7 @@ with col_ranking:
     st.markdown("</div>", unsafe_allow_html=True)
 
 with col_principal:
-    tab1, tab2, tab3 = st.tabs(["🔮 Simulador Aero", "📊 Partidos Recientes", "📅 Próxima Jornada"])
+    tab1, tab2, tab3 = st.tabs(["Simulador manual", "📊 Partidos Recientes", "📅 Próxima Jornada"])
 
     # --- PESTAÑA 1: SIMULADOR MANUAL ---
     with tab1:
@@ -176,7 +176,7 @@ with col_principal:
             idx_visita = equipos.index('Morocco') if 'Morocco' in equipos else 1
             visitante = st.selectbox("Equipo Visitante:", equipos, index=idx_visita)
             
-        if st.button("CALCULAR PREDICCIÓN AI", use_container_width=True):
+        if st.button("PREDECIR", use_container_width=True):
             xg_l, xg_v, paquete_probs = mh.predecir_partido(local, visitante)
             probs_flat = np.array(paquete_probs).flatten()
             
@@ -246,13 +246,14 @@ with col_principal:
     # --- PESTAÑA 3: PRÓXIMA JORNADA ---
     with tab3:
         st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
-        st.subheader("📅 Predicciones automáticas para Mañana")
+        st.subheader("Predicciones para hoy")
         st.caption("Lote diario precargado.")
         
         partidos_manana = [
-            ('Argentina', 'Brazil'), 
-            ('France', 'Spain'),     
-            ('Germany', 'England')   
+            ('USA', 'Australia'), 
+            ('Scotland', 'Morocco'),     
+            ('Brazil', 'Haiti'),
+            ('Türkiye', 'Paraguay)
         ]
         
         for eq_l, eq_v in partidos_manana:
