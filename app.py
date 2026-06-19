@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import requests
-import datetime
 import motor_hibrido as mh
 
 # ==========================================
@@ -11,7 +9,7 @@ st.set_page_config(page_title="AI Football Predictor 2026", layout="wide", page_
 st.title("⚽ Plataforma Predictiva Híbrida - Mundial 2026")
 
 # ==========================================
-# 2. FUNCIONES BASE (NORMALIZACIÓN Y API)
+# 2. FUNCIÓN DE NORMALIZACIÓN MATEMÁTICA
 # ==========================================
 def normalizar_probs(val_l, val_e, val_v):
     def extraer(v):
@@ -26,42 +24,6 @@ def normalizar_probs(val_l, val_e, val_v):
     if total > 0:
         return pl/total, pe/total, pv/total
     return 0.33, 0.34, 0.33
-
-@st.cache_data(ttl=43200)
-def obtener_partidos_manana():
-    manana = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
-    url = "https://v3.football.api-sports.io/fixtures"
-    querystring = {"date": manana, "league": "1", "season": "2026"} 
-    
-    # Intentamos leer la clave secreta de Streamlit
-    try:
-        api_key = st.secrets["API_KEY"]
-    except Exception:
-        api_key = "CLAVE_NO_ENCONTRADA"
-        
-    headers = {
-        "x-apisports-key": api_key,
-        "x-apisports-host": "v3.football.api-sports.io"
-    }
-    
-    lista_partidos = []
-    
-    try:
-        response = requests.get(url, headers=headers, params=querystring, timeout=10)
-        datos = response.json()
-        
-        # --- LÍNEA ESPÍA PARA DIAGNÓSTICO ---
-        st.write("🔍 DEBUG API:", datos) 
-        
-        for partido in datos.get("response", []):
-            local = partido["teams"]["home"]["name"]
-            visitante = partido["teams"]["away"]["name"]
-            lista_partidos.append((local, visitante))
-            
-    except Exception as e:
-        st.error("Error al conectarse con la API.")
-        
-    return lista_partidos
 
 # ==========================================
 # 3. MOTOR DE POWER RANKING
@@ -129,13 +91,10 @@ with col_principal:
             p_local, p_empate, p_visita = normalizar_probs(p_l_crudo, p_e_crudo, p_v_crudo)
             
             st.success("Análisis Completado")
-            
             st.write(f"**Victoria {local}: {p_local*100:.1f}%**")
             st.progress(p_local)
-            
             st.write(f"**Empate: {p_empate*100:.1f}%**")
             st.progress(p_empate)
-            
             st.write(f"**Victoria {visitante}: {p_visita*100:.1f}%**")
             st.progress(p_visita)
 
@@ -152,22 +111,26 @@ with col_principal:
     # --- PESTAÑA 3: PRÓXIMA JORNADA ---
     with tab3:
         st.subheader("🔮 Predicciones de la IA para Mañana")
-        st.caption("Conectado en tiempo real a API-Football.")
+        st.caption("Actualización diaria.")
         
-        partidos_manana = obtener_partidos_manana()
+        # ========================================================
+        # AQUÍ PONES LOS PARTIDOS MANUALMENTE (ASEGÚRATE DE QUE ESTÉN EN INGLÉS)
+        # ========================================================
+        partidos_manana = [
+            ('Argentina', 'Brazil'),  # <- Cambia por tu partido real 1
+            ('France', 'Spain'),      # <- Cambia por tu partido real 2
+            ('Germany', 'England')    # <- Cambia por tu partido real 3
+        ]
         
-        if not partidos_manana:
-            st.info("No hay partidos programados para mañana o la API está descansando.")
-        else:
-            for eq_l, eq_v in partidos_manana:
-                if eq_l in equipos and eq_v in equipos:
-                    with st.expander(f"🏟️ {eq_l} vs {eq_v}"):
-                        p_l_crudo, p_e_crudo, p_v_crudo = mh.predecir_partido(eq_l, eq_v)
-                        p_l, p_e, p_v = normalizar_probs(p_l_crudo, p_e_crudo, p_v_crudo)
-                        
-                        m1, m2, m3 = st.columns(3)
-                        m1.metric(label=f"Gana {eq_l}", value=f"{p_l*100:.1f}%")
-                        m2.metric(label="Empate", value=f"{p_e*100:.1f}%")
-                        m3.metric(label=f"Gana {eq_v}", value=f"{p_v*100:.1f}%")
-                else:
-                    st.warning(f"Diferencia de nombres en la base: {eq_l} vs {eq_v}")
+        for eq_l, eq_v in partidos_manana:
+            if eq_l in equipos and eq_v in equipos:
+                with st.expander(f"🏟️ {eq_l} vs {eq_v}"):
+                    p_l_crudo, p_e_crudo, p_v_crudo = mh.predecir_partido(eq_l, eq_v)
+                    p_l, p_e, p_v = normalizar_probs(p_l_crudo, p_e_crudo, p_v_crudo)
+                    
+                    m1, m2, m3 = st.columns(3)
+                    m1.metric(label=f"Gana {eq_l}", value=f"{p_l*100:.1f}%")
+                    m2.metric(label="Empate", value=f"{p_e*100:.1f}%")
+                    m3.metric(label=f"Gana {eq_v}", value=f"{p_v*100:.1f}%")
+            else:
+                st.warning(f"Error de nombre en la base: {eq_l} vs {eq_v}")
