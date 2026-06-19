@@ -1,6 +1,44 @@
 import streamlit as st
 import pandas as pd
 import motor_hibrido as mh
+import requests
+import datetime
+
+# ==========================================
+# FUNCIÓN AUTOMÁTICA DE CALENDARIO (API-FOOTBALL)
+# ==========================================
+@st.cache_data(ttl=43200) # Se actualiza cada 12 horas para no gastar tus peticiones gratis
+def obtener_partidos_manana():
+    # 1. Calculamos la fecha de mañana
+    manana = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+    
+    # 2. Configuramos la conexión a la API
+    url = "https://v3.football.api-sports.io/fixtures"
+    
+    # NOTA: El ID de la liga del Mundial suele ser 1 en esta API, confírmalo en su documentación.
+    querystring = {"date": manana, "league": "1", "season": "2026"} 
+    
+    headers = {
+        "x-apisports-key": st.secrets["API_KEY"],
+        "x-apisports-host": "v3.football.api-sports.io"
+    }
+    
+    lista_partidos = []
+    
+    try:
+        response = requests.get(url, headers=headers, params=querystring, timeout=10)
+        datos = response.json()
+        
+        # 3. Filtramos la respuesta para sacar los nombres de los equipos
+        for partido in datos.get("response", []):
+            local = partido["teams"]["home"]["name"]
+            visitante = partido["teams"]["away"]["name"]
+            lista_partidos.append((local, visitante))
+            
+    except Exception as e:
+        st.error("Error de conexión con el satélite de API-Football.")
+        
+    return lista_partidos
 
 # ==========================================
 # 1. CONFIGURACIÓN DE LA PÁGINA
@@ -115,25 +153,30 @@ with col_principal:
         except FileNotFoundError:
             st.warning("Aún no hay datos guardados en 'partidos_manuales.csv'.")
 
-    # --- PESTAÑA 3: PRÓXIMA JORNADA ---
+   # --- PESTAÑA 3: PRÓXIMA JORNADA ---
     with tab3:
         st.subheader("🔮 Predicciones de la IA para Mañana")
+        st.caption("Conectado en tiempo real a API-Football.")
         
-        partidos_manana = [
-            ('Germany', 'Spain'),
-            ('Brazil', 'France'),
-            ('Argentina', 'England')
-        ]
+        # ¡LA MAGIA OCURRE AQUÍ! Llamamos a la función automática
+        partidos_manana = obtener_partidos_manana()
         
-        for eq_l, eq_v in partidos_manana:
-            if eq_l in equipos and eq_v in equipos:
-                with st.expander(f"🏟️ {eq_l} vs {eq_v}"):
-                    p_l_crudo, p_e_crudo, p_v_crudo = mh.predecir_partido(eq_l, eq_v)
-                    
-                    # Aplicamos la normalización aquí también
-                    p_l, p_e, p_v = normalizar_probs(p_l_crudo, p_e_crudo, p_v_crudo)
-                    
-                    m1, m2, m3 = st.columns(3)
-                    m1.metric(label=f"Gana {eq_l}", value=f"{p_l*100:.1f}%")
-                    m2.metric(label="Empate", value=f"{p_e*100:.1f}%")
-                    m3.metric(label=f"Gana {eq_v}", value=f"{p_v*100:.1f}%")
+        if not partidos_manana:
+            st.info("No hay partidos programados para mañana o la API está descansando.")
+        else:
+            for eq_l, eq_v in partidos_manana:
+                # Verificamos que la API nos mande nombres que sí existan en nuestra base
+                if eq_l in equipos and eq_v in equipos:
+                   with st.expander(f"🏟️ {eq_l} vs {eq_v}"):
+                            # Sacamos los datos crudos del motor
+                            p_l_crudo, p_e_crudo, p_v_crudo = mh.predecir_partido(eq_l, eq_v)
+                            
+                            # USAMOS LA FUNCIÓN CORRECTA PARA NORMALIZAR (Garantiza que sumen 100%)
+                            p_l, p_e, p_v = normalizar_probs(p_l_crudo, p_e_crudo, p_v_crudo)
+                            
+                            m1, m2, m3 = st.columns(3)
+                            m1.metric(label=f"Gana {eq_l}", value=f"{p_l*100:.1f}%")
+                            m2.metric(label="Empate", value=f"{p_e*100:.1f}%")
+                            m3.metric(label=f"Gana {eq_v}", value=f"{p_v*100:.1f}%")
+                else:
+                    st.warning(f"No se pudo predecir el {eq_l} vs {eq_v} (Diferencia de nombres en la base).")
