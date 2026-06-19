@@ -1,0 +1,397 @@
+torneo_id,temporada,fecha,local,visita,goles_local,goles_visita
+34,2022,2020-10-08,Paraguay,Peru,2,2
+34,2022,2020-10-08,Uruguay,Chile,2,1
+34,2022,2020-10-09,Colombia,Venezuela,3,0
+34,2022,2020-10-09,Argentina,Ecuador,1,0
+34,2022,2020-10-10,Brazil,Bolivia,5,0
+34,2022,2020-10-13,Bolivia,Argentina,1,2
+34,2022,2020-10-13,Ecuador,Uruguay,4,2
+34,2022,2020-10-14,Chile,Colombia,2,2
+34,2022,2020-10-14,Peru,Brazil,2,4
+34,2022,2020-10-14,Venezuela,Paraguay,0,1
+34,2022,2020-11-12,Bolivia,Ecuador,2,3
+34,2022,2020-11-13,Argentina,Paraguay,1,1
+34,2022,2020-11-13,Colombia,Uruguay,0,3
+34,2022,2020-11-13,Chile,Peru,2,0
+34,2022,2020-11-14,Brazil,Venezuela,1,0
+34,2022,2020-11-17,Venezuela,Chile,2,1
+34,2022,2020-11-17,Ecuador,Colombia,6,1
+34,2022,2020-11-17,Paraguay,Bolivia,2,2
+34,2022,2020-11-17,Uruguay,Brazil,0,2
+34,2022,2020-11-18,Peru,Argentina,0,2
+31,2022,2021-03-23,Antigua and Barbuda,Montserrat,2,2
+31,2022,2021-03-23,Suriname,Cayman Islands,3,0
+31,2022,2021-03-24,St. Kitts and Nevis,Puerto Rico,1,0
+31,2022,2021-03-24,Curaçao,St. Vincent / Grenadines,5,0
+31,2022,2021-03-24,Dominican Republic,Dominica,1,0
+31,2022,2021-03-25,Guatemala,Cuba,1,0
+31,2022,2021-03-25,Haiti,Belize,2,0
+31,2022,2021-03-25,Trinidad and Tobago,Guyana,3,0
+31,2022,2021-03-26,British Virgin Islands,Guatemala,0,3
+31,2022,2021-03-26,Anguilla,Dominican Republic,0,6
+31,2022,2021-03-26,Canada,Bermuda,5,1
+31,2022,2021-03-26,Panama,Barbados,1,0
+31,2022,2021-03-26,El Salvador,Grenada,2,0
+31,2022,2021-03-27,Turks and Caicos Islands,Nicaragua,0,7
+31,2022,2021-03-27,Bahamas,St. Kitts and Nevis,0,4
+31,2022,2021-03-27,Aruba,Suriname,0,6
+31,2022,2021-03-27,US Virgin Islands,Antigua and Barbuda,0,3
+31,2022,2021-03-28,Puerto Rico,Trinidad and Tobago,1,1
+31,2022,2021-03-28,Cuba,Curaçao,1,2
+31,2022,2021-03-28,Montserrat,El Salvador,1,1
+31,2022,2021-03-28,Dominica,Panama,1,2
+31,2022,2021-03-30,Belize,Turks and Caicos Islands,5,0
+31,2022,2021-03-30,Guyana,Bahamas,4,0
+31,2022,2021-03-30,St. Vincent / Grenadines,British Virgin Islands,3,0
+31,2022,2021-03-30,Grenada,US Virgin Islands,1,0
+31,2022,2021-03-30,Barbados,Anguilla,1,0
+31,2022,2021-03-30,Cayman Islands,Canada,0,11
+31,2022,2021-03-31,Bermuda,Aruba,5,0
+31,2022,2021-06-02,Puerto Rico,Bahamas,7,0
+31,2022,2021-06-02,Montserrat,US Virgin Islands,4,0
+31,2022,2021-06-02,Cayman Islands,Aruba,1,3
+31,2022,2021-06-02,Cuba,British Virgin Islands,5,0
+31,2022,2021-06-02,Dominica,Anguilla,3,0
+34,2022,2021-06-03,Uruguay,Paraguay,0,0
+34,2022,2021-06-03,Bolivia,Venezuela,3,1
+31,2022,2021-06-04,St. Kitts and Nevis,Guyana,3,0
+31,2022,2021-06-04,Suriname,Bermuda,6,0
+31,2022,2021-06-04,Dominican Republic,Barbados,1,1
+31,2022,2021-06-04,Antigua and Barbuda,Grenada,1,0
+31,2022,2021-06-04,Guatemala,St. Vincent / Grenadines,10,0
+34,2022,2021-06-04,Argentina,Chile,1,1
+34,2022,2021-06-04,Peru,Colombia,0,3
+31,2022,2021-06-05,Nicaragua,Belize,3,0
+34,2022,2021-06-05,Brazil,Ecuador,2,0
+31,2022,2021-06-05,US Virgin Islands,El Salvador,0,7
+31,2022,2021-06-05,British Virgin Islands,Curaçao,0,8
+31,2022,2021-06-05,Bahamas,Trinidad and Tobago,0,0
+31,2022,2021-06-05,Turks and Caicos Islands,Haiti,0,10
+31,2022,2021-06-06,Anguilla,Panama,0,13
+31,2022,2021-06-06,Aruba,Canada,0,7
+34,2022,2021-06-08,Colombia,Argentina,2,2
+34,2022,2021-06-08,Venezuela,Uruguay,0,0
+31,2022,2021-06-08,Grenada,Montserrat,1,2
+31,2022,2021-06-08,Trinidad and Tobago,St. Kitts and Nevis,2,0
+31,2022,2021-06-08,Haiti,Nicaragua,1,0
+34,2022,2021-06-08,Ecuador,Peru,1,2
+31,2022,2021-06-08,Guyana,Puerto Rico,0,2
+31,2022,2021-06-08,St. Vincent / Grenadines,Cuba,0,1
+34,2022,2021-06-09,Chile,Bolivia,1,1
+34,2022,2021-06-09,Paraguay,Brazil,0,2
+31,2022,2021-06-09,Canada,Suriname,4,0
+31,2022,2021-06-09,Bermuda,Cayman Islands,1,1
+31,2022,2021-06-09,Curaçao,Guatemala,0,0
+31,2022,2021-06-09,Panama,Dominican Republic,3,0
+31,2022,2021-06-09,Barbados,Dominica,1,1
+31,2022,2021-06-09,El Salvador,Antigua and Barbuda,3,0
+31,2022,2021-06-12,St. Kitts and Nevis,El Salvador,0,4
+31,2022,2021-06-12,Haiti,Canada,0,1
+31,2022,2021-06-12,Panama,Curaçao,2,1
+31,2022,2021-06-16,Curaçao,Panama,0,0
+31,2022,2021-06-16,Canada,Haiti,3,0
+31,2022,2021-06-16,El Salvador,St. Kitts and Nevis,2,0
+34,2022,2021-09-02,Bolivia,Colombia,1,1
+34,2022,2021-09-02,Ecuador,Paraguay,2,0
+34,2022,2021-09-03,Peru,Uruguay,1,1
+34,2022,2021-09-03,Venezuela,Argentina,1,3
+34,2022,2021-09-03,Chile,Brazil,0,1
+31,2022,2021-09-03,Canada,Honduras,1,1
+31,2022,2021-09-03,Panama,Costa Rica,0,0
+31,2022,2021-09-03,Mexico,Jamaica,2,1
+31,2022,2021-09-03,El Salvador,USA,0,0
+31,2022,2021-09-05,Jamaica,Panama,0,3
+31,2022,2021-09-05,Costa Rica,Mexico,0,1
+31,2022,2021-09-05,El Salvador,Honduras,0,0
+34,2022,2021-09-05,Paraguay,Colombia,1,1
+34,2022,2021-09-05,Uruguay,Bolivia,4,2
+34,2022,2021-09-05,Ecuador,Chile,0,0
+31,2022,2021-09-06,USA,Canada,1,1
+34,2022,2021-09-06,Peru,Venezuela,1,0
+31,2022,2021-09-08,Canada,El Salvador,3,0
+34,2022,2021-09-09,Paraguay,Venezuela,2,1
+34,2022,2021-09-09,Colombia,Chile,3,1
+34,2022,2021-09-09,Argentina,Bolivia,3,0
+34,2022,2021-09-09,Uruguay,Ecuador,1,0
+31,2022,2021-09-09,Honduras,USA,1,4
+31,2022,2021-09-09,Costa Rica,Jamaica,1,1
+31,2022,2021-09-09,Panama,Mexico,1,1
+34,2022,2021-09-10,Brazil,Peru,2,0
+34,2022,2021-10-07,Uruguay,Colombia,0,0
+34,2022,2021-10-07,Paraguay,Argentina,0,0
+34,2022,2021-10-07,Venezuela,Brazil,1,3
+31,2022,2021-10-07,USA,Jamaica,2,0
+34,2022,2021-10-08,Ecuador,Bolivia,3,0
+31,2022,2021-10-08,El Salvador,Panama,1,0
+31,2022,2021-10-08,Mexico,Canada,1,1
+31,2022,2021-10-08,Honduras,Costa Rica,0,0
+34,2022,2021-10-08,Peru,Chile,2,0
+34,2022,2021-10-10,Bolivia,Peru,1,0
+34,2022,2021-10-10,Venezuela,Ecuador,2,1
+34,2022,2021-10-10,Colombia,Brazil,0,0
+31,2022,2021-10-10,Mexico,Honduras,3,0
+31,2022,2021-10-10,Costa Rica,El Salvador,2,1
+31,2022,2021-10-10,Jamaica,Canada,0,0
+31,2022,2021-10-10,Panama,USA,1,0
+34,2022,2021-10-10,Argentina,Uruguay,3,0
+34,2022,2021-10-11,Chile,Paraguay,2,0
+31,2022,2021-10-13,USA,Costa Rica,2,1
+31,2022,2021-10-13,Canada,Panama,4,1
+34,2022,2021-10-14,Argentina,Peru,1,0
+31,2022,2021-10-14,Honduras,Jamaica,0,2
+31,2022,2021-10-14,El Salvador,Mexico,0,2
+34,2022,2021-10-14,Bolivia,Paraguay,4,0
+34,2022,2021-10-14,Colombia,Ecuador,0,0
+34,2022,2021-10-15,Chile,Venezuela,3,0
+34,2022,2021-10-15,Brazil,Uruguay,4,1
+34,2022,2021-11-11,Paraguay,Chile,0,1
+34,2022,2021-11-11,Ecuador,Venezuela,1,0
+34,2022,2021-11-12,Uruguay,Argentina,0,1
+34,2022,2021-11-12,Peru,Bolivia,3,0
+34,2022,2021-11-12,Brazil,Colombia,1,0
+31,2022,2021-11-13,USA,Mexico,2,0
+31,2022,2021-11-13,Canada,Costa Rica,1,0
+31,2022,2021-11-13,El Salvador,Jamaica,1,1
+31,2022,2021-11-13,Honduras,Panama,2,3
+34,2022,2021-11-16,Argentina,Brazil,0,0
+34,2022,2021-11-16,Colombia,Paraguay,0,0
+34,2022,2021-11-16,Venezuela,Peru,1,2
+34,2022,2021-11-16,Bolivia,Uruguay,3,0
+31,2022,2021-11-16,Jamaica,USA,1,1
+31,2022,2021-11-17,Panama,El Salvador,2,1
+31,2022,2021-11-17,Canada,Mexico,2,1
+34,2022,2021-11-17,Chile,Ecuador,0,2
+31,2022,2021-11-17,Costa Rica,Honduras,2,1
+34,2022,2022-01-27,Paraguay,Uruguay,0,1
+34,2022,2022-01-27,Ecuador,Brazil,1,1
+31,2022,2022-01-28,Jamaica,Mexico,1,2
+34,2022,2022-01-28,Venezuela,Bolivia,4,1
+31,2022,2022-01-28,USA,El Salvador,1,0
+34,2022,2022-01-28,Chile,Argentina,1,2
+31,2022,2022-01-28,Honduras,Canada,0,2
+34,2022,2022-01-28,Colombia,Peru,0,1
+31,2022,2022-01-28,Costa Rica,Panama,1,0
+31,2022,2022-01-29,Panama,Jamaica,3,2
+31,2022,2022-01-30,Mexico,Costa Rica,0,0
+31,2022,2022-01-30,Canada,USA,2,0
+31,2022,2022-01-31,Honduras,El Salvador,0,2
+34,2022,2022-02-01,Uruguay,Venezuela,4,1
+34,2022,2022-02-01,Argentina,Colombia,1,0
+34,2022,2022-02-01,Bolivia,Chile,2,3
+34,2022,2022-02-02,Peru,Ecuador,1,1
+34,2022,2022-02-02,Brazil,Paraguay,4,0
+31,2022,2022-02-03,USA,Honduras,3,0
+31,2022,2022-02-03,Jamaica,Costa Rica,0,1
+31,2022,2022-02-03,El Salvador,Canada,0,2
+31,2022,2022-02-03,Mexico,Panama,1,0
+33,2022,2022-03-17,Cook Islands,Solomon Islands,0,2
+33,2022,2022-03-18,Papua New Guinea,New Zealand,0,1
+33,2022,2022-03-18,New Caledonia,Fiji,1,2
+33,2022,2022-03-21,Papua New Guinea,New Caledonia,1,0
+33,2022,2022-03-21,New Zealand,Fiji,4,0
+34,2022,2022-03-24,Brazil,Chile,4,0
+34,2022,2022-03-24,Uruguay,Peru,1,0
+33,2022,2022-03-24,Fiji,Papua New Guinea,1,2
+34,2022,2022-03-24,Paraguay,Ecuador,3,1
+34,2022,2022-03-24,Colombia,Bolivia,3,0
+33,2022,2022-03-24,New Zealand,New Caledonia,7,1
+31,2022,2022-03-24,Jamaica,El Salvador,1,1
+33,2022,2022-03-24,Solomon Islands,Tahiti,3,1
+31,2022,2022-03-25,Panama,Honduras,1,1
+31,2022,2022-03-25,Mexico,USA,0,0
+31,2022,2022-03-25,Costa Rica,Canada,1,0
+34,2022,2022-03-25,Argentina,Venezuela,3,0
+33,2022,2022-03-27,Solomon Islands,Papua New Guinea,3,2
+31,2022,2022-03-27,Canada,Jamaica,4,0
+31,2022,2022-03-27,El Salvador,Costa Rica,1,2
+31,2022,2022-03-27,USA,Panama,5,1
+31,2022,2022-03-27,Honduras,Mexico,0,1
+33,2022,2022-03-27,New Zealand,Tahiti,1,0
+34,2022,2022-03-30,Venezuela,Colombia,0,1
+34,2022,2022-03-30,Ecuador,Argentina,1,1
+34,2022,2022-03-30,Chile,Uruguay,0,2
+34,2022,2022-03-30,Peru,Paraguay,2,0
+34,2022,2022-03-30,Bolivia,Brazil,0,4
+33,2022,2022-03-30,Solomon Islands,New Zealand,0,5
+31,2022,2022-03-31,Panama,Canada,1,0
+31,2022,2022-03-31,Mexico,El Salvador,2,0
+31,2022,2022-03-31,Costa Rica,USA,2,0
+31,2022,2022-03-31,Jamaica,Honduras,2,1
+1,2022,2022-11-20,Qatar,Ecuador,0,2
+1,2022,2022-11-21,USA,Wales,1,1
+1,2022,2022-11-21,Senegal,Netherlands,0,2
+1,2022,2022-11-21,England,Iran,6,2
+1,2022,2022-11-22,France,Australia,4,1
+1,2022,2022-11-22,Mexico,Poland,0,0
+1,2022,2022-11-22,Denmark,Tunisia,0,0
+1,2022,2022-11-22,Argentina,Saudi Arabia,1,2
+1,2022,2022-11-23,Belgium,Canada,1,0
+1,2022,2022-11-23,Spain,Costa Rica,7,0
+1,2022,2022-11-23,Morocco,Croatia,0,0
+1,2022,2022-11-23,Germany,Japan,1,2
+1,2022,2022-11-24,Uruguay,South Korea,0,0
+1,2022,2022-11-24,Brazil,Serbia,2,0
+1,2022,2022-11-24,Switzerland,Cameroon,1,0
+1,2022,2022-11-24,Portugal,Ghana,3,2
+1,2022,2022-11-25,Wales,Iran,0,2
+1,2022,2022-11-25,Qatar,Senegal,1,3
+1,2022,2022-11-25,Netherlands,Ecuador,1,1
+1,2022,2022-11-25,England,USA,0,0
+1,2022,2022-11-26,Tunisia,Australia,0,1
+1,2022,2022-11-26,Poland,Saudi Arabia,2,0
+1,2022,2022-11-26,France,Denmark,2,1
+1,2022,2022-11-26,Argentina,Mexico,2,0
+1,2022,2022-11-27,Japan,Costa Rica,0,1
+1,2022,2022-11-27,Belgium,Morocco,0,2
+1,2022,2022-11-27,Croatia,Canada,4,1
+1,2022,2022-11-27,Spain,Germany,1,1
+1,2022,2022-11-28,Portugal,Uruguay,2,0
+1,2022,2022-11-28,Cameroon,Serbia,3,3
+1,2022,2022-11-28,South Korea,Ghana,2,3
+1,2022,2022-11-28,Brazil,Switzerland,1,0
+1,2022,2022-11-29,Ecuador,Senegal,1,2
+1,2022,2022-11-29,Netherlands,Qatar,2,0
+1,2022,2022-11-29,Iran,USA,0,1
+1,2022,2022-11-29,Wales,England,0,3
+1,2022,2022-11-30,Australia,Denmark,1,0
+1,2022,2022-11-30,Tunisia,France,1,0
+1,2022,2022-11-30,Saudi Arabia,Mexico,1,2
+1,2022,2022-11-30,Poland,Argentina,0,2
+1,2022,2022-12-01,Costa Rica,Germany,2,4
+1,2022,2022-12-01,Croatia,Belgium,0,0
+1,2022,2022-12-01,Canada,Morocco,1,2
+1,2022,2022-12-01,Japan,Spain,2,1
+1,2022,2022-12-02,Cameroon,Brazil,1,0
+1,2022,2022-12-02,Serbia,Switzerland,2,3
+1,2022,2022-12-02,Ghana,Uruguay,0,2
+1,2022,2022-12-02,South Korea,Portugal,2,1
+1,2022,2022-12-03,Argentina,Australia,2,1
+1,2022,2022-12-03,Netherlands,USA,3,1
+1,2022,2022-12-04,England,Senegal,3,0
+1,2022,2022-12-04,France,Poland,3,1
+1,2022,2022-12-05,Brazil,South Korea,4,1
+1,2022,2022-12-06,Portugal,Switzerland,6,1
+1,2022,2022-12-10,England,France,1,2
+1,2022,2022-12-10,Morocco,Portugal,1,0
+1,2022,2022-12-13,Argentina,Croatia,3,0
+1,2022,2022-12-14,France,Morocco,2,0
+1,2022,2022-12-17,Croatia,Morocco,2,1
+6,2023,2024-01-13,Ivory Coast,Guinea-Bissau,2,0
+6,2023,2024-01-14,Ghana,Cape Verde Islands,1,2
+6,2023,2024-01-14,Egypt,Mozambique,2,2
+6,2023,2024-01-14,Nigeria,Equatorial Guinea,1,1
+6,2023,2024-01-15,Algeria,Angola,1,1
+6,2023,2024-01-15,Cameroon,Guinea,1,1
+6,2023,2024-01-15,Senegal,Gambia,3,0
+6,2023,2024-01-16,Burkina Faso,Mauritania,1,0
+6,2023,2024-01-16,Mali,South Africa,2,0
+6,2023,2024-01-16,Tunisia,Namibia,0,1
+6,2023,2024-01-17,Congo DR,Zambia,1,1
+6,2023,2024-01-17,Morocco,Tanzania,3,0
+6,2023,2024-01-18,Egypt,Ghana,2,2
+6,2023,2024-01-18,Ivory Coast,Nigeria,0,1
+6,2023,2024-01-18,Equatorial Guinea,Guinea-Bissau,4,2
+6,2023,2024-01-19,Senegal,Cameroon,3,1
+6,2023,2024-01-19,Guinea,Gambia,1,0
+6,2023,2024-01-19,Cape Verde Islands,Mozambique,3,0
+6,2023,2024-01-20,Algeria,Burkina Faso,2,2
+6,2023,2024-01-20,Mauritania,Angola,2,3
+6,2023,2024-01-20,Tunisia,Mali,1,1
+6,2023,2024-01-21,Morocco,Congo DR,1,1
+6,2023,2024-01-21,Zambia,Tanzania,1,1
+6,2023,2024-01-21,South Africa,Namibia,4,0
+6,2023,2024-01-22,Guinea-Bissau,Nigeria,0,1
+6,2023,2024-01-22,Equatorial Guinea,Ivory Coast,4,0
+6,2023,2024-01-22,Mozambique,Ghana,2,2
+6,2023,2024-01-22,Cape Verde Islands,Egypt,2,2
+6,2023,2024-01-23,Gambia,Cameroon,2,3
+6,2023,2024-01-23,Mauritania,Algeria,1,0
+6,2023,2024-01-23,Angola,Burkina Faso,2,0
+6,2023,2024-01-23,Guinea,Senegal,0,2
+6,2023,2024-01-24,Namibia,Mali,0,0
+6,2023,2024-01-24,South Africa,Tunisia,0,0
+6,2023,2024-01-24,Tanzania,Congo DR,0,0
+6,2023,2024-01-24,Zambia,Morocco,0,1
+6,2023,2024-01-27,Angola,Namibia,3,0
+6,2023,2024-01-27,Nigeria,Cameroon,2,0
+6,2023,2024-01-28,Equatorial Guinea,Guinea,0,1
+6,2023,2024-01-29,Cape Verde Islands,Mauritania,1,0
+6,2023,2024-01-30,Mali,Burkina Faso,2,1
+6,2023,2024-01-30,Morocco,South Africa,0,2
+6,2023,2024-02-02,Nigeria,Angola,1,0
+6,2023,2024-02-02,Congo DR,Guinea,3,1
+6,2023,2024-02-07,Ivory Coast,Congo DR,1,0
+6,2023,2024-02-11,Nigeria,Ivory Coast,1,2
+4,2024,2024-06-14,Germany,Scotland,5,1
+4,2024,2024-06-15,Italy,Albania,2,1
+4,2024,2024-06-15,Spain,Croatia,3,0
+4,2024,2024-06-15,Hungary,Switzerland,1,3
+4,2024,2024-06-16,Serbia,England,0,1
+4,2024,2024-06-16,Slovenia,Denmark,1,1
+4,2024,2024-06-16,Poland,Netherlands,1,2
+4,2024,2024-06-17,Austria,France,0,1
+4,2024,2024-06-17,Belgium,Slovakia,0,1
+4,2024,2024-06-17,Romania,Ukraine,3,0
+4,2024,2024-06-18,Türkiye,Georgia,3,1
+4,2024,2024-06-18,Portugal,Czechia,2,1
+4,2024,2024-06-19,Germany,Hungary,2,0
+4,2024,2024-06-19,Scotland,Switzerland,1,1
+4,2024,2024-06-19,Croatia,Albania,2,2
+4,2024,2024-06-20,Spain,Italy,1,0
+4,2024,2024-06-20,Denmark,England,1,1
+4,2024,2024-06-20,Slovenia,Serbia,1,1
+4,2024,2024-06-21,Slovakia,Ukraine,1,2
+4,2024,2024-06-21,Poland,Austria,1,3
+4,2024,2024-06-21,Netherlands,France,0,0
+9,2024,2024-06-21,Argentina,Canada,2,0
+9,2024,2024-06-22,Peru,Chile,0,0
+9,2024,2024-06-22,Ecuador,Venezuela,1,2
+4,2024,2024-06-22,Belgium,Romania,2,0
+4,2024,2024-06-22,Türkiye,Portugal,0,3
+4,2024,2024-06-22,Georgia,Czechia,1,1
+4,2024,2024-06-23,Switzerland,Germany,1,1
+9,2024,2024-06-23,USA,Bolivia,2,0
+9,2024,2024-06-23,Mexico,Jamaica,1,0
+4,2024,2024-06-23,Scotland,Hungary,0,1
+9,2024,2024-06-24,Uruguay,Panama,3,1
+9,2024,2024-06-24,Colombia,Paraguay,2,1
+4,2024,2024-06-24,Albania,Spain,0,1
+4,2024,2024-06-24,Croatia,Italy,1,1
+9,2024,2024-06-25,Brazil,Costa Rica,0,0
+4,2024,2024-06-25,France,Poland,1,1
+4,2024,2024-06-25,Netherlands,Austria,2,3
+4,2024,2024-06-25,England,Slovenia,0,0
+4,2024,2024-06-25,Denmark,Serbia,0,0
+4,2024,2024-06-26,Ukraine,Belgium,0,0
+4,2024,2024-06-26,Slovakia,Romania,1,1
+9,2024,2024-06-26,Chile,Argentina,0,1
+9,2024,2024-06-26,Peru,Canada,0,1
+4,2024,2024-06-26,Czechia,Türkiye,1,2
+4,2024,2024-06-26,Georgia,Portugal,2,0
+9,2024,2024-06-27,Ecuador,Jamaica,3,1
+9,2024,2024-06-27,Venezuela,Mexico,1,0
+9,2024,2024-06-28,Uruguay,Bolivia,5,0
+9,2024,2024-06-28,Panama,USA,2,1
+9,2024,2024-06-29,Paraguay,Brazil,1,4
+9,2024,2024-06-29,Colombia,Costa Rica,3,0
+4,2024,2024-06-29,Switzerland,Italy,2,0
+4,2024,2024-06-29,Germany,Denmark,2,0
+9,2024,2024-06-30,Canada,Chile,0,0
+9,2024,2024-06-30,Argentina,Peru,2,0
+4,2024,2024-06-30,Spain,Georgia,4,1
+9,2024,2024-07-01,Jamaica,Venezuela,0,3
+9,2024,2024-07-01,Mexico,Ecuador,0,0
+4,2024,2024-07-01,France,Belgium,1,0
+4,2024,2024-07-02,Romania,Netherlands,0,3
+4,2024,2024-07-02,Austria,Türkiye,1,2
+9,2024,2024-07-02,Bolivia,Panama,1,3
+9,2024,2024-07-02,USA,Uruguay,0,1
+9,2024,2024-07-03,Brazil,Colombia,1,1
+9,2024,2024-07-03,Costa Rica,Paraguay,2,1
+4,2024,2024-07-06,Netherlands,Türkiye,2,1
+9,2024,2024-07-06,Colombia,Panama,5,0
+4,2024,2024-07-09,Spain,France,2,1
+9,2024,2024-07-10,Argentina,Canada,2,0
+4,2024,2024-07-10,Netherlands,England,1,2
+9,2024,2024-07-11,Uruguay,Colombia,0,1
+4,2024,2024-07-14,Spain,England,2,1
