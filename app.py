@@ -240,7 +240,7 @@ with col_principal:
             ('Netherlands', 'Sweden'), 
             ('Germany', 'Ivory Coast'),     
             ('Tunisia', 'Japan'),
-            ('Ecuadro', 'Curaçao')
+            ('Ecuador', 'Curaçao')
         ]
         
         for eq_l, eq_v in partidos_manana:
