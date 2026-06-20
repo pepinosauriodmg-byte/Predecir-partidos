@@ -8,15 +8,9 @@ import motor_hibrido as mh
 # ==========================================
 st.set_page_config(page_title="AI Football Predictor 2026", layout="wide", page_icon="⚽")
 
-# Inyección de CSS para lograr el efecto Glassmorphic y los degradados brillantes de los 2000s
 st.markdown("""
 <style>
-    /* Fondo general con sutil degradado aqua/aerodinámico */
-    .stApp {
-        background: linear-gradient(135deg, #0f172a 0%, #022c22 50%, #0369a1 100%);
-    }
-    
-    /* Título con reflejo brillante brillante */
+    .stApp { background: linear-gradient(135deg, #0f172a 0%, #022c22 50%, #0369a1 100%); }
     .frutiger-title {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 800;
@@ -26,8 +20,6 @@ st.markdown("""
         text-shadow: 0px 4px 12px rgba(56, 189, 248, 0.3);
         margin-bottom: 20px;
     }
-
-    /* Tarjetas de Cristal (Glassmorphism puro Frutiger Aero) */
     .frutiger-card {
         background: rgba(255, 255, 255, 0.07);
         backdrop-filter: blur(12px);
@@ -38,8 +30,6 @@ st.markdown("""
         box-shadow: 0 8px 32px 0 rgba(0, 168, 255, 0.15), inset 0 4px 4px rgba(255,255,255,0.1);
         margin-bottom: 15px;
     }
-
-    /* Filas de partidos dinámicos y estilizados */
     .match-row {
         display: flex;
         justify-content: space-between;
@@ -51,7 +41,6 @@ st.markdown("""
         margin-bottom: 10px;
         box-shadow: inset 0 2px 4px rgba(255,255,255,0.05);
     }
-    
     .team-box {
         font-size: 1.15rem;
         font-weight: 600;
@@ -60,7 +49,6 @@ st.markdown("""
         gap: 10px;
         color: #f8fafc;
     }
-    
     .score-box {
         background: rgba(14, 165, 233, 0.3);
         border: 1px solid #38bdf8;
@@ -71,8 +59,6 @@ st.markdown("""
         color: #fff;
         text-shadow: 0 0 8px #38bdf8;
     }
-
-    /* Botones de burbuja brillante */
     .stButton>button {
         background: linear-gradient(180deg, #4ade80 0%, #22c55e 50%, #15803d 100%) !important;
         color: white !important;
@@ -83,7 +69,6 @@ st.markdown("""
         box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4), inset 0 2px 2px rgba(255,255,255,0.4) !important;
         transition: all 0.3s ease !important;
     }
-    
     .stButton>button:hover {
         transform: translateY(-2px) scale(1.01);
         box-shadow: 0 6px 20px rgba(34, 197, 94, 0.6), inset 0 3px 3px rgba(255,255,255,0.5) !important;
@@ -94,7 +79,7 @@ st.markdown("""
 st.markdown("<h1 class='frutiger-title'>⚽ Plataforma Predictiva Híbrida - Mundial 2026</h1>", unsafe_allow_html=True)
 
 # ==========================================
-# 2. DICCIONARIO MAESTRO DE BANDERAS (MUNDIALISTA)
+# 2. DICCIONARIO MAESTRO DE BANDERAS EXPANDIDO
 # ==========================================
 DICT_BANDERAS = {
     'Scotland': '🏴󠁧󠁢󠁳󠁣󠁴󠁿', 'Morocco': '🇲🇦', 'Mexico': '🇲🇽', 'South Korea': '🇰🇷',
@@ -102,7 +87,13 @@ DICT_BANDERAS = {
     'Germany': '🇩🇪', 'England': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'Canada': '🇨🇦', 'USA': '🇺🇸',
     'Colombia': '🇨🇴', 'Qatar': '🇶🇦', 'Ghana': '🇬🇭', 'Panama': '🇵🇦',
     'Uzbekistan': '🇺🇿', 'Czechia': '🇨🇿', 'South Africa': '🇿🇦', 'Switzerland': '🇨🇭',
-    'Bosnia and Herzegovina': '🇧🇦'
+    'Bosnia and Herzegovina': '🇧🇦', 'Netherlands': '🇳🇱', 'Sweden': '🇸🇪', 
+    'Ivory Coast': '🇨🇮', 'Haiti': '🇭🇹', 'Türkiye': '🇹🇷', 'Paraguay': '🇵🇾',
+    'Japan': '🇯🇵', 'Croatia': '🇭🇷', 'Cabo Verde': '🇨🇻', 'DR Congo': '🇨🇩',
+    'Tunisia': '🇹🇳', 'Australia': '🇦🇺', 'Portugal': '🇵🇹', 'Italy': '🇮🇹',
+    'Uruguay': '🇺🇾', 'Belgium': '🇧🇪', 'Senegal': '🇸🇳', 'Cameroon': '🇨🇲',
+    'Nigeria': '🇳🇬', 'Iran': '🇮🇷', 'Saudi Arabia': '🇸🇦', 'Ecuador': '🇪🇨',
+    'Chile': '🇨🇱', 'Peru': '🇵🇪'
 }
 
 def obtener_bandera(equipo):
@@ -153,14 +144,13 @@ with col_ranking:
     st.caption("Algoritmo híbrido FA/FD con suavizado de Laplace")
     df_ranking = calcular_power_ranking()
     
-    # Renderizado estético del ranking agregándole banderas dinámicamente
     df_ranking_visual = df_ranking.copy()
     df_ranking_visual['Equipo'] = df_ranking_visual['Equipo'].apply(lambda x: f"{obtener_bandera(x)} {x}")
     st.dataframe(df_ranking_visual, use_container_width=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
 with col_principal:
-    tab1, tab2, tab3 = st.tabs(["Simulador manual", "📊 Partidos Recientes", "📅 Próxima Jornada"])
+    tab1, tab2, tab3 = st.tabs(["🔮 Simulador Aero", "📊 Partidos Recientes", "📅 Próxima Jornada"])
 
     # --- PESTAÑA 1: SIMULADOR MANUAL ---
     with tab1:
@@ -176,7 +166,7 @@ with col_principal:
             idx_visita = equipos.index('Morocco') if 'Morocco' in equipos else 1
             visitante = st.selectbox("Equipo Visitante:", equipos, index=idx_visita)
             
-        if st.button("PREDECIR", use_container_width=True):
+        if st.button("CALCULAR PREDICCIÓN AI", use_container_width=True):
             xg_l, xg_v, paquete_probs = mh.predecir_partido(local, visitante)
             probs_flat = np.array(paquete_probs).flatten()
             
@@ -186,7 +176,6 @@ with col_principal:
             
             st.success("Cómputo Neuronal Exitoso")
             
-            # Encabezado hiper-gráfico con banderas gigantes al estilo marcador de TV del 2006
             bandera_l = obtener_bandera(local)
             bandera_v = obtener_bandera(visitante)
             
@@ -213,7 +202,7 @@ with col_principal:
             st.progress(p_visita)
         st.markdown("</div>", unsafe_allow_html=True)
 
-# --- PESTAÑA 2: RESULTADOS RECIENTES ---
+    # --- PESTAÑA 2: RESULTADOS RECIENTES ---
     with tab2:
         st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
         st.subheader("🏁 Historial de Partidos Jugados (Control Manual)")
@@ -221,15 +210,11 @@ with col_principal:
             df_partidos = pd.read_csv('partidos_manuales.csv')
             df_recientes = df_partidos.iloc[::-1]
             
-            # Renderizamos cada partido como una fila gráfica
             for _, row in df_recientes.iterrows():
                 loc = row['local']
-                
-                # --- EL FIX ESTÁ AQUÍ (visita y goles_visita) ---
                 vis = row['visita']
                 gl = row['goles_local']
                 gv = row['goles_visita']
-                # ------------------------------------------------
                 
                 st.markdown(f"""
                 <div class='match-row'>
@@ -241,19 +226,20 @@ with col_principal:
                 
         except FileNotFoundError:
             st.warning("Aún no hay registros en 'partidos_manuales.csv'.")
+        except KeyError:
+            st.error("Error leyendo las columnas del CSV. Verifica los nombres 'local', 'visita', 'goles_local', 'goles_visita'.")
         st.markdown("</div>", unsafe_allow_html=True)
 
     # --- PESTAÑA 3: PRÓXIMA JORNADA ---
     with tab3:
         st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
-        st.subheader("Predicciones para hoy")
+        st.subheader("📅 Predicciones automáticas para Mañana")
         st.caption("Lote diario precargado.")
         
         partidos_manana = [
-            ('USA', 'Australia'), 
-            ('Scotland', 'Morocco'),     
-            ('Brazil', 'Haiti'),
-            ('Türkiye', 'Paraguay')
+            ('Argentina', 'Brazil'), 
+            ('France', 'Spain'),     
+            ('Germany', 'England')   
         ]
         
         for eq_l, eq_v in partidos_manana:
