@@ -260,7 +260,7 @@ Namibia,R. Nyambe,DEF,33,68,76
 Namibia,M. Starke,MED,61,41,61
 Namibia,D. Hotto,DEL,75,29,61
 Netherlands,J. Cillessen,POR,15,83,83
-Netherlands,V. van Dijk,DEF,60,66,86
+Netherlands,V. van Dijk,DEF,60,78,86
 Netherlands,A. Robben,MED,86,32,64
 Netherlands,R. van Persie,DEL,90,33,68
 New Caledonia,Reserva POR,POR,60,60,60
@@ -595,16 +595,16 @@ Curacao,Obispo,DEF,68,68,75
 Curacao,Bazoer,MED,71,71,75
 Curacao,Floranus,DEF,70,70,75
 Curacao,Room,POR,45,45,75
-Netherlands,Dumfries,DEF,60,60,75
-Netherlands,Verbruggen,POR,45,45,75
-Netherlands,van Hecke,DEF,60,60,75
-Netherlands,Gravenberch,MED,62,62,75
-Netherlands,de Jong,MED,69,69,75
+Netherlands,Dumfries,DEF,60,78,75
+Netherlands,Verbruggen,POR,45,89,75
+Netherlands,van Hecke,DEF,60,78,75
+Netherlands,Gravenberch,MED,77,77,75
+Netherlands,de Jong,MED,79,79,75
 Netherlands,Summerville,DEL,70,70,75
-Netherlands,Malen,DEL,63,63,75
-Netherlands,van de Ven,DEF,56,56,75
-Netherlands,Reijnders,MED,66,66,75
-Netherlands,Gakpo,DEL,63,63,75
+Netherlands,Malen,DEL,76,63,75
+Netherlands,van de Ven,DEF,56,74,75
+Netherlands,Reijnders,MED,75,75,75
+Netherlands,Gakpo,DEL,89,63,75
 Japan,Maeda,DEL,59,59,75
 Japan,Ueda,DEL,60,60,75
 Japan,Kamada,MED,73,73,75
@@ -634,17 +634,17 @@ Ecuador,Hincapie,MED,45,45,75
 Ecuador,Pacho,MED,55,55,75
 Ecuador,Ordonez,MED,63,63,75
 Ecuador,Galindez,MED,59,59,75
-Sweden,Lagerbielke,DEF,75,75,75
-Sweden,Bernhardsson,MED,80,80,75
-Sweden,Isak,DEL,85,85,75
-Sweden,Nordfeldt,POR,73,73,75
-Sweden,Hien,DEF,80,80,75
+Sweden,Lagerbielke,DEF,75,70,75
+Sweden,Bernhardsson,MED,74,74,75
+Sweden,Isak,DEL,76,85,75
+Sweden,Nordfeldt,POR,73,45,75
+Sweden,Hien,DEF,80,70,75
 Sweden,Karlstrom,MED,77,77,75
-Sweden,Nygren,DEL,76,76,75
+Sweden,Nygren,MED,71,71,75
 Sweden,Lindelof,DEF,75,75,75
-Sweden,Gudmundsson,DEF,78,78,75
+Sweden,Gudmundsson,MED,65,65,75
 Sweden,Gyokeres,DEL,83,83,75
-Sweden,Ayari,MED,89,89,75
+Sweden,Ayari,MED,69,69,75
 Tunisia,Abdi,DEF,66,66,75
 Tunisia,Ben Hamida,DEF,74,74,75
 Tunisia,Saad,DEL,71,71,75
@@ -942,3 +942,7 @@ Paraguay,D. Gómez,MED,54,54,75
 Paraguay,Galarza,MED,67,67,75
 Paraguay,G. Gómez,DEF,50,64,75
 Paraguay,Cáceres,DEF,50,72,75
+Netherlands,Brobbey,DEL,89,50,75
+Sweden,Lindelöf,DEF,50,67,75
+Sweden,Karlström,MED,70,70,75
+Sweden,Gyökeres,DEL,76,50,75
