@@ -82,6 +82,28 @@ modelo_rf = RandomForestClassifier(n_estimators=150, max_depth=5, random_state=4
 modelo_rf.fit(X, Y, sample_weight=df_ml['peso_entrenamiento'])
 print("¡Red Neuronal entrenada con priorización mundialista y ponderación de fuerza ELO!\n")
 
+# ================================================================
+# LA FUSIÓN DEFINITIVA: POISSON (PRESENTE) + ML ELO (PASADO)
+# ================================================================
+
+def calcular_probabilidades_poisson(xg_local, xg_visita, max_goles=10):
+    """Convierte los Goles Esperados en Porcentajes exactos de victoria"""
+    p_local, p_empate, p_visita = 0.0, 0.0, 0.0
+    
+    for gl in range(max_goles):
+        for gv in range(max_goles):
+            prob = poisson.pmf(gl, xg_local) * poisson.pmf(gv, xg_visita)
+            if gl > gv:
+                p_local += prob
+            elif gl < gv:
+                p_visita += prob
+            else:
+                p_empate += prob
+                
+    # Retornamos en el mismo orden que el ML: [Visita(0), Empate(1), Local(2)]
+    return p_visita, p_empate, p_local
+
+
 def predecir_partido(equipo_A, equipo_B):
     if equipo_A not in dict_fa or equipo_B not in dict_fa:
         return None, None, [0.33, 0.33, 0.34]
@@ -91,24 +113,41 @@ def predecir_partido(equipo_A, equipo_B):
     atq_a, def_a = dict_plantilla_atq.get(equipo_A, 50.0), dict_plantilla_def.get(equipo_A, 50.0)
     atq_b, def_b = dict_plantilla_atq.get(equipo_B, 50.0), dict_plantilla_def.get(equipo_B, 50.0)
 
+    # 1. CÁLCULO DEL PRESENTE (xG y Probabilidades de Poisson)
     xg_a = fa_a * fd_b * promedio_global
     xg_b = fa_b * fd_a * promedio_global
+    poisson_v, poisson_e, poisson_l = calcular_probabilidades_poisson(xg_a, xg_b)
 
-    # === CARGAR ELO EN VIVO ===
+    # 2. CARGA DE ELO EN VIVO
     try:
         df_elo_vivo = pd.read_csv('ranking_elo_vivo.csv').set_index('equipo')
-        elo_l = df_elo_vivo.loc[equipo_A, 'elo_actual'] if equipo_A in df_elo_vivo.index else 1500.0
-        elo_v = df_elo_vivo.loc[equipo_B, 'elo_actual'] if equipo_B in df_elo_vivo.index else 1500.0
+        elo_l = df_elo_vivo.loc[equipo_A, 'elo_actual'] if equipo_A in df_elo_vivo.index else 1100.0
+        elo_v = df_elo_vivo.loc[equipo_B, 'elo_actual'] if equipo_B in df_elo_vivo.index else 1100.0
     except FileNotFoundError:
-        elo_l, elo_v = 1500.0, 1500.0
+        elo_l, elo_v = 1100.0, 1100.0
 
-    # === VECTOR DE PREDICCIÓN CON ELO INYECTADO ===
+    # 3. CÁLCULO DEL PASADO (Probabilidades de la Red Neuronal)
     vector = pd.DataFrame([{
         'FA_local': fa_a, 'FD_local': fd_a, 'FA_visita': fa_b, 'FD_visita': fd_b,
         'diferencia_FA': fa_a - fa_b, 'diferencia_FD': fd_a - fd_b,
         'dif_Plantilla_Atq': atq_a - atq_b, 'dif_Plantilla_Def': def_a - def_b,
         'elo_local': elo_l, 'elo_visita': elo_v
     }])
+    probs_ml = modelo_rf.predict_proba(vector)[0]
+    
+    ml_v = probs_ml[0]
+    ml_e = probs_ml[1]
+    ml_l = probs_ml[2]
 
-    probs = modelo_rf.predict_proba(vector)[0]
-    return xg_a, xg_b, probs
+    # 4. LA VOTACIÓN SUAVE (BLENDING)
+    # 60% peso a la forma actual de los jugadores, 40% a la historia del equipo
+    PESO_PRESENTE = 0.60
+    PESO_HISTORIA = 0.40
+    
+    prob_final_v = (poisson_v * PESO_PRESENTE) + (ml_v * PESO_HISTORIA)
+    prob_final_e = (poisson_e * PESO_PRESENTE) + (ml_e * PESO_HISTORIA)
+    prob_final_l = (poisson_l * PESO_PRESENTE) + (ml_l * PESO_HISTORIA)
+    
+    probs_hibridas = [prob_final_v, prob_final_e, prob_final_l]
+
+    return xg_a, xg_b, probs_hibridas
