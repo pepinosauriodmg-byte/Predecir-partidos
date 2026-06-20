@@ -79,21 +79,35 @@ st.markdown("""
 st.markdown("<h1 class='frutiger-title'>⚽ Plataforma Predictiva Híbrida - Mundial 2026</h1>", unsafe_allow_html=True)
 
 # ==========================================
-# 2. DICCIONARIO MAESTRO DE BANDERAS EXPANDIDO
+# 2. DICCIONARIO MAESTRO DE BANDERAS (ULTRA EXPANDIDO)
 # ==========================================
 DICT_BANDERAS = {
+    # Los que ya teníamos
     'Scotland': '🏴󠁧󠁢󠁳󠁣󠁴󠁿', 'Morocco': '🇲🇦', 'Mexico': '🇲🇽', 'South Korea': '🇰🇷',
     'Argentina': '🇦🇷', 'Brazil': '🇧🇷', 'France': '🇫🇷', 'Spain': '🇪🇸',
     'Germany': '🇩🇪', 'England': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'Canada': '🇨🇦', 'USA': '🇺🇸',
     'Colombia': '🇨🇴', 'Qatar': '🇶🇦', 'Ghana': '🇬🇭', 'Panama': '🇵🇦',
     'Uzbekistan': '🇺🇿', 'Czechia': '🇨🇿', 'South Africa': '🇿🇦', 'Switzerland': '🇨🇭',
     'Bosnia and Herzegovina': '🇧🇦', 'Netherlands': '🇳🇱', 'Sweden': '🇸🇪', 
-    'Ivory Coast': '🇨🇮', 'Haiti': '🇭🇹', 'Türkiye': '🇹🇷', 'Paraguay': '🇵🇾',
-    'Japan': '🇯🇵', 'Croatia': '🇭🇷', 'Cabo Verde': '🇨🇻', 'DR Congo': '🇨🇩',
-    'Tunisia': '🇹🇳', 'Australia': '🇦🇺', 'Portugal': '🇵🇹', 'Italy': '🇮🇹',
-    'Uruguay': '🇺🇾', 'Belgium': '🇧🇪', 'Senegal': '🇸🇳', 'Cameroon': '🇨🇲',
-    'Nigeria': '🇳🇬', 'Iran': '🇮🇷', 'Saudi Arabia': '🇸🇦', 'Ecuador': '🇪🇨',
-    'Chile': '🇨🇱', 'Peru': '🇵🇪'
+    'Ivory Coast': '🇨🇮', "Côte d'Ivoire": '🇨🇮', 'Haiti': '🇭🇹', 'Türkiye': '🇹🇷', 
+    'Turkey': '🇹🇷', 'Paraguay': '🇵🇾', 'Japan': '🇯🇵', 'Croatia': '🇭🇷', 
+    'Cabo Verde': '🇨🇻', 'Cape Verde': '🇨🇻', 'DR Congo': '🇨🇩', 'Tunisia': '🇹🇳', 
+    'Australia': '🇦🇺', 'Portugal': '🇵🇹', 'Italy': '🇮🇹', 'Uruguay': '🇺🇾', 
+    'Belgium': '🇧🇪', 'Senegal': '🇸🇳', 'Cameroon': '🇨🇲', 'Nigeria': '🇳🇬', 
+    'Iran': '🇮🇷', 'Saudi Arabia': '🇸🇦', 'Ecuador': '🇪🇨', 'Chile': '🇨🇱', 'Peru': '🇵🇪',
+    
+    # --- LOS NUEVOS DE TU CAPTURA ---
+    'Austria': '🇦🇹', 'Jordan': '🇯🇴', 'Algeria': '🇩🇿', 'Iraq': '🇮🇶',
+    'Norway': '🇳🇴', 'New Zealand': '🇳🇿', 'Egypt': '🇪🇬',
+    
+    # --- OTROS POSIBLES DE ELIMINATORIAS / MUNDIAL ---
+    'Wales': '🏴󠁧󠁢󠁷󠁬󠁳󠁿', 'Denmark': '🇩🇰', 'Serbia': '🇷🇸', 'Poland': '🇵🇱',
+    'Ukraine': '🇺🇦', 'Mali': '🇲🇱', 'Costa Rica': '🇨🇷', 'Jamaica': '🇯🇲',
+    'Honduras': '🇭🇳', 'Venezuela': '🇻🇪', 'Bolivia': '🇧🇴', 'Greece': '🇬🇷',
+    'Hungary': '🇭🇺', 'Romania': '🇷🇴', 'Slovakia': '🇸🇰', 'Slovenia': '🇸🇮',
+    'Albania': '🇦🇱', 'Georgia': '🇬🇪', 'China PR': '🇨🇳', 'China': '🇨🇳', 
+    'UAE': '🇦🇪', 'Oman': '🇴🇲', 'Bahrain': '🇧🇭', 'Syria': '🇸🇾',
+    'North Macedonia': '🇲🇰', 'Macedonia': '🇲🇰', 'Republic of Ireland': '🇮🇪'
 }
 
 def obtener_bandera(equipo):
