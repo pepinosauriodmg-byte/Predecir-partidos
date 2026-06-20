@@ -237,9 +237,10 @@ with col_principal:
         st.caption("Lote diario precargado.")
         
         partidos_manana = [
-            ('Argentina', 'Brazil'), 
-            ('France', 'Spain'),     
-            ('Germany', 'England')   
+            ('Netherlands', 'Sweden'), 
+            ('Germany', 'Ivory Coast'),     
+            ('Tunisia', 'Japan'),
+            ('Ecuadro', 'Curaçao')
         ]
         
         for eq_l, eq_v in partidos_manana:
