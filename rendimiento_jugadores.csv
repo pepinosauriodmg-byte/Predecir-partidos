@@ -136,8 +136,8 @@ Dominican Republic,Junior Firpo,DEF,58,74,69
 Dominican Republic,H. Mörschel,MED,65,37,61
 Dominican Republic,Mariano,DEL,81,45,82
 Ecuador,M. Ramírez,POR,15,75,75
-Ecuador,A. Valencia,DEF,65,58,85
-Ecuador,A. Valencia,MED,58,58,75
+Ecuador,A. Valencia,DEL,61,58,85
+Ecuador,A. Valencia,DEL,61,58,75
 Ecuador,S. Mandíquez,DEL,80,29,80
 Egypt,M. El Shenawy,POR,15,73,73
 Egypt,A. Hegazi,DEF,20,77,86
@@ -227,7 +227,7 @@ Jamaica,A. Blake,POR,15,78,78
 Jamaica,E. Pinnock,DEF,37,80,82
 Jamaica,L. Bailey,MED,78,33,64
 Jamaica,L. Bailey,DEL,77,33,64
-Japan,K. Nakamura,MED,73,73,76
+Japan,K. Nakamura,MED,75,75,76
 Japan,M. Hasebe,DEF,51,81,69
 Japan,S. Kagawa,MED,73,32,49
 Japan,T. Kubo,MED,60,60,60
@@ -385,7 +385,7 @@ Trinidad and Tobago,J. Jones,MED,58,63,73
 Trinidad and Tobago,L. García,DEL,73,35,82
 Tunisia,F. Ben Mustapha,POR,15,72,72
 Tunisia,A. Abdennour,DEF,57,80,83
-Tunisia,E. Skhiri,MED,65,65,76
+Tunisia,E. Skhiri,MED,63,63,76
 Tunisia,W. Khazri,DEL,80,43,68
 Turks and Caicos Islands,Portero Turks and Caicos Islands,POR,10,70,70
 Turks and Caicos Islands,Defensa Turks and Caicos Islands,DEF,30,70,70
@@ -585,16 +585,16 @@ Germany,Sane,DEL,80,80,75
 Germany,Musiala,MED,85,85,75
 Germany,Wirtz,MED,80,80,75
 Germany,Havertz,DEL,91,91,75
-Curacao,Locadia,DEL,74,74,75
+Curacao,Locadia,DEL,50,74,75
 Curacao,Bacuna,MED,68,68,75
-Curacao,Comenencia,DEF,76,76,75
+Curacao,Comenencia,MED,45,45,75
 Curacao,Hansen,DEL,77,77,75
-Curacao,Chong,DEL,77,77,75
-Curacao,Fonville,DEL,62,62,75
-Curacao,Obispo,DEF,68,68,75
+Curacao,Chong,DEL,61,77,75
+Curacao,Fonville,MED,48,48,75
+Curacao,Obispo,DEF,68,67,75
 Curacao,Bazoer,MED,71,71,75
-Curacao,Floranus,DEF,70,70,75
-Curacao,Room,POR,45,45,75
+Curacao,Floranus,DEF,70,62,75
+Curacao,Room,POR,45,80,75
 Netherlands,Dumfries,DEF,60,78,75
 Netherlands,Verbruggen,POR,45,89,75
 Netherlands,van Hecke,DEF,60,78,75
@@ -606,13 +606,13 @@ Netherlands,van de Ven,DEF,56,74,75
 Netherlands,Reijnders,MED,75,75,75
 Netherlands,Gakpo,DEL,89,63,75
 Japan,Maeda,DEL,59,59,75
-Japan,Ueda,DEL,60,60,75
-Japan,Kamada,MED,73,73,75
+Japan,Ueda,DEL,87,60,75
+Japan,Kamada,MED,78,78,75
 Japan,Ito,DEF,55,55,75
 Japan,Taniguchi,DEF,60,60,75
-Japan,Suzuki,POR,58,58,75
-Japan,Sano,MED,60,60,75
-Japan,Doan,MED,59,59,75
+Japan,Suzuki,POR,58,74,75
+Japan,Sano,MED,76,76,75
+Japan,Doan,MED,73,73,75
 Japan,Watanabe,DEF,61,61,75
 Ivory Coast,Doue,MED,62,62,75
 Ivory Coast,Singo,MED,60,60,75
@@ -624,16 +624,16 @@ Ivory Coast,Agbadou,MED,65,65,75
 Ivory Coast,Konan,DEF,55,55,75
 Ivory Coast,Diomande,MED,66,66,75
 Ivory Coast,Toure,MED,59,59,75
-Ecuador,Yeboah,MED,59,59,75
-Ecuador,Plata,MED,65,65,75
-Ecuador,Vite,MED,61,61,75
-Ecuador,Caicedo,MED,61,61,75
-Ecuador,Franco,MED,61,61,75
+Ecuador,Yeboah,MED,67,67,75
+Ecuador,Plata,DEL,66,65,75
+Ecuador,Vite,MED,65,65,75
+Ecuador,Caicedo,MED,69,69,75
+Ecuador,Franco,DEF,61,62,75
 Ecuador,Minda,MED,59,59,75
 Ecuador,Hincapie,MED,45,45,75
-Ecuador,Pacho,MED,55,55,75
+Ecuador,Pacho,DEF,55,69,75
 Ecuador,Ordonez,MED,63,63,75
-Ecuador,Galindez,MED,59,59,75
+Ecuador,Galindez,POR,59,70,75
 Sweden,Lagerbielke,DEF,75,70,75
 Sweden,Bernhardsson,MED,74,74,75
 Sweden,Isak,DEL,76,85,75
@@ -645,15 +645,15 @@ Sweden,Lindelof,DEF,75,75,75
 Sweden,Gudmundsson,MED,65,65,75
 Sweden,Gyokeres,DEL,83,83,75
 Sweden,Ayari,MED,69,69,75
-Tunisia,Abdi,DEF,66,66,75
+Tunisia,Abdi,DEF,66,64,75
 Tunisia,Ben Hamida,DEF,74,74,75
-Tunisia,Saad,DEL,71,71,75
-Tunisia,Mejbri,MED,71,71,75
-Tunisia,Slimane,MED,65,65,75
+Tunisia,Saad,DEL,65,71,75
+Tunisia,Mejbri,MED,59,59,75
+Tunisia,Slimane,MED,72,72,75
 Tunisia,Khedira,MED,66,66,75
-Tunisia,Rekik,DEF,69,69,75
-Tunisia,Talbi,DEF,70,70,75
-Tunisia,Valery,DEF,62,62,75
+Tunisia,Rekik,DEF,69,64,75
+Tunisia,Talbi,DEF,70,67,75
+Tunisia,Valery,DEF,62,59,75
 Tunisia,Chamakh,POR,45,45,75
 Spain,Llorente,DEF,61,61,75
 Spain,Cubarsi,DEF,58,58,75
@@ -961,3 +961,18 @@ Ivory Coast,Kessié,MED,72,72,75
 Ivory Coast,Sangaré,MED,68,68,75
 Ivory Coast,Pépé,DEL,70,50,75
 Ivory Coast,Zaha,DEL,68,50,75
+Ecuador,Hincapié,DEF,50,68,75
+Ecuador,Estupiñán,DEF,50,56,75
+Ecuador,Alcivar,MED,55,55,75
+Curacao,Gaari,DEF,50,57,75
+Curacao,Brenet,DEF,50,58,75
+Curacao,J. Bacuna,MED,54,54,75
+Curacao,L. Bacuna,MED,56,56,75
+Tunisia,Dahmen,POR,50,45,75
+Tunisia,Bronn,DEF,50,61,75
+Tunisia,Tounekti,DEL,65,50,75
+Japan,H. Ito,DEF,50,74,75
+Japan,Itakura,DEF,50,78,75
+Japan,Tomiyasu,DEF,50,79,75
+Japan,Tanaka,MED,75,75,75
+Japan,J. Ito,DEL,77,50,75
