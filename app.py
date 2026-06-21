@@ -260,7 +260,7 @@ with col_principal:
             st.error("Error leyendo las columnas del CSV. Verifica los nombres 'local', 'visita', 'goles_local', 'goles_visita'.")
         st.markdown("</div>", unsafe_allow_html=True)
 
-  # --- PESTAÑA 3: PRÓXIMA JORNADA ---
+# --- PESTAÑA 3: PRÓXIMA JORNADA ---
     with tab3:
         st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
         st.subheader("📅 Predicciones automáticas para Mañana")
@@ -273,10 +273,9 @@ with col_principal:
             ('Ecuador', 'Curaçao')
         ]
         
-# --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE (10 Partidos + Fecha Exacta) ---
+        # --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE (10 Partidos + Fecha Blindada) ---
         def obtener_historial_reciente(equipo, limite=10):
             try:
-                # 1. Cargamos y combinamos
                 df_historico = pd.read_csv('historial_selecciones_combinado.csv')
                 try:
                     df_manual = pd.read_csv('partidos_manuales.csv')
@@ -284,15 +283,15 @@ with col_principal:
                 except FileNotFoundError:
                     df_combinado = df_historico
                     
-                # 2. Filtramos al equipo
                 partidos_equipo = df_combinado[(df_combinado['local'] == equipo) | (df_combinado['visita'] == equipo)].copy()
                 
-                # 3. ORDEN CRONOLÓGICO PERFECTO (Usando tu fecha real)
-                if 'date' in partidos_equipo.columns:
-                    partidos_equipo['date'] = pd.to_datetime(partidos_equipo['date'], errors='coerce')
-                    partidos_equipo = partidos_equipo.sort_values(by='date', ascending=True)
+                # Buscamos dinámicamente si la columna se llama 'date' o 'fecha'
+                col_fecha = 'date' if 'date' in partidos_equipo.columns else 'fecha' if 'fecha' in partidos_equipo.columns else None
                 
-                # 4. Tomamos los últimos 10 y los invertimos (el más nuevo hasta arriba)
+                if col_fecha:
+                    partidos_equipo[col_fecha] = pd.to_datetime(partidos_equipo[col_fecha], errors='coerce')
+                    partidos_equipo = partidos_equipo.sort_values(by=col_fecha, ascending=True)
+                
                 ultimos = partidos_equipo.tail(limite).iloc[::-1]
                 
                 resultados = []
@@ -303,41 +302,62 @@ with col_principal:
                     gf = int(p['goles_local'] if es_local else p['goles_visita'])
                     gc = int(p['goles_visita'] if es_local else p['goles_local'])
                     
-                    if gf > gc: res = "✅ Victoria"
-                    elif gf < gc: res = "❌ Derrota "
-                    else: res = "➖ Empate "
+                    if gf > gc: res = "✅ V"
+                    elif gf < gc: res = "❌ D"
+                    else: res = "➖ E"
                     
-                    # Extraemos la fecha para mostrarla en la interfaz
-                    try:
-                        fecha_str = p['date'].strftime('%Y-%m-%d')
-                    except:
+                    # Extracción de fecha a prueba de fallos
+                    if col_fecha and not pd.isna(p[col_fecha]):
+                        fecha_str = str(p[col_fecha]).split(' ')[0] # Corta directo a "YYYY-MM-DD"
+                    else:
                         fecha_str = "Fecha N/D"
                         
-                    # Agregamos la fecha al texto que verá el usuario
                     resultados.append(f"📅 {fecha_str} | {res} vs **{rival}** ({gf} - {gc})")
                     
                 if not resultados:
                     return ["Aún no hay historial registrado."]
                 return resultados
             except Exception as e:
-                return [f"Error al cargar datos: {e}"]
+                return [f"Error al cargar historial: {e}"]
 
-        # --- FUNCIÓN AUXILIAR: TOP JUGADORES ---
+        # --- FUNCIÓN AUXILIAR: TOP JUGADORES (Búsqueda Blindada) ---
         def obtener_top_jugadores(equipo, top=3):
             try:
                 df_jugadores = pd.read_csv('rendimiento_jugadores.csv')
-                plantilla = df_jugadores[df_jugadores['equipo'] == equipo].copy()
-                if plantilla.empty:
-                    return ["Sin datos de plantilla"]
                 
-                plantilla = plantilla.sort_values(by='rating', ascending=False).head(top)
+                # Limpiamos todos los nombres de columnas (quitar espacios invisibles y mayúsculas)
+                df_jugadores.columns = df_jugadores.columns.str.strip().str.lower()
+                
+                # Encontramos las columnas sin importar cómo se llamen (usamos índices si fallan los nombres)
+                col_eq = [c for c in df_jugadores.columns if 'equip' in c or 'team' in c]
+                col_eq = col_eq[0] if col_eq else df_jugadores.columns[0]
+                
+                col_nom = [c for c in df_jugadores.columns if 'nom' in c or 'jug' in c or 'play' in c]
+                col_nom = col_nom[0] if col_nom else df_jugadores.columns[1]
+                
+                col_rat = [c for c in df_jugadores.columns if 'rat' in c or 'cal' in c or 'pun' in c]
+                col_rat = col_rat[0] if col_rat else df_jugadores.columns[2]
+                
+                col_pos = [c for c in df_jugadores.columns if 'pos' in c]
+                col_pos = col_pos[0] if col_pos else df_jugadores.columns[3]
+                
+                # Filtramos el equipo (ignoramos mayúsculas/minúsculas para que sea perfecto)
+                plantilla = df_jugadores[df_jugadores[col_eq].astype(str).str.contains(equipo, case=False, na=False)].copy()
+                
+                if plantilla.empty:
+                    return [f"Sin datos registrados para {equipo}"]
+                
+                # Convertimos calificaciones a números forzosamente y ordenamos
+                plantilla[col_rat] = pd.to_numeric(plantilla[col_rat], errors='coerce').fillna(0)
+                plantilla = plantilla.sort_values(by=col_rat, ascending=False).head(top)
                 
                 top_str = []
                 for _, j in plantilla.iterrows():
-                    top_str.append(f"⭐ {j['nombre']} ({j['posicion']}): **{j['rating']}**")
+                    top_str.append(f"⭐ {j[col_nom]} ({j[col_pos]}): **{j[col_rat]}**")
                 return top_str
-            except:
-                return ["Sin datos de plantilla"]
+            except Exception as e:
+                # Si llega a fallar, te mostrará el error exacto en pantalla para debuggear
+                return [f"Error leyendo jugadores: {str(e)[:40]}"]
 
         # --- RENDERIZADO DE PARTIDOS ---
         for eq_l, eq_v in partidos_manana:
@@ -353,7 +373,6 @@ with col_principal:
                     p_e = float(probs_flat[1])
                     p_l = float(probs_flat[2])
                     
-                    # 1. PREDICCIÓN PRINCIPAL
                     st.markdown(f"""
                     <div style='text-align: center; margin-bottom: 15px; font-family: monospace; font-size: 1.1rem; color: #4ade80;'>
                         <b>xG Esperado de Poisson:</b> {float(xg_l):.2f} - {float(xg_v):.2f}
@@ -367,7 +386,6 @@ with col_principal:
                     
                     st.divider()
                     
-                    # 2. CONTEXTO ESTADÍSTICO
                     st.markdown("##### 🔍 Justificación Estadística en Vivo")
                     
                     col_info_l, col_info_v = st.columns(2)
@@ -379,8 +397,8 @@ with col_principal:
                         for j in obtener_top_jugadores(eq_l):
                             st.write(f"<small>{j}</small>", unsafe_allow_html=True)
                         
-                        st.write("") # Espacio en blanco
-                        st.caption("📈 Últimos 5 Partidos:")
+                        st.write("") 
+                        st.caption("📈 Últimos 10 Partidos:") # <- ¡Ya dice 10!
                         for h in obtener_historial_reciente(eq_l):
                             st.write(f"<small>{h}</small>", unsafe_allow_html=True)
 
@@ -391,8 +409,8 @@ with col_principal:
                         for j in obtener_top_jugadores(eq_v):
                             st.write(f"<small>{j}</small>", unsafe_allow_html=True)
                         
-                        st.write("") # Espacio en blanco
-                        st.caption("📈 Últimos 5 Partidos:")
+                        st.write("") 
+                        st.caption("📈 Últimos 10 Partidos:") # <- ¡Ya dice 10!
                         for h in obtener_historial_reciente(eq_v):
                             st.write(f"<small>{h}</small>", unsafe_allow_html=True)
 
