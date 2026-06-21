@@ -118,35 +118,32 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ==========================================
-# 1.5 MOTOR DE ICONOS FRUTIGER AERO (ICONS8 CDN)
+# 1.5 MOTOR DE ICONOS 3D SKEUOMORPHIC (FRUTIGER AERO PURO)
 # ==========================================
 ICONS = {
-    "balon": "https://img.icons8.com/color/96/soccer-ball.png",
-    "check": "https://img.icons8.com/color/96/checkmark.png",
-    "cross": "https://img.icons8.com/color/96/cancel.png",
-    "empate": "https://img.icons8.com/color/96/minus.png",
-    "star": "https://img.icons8.com/color/96/star.png",
-    "calendar": "https://img.icons8.com/color/96/calendar.png",
-    "chart": "https://img.icons8.com/color/96/line-chart.png",
-    "search": "https://img.icons8.com/color/96/search.png",
-    "trophy": "https://img.icons8.com/color/96/trophy.png",
-    "simulador": "https://img.icons8.com/color/96/crystal-ball.png",
-    "historial": "https://img.icons8.com/color/96/time-machine.png",
-    "handshake": "https://img.icons8.com/color/96/handshake.png",
-    "robot": "https://img.icons8.com/color/96/bot.png"
+    "balon": "https://img.icons8.com/3d-fluency/96/soccer-ball.png",
+    "check": "https://img.icons8.com/3d-fluency/96/ok.png",
+    "cross": "https://img.icons8.com/3d-fluency/96/cancel.png",
+    "empate": "https://img.icons8.com/3d-fluency/96/minus.png",
+    "star": "https://img.icons8.com/3d-fluency/96/star.png",
+    "calendar": "https://img.icons8.com/3d-fluency/96/calendar.png",
+    "chart": "https://img.icons8.com/3d-fluency/96/bar-chart.png",
+    "search": "https://img.icons8.com/3d-fluency/96/search.png",
+    "trophy": "https://img.icons8.com/3d-fluency/96/trophy.png",
+    "simulador": "https://img.icons8.com/3d-fluency/96/idea.png",  # Foco de luz 3D (Procesamiento/IA)
+    "historial": "https://img.icons8.com/3d-fluency/96/time.png",
+    "handshake": "https://img.icons8.com/3d-fluency/96/handshake.png",
+    "robot": "https://img.icons8.com/3d-fluency/96/bot.png"
 }
 
 def icon(name, size=24):
     url = ICONS.get(name, ICONS["balon"])
-    return f"<img src='{url}' width='{size}' height='{size}' style='vertical-align: text-bottom; margin-right: 6px; filter: drop-shadow(2px 4px 4px rgba(0,0,0,0.6));'>"
+    # Le subimos la intensidad a la sombra paralela para que resalte más el efecto 3D
+    return f"<img src='{url}' width='{size}' height='{size}' style='vertical-align: text-bottom; margin-right: 8px; filter: drop-shadow(2px 5px 6px rgba(0,0,0,0.8));'>"
 
-# El título ahora está blindado en un contenedor para que no se rompa la imagen
-st.markdown(f"""
-<div style='display: flex; align-items: center; margin-bottom: 25px;'>
-    {icon('balon', 55)}
-    <h1 class='frutiger-title' style='margin-bottom: 0; margin-left: 10px;'>Plataforma Predictiva Híbrida - Mundial 2026</h1>
-</div>
-""", unsafe_allow_html=True)
+# Título principal (Devuelto al h1 puro para que Streamlit no rompa el logo)
+st.markdown(f"<h1 class='frutiger-title'>{icon('balon', 48)} Plataforma Predictiva Híbrida - Mundial 2026</h1>", unsafe_allow_html=True)
+
 # ==========================================
 # 2. DICCIONARIO MAESTRO DE BANDERAS (ULTRA EXPANDIDO)
 # ==========================================
