@@ -4,74 +4,99 @@ import numpy as np
 import motor_hibrido as mh
 
 # ==========================================
-# 1. CONFIGURACIÓN DE LA PÁGINA Y ESTILO FRUTIGER AERO
+# 1. CONFIGURACIÓN DE LA PÁGINA Y ESTILO WINDOWS VISTA AERO
 # ==========================================
 st.set_page_config(page_title="AI Football Predictor 2026", layout="wide", page_icon="⚽")
 
 st.markdown("""
 <style>
-    .stApp { background: linear-gradient(135deg, #0f172a 0%, #022c22 50%, #0369a1 100%); }
+    /* 1. Fondo simulando la Aurora de Windows Vista */
+    .stApp { 
+        background: radial-gradient(circle at 15% 50%, rgba(31, 143, 166, 0.4), transparent 40%),
+                    radial-gradient(circle at 85% 30%, rgba(74, 222, 128, 0.25), transparent 50%),
+                    linear-gradient(135deg, #02111d 0%, #032b38 50%, #000000 100%);
+        background-attachment: fixed;
+    }
+    
+    /* 2. Forzar tipografía nativa de Windows (Segoe UI) en toda la app */
+    html, body, [class*="css"] {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    }
+
+    /* 3. Título con relieve de cristal translúcido */
     .frutiger-title {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: 800;
-        background: linear-gradient(to right, #38bdf8, #4ade80, #0ea5e9);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: 0px 4px 12px rgba(56, 189, 248, 0.3);
+        font-weight: 400;
+        color: #ffffff;
+        text-shadow: 0px 0px 10px rgba(255,255,255,0.4), 0px 4px 5px rgba(0,0,0,0.8);
         margin-bottom: 20px;
+        letter-spacing: 1px;
     }
+
+    /* 4. Marcos Aero Glass (Ventanas de Vista) */
     .frutiger-card {
-        background: rgba(255, 255, 255, 0.07);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: rgba(20, 30, 40, 0.45); /* Cristal oscuro tintado */
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        /* El truco de Vista: Borde superior muy blanco simulando el reflejo del vidrio */
         border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 8px; /* Menos redondeado que el diseño móvil actual */
         padding: 20px;
-        box-shadow: 0 8px 32px 0 rgba(0, 168, 255, 0.15), inset 0 4px 4px rgba(255,255,255,0.1);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.6), inset 0 1px 2px rgba(255,255,255,0.2);
         margin-bottom: 15px;
+        color: #f8fafc;
     }
+    
+    /* 5. Cajas interiores simulando paneles hundidos */
     .match-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(74, 222, 128, 0.1) 100%);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.35); /* Fondo hundido */
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Reflejo en la base */
+        border-radius: 6px;
         padding: 12px 25px;
         margin-bottom: 10px;
-        box-shadow: inset 0 2px 4px rgba(255,255,255,0.05);
+        box-shadow: inset 0 3px 8px rgba(0,0,0,0.5);
     }
+    
     .team-box {
-        font-size: 1.15rem;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #f8fafc;
+        font-size: 1.15rem; font-weight: 600; display: flex; align-items: center; gap: 10px; 
+        color: #ffffff; text-shadow: 1px 1px 3px black; 
     }
+    
+    /* 6. Cápsulas de marcador (Estilo barra de progreso Aqua/Vista) */
     .score-box {
-        background: rgba(14, 165, 233, 0.3);
-        border: 1px solid #38bdf8;
+        background: linear-gradient(to bottom, #59c0ea 0%, #2098d3 49%, #0570b0 50%, #0087ce 100%);
+        border: 1px solid #002244;
         padding: 4px 16px;
-        border-radius: 20px;
+        border-radius: 12px;
         font-size: 1.2rem;
         font-weight: 700;
         color: #fff;
-        text-shadow: 0 0 8px #38bdf8;
+        box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.6), 0 2px 5px rgba(0,0,0,0.5);
+        text-shadow: 0 -1px 1px rgba(0,0,0,0.6);
     }
+    
+    /* 7. El icónico Botón Verde Glossy tridimensional */
     .stButton>button {
-        background: linear-gradient(180deg, #4ade80 0%, #22c55e 50%, #15803d 100%) !important;
+        background: linear-gradient(to bottom, #8fde62 0%, #57b32c 49%, #368a12 50%, #46a31d 100%) !important;
         color: white !important;
-        border: 1px solid #86efac !important;
-        border-radius: 25px !important;
+        border: 1px solid #1a4d04 !important;
+        border-radius: 20px !important;
         padding: 10px 24px !important;
         font-weight: bold !important;
-        box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4), inset 0 2px 2px rgba(255,255,255,0.4) !important;
-        transition: all 0.3s ease !important;
+        box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.7), 0 4px 8px rgba(0,0,0,0.5) !important;
+        transition: all 0.2s ease !important;
+        text-shadow: 0 -1px 1px rgba(0,0,0,0.6) !important;
     }
+    
     .stButton>button:hover {
-        transform: translateY(-2px) scale(1.01);
-        box-shadow: 0 6px 20px rgba(34, 197, 94, 0.6), inset 0 3px 3px rgba(255,255,255,0.5) !important;
+        background: linear-gradient(to bottom, #a4e67d 0%, #6bc241 49%, #479e22 50%, #57b82c 100%) !important;
+        box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.9), 0 6px 12px rgba(0,0,0,0.6) !important;
+        transform: scale(1.02);
     }
 </style>
 """, unsafe_allow_html=True)
