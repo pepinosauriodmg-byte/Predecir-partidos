@@ -104,12 +104,7 @@ st.markdown("""
         font-weight: bold !important;
         box-shadow: inset 0 1px 2px #ffffff, 0 2px 4px rgba(0,0,0,0.3) !important;
     }
-    /* Estilo Hover */
-    button[data-baseweb="tab"]:hover {
-        background: linear-gradient(to bottom, #f2fafe 0%, #ccedfb 49%, #aedef7 50%, #cdeaf8 100%) !important;
-        border: 1px solid #3c7fb1 !important;
-    }
-    /* Estilo del botón ACTIVO (Azul Cristal de Windows Vista) */
+/* Estilo del botón ACTIVO (Azul Cristal de Windows Vista) */
     button[data-baseweb="tab"][aria-selected="true"] {
         background: linear-gradient(to bottom, #dcedf8 0%, #8ebce3 49%, #5c9cdb 50%, #85bce4 100%) !important;
         border: 1px solid #1a3b5c !important;
@@ -120,6 +115,27 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# ==========================================
+# 1.5 MOTOR DE ICONOS FRUTIGER AERO (OXYGEN KDE 4)
+# ==========================================
+ICONS = {
+    "balon": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg",
+    "check": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Oxygen480-actions-dialog-ok.svg",
+    "cross": "https://upload.wikimedia.org/wikipedia/commons/9/97/Oxygen480-actions-dialog-close.svg",
+    "empate": "https://upload.wikimedia.org/wikipedia/commons/0/03/Oxygen480-actions-list-remove.svg",
+    "star": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Oxygen480-status-rating.svg",
+    "calendar": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Oxygen480-mimetypes-x-office-calendar.svg",
+    "chart": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Oxygen480-apps-utilities-system-monitor.svg",
+    "search": "https://upload.wikimedia.org/wikipedia/commons/6/61/Oxygen480-actions-system-search.svg",
+    "trophy": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Oxygen480-categories-applications-games.svg"
+}
+
+def icon(name, size=24):
+    """Genera una etiqueta de imagen HTML con estilo glossy y sombra."""
+    url = ICONS.get(name, ICONS["balon"])
+    return f"<img src='{url}' width='{size}' height='{size}' style='vertical-align: text-bottom; margin-right: 6px; filter: drop-shadow(2px 4px 4px rgba(0,0,0,0.6));'>"
+
+# AHORA SÍ: Imprimimos el título porque la función icon() ya existe
 st.markdown(f"<h1 class='frutiger-title'>{icon('balon', 45)} Plataforma Predictiva Híbrida - Mundial 2026</h1>", unsafe_allow_html=True)
 
 # ==========================================
@@ -157,26 +173,6 @@ DICT_BANDERAS = {
 
 def obtener_bandera(equipo):
     return DICT_BANDERAS.get(equipo, '⚽')
-
-# ==========================================
-# 2.5 MOTOR DE ICONOS FRUTIGER AERO (OXYGEN KDE 4)
-# ==========================================
-ICONS = {
-    "balon": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg",
-    "check": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Oxygen480-actions-dialog-ok.svg",
-    "cross": "https://upload.wikimedia.org/wikipedia/commons/9/97/Oxygen480-actions-dialog-close.svg",
-    "empate": "https://upload.wikimedia.org/wikipedia/commons/0/03/Oxygen480-actions-list-remove.svg",
-    "star": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Oxygen480-status-rating.svg",
-    "calendar": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Oxygen480-mimetypes-x-office-calendar.svg",
-    "chart": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Oxygen480-apps-utilities-system-monitor.svg",
-    "search": "https://upload.wikimedia.org/wikipedia/commons/6/61/Oxygen480-actions-system-search.svg",
-    "trophy": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Oxygen480-categories-applications-games.svg"
-}
-
-def icon(name, size=24):
-    """Genera una etiqueta de imagen HTML con estilo glossy y sombra."""
-    url = ICONS.get(name, ICONS["balon"])
-    return f"<img src='{url}' width='{size}' height='{size}' style='vertical-align: text-bottom; margin-right: 6px; filter: drop-shadow(2px 4px 4px rgba(0,0,0,0.6));'>"
 
 # ==========================================
 # 3. MOTOR DE POWER RANKING
