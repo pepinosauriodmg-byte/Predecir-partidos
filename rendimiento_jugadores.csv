@@ -43,9 +43,9 @@ Barbados,Reserva POR,POR,60,60,60
 Barbados,E. Boyce,DEF,56,71,73
 Barbados,J. Forte,MED,63,28,66
 Barbados,J. Forte,DEL,61,28,70
-Belgium,T. Courtois,POR,15,49,90
+Belgium,T. Courtois,POR,15,59,90
 Belgium,J. Vertonghen,DEF,63,88,79
-Belgium,K. De Bruyne,MED,48,48,78
+Belgium,K. De Bruyne,MED,46,46,78
 Belgium,E. Hazard,DEL,83,35,66
 Belize,Reserva POR,POR,60,60,60
 Belize,Reserva DEF,DEF,60,60,60
@@ -214,7 +214,7 @@ Hungary,N. Nikolić,DEL,76,24,73
 Iran,A. Abedzadeh,POR,15,73,73
 Iran,M. Mohammadi,DEF,57,54,71
 Iran,A. Jahanbakhsh,MED,76,42,71
-Iran,M. Taremi,DEL,62,38,74
+Iran,M. Taremi,DEL,53,38,74
 Italy,G. Donnarumma,POR,15,89,89
 Italy,G. Chiellini,DEF,46,90,82
 Italy,M. Verratti,MED,61,79,66
@@ -675,13 +675,13 @@ Cabo Verde,Lopes,DEF,58,58,75
 Cabo Verde,Diney,DEF,63,63,75
 Cabo Verde,Moreira,DEF,45,45,75
 Cabo Verde,Vozinha,POR,85,85,75
-Belgium,Meunier,MED,52,52,75
-Belgium,Ngoy,MED,59,59,75
-Belgium,Mechele,MED,61,61,75
+Belgium,Meunier,DEF,52,45,75
+Belgium,Ngoy,DEF,59,49,75
+Belgium,Mechele,DEF,61,53,75
 Belgium,Onana,MED,51,51,75
 Belgium,Castagne,MED,53,53,75
-Belgium,Tielemans,MED,56,56,75
-Belgium,Trossard,MED,51,51,75
+Belgium,Tielemans,MED,53,53,75
+Belgium,Trossard,DEL,56,51,75
 Belgium,Doku,MED,45,45,75
 Belgium,De Ketelaere,MED,54,54,75
 Egypt,Marmoush,MED,48,48,75
@@ -714,13 +714,13 @@ Uruguay,Ugarte,MED,62,62,75
 Uruguay,Olivera,MED,62,62,75
 Uruguay,Caceres,MED,58,58,75
 Uruguay,Varela,MED,69,69,75
-Iran,Beiranvand,MED,48,48,75
-Iran,Rezaeian,MED,83,83,75
-Iran,Khalilzadeh,MED,55,55,75
-Iran,Nemati,MED,57,57,75
-Iran,Mohebi,MED,62,62,75
-Iran,Ghoddos,MED,60,60,75
-Iran,Ezatolahi,MED,62,62,75
+Iran,Beiranvand,POR,48,79,75
+Iran,Rezaeian,DEF,83,61,75
+Iran,Khalilzadeh,DEF,55,69,75
+Iran,Nemati,DEL,59,57,75
+Iran,Mohebi,DEL,53,62,75
+Iran,Ghoddos,MED,48,48,75
+Iran,Ezatolahi,MED,57,57,75
 Iran,Yousefi,MED,61,61,75
 Iran,Moghanlou,MED,61,61,75
 New Zealand,McCowatt,MED,57,57,75
@@ -985,3 +985,10 @@ Spain,Baena,DEL,67,50,75
 Saudi Arabia,Alawjami,DEF,50,65,75
 Saudi Arabia,N. Al Dawsari,MED,59,59,75
 Saudi Arabia,S. Al-Dawsari,DEL,63,50,75
+Belgium,De Cuyper,DEF,50,53,75
+Belgium,Raskin,MED,52,52,75
+Belgium,Saelemaekers,MED,46,46,75
+Belgium,Lukaku,DEL,46,50,75
+Iran,Hardani,DEF,50,50,75
+Iran,Kanaanizadegan,DEF,50,61,75
+Iran,Hajsafi,MED,52,52,75
