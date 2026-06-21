@@ -353,7 +353,7 @@ South Korea,H. Son,DEL,53,53,69
 South Korea,H. Son,DEL,53,42,69
 Spain,De Gea,POR,15,91,91
 Spain,Sergio Ramos,DEF,63,91,84
-Spain,Rodri,MED,64,64,84
+Spain,Rodri,MED,74,74,84
 Spain,Gerard Moreno,DEL,86,46,73
 St. Kitts and Nevis,Portero St. Kitts and Nevis,POR,10,70,70
 St. Kitts and Nevis,Defensa St. Kitts and Nevis,DEF,30,70,70
@@ -659,11 +659,11 @@ Spain,Llorente,DEF,61,61,75
 Spain,Cubarsi,DEF,58,58,75
 Spain,Pedri,MED,73,73,75
 Spain,Simon,POR,56,56,75
-Spain,Laporte,DEF,59,59,75
+Spain,Laporte,DEF,59,80,75
 Spain,Ruiz,MED,57,57,75
-Spain,Cucurella,DEF,56,56,75
+Spain,Cucurella,DEF,56,70,75
 Spain,Torres,DEL,49,49,75
-Spain,Oyarzabal,DEL,55,55,75
+Spain,Oyarzabal,DEL,88,55,75
 Spain,Gavi,MED,51,51,75
 Cabo Verde,Livramento,DEF,48,48,75
 Cabo Verde,Cabral,DEL,51,51,75
@@ -694,17 +694,17 @@ Egypt,Ibrahim,MED,60,60,75
 Egypt,Shobeir,MED,55,55,75
 Egypt,Lasheen,MED,61,61,75
 Egypt,Hany,MED,56,56,75
-Saudi Arabia,Al-Owais,MED,75,75,75
-Saudi Arabia,Abdulhamid,MED,47,47,75
-Saudi Arabia,Tambakti,MED,47,47,75
-Saudi Arabia,Al-Amri,MED,63,63,75
-Saudi Arabia,Al-Harbi,MED,49,49,75
+Saudi Arabia,Al-Owais,POR,75,45,75
+Saudi Arabia,Abdulhamid,DEF,47,52,75
+Saudi Arabia,Tambakti,DEF,47,53,75
+Saudi Arabia,Al-Amri,DEF,63,53,75
+Saudi Arabia,Al-Harbi,DEF,49,50,75
 Saudi Arabia,Abu Al-Shamat,MED,46,46,75
 Saudi Arabia,Kanno,MED,51,51,75
-Saudi Arabia,Al-Khaibari,MED,50,50,75
+Saudi Arabia,Al-Khaibari,MED,57,57,75
 Saudi Arabia,Al-Dawsari,MED,47,47,75
-Saudi Arabia,Al-Juwayr,MED,52,52,75
-Saudi Arabia,Al-Buraikan,MED,52,52,75
+Saudi Arabia,Al-Juwayr,MED,62,62,75
+Saudi Arabia,Al-Buraikan,DEL,59,52,75
 Uruguay,Araujo,MED,72,72,75
 Uruguay,Vina,MED,45,45,75
 Uruguay,Nunez,MED,56,56,75
@@ -976,3 +976,12 @@ Japan,Itakura,DEF,50,78,75
 Japan,Tomiyasu,DEF,50,79,75
 Japan,Tanaka,MED,75,75,75
 Japan,J. Ito,DEL,77,50,75
+Spain,Simón,POR,50,72,75
+Spain,Porro,DEF,50,75,75
+Spain,Cubarsí,DEF,50,73,75
+Spain,Olmo,MED,70,70,75
+Spain,Yamal,DEL,79,50,75
+Spain,Baena,DEL,67,50,75
+Saudi Arabia,Alawjami,DEF,50,65,75
+Saudi Arabia,N. Al Dawsari,MED,59,59,75
+Saudi Arabia,S. Al-Dawsari,DEL,63,50,75
