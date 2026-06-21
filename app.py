@@ -273,41 +273,42 @@ with col_principal:
             ('Ecuador', 'Curaçao')
         ]
         
-      # --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE (10 Partidos + Fecha Estandarizada) ---
+# --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE (Regex Anti-Errores) ---
         def obtener_historial_reciente(equipo, limite=10):
             try:
-                # 1. Cargamos el pasado
-                df_historico = pd.read_csv('historial_selecciones_combinado.csv')
+                import re  # Importamos la librería de expresiones regulares
                 
-                # 2. Cargamos el presente
+                # 1. Carga de datos
+                df_historico = pd.read_csv('historial_selecciones_combinado.csv')
                 try:
                     df_manual = pd.read_csv('partidos_manuales.csv')
                     df_combinado = pd.concat([df_historico, df_manual], ignore_index=True)
                 except FileNotFoundError:
                     df_combinado = df_historico
                 
-                # 3. LIMPIEZA TOTAL DE COLUMNAS (Adiós errores por Mayúsculas o Espacios)
                 df_combinado.columns = df_combinado.columns.str.strip().str.lower()
                 
-                # 4. Mapeo dinámico de columnas clave por si cambian de nombre
                 col_local = [c for c in df_combinado.columns if 'local' in c or 'home' in c][0]
                 col_visita = [c for c in df_combinado.columns if 'visit' in c or 'away' in c][0]
                 col_g_loc = [c for c in df_combinado.columns if 'goles_local' in c or 'score' in c or 'goles_l' in c][0]
                 col_g_vis = [c for c in df_combinado.columns if 'goles_visita' in c or 'score' in c or 'goles_v' in c][0]
                 
-                # Buscador elástico de fecha (detecta 'date', 'fecha', 'fecha_partido', etc.)
-                col_fecha = [c for c in df_combinado.columns if 'dat' in c or 'fech' in c]
-                col_fecha = col_fecha[0] if col_fecha else None
-                
-                # 5. Filtramos al equipo utilizando las columnas normalizadas
                 partidos_equipo = df_combinado[(df_combinado[col_local] == equipo) | (df_combinado[col_visita] == equipo)].copy()
                 
-                # 6. ORDEN CRONOLÓGICO SEGURO
-                if col_fecha:
-                    partidos_equipo[col_fecha] = pd.to_datetime(partidos_equipo[col_fecha], errors='coerce')
-                    partidos_equipo = partidos_equipo.sort_values(by=col_fecha, ascending=True)
+                # 2. EL ESCÁNER DE FECHAS (Adiós a los errores de Pandas)
+                def escudrinar_fecha(fila):
+                    for valor in fila.values:
+                        # Busca cualquier patrón de 4 números - 2 números - 2 números
+                        match = re.search(r'\d{4}[-/]\d{2}[-/]\d{2}', str(valor))
+                        if match:
+                            return match.group(0)
+                    return '1900-01-01' # Si de verdad no hay fecha, manda esto al fondo
                 
-                # 7. Tomamos los últimos 10 y los invertimos para que el más nuevo salga arriba
+                # Extraemos las fechas a la fuerza bruta y ordenamos
+                partidos_equipo['fecha_exacta'] = partidos_equipo.apply(escudrinar_fecha, axis=1)
+                partidos_equipo = partidos_equipo.sort_values(by='fecha_exacta', ascending=True)
+                
+                # 3. Tomamos los 10 últimos y los invertimos
                 ultimos = partidos_equipo.tail(limite).iloc[::-1]
                 
                 resultados = []
@@ -322,11 +323,9 @@ with col_principal:
                     elif gf < gc: res = "❌ Derrota "
                     else: res = "➖ Empate "
                     
-                    # Formateo de fecha ultra-limpio sin importar el formato origen
-                    if col_fecha and not pd.isna(p[col_fecha]):
-                        fecha_str = str(p[col_fecha]).split(' ')[0] # Corta a "YYYY-MM-DD"
-                    else:
-                        fecha_str = "Fecha N/D"
+                    fecha_str = p['fecha_exacta']
+                    if fecha_str == '1900-01-01': 
+                        fecha_str = "N/D"
                         
                     resultados.append(f"📅 {fecha_str} | {res} vs **{rival}** ({gf} - {gc})")
                     
