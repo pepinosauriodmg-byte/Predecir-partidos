@@ -1,397 +1,3599 @@
-torneo_id,temporada,fecha,local,visita,goles_local,goles_visita
-34,2022,2020-10-08,Paraguay,Peru,2,2
-34,2022,2020-10-08,Uruguay,Chile,2,1
-34,2022,2020-10-09,Colombia,Venezuela,3,0
-34,2022,2020-10-09,Argentina,Ecuador,1,0
-34,2022,2020-10-10,Brazil,Bolivia,5,0
-34,2022,2020-10-13,Bolivia,Argentina,1,2
-34,2022,2020-10-13,Ecuador,Uruguay,4,2
-34,2022,2020-10-14,Chile,Colombia,2,2
-34,2022,2020-10-14,Peru,Brazil,2,4
-34,2022,2020-10-14,Venezuela,Paraguay,0,1
-34,2022,2020-11-12,Bolivia,Ecuador,2,3
-34,2022,2020-11-13,Argentina,Paraguay,1,1
-34,2022,2020-11-13,Colombia,Uruguay,0,3
-34,2022,2020-11-13,Chile,Peru,2,0
-34,2022,2020-11-14,Brazil,Venezuela,1,0
-34,2022,2020-11-17,Venezuela,Chile,2,1
-34,2022,2020-11-17,Ecuador,Colombia,6,1
-34,2022,2020-11-17,Paraguay,Bolivia,2,2
-34,2022,2020-11-17,Uruguay,Brazil,0,2
-34,2022,2020-11-18,Peru,Argentina,0,2
-31,2022,2021-03-23,Antigua and Barbuda,Montserrat,2,2
-31,2022,2021-03-23,Suriname,Cayman Islands,3,0
-31,2022,2021-03-24,St. Kitts and Nevis,Puerto Rico,1,0
-31,2022,2021-03-24,Curaçao,St. Vincent / Grenadines,5,0
-31,2022,2021-03-24,Dominican Republic,Dominica,1,0
-31,2022,2021-03-25,Guatemala,Cuba,1,0
-31,2022,2021-03-25,Haiti,Belize,2,0
-31,2022,2021-03-25,Trinidad and Tobago,Guyana,3,0
-31,2022,2021-03-26,British Virgin Islands,Guatemala,0,3
-31,2022,2021-03-26,Anguilla,Dominican Republic,0,6
-31,2022,2021-03-26,Canada,Bermuda,5,1
-31,2022,2021-03-26,Panama,Barbados,1,0
-31,2022,2021-03-26,El Salvador,Grenada,2,0
-31,2022,2021-03-27,Turks and Caicos Islands,Nicaragua,0,7
-31,2022,2021-03-27,Bahamas,St. Kitts and Nevis,0,4
-31,2022,2021-03-27,Aruba,Suriname,0,6
-31,2022,2021-03-27,US Virgin Islands,Antigua and Barbuda,0,3
-31,2022,2021-03-28,Puerto Rico,Trinidad and Tobago,1,1
-31,2022,2021-03-28,Cuba,Curaçao,1,2
-31,2022,2021-03-28,Montserrat,El Salvador,1,1
-31,2022,2021-03-28,Dominica,Panama,1,2
-31,2022,2021-03-30,Belize,Turks and Caicos Islands,5,0
-31,2022,2021-03-30,Guyana,Bahamas,4,0
-31,2022,2021-03-30,St. Vincent / Grenadines,British Virgin Islands,3,0
-31,2022,2021-03-30,Grenada,US Virgin Islands,1,0
-31,2022,2021-03-30,Barbados,Anguilla,1,0
-31,2022,2021-03-30,Cayman Islands,Canada,0,11
-31,2022,2021-03-31,Bermuda,Aruba,5,0
-31,2022,2021-06-02,Puerto Rico,Bahamas,7,0
-31,2022,2021-06-02,Montserrat,US Virgin Islands,4,0
-31,2022,2021-06-02,Cayman Islands,Aruba,1,3
-31,2022,2021-06-02,Cuba,British Virgin Islands,5,0
-31,2022,2021-06-02,Dominica,Anguilla,3,0
-34,2022,2021-06-03,Uruguay,Paraguay,0,0
-34,2022,2021-06-03,Bolivia,Venezuela,3,1
-31,2022,2021-06-04,St. Kitts and Nevis,Guyana,3,0
-31,2022,2021-06-04,Suriname,Bermuda,6,0
-31,2022,2021-06-04,Dominican Republic,Barbados,1,1
-31,2022,2021-06-04,Antigua and Barbuda,Grenada,1,0
-31,2022,2021-06-04,Guatemala,St. Vincent / Grenadines,10,0
-34,2022,2021-06-04,Argentina,Chile,1,1
-34,2022,2021-06-04,Peru,Colombia,0,3
-31,2022,2021-06-05,Nicaragua,Belize,3,0
-34,2022,2021-06-05,Brazil,Ecuador,2,0
-31,2022,2021-06-05,US Virgin Islands,El Salvador,0,7
-31,2022,2021-06-05,British Virgin Islands,Curaçao,0,8
-31,2022,2021-06-05,Bahamas,Trinidad and Tobago,0,0
-31,2022,2021-06-05,Turks and Caicos Islands,Haiti,0,10
-31,2022,2021-06-06,Anguilla,Panama,0,13
-31,2022,2021-06-06,Aruba,Canada,0,7
-34,2022,2021-06-08,Colombia,Argentina,2,2
-34,2022,2021-06-08,Venezuela,Uruguay,0,0
-31,2022,2021-06-08,Grenada,Montserrat,1,2
-31,2022,2021-06-08,Trinidad and Tobago,St. Kitts and Nevis,2,0
-31,2022,2021-06-08,Haiti,Nicaragua,1,0
-34,2022,2021-06-08,Ecuador,Peru,1,2
-31,2022,2021-06-08,Guyana,Puerto Rico,0,2
-31,2022,2021-06-08,St. Vincent / Grenadines,Cuba,0,1
-34,2022,2021-06-09,Chile,Bolivia,1,1
-34,2022,2021-06-09,Paraguay,Brazil,0,2
-31,2022,2021-06-09,Canada,Suriname,4,0
-31,2022,2021-06-09,Bermuda,Cayman Islands,1,1
-31,2022,2021-06-09,Curaçao,Guatemala,0,0
-31,2022,2021-06-09,Panama,Dominican Republic,3,0
-31,2022,2021-06-09,Barbados,Dominica,1,1
-31,2022,2021-06-09,El Salvador,Antigua and Barbuda,3,0
-31,2022,2021-06-12,St. Kitts and Nevis,El Salvador,0,4
-31,2022,2021-06-12,Haiti,Canada,0,1
-31,2022,2021-06-12,Panama,Curaçao,2,1
-31,2022,2021-06-16,Curaçao,Panama,0,0
-31,2022,2021-06-16,Canada,Haiti,3,0
-31,2022,2021-06-16,El Salvador,St. Kitts and Nevis,2,0
-34,2022,2021-09-02,Bolivia,Colombia,1,1
-34,2022,2021-09-02,Ecuador,Paraguay,2,0
-34,2022,2021-09-03,Peru,Uruguay,1,1
-34,2022,2021-09-03,Venezuela,Argentina,1,3
-34,2022,2021-09-03,Chile,Brazil,0,1
-31,2022,2021-09-03,Canada,Honduras,1,1
-31,2022,2021-09-03,Panama,Costa Rica,0,0
-31,2022,2021-09-03,Mexico,Jamaica,2,1
-31,2022,2021-09-03,El Salvador,USA,0,0
-31,2022,2021-09-05,Jamaica,Panama,0,3
-31,2022,2021-09-05,Costa Rica,Mexico,0,1
-31,2022,2021-09-05,El Salvador,Honduras,0,0
-34,2022,2021-09-05,Paraguay,Colombia,1,1
-34,2022,2021-09-05,Uruguay,Bolivia,4,2
-34,2022,2021-09-05,Ecuador,Chile,0,0
-31,2022,2021-09-06,USA,Canada,1,1
-34,2022,2021-09-06,Peru,Venezuela,1,0
-31,2022,2021-09-08,Canada,El Salvador,3,0
-34,2022,2021-09-09,Paraguay,Venezuela,2,1
-34,2022,2021-09-09,Colombia,Chile,3,1
-34,2022,2021-09-09,Argentina,Bolivia,3,0
-34,2022,2021-09-09,Uruguay,Ecuador,1,0
-31,2022,2021-09-09,Honduras,USA,1,4
-31,2022,2021-09-09,Costa Rica,Jamaica,1,1
-31,2022,2021-09-09,Panama,Mexico,1,1
-34,2022,2021-09-10,Brazil,Peru,2,0
-34,2022,2021-10-07,Uruguay,Colombia,0,0
-34,2022,2021-10-07,Paraguay,Argentina,0,0
-34,2022,2021-10-07,Venezuela,Brazil,1,3
-31,2022,2021-10-07,USA,Jamaica,2,0
-34,2022,2021-10-08,Ecuador,Bolivia,3,0
-31,2022,2021-10-08,El Salvador,Panama,1,0
-31,2022,2021-10-08,Mexico,Canada,1,1
-31,2022,2021-10-08,Honduras,Costa Rica,0,0
-34,2022,2021-10-08,Peru,Chile,2,0
-34,2022,2021-10-10,Bolivia,Peru,1,0
-34,2022,2021-10-10,Venezuela,Ecuador,2,1
-34,2022,2021-10-10,Colombia,Brazil,0,0
-31,2022,2021-10-10,Mexico,Honduras,3,0
-31,2022,2021-10-10,Costa Rica,El Salvador,2,1
-31,2022,2021-10-10,Jamaica,Canada,0,0
-31,2022,2021-10-10,Panama,USA,1,0
-34,2022,2021-10-10,Argentina,Uruguay,3,0
-34,2022,2021-10-11,Chile,Paraguay,2,0
-31,2022,2021-10-13,USA,Costa Rica,2,1
-31,2022,2021-10-13,Canada,Panama,4,1
-34,2022,2021-10-14,Argentina,Peru,1,0
-31,2022,2021-10-14,Honduras,Jamaica,0,2
-31,2022,2021-10-14,El Salvador,Mexico,0,2
-34,2022,2021-10-14,Bolivia,Paraguay,4,0
-34,2022,2021-10-14,Colombia,Ecuador,0,0
-34,2022,2021-10-15,Chile,Venezuela,3,0
-34,2022,2021-10-15,Brazil,Uruguay,4,1
-34,2022,2021-11-11,Paraguay,Chile,0,1
-34,2022,2021-11-11,Ecuador,Venezuela,1,0
-34,2022,2021-11-12,Uruguay,Argentina,0,1
-34,2022,2021-11-12,Peru,Bolivia,3,0
-34,2022,2021-11-12,Brazil,Colombia,1,0
-31,2022,2021-11-13,USA,Mexico,2,0
-31,2022,2021-11-13,Canada,Costa Rica,1,0
-31,2022,2021-11-13,El Salvador,Jamaica,1,1
-31,2022,2021-11-13,Honduras,Panama,2,3
-34,2022,2021-11-16,Argentina,Brazil,0,0
-34,2022,2021-11-16,Colombia,Paraguay,0,0
-34,2022,2021-11-16,Venezuela,Peru,1,2
-34,2022,2021-11-16,Bolivia,Uruguay,3,0
-31,2022,2021-11-16,Jamaica,USA,1,1
-31,2022,2021-11-17,Panama,El Salvador,2,1
-31,2022,2021-11-17,Canada,Mexico,2,1
-34,2022,2021-11-17,Chile,Ecuador,0,2
-31,2022,2021-11-17,Costa Rica,Honduras,2,1
-34,2022,2022-01-27,Paraguay,Uruguay,0,1
-34,2022,2022-01-27,Ecuador,Brazil,1,1
-31,2022,2022-01-28,Jamaica,Mexico,1,2
-34,2022,2022-01-28,Venezuela,Bolivia,4,1
-31,2022,2022-01-28,USA,El Salvador,1,0
-34,2022,2022-01-28,Chile,Argentina,1,2
-31,2022,2022-01-28,Honduras,Canada,0,2
-34,2022,2022-01-28,Colombia,Peru,0,1
-31,2022,2022-01-28,Costa Rica,Panama,1,0
-31,2022,2022-01-29,Panama,Jamaica,3,2
-31,2022,2022-01-30,Mexico,Costa Rica,0,0
-31,2022,2022-01-30,Canada,USA,2,0
-31,2022,2022-01-31,Honduras,El Salvador,0,2
-34,2022,2022-02-01,Uruguay,Venezuela,4,1
-34,2022,2022-02-01,Argentina,Colombia,1,0
-34,2022,2022-02-01,Bolivia,Chile,2,3
-34,2022,2022-02-02,Peru,Ecuador,1,1
-34,2022,2022-02-02,Brazil,Paraguay,4,0
-31,2022,2022-02-03,USA,Honduras,3,0
-31,2022,2022-02-03,Jamaica,Costa Rica,0,1
-31,2022,2022-02-03,El Salvador,Canada,0,2
-31,2022,2022-02-03,Mexico,Panama,1,0
-33,2022,2022-03-17,Cook Islands,Solomon Islands,0,2
-33,2022,2022-03-18,Papua New Guinea,New Zealand,0,1
-33,2022,2022-03-18,New Caledonia,Fiji,1,2
-33,2022,2022-03-21,Papua New Guinea,New Caledonia,1,0
-33,2022,2022-03-21,New Zealand,Fiji,4,0
-34,2022,2022-03-24,Brazil,Chile,4,0
-34,2022,2022-03-24,Uruguay,Peru,1,0
-33,2022,2022-03-24,Fiji,Papua New Guinea,1,2
-34,2022,2022-03-24,Paraguay,Ecuador,3,1
-34,2022,2022-03-24,Colombia,Bolivia,3,0
-33,2022,2022-03-24,New Zealand,New Caledonia,7,1
-31,2022,2022-03-24,Jamaica,El Salvador,1,1
-33,2022,2022-03-24,Solomon Islands,Tahiti,3,1
-31,2022,2022-03-25,Panama,Honduras,1,1
-31,2022,2022-03-25,Mexico,USA,0,0
-31,2022,2022-03-25,Costa Rica,Canada,1,0
-34,2022,2022-03-25,Argentina,Venezuela,3,0
-33,2022,2022-03-27,Solomon Islands,Papua New Guinea,3,2
-31,2022,2022-03-27,Canada,Jamaica,4,0
-31,2022,2022-03-27,El Salvador,Costa Rica,1,2
-31,2022,2022-03-27,USA,Panama,5,1
-31,2022,2022-03-27,Honduras,Mexico,0,1
-33,2022,2022-03-27,New Zealand,Tahiti,1,0
-34,2022,2022-03-30,Venezuela,Colombia,0,1
-34,2022,2022-03-30,Ecuador,Argentina,1,1
-34,2022,2022-03-30,Chile,Uruguay,0,2
-34,2022,2022-03-30,Peru,Paraguay,2,0
-34,2022,2022-03-30,Bolivia,Brazil,0,4
-33,2022,2022-03-30,Solomon Islands,New Zealand,0,5
-31,2022,2022-03-31,Panama,Canada,1,0
-31,2022,2022-03-31,Mexico,El Salvador,2,0
-31,2022,2022-03-31,Costa Rica,USA,2,0
-31,2022,2022-03-31,Jamaica,Honduras,2,1
-1,2022,2022-11-20,Qatar,Ecuador,0,2
-1,2022,2022-11-21,USA,Wales,1,1
-1,2022,2022-11-21,Senegal,Netherlands,0,2
-1,2022,2022-11-21,England,Iran,6,2
-1,2022,2022-11-22,France,Australia,4,1
-1,2022,2022-11-22,Mexico,Poland,0,0
-1,2022,2022-11-22,Denmark,Tunisia,0,0
-1,2022,2022-11-22,Argentina,Saudi Arabia,1,2
-1,2022,2022-11-23,Belgium,Canada,1,0
-1,2022,2022-11-23,Spain,Costa Rica,7,0
-1,2022,2022-11-23,Morocco,Croatia,0,0
-1,2022,2022-11-23,Germany,Japan,1,2
-1,2022,2022-11-24,Uruguay,South Korea,0,0
-1,2022,2022-11-24,Brazil,Serbia,2,0
-1,2022,2022-11-24,Switzerland,Cameroon,1,0
-1,2022,2022-11-24,Portugal,Ghana,3,2
-1,2022,2022-11-25,Wales,Iran,0,2
-1,2022,2022-11-25,Qatar,Senegal,1,3
-1,2022,2022-11-25,Netherlands,Ecuador,1,1
-1,2022,2022-11-25,England,USA,0,0
-1,2022,2022-11-26,Tunisia,Australia,0,1
-1,2022,2022-11-26,Poland,Saudi Arabia,2,0
-1,2022,2022-11-26,France,Denmark,2,1
-1,2022,2022-11-26,Argentina,Mexico,2,0
-1,2022,2022-11-27,Japan,Costa Rica,0,1
-1,2022,2022-11-27,Belgium,Morocco,0,2
-1,2022,2022-11-27,Croatia,Canada,4,1
-1,2022,2022-11-27,Spain,Germany,1,1
-1,2022,2022-11-28,Portugal,Uruguay,2,0
-1,2022,2022-11-28,Cameroon,Serbia,3,3
-1,2022,2022-11-28,South Korea,Ghana,2,3
-1,2022,2022-11-28,Brazil,Switzerland,1,0
-1,2022,2022-11-29,Ecuador,Senegal,1,2
-1,2022,2022-11-29,Netherlands,Qatar,2,0
-1,2022,2022-11-29,Iran,USA,0,1
-1,2022,2022-11-29,Wales,England,0,3
-1,2022,2022-11-30,Australia,Denmark,1,0
-1,2022,2022-11-30,Tunisia,France,1,0
-1,2022,2022-11-30,Saudi Arabia,Mexico,1,2
-1,2022,2022-11-30,Poland,Argentina,0,2
-1,2022,2022-12-01,Costa Rica,Germany,2,4
-1,2022,2022-12-01,Croatia,Belgium,0,0
-1,2022,2022-12-01,Canada,Morocco,1,2
-1,2022,2022-12-01,Japan,Spain,2,1
-1,2022,2022-12-02,Cameroon,Brazil,1,0
-1,2022,2022-12-02,Serbia,Switzerland,2,3
-1,2022,2022-12-02,Ghana,Uruguay,0,2
-1,2022,2022-12-02,South Korea,Portugal,2,1
-1,2022,2022-12-03,Argentina,Australia,2,1
-1,2022,2022-12-03,Netherlands,USA,3,1
-1,2022,2022-12-04,England,Senegal,3,0
-1,2022,2022-12-04,France,Poland,3,1
-1,2022,2022-12-05,Brazil,South Korea,4,1
-1,2022,2022-12-06,Portugal,Switzerland,6,1
-1,2022,2022-12-10,England,France,1,2
-1,2022,2022-12-10,Morocco,Portugal,1,0
-1,2022,2022-12-13,Argentina,Croatia,3,0
-1,2022,2022-12-14,France,Morocco,2,0
-1,2022,2022-12-17,Croatia,Morocco,2,1
-6,2023,2024-01-13,Ivory Coast,Guinea-Bissau,2,0
-6,2023,2024-01-14,Ghana,Cape Verde Islands,1,2
-6,2023,2024-01-14,Egypt,Mozambique,2,2
-6,2023,2024-01-14,Nigeria,Equatorial Guinea,1,1
-6,2023,2024-01-15,Algeria,Angola,1,1
-6,2023,2024-01-15,Cameroon,Guinea,1,1
-6,2023,2024-01-15,Senegal,Gambia,3,0
-6,2023,2024-01-16,Burkina Faso,Mauritania,1,0
-6,2023,2024-01-16,Mali,South Africa,2,0
-6,2023,2024-01-16,Tunisia,Namibia,0,1
-6,2023,2024-01-17,Congo DR,Zambia,1,1
-6,2023,2024-01-17,Morocco,Tanzania,3,0
-6,2023,2024-01-18,Egypt,Ghana,2,2
-6,2023,2024-01-18,Ivory Coast,Nigeria,0,1
-6,2023,2024-01-18,Equatorial Guinea,Guinea-Bissau,4,2
-6,2023,2024-01-19,Senegal,Cameroon,3,1
-6,2023,2024-01-19,Guinea,Gambia,1,0
-6,2023,2024-01-19,Cape Verde Islands,Mozambique,3,0
-6,2023,2024-01-20,Algeria,Burkina Faso,2,2
-6,2023,2024-01-20,Mauritania,Angola,2,3
-6,2023,2024-01-20,Tunisia,Mali,1,1
-6,2023,2024-01-21,Morocco,Congo DR,1,1
-6,2023,2024-01-21,Zambia,Tanzania,1,1
-6,2023,2024-01-21,South Africa,Namibia,4,0
-6,2023,2024-01-22,Guinea-Bissau,Nigeria,0,1
-6,2023,2024-01-22,Equatorial Guinea,Ivory Coast,4,0
-6,2023,2024-01-22,Mozambique,Ghana,2,2
-6,2023,2024-01-22,Cape Verde Islands,Egypt,2,2
-6,2023,2024-01-23,Gambia,Cameroon,2,3
-6,2023,2024-01-23,Mauritania,Algeria,1,0
-6,2023,2024-01-23,Angola,Burkina Faso,2,0
-6,2023,2024-01-23,Guinea,Senegal,0,2
-6,2023,2024-01-24,Namibia,Mali,0,0
-6,2023,2024-01-24,South Africa,Tunisia,0,0
-6,2023,2024-01-24,Tanzania,Congo DR,0,0
-6,2023,2024-01-24,Zambia,Morocco,0,1
-6,2023,2024-01-27,Angola,Namibia,3,0
-6,2023,2024-01-27,Nigeria,Cameroon,2,0
-6,2023,2024-01-28,Equatorial Guinea,Guinea,0,1
-6,2023,2024-01-29,Cape Verde Islands,Mauritania,1,0
-6,2023,2024-01-30,Mali,Burkina Faso,2,1
-6,2023,2024-01-30,Morocco,South Africa,0,2
-6,2023,2024-02-02,Nigeria,Angola,1,0
-6,2023,2024-02-02,Congo DR,Guinea,3,1
-6,2023,2024-02-07,Ivory Coast,Congo DR,1,0
-6,2023,2024-02-11,Nigeria,Ivory Coast,1,2
-4,2024,2024-06-14,Germany,Scotland,5,1
-4,2024,2024-06-15,Italy,Albania,2,1
-4,2024,2024-06-15,Spain,Croatia,3,0
-4,2024,2024-06-15,Hungary,Switzerland,1,3
-4,2024,2024-06-16,Serbia,England,0,1
-4,2024,2024-06-16,Slovenia,Denmark,1,1
-4,2024,2024-06-16,Poland,Netherlands,1,2
-4,2024,2024-06-17,Austria,France,0,1
-4,2024,2024-06-17,Belgium,Slovakia,0,1
-4,2024,2024-06-17,Romania,Ukraine,3,0
-4,2024,2024-06-18,Türkiye,Georgia,3,1
-4,2024,2024-06-18,Portugal,Czechia,2,1
-4,2024,2024-06-19,Germany,Hungary,2,0
-4,2024,2024-06-19,Scotland,Switzerland,1,1
-4,2024,2024-06-19,Croatia,Albania,2,2
-4,2024,2024-06-20,Spain,Italy,1,0
-4,2024,2024-06-20,Denmark,England,1,1
-4,2024,2024-06-20,Slovenia,Serbia,1,1
-4,2024,2024-06-21,Slovakia,Ukraine,1,2
-4,2024,2024-06-21,Poland,Austria,1,3
-4,2024,2024-06-21,Netherlands,France,0,0
-9,2024,2024-06-21,Argentina,Canada,2,0
-9,2024,2024-06-22,Peru,Chile,0,0
-9,2024,2024-06-22,Ecuador,Venezuela,1,2
-4,2024,2024-06-22,Belgium,Romania,2,0
-4,2024,2024-06-22,Türkiye,Portugal,0,3
-4,2024,2024-06-22,Georgia,Czechia,1,1
-4,2024,2024-06-23,Switzerland,Germany,1,1
-9,2024,2024-06-23,USA,Bolivia,2,0
-9,2024,2024-06-23,Mexico,Jamaica,1,0
-4,2024,2024-06-23,Scotland,Hungary,0,1
-9,2024,2024-06-24,Uruguay,Panama,3,1
-9,2024,2024-06-24,Colombia,Paraguay,2,1
-4,2024,2024-06-24,Albania,Spain,0,1
-4,2024,2024-06-24,Croatia,Italy,1,1
-9,2024,2024-06-25,Brazil,Costa Rica,0,0
-4,2024,2024-06-25,France,Poland,1,1
-4,2024,2024-06-25,Netherlands,Austria,2,3
-4,2024,2024-06-25,England,Slovenia,0,0
-4,2024,2024-06-25,Denmark,Serbia,0,0
-4,2024,2024-06-26,Ukraine,Belgium,0,0
-4,2024,2024-06-26,Slovakia,Romania,1,1
-9,2024,2024-06-26,Chile,Argentina,0,1
-9,2024,2024-06-26,Peru,Canada,0,1
-4,2024,2024-06-26,Czechia,Türkiye,1,2
-4,2024,2024-06-26,Georgia,Portugal,2,0
-9,2024,2024-06-27,Ecuador,Jamaica,3,1
-9,2024,2024-06-27,Venezuela,Mexico,1,0
-9,2024,2024-06-28,Uruguay,Bolivia,5,0
-9,2024,2024-06-28,Panama,USA,2,1
-9,2024,2024-06-29,Paraguay,Brazil,1,4
-9,2024,2024-06-29,Colombia,Costa Rica,3,0
-4,2024,2024-06-29,Switzerland,Italy,2,0
-4,2024,2024-06-29,Germany,Denmark,2,0
-9,2024,2024-06-30,Canada,Chile,0,0
-9,2024,2024-06-30,Argentina,Peru,2,0
-4,2024,2024-06-30,Spain,Georgia,4,1
-9,2024,2024-07-01,Jamaica,Venezuela,0,3
-9,2024,2024-07-01,Mexico,Ecuador,0,0
-4,2024,2024-07-01,France,Belgium,1,0
-4,2024,2024-07-02,Romania,Netherlands,0,3
-4,2024,2024-07-02,Austria,Türkiye,1,2
-9,2024,2024-07-02,Bolivia,Panama,1,3
-9,2024,2024-07-02,USA,Uruguay,0,1
-9,2024,2024-07-03,Brazil,Colombia,1,1
-9,2024,2024-07-03,Costa Rica,Paraguay,2,1
-4,2024,2024-07-06,Netherlands,Türkiye,2,1
-9,2024,2024-07-06,Colombia,Panama,5,0
-4,2024,2024-07-09,Spain,France,2,1
-9,2024,2024-07-10,Argentina,Canada,2,0
-4,2024,2024-07-10,Netherlands,England,1,2
-9,2024,2024-07-11,Uruguay,Colombia,0,1
-4,2024,2024-07-14,Spain,England,2,1
+local,visita,goles_local,goles_visita,torneo_id,temporada
+Thailand,Cambodia,3,1,1,2023
+Philippines,Indonesia,1,2,1,2023
+Vietnam,Myanmar,3,0,1,2023
+Malaysia,Singapore,4,1,1,2023
+Iraq,Oman,0,0,1,2023
+Yemen,Saudi Arabia,0,2,1,2023
+Indonesia,Vietnam,0,0,1,2023
+Bahrain,United Arab Emirates,2,1,1,2023
+Kuwait,Qatar,0,2,1,2023
+Malaysia,Thailand,1,0,1,2023
+Iceland,Estonia,1,1,0,2023
+Sweden,Finland,2,0,0,2023
+Oman,Yemen,3,2,1,2023
+Iraq,Saudi Arabia,2,0,1,2023
+Vietnam,Indonesia,2,0,1,2023
+United Arab Emirates,Kuwait,0,1,1,2023
+Qatar,Bahrain,1,2,1,2023
+Thailand,Malaysia,3,0,1,2023
+Finland,Estonia,0,1,0,2023
+Sweden,Iceland,2,1,0,2023
+Iraq,Yemen,5,0,1,2023
+Saudi Arabia,Oman,1,2,1,2023
+Bahrain,Kuwait,1,1,1,2023
+Qatar,United Arab Emirates,1,1,1,2023
+Vietnam,Thailand,2,2,1,2023
+Iraq,Qatar,2,1,1,2023
+Bahrain,Oman,0,1,1,2023
+Thailand,Vietnam,1,0,1,2023
+Iraq,Oman,3,2,1,2023
+United States,Serbia,1,2,0,2023
+United States,Colombia,0,0,0,2023
+Grenada,Barbados,1,1,0,2023
+Grenada,Barbados,2,2,0,2023
+Grenada,Saint Lucia,1,2,0,2023
+Saint Barthélemy,Sint Maarten,5,1,0,2023
+Grenada,Saint Lucia,2,0,0,2023
+Saint Martin,Saint Barthélemy,3,2,0,2023
+Jamaica,Trinidad and Tobago,0,1,0,2023
+Guatemala,Panama,1,1,0,2023
+Jamaica,Trinidad and Tobago,0,0,0,2023
+Bangladesh,Malawi,1,1,0,2023
+Ethiopia,Rwanda,1,0,0,2023
+Fiji,Vanuatu,1,2,0,2023
+Maldives,Pakistan,1,0,0,2023
+Tahiti,New Caledonia,0,2,0,2023
+Honduras,El Salvador,1,0,0,2023
+India,Myanmar,1,0,1,2023
+Nepal,Laos,2,0,1,2023
+Republic of Ireland,Latvia,3,2,0,2023
+Sierra Leone,São Tomé and Príncipe,2,2,1,2023
+Benin,Rwanda,1,1,1,2023
+Argentina,Panama,2,0,0,2023
+Hong Kong,Singapore,1,1,0,2023
+Hungary,Estonia,1,0,0,2023
+Iran,Russia,1,1,0,2023
+Malaysia,Turkmenistan,1,0,0,2023
+New Zealand,China,0,0,0,2023
+Solomon Islands,Vanuatu,2,0,0,2023
+Madagascar,Central African Republic,0,3,1,2023
+Ghana,Angola,1,0,1,2023
+Algeria,Niger,2,1,1,2023
+Congo,South Sudan,1,2,1,2023
+Zambia,Lesotho,3,1,1,2023
+Gabon,Sudan,1,0,1,2023
+Italy,England,1,2,1,2023
+North Macedonia,Malta,2,1,1,2023
+Denmark,Finland,3,1,1,2023
+San Marino,Northern Ireland,0,2,1,2023
+Kazakhstan,Slovenia,1,2,1,2023
+Portugal,Liechtenstein,4,0,1,2023
+Bosnia and Herzegovina,Iceland,3,0,1,2023
+Slovakia,Luxembourg,0,0,1,2023
+Suriname,Mexico,0,2,1,2023
+Barbados,Cuba,0,1,1,2023
+Guadeloupe,Antigua and Barbuda,0,1,1,2023
+French Guiana,Dominican Republic,1,1,1,2023
+Saint Martin,Saint Kitts and Nevis,1,3,1,2023
+British Virgin Islands,Puerto Rico,1,3,1,2023
+Australia,Ecuador,3,1,0,2023
+Japan,Uruguay,1,1,0,2023
+South Korea,Colombia,2,2,0,2023
+Kuwait,Philippines,2,0,0,2023
+Saudi Arabia,Venezuela,1,2,0,2023
+Tahiti,New Caledonia,2,1,0,2023
+Uzbekistan,Bolivia,1,0,0,2023
+Nigeria,Guinea-Bissau,0,1,1,2023
+Cape Verde,Eswatini,0,0,1,2023
+Burkina Faso,Togo,1,0,1,2023
+Cameroon,Namibia,1,1,1,2023
+Guinea,Ethiopia,2,0,1,2023
+Egypt,Malawi,2,0,1,2023
+Uganda,Tanzania,0,1,1,2023
+Mali,Gambia,2,0,1,2023
+Ivory Coast,Comoros,3,1,1,2023
+DR Congo,Mauritania,3,1,1,2023
+Equatorial Guinea,Botswana,2,0,1,2023
+Tunisia,Libya,3,0,1,2023
+South Africa,Liberia,2,2,1,2023
+Senegal,Mozambique,5,1,1,2023
+Gibraltar,Greece,0,3,1,2023
+France,Netherlands,4,0,1,2023
+Czech Republic,Poland,3,1,1,2023
+Moldova,Faroe Islands,1,1,1,2023
+Austria,Azerbaijan,4,1,1,2023
+Sweden,Belgium,0,3,1,2023
+Bulgaria,Montenegro,0,1,1,2023
+Serbia,Lithuania,2,0,1,2023
+Grenada,United States,1,7,1,2023
+Bahamas,Trinidad and Tobago,0,3,1,2023
+Nicaragua,Saint Vincent and the Grenadines,4,1,1,2023
+Belize,Guatemala,1,2,1,2023
+Anguilla,Saint Lucia,1,2,1,2023
+Bahrain,Palestine,1,2,0,2023
+Bangladesh,Seychelles,1,0,0,2023
+Bhutan,Laos,1,2,1,2023
+Georgia,Mongolia,6,1,0,2023
+Germany,Peru,2,0,0,2023
+Indonesia,Burundi,3,1,0,2023
+Morocco,Brazil,2,1,0,2023
+Myanmar,Kyrgyzstan,1,1,1,2023
+Thailand,Syria,1,3,0,2023
+United Arab Emirates,Tajikistan,0,0,0,2023
+Scotland,Cyprus,3,0,1,2023
+Spain,Norway,3,0,1,2023
+Croatia,Wales,1,1,1,2023
+Armenia,Turkey,1,2,1,2023
+Belarus,Switzerland,0,5,1,2023
+Israel,Kosovo,1,1,1,2023
+Andorra,Romania,0,2,1,2023
+Martinique,Costa Rica,1,2,1,2023
+Curaçao,Canada,0,2,1,2023
+Bermuda,Guyana,0,2,1,2023
+Montserrat,Haiti,0,4,1,2023
+Sint Maarten,Bonaire,6,1,1,2023
+Turks and Caicos Islands,United States Virgin Islands,1,0,1,2023
+Fiji,Solomon Islands,0,2,0,2023
+Macau,Singapore,0,1,0,2023
+New Zealand,China,2,1,0,2023
+Russia,Iraq,2,0,0,2023
+São Tomé and Príncipe,Sierra Leone,0,2,1,2023
+Lesotho,Zambia,0,2,1,2023
+England,Ukraine,2,0,1,2023
+Malta,Italy,0,2,1,2023
+Slovenia,San Marino,2,0,1,2023
+Kazakhstan,Denmark,3,2,1,2023
+Northern Ireland,Finland,0,1,1,2023
+Liechtenstein,Iceland,0,7,1,2023
+Luxembourg,Portugal,0,6,1,2023
+Slovakia,Bosnia and Herzegovina,2,0,1,2023
+Mexico,Jamaica,2,2,1,2023
+Antigua and Barbuda,Barbados,1,2,1,2023
+Cuba,Guadeloupe,1,0,1,2023
+Puerto Rico,Cayman Islands,5,1,1,2023
+Chile,Paraguay,3,2,0,2023
+Greece,Lithuania,0,0,0,2023
+North Macedonia,Faroe Islands,1,0,0,2023
+Oman,Lebanon,2,0,0,2023
+Guinea-Bissau,Nigeria,0,1,1,2023
+Ethiopia,Guinea,2,3,1,2023
+Central African Republic,Madagascar,2,0,1,2023
+Angola,Ghana,1,1,1,2023
+Niger,Algeria,0,1,1,2023
+South Sudan,Congo,0,1,1,2023
+Sudan,Gabon,1,0,1,2023
+Republic of Ireland,France,0,1,1,2023
+Netherlands,Gibraltar,3,0,1,2023
+Poland,Albania,1,0,1,2023
+Moldova,Czech Republic,0,0,1,2023
+Austria,Estonia,2,1,1,2023
+Sweden,Azerbaijan,5,0,1,2023
+Hungary,Bulgaria,3,0,1,2023
+Montenegro,Serbia,0,2,1,2023
+United States,El Salvador,1,0,1,2023
+Saint Vincent and the Grenadines,Bahamas,1,1,1,2023
+Trinidad and Tobago,Nicaragua,1,1,1,2023
+Dominican Republic,Belize,2,0,1,2023
+Guatemala,French Guiana,4,0,1,2023
+Saint Kitts and Nevis,Aruba,2,0,1,2023
+Saint Lucia,Dominica,3,1,1,2023
+Argentina,Curaçao,7,0,0,2023
+Armenia,Cyprus,2,2,0,2023
+Australia,Ecuador,1,2,0,2023
+Bahrain,Syria,1,0,0,2023
+Bangladesh,Seychelles,0,1,0,2023
+Germany,Belgium,2,3,0,2023
+India,Kyrgyzstan,2,0,1,2023
+Indonesia,Burundi,2,2,0,2023
+Iran,Kenya,2,1,0,2023
+Japan,Colombia,1,2,0,2023
+Jordan,Philippines,4,0,0,2023
+South Korea,Uruguay,1,2,0,2023
+Kuwait,Tajikistan,2,1,0,2023
+Malaysia,Hong Kong,2,0,0,2023
+Morocco,Peru,0,0,0,2023
+Nepal,Bhutan,1,1,1,2023
+Saudi Arabia,Bolivia,1,2,0,2023
+United Arab Emirates,Thailand,2,0,0,2023
+Uzbekistan,Venezuela,1,1,0,2023
+Eswatini,Cape Verde,0,1,1,2023
+Togo,Burkina Faso,1,1,1,2023
+Namibia,Cameroon,2,1,1,2023
+Malawi,Egypt,0,4,1,2023
+Tanzania,Uganda,0,1,1,2023
+Gambia,Mali,1,0,1,2023
+Comoros,Ivory Coast,0,2,1,2023
+Mauritania,DR Congo,1,1,1,2023
+Botswana,Equatorial Guinea,2,3,1,2023
+Libya,Tunisia,0,1,1,2023
+Liberia,South Africa,1,2,1,2023
+Mozambique,Senegal,0,1,1,2023
+Scotland,Spain,2,0,1,2023
+Georgia,Norway,1,1,1,2023
+Wales,Latvia,1,0,1,2023
+Turkey,Croatia,0,2,1,2023
+Kosovo,Andorra,1,1,1,2023
+Switzerland,Israel,3,0,1,2023
+Romania,Belarus,2,1,1,2023
+Costa Rica,Panama,0,1,1,2023
+Canada,Honduras,4,1,1,2023
+Haiti,Bermuda,3,1,1,2023
+Guyana,Montserrat,0,0,1,2023
+Bonaire,Turks and Caicos Islands,1,2,1,2023
+United States Virgin Islands,Sint Maarten,1,2,1,2023
+Rwanda,Benin,1,1,1,2023
+Nepal,Laos,2,1,1,2023
+United States,Mexico,1,1,0,2023
+Mexico,Guatemala,2,0,0,2023
+Luxembourg,Malta,0,1,0,2023
+Mexico,Cameroon,2,2,0,2023
+Panama,Nicaragua,3,2,0,2023
+Chile,Cuba,3,0,0,2023
+Guatemala,Trinidad and Tobago,0,1,0,2023
+Tajikistan,Turkmenistan,1,1,1,2023
+Uzbekistan,Oman,3,0,1,2023
+Mauritius,Pakistan,3,0,1,2023
+Germany,Ukraine,3,3,0,2023
+Morocco,Cape Verde,0,0,0,2023
+Iran,Afghanistan,6,1,1,2023
+Curaçao,Costa Rica,0,0,0,2023
+DR Congo,Uganda,1,0,0,2023
+Indonesia,Palestine,0,0,0,2023
+Malaysia,Solomon Islands,4,1,0,2023
+Mozambique,Malawi,1,1,0,2023
+Togo,Lesotho,2,0,0,2023
+Uruguay,Nicaragua,4,1,0,2023
+Netherlands,Croatia,2,4,1,2023
+Oman,Tajikistan,1,1,1,2023
+Uzbekistan,Turkmenistan,2,0,1,2023
+Pakistan,Kenya,0,1,1,2023
+Mauritius,Djibouti,1,3,1,2023
+Guinea-Bissau,São Tomé and Príncipe,1,0,1,2023
+Guinea,Egypt,1,2,1,2023
+South Sudan,Gambia,2,3,1,2023
+Panama,Canada,0,2,1,2023
+United States,Mexico,3,0,1,2023
+Argentina,Australia,2,0,0,2023
+Cambodia,Bangladesh,0,1,0,2023
+Costa Rica,Guatemala,0,1,0,2023
+Honduras,Venezuela,0,1,0,2023
+Jamaica,Qatar,1,2,0,2023
+Japan,El Salvador,6,0,0,2023
+Philippines,Nepal,1,0,0,2023
+Vietnam,Hong Kong,1,0,0,2023
+Spain,Italy,2,1,1,2023
+Antigua and Barbuda,Guadeloupe,0,5,1,2023
+Martinique,Saint Lucia,3,1,1,2023
+Curaçao,Saint Kitts and Nevis,1,1,1,2023
+Chile,Dominican Republic,5,0,0,2023
+China,Myanmar,4,0,0,2023
+Taiwan,Thailand,2,2,0,2023
+Colombia,Iraq,1,0,0,2023
+South Korea,Peru,0,1,0,2023
+Poland,Germany,1,0,0,2023
+Serbia,Jordan,3,2,0,2023
+Singapore,Papua New Guinea,2,2,0,2023
+Sweden,New Zealand,4,1,0,2023
+Gibraltar,France,0,3,1,2023
+Greece,Republic of Ireland,2,1,1,2023
+Malta,England,0,4,1,2023
+North Macedonia,Ukraine,2,3,1,2023
+Wales,Armenia,2,4,1,2023
+Latvia,Turkey,2,3,1,2023
+Finland,Slovenia,2,0,1,2023
+Denmark,Northern Ireland,1,0,1,2023
+San Marino,Kazakhstan,0,3,1,2023
+Andorra,Switzerland,1,2,1,2023
+Belarus,Israel,1,2,1,2023
+Kosovo,Romania,0,0,1,2023
+Kyrgyzstan,Iran,1,5,1,2023
+Guyana,Grenada,1,1,1,2023
+Suriname,Puerto Rico,0,0,1,2023
+French Guiana,Sint Maarten,4,1,1,2023
+Brazil,Guinea,4,1,0,2023
+Ecuador,Bolivia,1,0,0,2023
+Norway,Scotland,1,2,1,2023
+Cyprus,Georgia,1,2,1,2023
+Faroe Islands,Czech Republic,0,3,1,2023
+Albania,Moldova,2,0,1,2023
+Azerbaijan,Estonia,1,1,1,2023
+Belgium,Austria,1,1,1,2023
+Lithuania,Bulgaria,1,1,1,2023
+Montenegro,Hungary,0,0,1,2023
+Luxembourg,Liechtenstein,2,0,1,2023
+Iceland,Slovakia,1,2,1,2023
+Portugal,Bosnia and Herzegovina,3,0,1,2023
+Ticino,Raetia,1,8,1,2023
+Turkmenistan,Oman,0,2,1,2023
+Uzbekistan,Tajikistan,5,1,1,2023
+Djibouti,Pakistan,3,1,1,2023
+Central African Republic,Angola,1,2,1,2023
+Zambia,Ivory Coast,3,0,1,2023
+Lesotho,Comoros,0,1,1,2023
+Equatorial Guinea,Tunisia,1,0,1,2023
+Botswana,Libya,1,0,1,2023
+South Africa,Morocco,2,1,1,2023
+Benin,Senegal,1,1,1,2023
+Panama,Mexico,0,1,1,2023
+United States,Canada,2,0,1,2023
+Egypt,South Sudan,3,0,0,2023
+Guatemala,Venezuela,0,1,0,2023
+Paraguay,Nicaragua,2,0,0,2023
+Singapore,Solomon Islands,1,1,0,2023
+Netherlands,Italy,2,3,1,2023
+Croatia,Spain,0,0,1,2023
+Mauritius,Kenya,1,0,1,2023
+Sierra Leone,Nigeria,2,3,1,2023
+Cape Verde,Burkina Faso,3,1,1,2023
+Eswatini,Togo,0,2,1,2023
+Madagascar,Ghana,0,0,1,2023
+Tanzania,Niger,1,0,1,2023
+Uganda,Algeria,1,2,1,2023
+Congo,Mali,0,2,1,2023
+Gabon,DR Congo,0,2,1,2023
+Rwanda,Mozambique,0,2,1,2023
+Hong Kong,Thailand,0,1,0,2023
+Indonesia,Argentina,0,2,0,2023
+Jamaica,Jordan,1,2,0,2023
+Macau,Myanmar,0,2,0,2023
+Philippines,Taiwan,2,3,0,2023
+Republic of Ireland,Gibraltar,3,0,1,2023
+France,Greece,1,0,1,2023
+Ukraine,Malta,1,0,1,2023
+England,North Macedonia,7,0,1,2023
+Armenia,Latvia,2,1,1,2023
+Turkey,Wales,2,0,1,2023
+Finland,San Marino,6,0,1,2023
+Northern Ireland,Kazakhstan,0,1,1,2023
+Slovenia,Denmark,1,1,1,2023
+Belarus,Kosovo,2,1,1,2023
+Switzerland,Romania,2,2,1,2023
+Israel,Andorra,2,1,1,2023
+Guadeloupe,Guyana,2,0,1,2023
+Martinique,Puerto Rico,2,0,1,2023
+Saint Kitts and Nevis,French Guiana,1,1,1,2023
+Algeria,Tunisia,1,1,0,2023
+Bolivia,Chile,0,0,0,2023
+Brazil,Senegal,2,4,0,2023
+China,Palestine,2,0,0,2023
+Ecuador,Costa Rica,3,1,0,2023
+Germany,Colombia,0,2,0,2023
+Haiti,Trinidad and Tobago,0,0,0,2023
+Japan,Peru,4,1,0,2023
+South Korea,El Salvador,1,1,0,2023
+Malaysia,Papua New Guinea,10,0,0,2023
+Montenegro,Czech Republic,1,4,0,2023
+Uruguay,Cuba,2,0,0,2023
+Vietnam,Syria,1,0,0,2023
+Scotland,Georgia,2,0,1,2023
+Norway,Cyprus,3,1,1,2023
+Faroe Islands,Albania,1,3,1,2023
+Moldova,Poland,3,2,1,2023
+Austria,Sweden,2,0,1,2023
+Estonia,Belgium,0,3,1,2023
+Hungary,Lithuania,2,0,1,2023
+Bulgaria,Serbia,1,1,1,2023
+Iceland,Portugal,0,1,1,2023
+Bosnia and Herzegovina,Luxembourg,0,2,1,2023
+Liechtenstein,Slovakia,0,1,1,2023
+Kyrgyzstan,Oman,0,1,1,2023
+Uzbekistan,Iran,0,1,1,2023
+Burundi,Namibia,3,2,1,2023
+Ethiopia,Malawi,0,0,1,2023
+Sudan,Mauritania,0,3,1,2023
+Kuwait,Nepal,3,1,1,2023
+India,Pakistan,4,0,1,2023
+Lebanon,Bangladesh,2,0,1,2023
+Maldives,Bhutan,2,0,1,2023
+Pakistan,Kuwait,0,4,1,2023
+India,Nepal,2,0,1,2023
+United States,Jamaica,1,1,1,2023
+Bangladesh,Maldives,3,1,1,2023
+Bhutan,Lebanon,1,4,1,2023
+Trinidad and Tobago,Saint Kitts and Nevis,3,0,1,2023
+Haiti,Qatar,2,1,1,2023
+Mexico,Honduras,4,0,1,2023
+El Salvador,Martinique,1,2,1,2023
+Costa Rica,Panama,1,2,1,2023
+Nepal,Pakistan,1,0,1,2023
+India,Kuwait,1,1,1,2023
+Canada,Guadeloupe,2,2,1,2023
+Guatemala,Cuba,1,0,1,2023
+Lebanon,Maldives,1,0,1,2023
+Bhutan,Bangladesh,1,3,1,2023
+Jamaica,Trinidad and Tobago,4,1,1,2023
+United States,Saint Kitts and Nevis,6,0,1,2023
+Qatar,Honduras,1,1,1,2023
+Haiti,Mexico,1,3,1,2023
+Székely Land,Chameria,3,2,1,2023
+Martinique,Panama,1,2,1,2023
+El Salvador,Costa Rica,0,0,1,2023
+Chameria,Two Sicilies,3,1,1,2023
+India,Lebanon,0,0,1,2023
+Kuwait,Bangladesh,1,0,1,2023
+Cuba,Guadeloupe,1,4,1,2023
+Guatemala,Canada,0,0,1,2023
+Székely Land,Two Sicilies,7,0,1,2023
+United States,Trinidad and Tobago,6,0,1,2023
+Jamaica,Saint Kitts and Nevis,5,0,1,2023
+Honduras,Haiti,2,1,1,2023
+Mexico,Qatar,0,1,1,2023
+India,Kuwait,1,1,1,2023
+Costa Rica,Martinique,6,4,1,2023
+Panama,El Salvador,2,2,1,2023
+Guadeloupe,Guatemala,2,3,1,2023
+Canada,Cuba,4,2,1,2023
+Eswatini,Botswana,0,1,1,2023
+South Africa,Namibia,1,1,1,2023
+Seychelles,Comoros,0,3,1,2023
+Zambia,Malawi,0,1,1,2023
+Mauritius,Lesotho,0,2,1,2023
+Mozambique,Angola,1,1,1,2023
+Panama,Qatar,4,0,1,2023
+Mexico,Costa Rica,2,0,1,2023
+South Africa,Botswana,2,1,1,2023
+Namibia,Eswatini,1,2,1,2023
+Guatemala,Jamaica,0,1,1,2023
+United States,Canada,2,2,1,2023
+Åland Islands,Isle of Wight,0,2,1,2023
+Guernsey,Western Isles,1,0,1,2023
+Isle of Man,Falkland Islands,3,0,1,2023
+Ynys Môn,Shetland,2,0,1,2023
+Orkney,Greenland,2,2,1,2023
+Jersey,Gozo,1,0,1,2023
+Menorca,Saint Helena,5,0,1,2023
+Zambia,Comoros,2,1,1,2023
+Malawi,Seychelles,2,0,1,2023
+Western Isles,Isle of Wight,0,1,1,2023
+Guernsey,Åland Islands,4,1,1,2023
+Falkland Islands,Ynys Môn,1,5,1,2023
+Shetland,Isle of Man,3,2,1,2023
+Greenland,Frøya,2,0,1,2023
+Gozo,Saint Helena,3,0,1,2023
+Jersey,Menorca,4,0,1,2023
+Angola,Mauritius,0,1,1,2023
+Mozambique,Lesotho,0,1,1,2023
+Guernsey,Isle of Wight,1,2,1,2023
+Åland Islands,Western Isles,0,2,1,2023
+Falkland Islands,Shetland,1,4,1,2023
+Isle of Man,Ynys Môn,1,2,1,2023
+Frøya,Orkney,2,3,1,2023
+Menorca,Gozo,0,1,1,2023
+Saint Helena,Jersey,0,5,1,2023
+Namibia,Botswana,0,0,1,2023
+South Africa,Eswatini,2,1,1,2023
+Malawi,Comoros,2,0,1,2023
+Seychelles,Zambia,2,4,1,2023
+United States,Panama,1,1,1,2023
+Jamaica,Mexico,0,3,1,2023
+Angola,Lesotho,4,2,1,2023
+Mauritius,Mozambique,0,1,1,2023
+Frøya,Saint Helena,4,2,1,2023
+Åland Islands,Falkland Islands,1,1,1,2023
+Western Isles,Menorca,2,1,1,2023
+Orkney,Isle of Man,0,1,1,2023
+Shetland,Greenland,5,1,1,2023
+Guernsey,Gozo,1,0,1,2023
+Isle of Wight,Jersey,2,3,1,2023
+Ynys Môn,Jersey,2,5,1,2023
+Malawi,Lesotho,1,1,1,2023
+South Africa,Zambia,1,2,1,2023
+Kernow,Sápmi,2,1,1,2023
+Mexico,Panama,1,0,1,2023
+South Africa,Malawi,0,0,1,2023
+Lesotho,Zambia,0,1,1,2023
+Ethiopia,Guyana,2,0,0,2023
+Tamil Eelam,Hmong,3,0,1,2023
+Hmong,Tibet,5,4,1,2023
+Tibet,Tamil Eelam,1,3,1,2023
+Raetia,Ticino,5,1,0,2023
+Tamil Eelam,Hmong,3,1,1,2023
+Comoros,Mayotte,0,0,1,2023
+Madagascar,Seychelles,1,0,1,2023
+Réunion,Mayotte,0,0,1,2023
+Madagascar,Mauritius,1,1,1,2023
+Bolivia,Panama,1,2,0,2023
+Tahiti,Cook Islands,9,1,0,2023
+Comoros,Réunion,1,1,1,2023
+Mauritius,Seychelles,1,0,1,2023
+Tahiti,Cook Islands,3,0,0,2023
+Madagascar,Comoros,4,2,1,2023
+Réunion,Mauritius,2,1,1,2023
+Comoros,Mauritius,0,2,1,2023
+Madagascar,Réunion,1,0,1,2023
+Bangladesh,Afghanistan,0,0,0,2023
+Guatemala,Honduras,0,0,0,2023
+Mozambique,Benin,3,2,1,2023
+Macau,Bhutan,0,1,0,2023
+Malta,Gibraltar,1,0,0,2023
+Oman,Palestine,2,1,0,2023
+Syria,Malaysia,2,2,0,2023
+Libya,Equatorial Guinea,1,1,1,2023
+Trinidad and Tobago,Curaçao,1,0,1,2023
+Panama,Martinique,3,0,1,2023
+Guatemala,El Salvador,2,0,1,2023
+Sint Maarten,Saint Lucia,1,5,1,2023
+Saint Kitts and Nevis,Guadeloupe,1,2,1,2023
+Anguilla,Saint Martin,0,6,1,2023
+United States Virgin Islands,Cayman Islands,2,2,1,2023
+Colombia,Venezuela,1,0,1,2023
+Paraguay,Peru,0,0,1,2023
+Argentina,Ecuador,1,0,1,2023
+Austria,Moldova,1,1,0,2023
+Bahrain,Kuwait,1,3,0,2023
+Bangladesh,Afghanistan,1,1,0,2023
+Bulgaria,Iran,0,1,0,2023
+Cambodia,Hong Kong,1,1,0,2023
+Norway,Jordan,6,0,0,2023
+Qatar,Kenya,1,2,0,2023
+Wales,South Korea,0,0,0,2023
+Ghana,Central African Republic,2,1,1,2023
+Angola,Madagascar,0,0,1,2023
+Algeria,Tanzania,0,0,1,2023
+Niger,Uganda,0,2,1,2023
+Tunisia,Botswana,3,0,1,2023
+France,Republic of Ireland,2,0,1,2023
+Netherlands,Greece,3,0,1,2023
+Czech Republic,Albania,1,1,1,2023
+Poland,Faroe Islands,2,0,1,2023
+Serbia,Hungary,1,2,1,2023
+Lithuania,Montenegro,2,2,1,2023
+Kazakhstan,Finland,0,1,1,2023
+Denmark,San Marino,4,0,1,2023
+Slovenia,Northern Ireland,4,2,1,2023
+Iraq,India,2,2,1,2023
+Thailand,Lebanon,2,1,1,2023
+Haiti,Cuba,0,0,1,2023
+Grenada,Suriname,1,1,1,2023
+Jamaica,Honduras,1,0,1,2023
+Barbados,Montserrat,2,3,1,2023
+Dominican Republic,Nicaragua,0,2,1,2023
+Bermuda,French Guiana,0,0,1,2023
+Belize,Saint Vincent and the Grenadines,1,2,1,2023
+Uruguay,Chile,3,1,1,2023
+Brazil,Bolivia,5,1,1,2023
+Taiwan,Philippines,1,1,0,2023
+Costa Rica,Saudi Arabia,3,1,0,2023
+Indonesia,Turkmenistan,2,0,0,2023
+Myanmar,Nepal,0,0,0,2023
+Singapore,Tajikistan,0,2,0,2023
+Burkina Faso,Eswatini,0,0,1,2023
+Egypt,Ethiopia,1,0,1,2023
+Mali,South Sudan,4,0,1,2023
+Georgia,Spain,1,7,1,2023
+Cyprus,Scotland,0,3,1,2023
+Croatia,Latvia,5,0,1,2023
+Turkey,Armenia,1,1,1,2023
+Bosnia and Herzegovina,Liechtenstein,2,1,1,2023
+Luxembourg,Iceland,3,1,1,2023
+Slovakia,Portugal,0,1,1,2023
+Antigua and Barbuda,Guyana,1,5,1,2023
+Bahamas,Puerto Rico,1,6,1,2023
+British Virgin Islands,Turks and Caicos Islands,3,1,1,2023
+China,Malaysia,1,1,0,2023
+Germany,Japan,1,4,0,2023
+Mexico,Australia,2,2,0,2023
+South Africa,Namibia,0,0,0,2023
+United States,Uzbekistan,3,0,0,2023
+Malawi,Guinea,2,2,1,2023
+Ivory Coast,Lesotho,1,0,1,2023
+Comoros,Zambia,1,1,1,2023
+Mauritania,Gabon,2,1,1,2023
+DR Congo,Sudan,2,0,1,2023
+Rwanda,Senegal,1,1,1,2023
+Ukraine,England,1,1,1,2023
+North Macedonia,Italy,1,1,1,2023
+Azerbaijan,Belgium,0,1,1,2023
+Estonia,Sweden,0,5,1,2023
+Andorra,Belarus,0,0,1,2023
+Kosovo,Switzerland,2,2,1,2023
+Romania,Israel,1,1,1,2023
+Guatemala,Panama,1,1,1,2023
+El Salvador,Trinidad and Tobago,2,3,1,2023
+Martinique,Curaçao,1,0,1,2023
+Guadeloupe,Sint Maarten,4,0,1,2023
+Saint Lucia,Saint Kitts and Nevis,2,0,1,2023
+Hungary,Czech Republic,1,1,0,2023
+Nigeria,São Tomé and Príncipe,6,0,1,2023
+Togo,Cape Verde,3,2,1,2023
+Gambia,Congo,2,2,1,2023
+Republic of Ireland,Netherlands,1,2,1,2023
+Greece,Gibraltar,5,0,1,2023
+Faroe Islands,Moldova,0,1,1,2023
+Albania,Poland,2,0,1,2023
+Montenegro,Bulgaria,2,1,1,2023
+Lithuania,Serbia,1,3,1,2023
+Finland,Denmark,0,1,1,2023
+Kazakhstan,Northern Ireland,1,0,1,2023
+San Marino,Slovenia,0,4,1,2023
+Lebanon,India,1,0,1,2023
+Thailand,Iraq,2,2,1,2023
+Dominican Republic,Montserrat,3,0,1,2023
+Nicaragua,Barbados,5,1,1,2023
+Saint Martin,Bonaire,2,1,1,2023
+Cayman Islands,Aruba,1,2,1,2023
+Cambodia,Macau,4,0,0,2023
+Hong Kong,Brunei,10,0,0,2023
+Kuwait,Kyrgyzstan,1,3,0,2023
+Myanmar,Nepal,1,0,0,2023
+Vietnam,Palestine,2,0,0,2023
+Guinea-Bissau,Sierra Leone,2,1,1,2023
+Armenia,Croatia,0,1,1,2023
+Latvia,Wales,0,2,1,2023
+Iceland,Bosnia and Herzegovina,1,0,1,2023
+Portugal,Luxembourg,9,0,1,2023
+Slovakia,Liechtenstein,3,0,1,2023
+Cuba,Suriname,1,0,1,2023
+Jamaica,Haiti,2,2,1,2023
+Honduras,Grenada,4,0,1,2023
+Saint Vincent and the Grenadines,Bermuda,4,3,1,2023
+French Guiana,Belize,0,2,1,2023
+Guyana,Bahamas,3,2,1,2023
+Puerto Rico,Antigua and Barbuda,5,0,1,2023
+Turks and Caicos Islands,Dominica,0,3,1,2023
+Bolivia,Argentina,0,3,1,2023
+Ecuador,Uruguay,2,1,1,2023
+Venezuela,Paraguay,1,0,1,2023
+Peru,Brazil,0,1,1,2023
+Chile,Colombia,0,0,1,2023
+Azerbaijan,Jordan,2,1,0,2023
+Bahrain,Turkmenistan,1,1,0,2023
+China,Syria,0,1,0,2023
+Egypt,Tunisia,1,3,0,2023
+Germany,France,2,1,0,2023
+Qatar,Russia,1,1,0,2023
+Ghana,Liberia,3,1,0,2023
+Iran,Angola,4,0,0,2023
+Japan,Turkey,4,2,0,2023
+Kenya,South Sudan,0,1,0,2023
+South Korea,Saudi Arabia,1,0,0,2023
+Mexico,Uzbekistan,3,3,0,2023
+Morocco,Burkina Faso,1,0,0,2023
+Philippines,Afghanistan,2,1,0,2023
+Scotland,England,1,3,0,2023
+Senegal,Algeria,0,1,0,2023
+Singapore,Taiwan,3,1,0,2023
+South Africa,DR Congo,1,0,0,2023
+United Arab Emirates,Costa Rica,4,1,0,2023
+United States,Oman,4,0,0,2023
+Cameroon,Burundi,3,0,1,2023
+Norway,Georgia,2,1,1,2023
+Spain,Cyprus,6,0,1,2023
+Italy,Ukraine,2,1,1,2023
+Malta,North Macedonia,0,2,1,2023
+Belgium,Estonia,5,0,1,2023
+Sweden,Austria,1,3,1,2023
+Switzerland,Andorra,3,0,1,2023
+Israel,Belarus,1,0,1,2023
+Romania,Kosovo,2,0,1,2023
+Papua New Guinea,Solomon Islands,1,3,1,2023
+New Caledonia,Vanuatu,4,0,1,2023
+China,Vietnam,2,0,0,2023
+Wales,Gibraltar,4,0,0,2023
+Solomon Islands,Vanuatu,1,0,1,2023
+New Caledonia,Papua New Guinea,3,1,1,2023
+Suriname,Haiti,1,1,1,2023
+Grenada,Jamaica,1,4,1,2023
+Cuba,Honduras,0,0,1,2023
+Sint Maarten,Saint Kitts and Nevis,2,3,1,2023
+Saint Lucia,Guadeloupe,2,1,1,2023
+Bonaire,Anguilla,2,0,1,2023
+Dominica,British Virgin Islands,1,1,1,2023
+Colombia,Uruguay,2,2,1,2023
+Bolivia,Ecuador,1,2,1,2023
+Argentina,Paraguay,1,0,1,2023
+Brazil,Venezuela,1,1,1,2023
+Chile,Peru,2,0,1,2023
+Afghanistan,Mongolia,1,0,1,2023
+Cambodia,Pakistan,0,0,1,2023
+Taiwan,Timor-Leste,4,0,1,2023
+Hong Kong,Bhutan,4,0,1,2023
+Indonesia,Brunei,6,0,1,2023
+Maldives,Bangladesh,1,1,1,2023
+Myanmar,Macau,5,1,1,2023
+Nepal,Laos,1,1,1,2023
+Singapore,Guam,2,1,1,2023
+Yemen,Sri Lanka,3,0,1,2023
+Algeria,Cape Verde,5,1,0,2023
+Bahrain,Kyrgyzstan,2,0,0,2023
+Egypt,Zambia,1,0,0,2023
+Georgia,Thailand,8,0,0,2023
+Montenegro,Lebanon,3,2,0,2023
+Russia,Cameroon,1,0,0,2023
+Sweden,Moldova,3,1,0,2023
+Spain,Scotland,2,0,1,2023
+Cyprus,Norway,0,4,1,2023
+Latvia,Armenia,2,0,1,2023
+Croatia,Turkey,0,1,1,2023
+Faroe Islands,Poland,0,2,1,2023
+Albania,Czech Republic,3,0,1,2023
+Andorra,Kosovo,0,3,1,2023
+Belarus,Romania,0,0,1,2023
+Curaçao,Panama,1,2,1,2023
+Martinique,El Salvador,1,0,1,2023
+Trinidad and Tobago,Guatemala,3,2,1,2023
+Montserrat,Nicaragua,0,3,1,2023
+Barbados,Dominican Republic,0,5,1,2023
+Saint Vincent and the Grenadines,French Guiana,1,4,1,2023
+Belize,Bermuda,0,1,1,2023
+DR Congo,New Zealand,1,1,0,2023
+England,Australia,1,0,0,2023
+Equatorial Guinea,Burkina Faso,0,0,0,2023
+Guinea,Guinea-Bissau,1,0,0,2023
+Iraq,Qatar,0,0,0,2023
+Japan,Canada,4,1,0,2023
+South Korea,Tunisia,4,0,0,2023
+Mali,Uganda,1,0,0,2023
+Nigeria,Saudi Arabia,2,2,0,2023
+South Africa,Eswatini,0,0,0,2023
+Vietnam,Uzbekistan,0,2,0,2023
+Republic of Ireland,Greece,0,2,1,2023
+Netherlands,France,1,2,1,2023
+Estonia,Azerbaijan,0,2,1,2023
+Austria,Belgium,2,3,1,2023
+Iceland,Luxembourg,1,1,1,2023
+Portugal,Slovakia,3,2,1,2023
+Liechtenstein,Bosnia and Herzegovina,0,2,1,2023
+Angola,Mozambique,1,1,0,2023
+Puerto Rico,Guyana,1,3,1,2023
+Bahamas,Antigua and Barbuda,1,4,1,2023
+Aruba,United States Virgin Islands,3,1,1,2023
+Ivory Coast,Morocco,1,1,0,2023
+Liberia,Libya,2,3,0,2023
+Mauritania,Madagascar,2,1,0,2023
+Mexico,Ghana,2,0,0,2023
+Niger,Somalia,3,0,0,2023
+Sierra Leone,Benin,1,1,0,2023
+United States,Germany,1,3,0,2023
+Ukraine,North Macedonia,2,0,1,2023
+Italy,Malta,4,0,1,2023
+Bulgaria,Lithuania,0,2,1,2023
+Hungary,Serbia,2,1,1,2023
+Northern Ireland,San Marino,3,0,1,2023
+Slovenia,Finland,3,0,1,2023
+Denmark,Kazakhstan,3,1,1,2023
+Papua New Guinea,Vanuatu,0,1,1,2023
+New Caledonia,Solomon Islands,0,1,1,2023
+Honduras,Cuba,4,0,1,2023
+Haiti,Jamaica,2,3,1,2023
+Suriname,Grenada,4,0,1,2023
+Guadeloupe,Saint Lucia,2,0,1,2023
+Saint Kitts and Nevis,Sint Maarten,0,1,1,2023
+Kyrgyzstan,Philippines,0,1,0,2023
+Sudan,Tanzania,1,1,0,2023
+Georgia,Cyprus,4,0,1,2023
+Norway,Spain,0,1,1,2023
+Wales,Croatia,2,1,1,2023
+Turkey,Latvia,4,0,1,2023
+Czech Republic,Faroe Islands,1,0,1,2023
+Poland,Moldova,1,1,1,2023
+Switzerland,Belarus,3,3,1,2023
+Romania,Andorra,4,0,1,2023
+Dominican Republic,Barbados,5,2,1,2023
+Nicaragua,Montserrat,3,0,1,2023
+French Guiana,Saint Vincent and the Grenadines,3,2,1,2023
+Saint Martin,Anguilla,8,0,1,2023
+Turks and Caicos Islands,British Virgin Islands,2,2,1,2023
+Algeria,Egypt,1,1,0,2023
+Botswana,Eswatini,2,1,0,2023
+Kenya,Russia,2,2,0,2023
+China,Uzbekistan,1,2,0,2023
+Mozambique,Nigeria,2,3,0,2023
+Senegal,Cameroon,1,0,0,2023
+Gibraltar,Republic of Ireland,0,4,1,2023
+Greece,Netherlands,0,1,1,2023
+Azerbaijan,Austria,0,1,1,2023
+Belgium,Sweden,1,1,1,2023
+Iceland,Liechtenstein,4,0,1,2023
+Bosnia and Herzegovina,Portugal,0,5,1,2023
+Luxembourg,Slovakia,0,1,1,2023
+El Salvador,Martinique,0,0,1,2023
+Panama,Guatemala,3,0,1,2023
+Curaçao,Trinidad and Tobago,5,3,1,2023
+Bermuda,Belize,1,1,1,2023
+Antigua and Barbuda,Bahamas,2,2,1,2023
+Guyana,Puerto Rico,3,1,1,2023
+Cayman Islands,United States Virgin Islands,2,1,1,2023
+Venezuela,Chile,3,0,1,2023
+Ecuador,Colombia,0,0,1,2023
+Paraguay,Bolivia,1,0,1,2023
+Peru,Argentina,0,2,1,2023
+Uruguay,Brazil,2,0,1,2023
+Bangladesh,Maldives,2,1,1,2023
+Bhutan,Hong Kong,2,0,1,2023
+Brunei,Indonesia,0,6,1,2023
+Guam,Singapore,0,1,1,2023
+Laos,Nepal,0,1,1,2023
+Macau,Myanmar,0,0,1,2023
+Mongolia,Afghanistan,0,1,1,2023
+Pakistan,Cambodia,1,0,1,2023
+Sri Lanka,Yemen,1,1,1,2023
+Taiwan,Timor-Leste,3,0,1,2023
+Albania,Bulgaria,2,0,0,2023
+Angola,DR Congo,0,0,0,2023
+Australia,New Zealand,2,0,1,2023
+Bahrain,Philippines,1,0,0,2023
+Benin,Madagascar,1,2,0,2023
+Burkina Faso,Mauritania,2,1,0,2023
+Cape Verde,Comoros,1,2,0,2023
+Estonia,Thailand,1,1,0,2023
+France,Scotland,4,1,0,2023
+Guinea,Gabon,1,1,0,2023
+Ivory Coast,South Africa,1,1,0,2023
+South Korea,Vietnam,6,0,0,2023
+Libya,Niger,1,1,0,2023
+Mali,Saudi Arabia,3,1,0,2023
+Mexico,Germany,2,2,0,2023
+North Macedonia,Armenia,3,1,0,2023
+Somalia,Sierra Leone,0,2,0,2023
+Sudan,Chad,1,0,0,2023
+Syria,Kuwait,1,2,0,2023
+United Arab Emirates,Lebanon,2,1,0,2023
+United States,Ghana,4,0,0,2023
+Zambia,Uganda,3,0,0,2023
+Morocco,Liberia,3,0,1,2023
+England,Italy,3,1,1,2023
+Malta,Ukraine,1,3,1,2023
+Serbia,Montenegro,3,1,1,2023
+Lithuania,Hungary,2,2,1,2023
+Finland,Kazakhstan,1,2,1,2023
+Northern Ireland,Slovenia,0,1,1,2023
+San Marino,Denmark,1,2,1,2023
+United Arab Emirates,Kuwait,1,0,0,2023
+Guatemala,Jamaica,0,0,0,2023
+Kosovo,Israel,1,0,1,2023
+Ethiopia,Sierra Leone,0,0,1,2023
+DR Congo,Mauritania,2,0,1,2023
+Rwanda,Zimbabwe,0,0,1,2023
+Equatorial Guinea,Namibia,0,3,1,2023
+Belgium,Serbia,1,0,0,2023
+Israel,Switzerland,1,1,1,2023
+Sint Maarten,Guadeloupe,0,2,1,2023
+Saint Kitts and Nevis,Saint Lucia,0,0,1,2023
+United States Virgin Islands,Aruba,1,4,1,2023
+British Virgin Islands,Dominica,1,2,1,2023
+Costa Rica,Panama,0,3,1,2023
+United States,Trinidad and Tobago,3,0,1,2023
+Bolivia,Peru,2,0,1,2023
+Venezuela,Ecuador,0,0,1,2023
+Colombia,Brazil,2,1,1,2023
+Argentina,Uruguay,0,2,1,2023
+Chile,Paraguay,0,0,1,2023
+Qatar,Afghanistan,8,1,1,2023
+Kuwait,India,0,1,1,2023
+Japan,Myanmar,5,0,1,2023
+Syria,North Korea,1,0,1,2023
+Thailand,China,1,2,1,2023
+South Korea,Singapore,5,0,1,2023
+Oman,Taiwan,3,0,1,2023
+Malaysia,Kyrgyzstan,4,3,1,2023
+Iran,Hong Kong,4,0,1,2023
+Turkmenistan,Uzbekistan,1,3,1,2023
+Iraq,Indonesia,5,1,1,2023
+Philippines,Vietnam,0,2,1,2023
+Tajikistan,Jordan,1,1,1,2023
+Saudi Arabia,Pakistan,4,0,1,2023
+United Arab Emirates,Nepal,4,0,1,2023
+Yemen,Bahrain,0,2,1,2023
+Lebanon,Palestine,0,0,1,2023
+Australia,Bangladesh,7,0,1,2023
+Egypt,Djibouti,6,0,1,2023
+Sudan,Togo,1,1,1,2023
+Nigeria,Lesotho,1,1,1,2023
+Cape Verde,Angola,0,0,1,2023
+Burundi,Gambia,3,2,1,2023
+Gabon,Kenya,2,1,1,2023
+Botswana,Mozambique,2,3,1,2023
+Algeria,Somalia,3,1,1,2023
+Curaçao,El Salvador,1,1,0,2023
+Norway,Faroe Islands,2,0,0,2023
+Cyprus,Spain,1,3,1,2023
+Georgia,Scotland,2,2,1,2023
+Estonia,Austria,0,2,1,2023
+Azerbaijan,Sweden,3,0,1,2023
+Bulgaria,Hungary,2,2,1,2023
+Montenegro,Lithuania,2,0,1,2023
+Liechtenstein,Portugal,0,2,1,2023
+Luxembourg,Bosnia and Herzegovina,4,1,1,2023
+Slovakia,Iceland,4,2,1,2023
+Montserrat,Dominican Republic,2,1,1,2023
+Barbados,Nicaragua,0,4,1,2023
+Bermuda,Saint Vincent and the Grenadines,3,1,1,2023
+Belize,French Guiana,1,0,1,2023
+Honduras,Mexico,2,0,1,2023
+Burkina Faso,Guinea-Bissau,1,1,1,2023
+Eswatini,Libya,0,1,1,2023
+Cameroon,Mauritius,3,0,1,2023
+Zambia,Congo,4,2,1,2023
+Ivory Coast,Seychelles,9,0,1,2023
+Guinea,Uganda,2,1,1,2023
+Liberia,Malawi,0,1,1,2023
+Tunisia,São Tomé and Príncipe,4,0,1,2023
+Comoros,Central African Republic,4,2,1,2023
+Ghana,Madagascar,1,0,1,2023
+Mali,Chad,3,1,1,2023
+Greece,New Zealand,2,0,0,2023
+England,Malta,2,0,1,2023
+Italy,North Macedonia,5,2,1,2023
+Moldova,Albania,1,1,1,2023
+Poland,Czech Republic,1,1,1,2023
+Finland,Northern Ireland,4,0,1,2023
+Denmark,Slovenia,2,1,1,2023
+Kazakhstan,San Marino,3,1,1,2023
+Papua New Guinea,Tuvalu,3,0,1,2023
+Solomon Islands,Samoa,1,0,1,2023
+Antigua and Barbuda,Puerto Rico,2,3,1,2023
+Anguilla,Bonaire,0,3,1,2023
+Jamaica,Canada,1,2,1,2023
+Senegal,South Sudan,4,0,1,2023
+South Africa,Benin,2,1,1,2023
+Niger,Tanzania,0,1,1,2023
+Germany,Turkey,2,3,0,2023
+France,Gibraltar,14,0,1,2023
+Netherlands,Republic of Ireland,1,0,1,2023
+Armenia,Wales,1,1,1,2023
+Latvia,Croatia,0,2,1,2023
+Belarus,Andorra,1,0,1,2023
+Switzerland,Kosovo,1,1,1,2023
+Israel,Romania,1,2,1,2023
+New Caledonia,Tonga,7,0,1,2023
+Fiji,Northern Mariana Islands,10,0,1,2023
+Guadeloupe,Saint Kitts and Nevis,5,0,1,2023
+Saint Lucia,Sint Maarten,1,2,1,2023
+Sierra Leone,Egypt,0,2,1,2023
+Sudan,DR Congo,1,0,1,2023
+Zimbabwe,Nigeria,1,1,1,2023
+Burundi,Gabon,1,2,1,2023
+Mozambique,Algeria,0,2,1,2023
+Cyprus,Lithuania,1,0,0,2023
+Scotland,Norway,3,3,1,2023
+Spain,Georgia,3,1,1,2023
+Belgium,Azerbaijan,5,0,1,2023
+Sweden,Estonia,2,0,1,2023
+Hungary,Montenegro,3,1,1,2023
+Serbia,Bulgaria,2,2,1,2023
+Portugal,Iceland,2,0,1,2023
+Bosnia and Herzegovina,Slovakia,1,2,1,2023
+Liechtenstein,Luxembourg,0,1,1,2023
+Montserrat,Barbados,4,2,1,2023
+Aruba,Cayman Islands,5,1,1,2023
+Dominica,Turks and Caicos Islands,2,0,1,2023
+Panama,Costa Rica,3,1,1,2023
+Trinidad and Tobago,United States,2,1,1,2023
+Djibouti,Guinea-Bissau,0,1,1,2023
+Gambia,Ivory Coast,0,2,1,2023
+Seychelles,Kenya,0,5,1,2023
+Liberia,Equatorial Guinea,3,0,1,2023
+Mali,Central African Republic,1,1,1,2023
+Chad,Madagascar,0,3,1,2023
+Curaçao,El Salvador,1,1,0,2023
+Russia,Cuba,8,0,0,2023
+North Macedonia,England,1,1,1,2023
+Ukraine,Italy,0,0,1,2023
+Albania,Faroe Islands,0,0,1,2023
+Czech Republic,Moldova,3,0,1,2023
+Northern Ireland,Denmark,2,0,1,2023
+San Marino,Finland,1,2,1,2023
+Slovenia,Kazakhstan,2,1,1,2023
+Tuvalu,Vanuatu,0,6,1,2023
+Samoa,American Samoa,10,0,1,2023
+Nicaragua,Dominican Republic,0,0,1,2023
+French Guiana,Bermuda,3,0,1,2023
+Saint Vincent and the Grenadines,Belize,3,0,1,2023
+Guyana,Antigua and Barbuda,6,0,1,2023
+Puerto Rico,Bahamas,6,1,1,2023
+Bonaire,Saint Martin,0,4,1,2023
+Canada,Jamaica,2,3,1,2023
+Mexico,Honduras,2,0,1,2023
+Ecuador,Chile,1,0,1,2023
+Paraguay,Colombia,0,1,1,2023
+Uruguay,Bolivia,3,0,1,2023
+Peru,Venezuela,1,1,1,2023
+Brazil,Argentina,0,1,1,2023
+India,Qatar,0,3,1,2023
+Afghanistan,Kuwait,0,4,1,2023
+Myanmar,North Korea,1,6,1,2023
+Syria,Japan,0,5,1,2023
+China,South Korea,0,3,1,2023
+Singapore,Thailand,1,3,1,2023
+Taiwan,Malaysia,0,1,1,2023
+Kyrgyzstan,Oman,1,0,1,2023
+Uzbekistan,Iran,2,2,1,2023
+Hong Kong,Turkmenistan,2,2,1,2023
+Philippines,Indonesia,1,1,1,2023
+Vietnam,Iraq,0,1,1,2023
+Pakistan,Tajikistan,1,6,1,2023
+Jordan,Saudi Arabia,0,2,1,2023
+Bahrain,United Arab Emirates,0,2,1,2023
+Nepal,Yemen,0,2,1,2023
+Palestine,Australia,0,1,1,2023
+Bangladesh,Lebanon,1,1,1,2023
+Ethiopia,Burkina Faso,0,3,1,2023
+South Sudan,Mauritania,0,0,1,2023
+Togo,Senegal,0,0,1,2023
+Lesotho,Benin,0,0,1,2023
+Rwanda,South Africa,2,0,1,2023
+Eswatini,Cape Verde,0,2,1,2023
+Libya,Cameroon,1,1,1,2023
+Mauritius,Angola,0,0,1,2023
+Niger,Zambia,2,1,1,2023
+Tanzania,Morocco,0,2,1,2023
+Somalia,Uganda,0,1,1,2023
+Botswana,Guinea,1,0,1,2023
+Malawi,Tunisia,0,1,1,2023
+São Tomé and Príncipe,Namibia,0,2,1,2023
+Comoros,Ghana,1,0,1,2023
+Austria,Germany,2,0,0,2023
+Poland,Latvia,2,0,0,2023
+Republic of Ireland,New Zealand,1,1,0,2023
+Gibraltar,Netherlands,0,6,1,2023
+Greece,France,2,2,1,2023
+Wales,Turkey,1,1,1,2023
+Croatia,Armenia,1,0,1,2023
+Andorra,Israel,0,2,1,2023
+Kosovo,Belarus,0,1,1,2023
+Romania,Switzerland,1,0,1,2023
+Tonga,Cook Islands,1,2,1,2023
+Fiji,Tahiti,0,0,1,2023
+Vanuatu,Papua New Guinea,1,1,1,2023
+Solomon Islands,American Samoa,11,0,1,2023
+Cook Islands,New Caledonia,0,8,1,2023
+Northern Mariana Islands,Tahiti,0,5,1,2023
+Northern Mariana Islands,American Samoa,4,0,1,2023
+Tonga,Tuvalu,0,4,1,2023
+Tahiti,Samoa,2,1,1,2023
+Cook Islands,Papua New Guinea,0,3,1,2023
+New Caledonia,Vanuatu,1,0,1,2023
+Solomon Islands,Fiji,2,0,1,2023
+American Samoa,Tonga,2,6,1,2023
+Northern Mariana Islands,Tuvalu,1,4,1,2023
+Samoa,Cook Islands,3,0,1,2023
+Tahiti,Papua New Guinea,2,0,1,2023
+Vanuatu,Fiji,2,4,1,2023
+Solomon Islands,New Caledonia,2,2,1,2023
+Mexico,Colombia,2,3,0,2023
+Japan,Thailand,5,0,0,2024
+China,Hong Kong,1,2,0,2024
+Indonesia,Libya,0,4,0,2024
+Tajikistan,Hong Kong,2,1,0,2024
+Saudi Arabia,Lebanon,1,0,0,2024
+Indonesia,Libya,1,2,0,2024
+Iran,Burkina Faso,2,1,0,2024
+Kyrgyzstan,Syria,1,1,0,2024
+Qatar,Jordan,1,2,0,2024
+Togo,Algeria,0,3,0,2024
+DR Congo,Angola,0,0,0,2024
+Iraq,South Korea,0,1,0,2024
+Bahrain,Australia,0,2,0,2024
+Mozambique,Lesotho,2,0,0,2024
+United Arab Emirates,Oman,0,1,0,2024
+Ivory Coast,Sierra Leone,5,1,0,2024
+Tunisia,Mauritania,0,0,0,2024
+Mali,Guinea-Bissau,6,2,0,2024
+Uzbekistan,Palestine,1,0,0,2024
+Egypt,Tanzania,2,0,0,2024
+Nigeria,Guinea,0,2,0,2024
+Botswana,Mozambique,1,1,0,2024
+Syria,Malaysia,2,2,0,2024
+Senegal,Niger,1,0,0,2024
+Ghana,Namibia,0,0,0,2024
+Japan,Jordan,6,1,0,2024
+Kyrgyzstan,Vietnam,2,1,0,2024
+Zambia,Cameroon,1,1,0,2024
+Equatorial Guinea,Djibouti,1,1,0,2024
+Saudi Arabia,Palestine,0,0,0,2024
+Burundi,Algeria,0,4,0,2024
+Indonesia,Iran,0,5,0,2024
+South Africa,Lesotho,0,0,0,2024
+DR Congo,Burkina Faso,1,2,0,2024
+Bahrain,Angola,0,3,0,2024
+Saudi Arabia,Hong Kong,2,0,0,2024
+Tunisia,Cape Verde,2,0,0,2024
+Morocco,Sierra Leone,3,1,0,2024
+Qatar,Lebanon,3,0,1,2024
+Kuwait,Libya,1,3,0,2024
+Sweden,Estonia,2,1,0,2024
+China,Tajikistan,0,0,1,2024
+Australia,India,2,0,1,2024
+Uzbekistan,Syria,0,0,1,2024
+Ivory Coast,Guinea-Bissau,2,0,1,2024
+Guatemala,Iceland,0,1,0,2024
+United Arab Emirates,Hong Kong,3,1,1,2024
+Iran,Palestine,4,1,1,2024
+Japan,Vietnam,4,2,1,2024
+Nigeria,Equatorial Guinea,1,1,1,2024
+Egypt,Mozambique,2,2,1,2024
+Ghana,Cape Verde,1,2,1,2024
+Indonesia,Iraq,1,3,1,2024
+South Korea,Bahrain,3,1,1,2024
+Malaysia,Jordan,0,4,1,2024
+Senegal,Gambia,3,0,1,2024
+Cameroon,Guinea,1,1,1,2024
+Algeria,Angola,1,1,1,2024
+Thailand,Kyrgyzstan,2,0,1,2024
+Saudi Arabia,Oman,2,1,1,2024
+Burkina Faso,Mauritania,1,0,1,2024
+Tunisia,Namibia,0,1,1,2024
+Mali,South Africa,2,0,1,2024
+Lebanon,China,0,0,1,2024
+Qatar,Tajikistan,1,0,1,2024
+Morocco,Tanzania,3,0,1,2024
+DR Congo,Zambia,1,1,1,2024
+Honduras,Iceland,0,2,0,2024
+Syria,Australia,0,1,1,2024
+India,Uzbekistan,0,3,1,2024
+Palestine,United Arab Emirates,1,1,1,2024
+Equatorial Guinea,Guinea-Bissau,4,2,1,2024
+Ivory Coast,Nigeria,0,1,1,2024
+Egypt,Ghana,2,2,1,2024
+Hong Kong,Iran,0,1,1,2024
+Iraq,Japan,2,1,1,2024
+Vietnam,Indonesia,0,1,1,2024
+Cape Verde,Mozambique,3,0,1,2024
+Senegal,Cameroon,3,1,1,2024
+Guinea,Gambia,1,0,1,2024
+Kuwait,Uganda,0,2,0,2024
+Jordan,South Korea,2,2,1,2024
+Bahrain,Malaysia,1,0,1,2024
+Algeria,Burkina Faso,2,2,1,2024
+Mauritania,Angola,2,3,1,2024
+Tunisia,Mali,1,1,1,2024
+United States,Slovenia,0,1,0,2024
+Oman,Thailand,0,0,1,2024
+Kyrgyzstan,Saudi Arabia,0,2,1,2024
+South Africa,Namibia,4,0,1,2024
+Morocco,DR Congo,1,1,1,2024
+Zambia,Tanzania,1,1,1,2024
+Qatar,China,1,0,1,2024
+Tajikistan,Lebanon,2,1,1,2024
+Guinea-Bissau,Nigeria,0,1,1,2024
+Ivory Coast,Equatorial Guinea,0,4,1,2024
+Cape Verde,Egypt,2,2,1,2024
+Mozambique,Ghana,2,2,1,2024
+Australia,Uzbekistan,1,1,1,2024
+Syria,India,1,0,1,2024
+Hong Kong,Palestine,0,3,1,2024
+Iran,United Arab Emirates,2,1,1,2024
+Gambia,Cameroon,2,3,1,2024
+Guinea,Senegal,0,2,1,2024
+Angola,Burkina Faso,2,0,1,2024
+Mauritania,Algeria,1,0,1,2024
+Iraq,Vietnam,3,2,1,2024
+Japan,Indonesia,3,1,1,2024
+Namibia,Mali,0,0,1,2024
+South Africa,Tunisia,0,0,1,2024
+Tanzania,DR Congo,0,0,1,2024
+Zambia,Morocco,0,1,1,2024
+Jordan,Bahrain,0,1,1,2024
+South Korea,Malaysia,3,3,1,2024
+Kyrgyzstan,Oman,1,1,1,2024
+Saudi Arabia,Thailand,0,0,1,2024
+Angola,Namibia,3,0,1,2024
+Nigeria,Cameroon,2,0,1,2024
+Australia,Indonesia,4,0,1,2024
+Tajikistan,United Arab Emirates,1,1,1,2024
+Egypt,DR Congo,1,1,1,2024
+Equatorial Guinea,Guinea,0,1,1,2024
+Iraq,Jordan,2,3,1,2024
+Qatar,Palestine,2,1,1,2024
+Cape Verde,Mauritania,1,0,1,2024
+Ivory Coast,Senegal,1,1,1,2024
+Saudi Arabia,South Korea,1,1,1,2024
+Uzbekistan,Thailand,2,1,1,2024
+Mali,Burkina Faso,2,1,1,2024
+Morocco,South Africa,0,2,1,2024
+Bahrain,Japan,1,3,1,2024
+Iran,Syria,1,1,1,2024
+Australia,South Korea,1,2,1,2024
+Tajikistan,Jordan,0,1,1,2024
+DR Congo,Guinea,3,1,1,2024
+Nigeria,Angola,1,0,1,2024
+Iran,Japan,2,1,1,2024
+Qatar,Uzbekistan,1,1,1,2024
+Cape Verde,South Africa,0,0,1,2024
+Ivory Coast,Mali,2,1,1,2024
+Costa Rica,El Salvador,2,0,0,2024
+Jordan,South Korea,2,0,1,2024
+Qatar,Iran,3,2,1,2024
+Ivory Coast,DR Congo,1,0,1,2024
+Nigeria,South Africa,1,1,1,2024
+Qatar,Jordan,3,1,1,2024
+South Africa,DR Congo,0,0,1,2024
+Ivory Coast,Nigeria,2,1,1,2024
+Trinidad and Tobago,Jamaica,0,1,0,2024
+Trinidad and Tobago,Jamaica,0,0,0,2024
+Kazakhstan,Turkmenistan,2,0,0,2024
+Solomon Islands,Fiji,2,1,0,2024
+Bonaire,El Salvador,1,1,0,2024
+San Marino,Saint Kitts and Nevis,1,3,0,2024
+Djibouti,Liberia,0,2,1,2024
+Somalia,Eswatini,0,3,1,2024
+Tonga,Samoa,1,4,1,2024
+South Africa,Andorra,1,1,1,2024
+Cape Verde,Guyana,1,0,1,2024
+Guinea,Vanuatu,6,0,1,2024
+Panama,Mexico,0,3,1,2024
+United States,Jamaica,3,1,1,2024
+Gibraltar,Lithuania,0,1,1,2024
+Poland,Estonia,5,1,1,2024
+Wales,Finland,4,1,1,2024
+Israel,Iceland,1,4,1,2024
+Bosnia and Herzegovina,Ukraine,1,2,1,2024
+Georgia,Luxembourg,2,0,1,2024
+Greece,Kazakhstan,5,0,1,2024
+Qatar,Kuwait,3,0,1,2024
+Afghanistan,India,0,0,1,2024
+Myanmar,Syria,1,1,1,2024
+Japan,North Korea,1,0,1,2024
+South Korea,Thailand,1,1,1,2024
+Singapore,China,2,2,1,2024
+Taiwan,Kyrgyzstan,0,2,1,2024
+Oman,Malaysia,2,0,1,2024
+Iran,Turkmenistan,5,0,1,2024
+Hong Kong,Uzbekistan,0,2,1,2024
+Indonesia,Vietnam,1,0,1,2024
+Iraq,Philippines,1,0,1,2024
+Pakistan,Jordan,0,3,1,2024
+Saudi Arabia,Tajikistan,1,0,1,2024
+Bahrain,Nepal,5,0,1,2024
+United Arab Emirates,Yemen,2,1,1,2024
+Australia,Lebanon,2,0,1,2024
+Palestine,Bangladesh,5,0,1,2024
+Belize,Puerto Rico,1,1,0,2024
+Cyprus,Latvia,1,1,0,2024
+Ecuador,Guatemala,2,0,0,2024
+Ethiopia,Lesotho,1,2,0,2024
+Malta,Slovenia,2,2,0,2024
+Montenegro,Belarus,2,0,0,2024
+Portugal,Sweden,5,2,0,2024
+Solomon Islands,Fiji,0,2,0,2024
+Venezuela,Italy,1,2,0,2024
+Algeria,Bolivia,3,2,1,2024
+Azerbaijan,Mongolia,1,0,1,2024
+Bulgaria,Tanzania,1,0,1,2024
+Egypt,New Zealand,1,0,1,2024
+Equatorial Guinea,Cambodia,2,0,1,2024
+Brunei,Bermuda,0,2,1,2024
+Central African Republic,Bhutan,6,0,1,2024
+Sri Lanka,Papua New Guinea,0,0,1,2024
+Anguilla,Turks and Caicos Islands,0,0,1,2024
+United States Virgin Islands,British Virgin Islands,1,1,1,2024
+Albania,Chile,0,3,0,2024
+Argentina,El Salvador,3,0,0,2024
+Armenia,Kosovo,0,1,0,2024
+Burkina Faso,Libya,1,2,0,2024
+Comoros,Uganda,4,0,0,2024
+Hungary,Turkey,1,0,0,2024
+Liechtenstein,Faroe Islands,0,4,0,2024
+Mauritania,Mali,0,2,0,2024
+Morocco,Angola,1,0,0,2024
+Netherlands,Scotland,4,0,0,2024
+Niger,Togo,1,2,0,2024
+Nigeria,Ghana,2,1,0,2024
+North Macedonia,Moldova,1,1,0,2024
+Norway,Czech Republic,1,2,0,2024
+Peru,Nicaragua,2,0,0,2024
+Romania,Northern Ireland,1,1,0,2024
+Senegal,Gabon,3,0,0,2024
+Spain,Colombia,0,1,0,2024
+Chad,Mauritius,1,0,1,2024
+São Tomé and Príncipe,South Sudan,1,1,1,2024
+Tunisia,Croatia,0,0,1,2024
+Canada,Trinidad and Tobago,2,0,1,2024
+Costa Rica,Honduras,3,1,1,2024
+Denmark,Switzerland,0,0,0,2024
+Dominican Republic,Aruba,2,0,0,2024
+England,Brazil,0,1,0,2024
+France,Germany,0,2,0,2024
+Ivory Coast,Benin,2,2,0,2024
+Republic of Ireland,Belgium,0,0,0,2024
+Slovakia,Austria,0,2,0,2024
+Samoa,Cook Islands,1,0,1,2024
+Jamaica,Panama,1,0,1,2024
+United States,Mexico,2,0,1,2024
+Belize,Puerto Rico,3,0,0,2024
+Ecuador,Italy,0,2,0,2024
+Ethiopia,Lesotho,2,1,0,2024
+Guatemala,Venezuela,0,0,0,2024
+San Marino,Saint Kitts and Nevis,0,0,0,2024
+Suriname,Martinique,1,1,0,2024
+Bolivia,Andorra,1,0,1,2024
+Azerbaijan,Bulgaria,1,1,1,2024
+Tanzania,Mongolia,3,0,1,2024
+Cape Verde,Equatorial Guinea,1,0,1,2024
+Bermuda,Guinea,1,5,1,2024
+Central African Republic,Papua New Guinea,4,0,1,2024
+Sri Lanka,Bhutan,2,0,1,2024
+Comoros,Angola,0,0,0,2024
+Cyprus,Serbia,0,1,0,2024
+Gabon,Congo,1,1,0,2024
+Montenegro,North Macedonia,1,0,0,2024
+Sweden,Albania,1,0,0,2024
+Algeria,South Africa,3,3,1,2024
+Egypt,Croatia,2,4,1,2024
+New Zealand,Tunisia,0,0,1,2024
+Cambodia,Guyana,1,4,1,2024
+Brunei,Vanuatu,3,2,1,2024
+Lithuania,Gibraltar,1,0,1,2024
+Wales,Poland,0,0,1,2024
+Ukraine,Iceland,2,1,1,2024
+Georgia,Greece,0,0,1,2024
+India,Afghanistan,1,2,1,2024
+Kuwait,Qatar,1,2,1,2024
+Syria,Myanmar,7,0,1,2024
+Thailand,South Korea,0,3,1,2024
+China,Singapore,4,1,1,2024
+Kyrgyzstan,Taiwan,5,1,1,2024
+Malaysia,Oman,0,2,1,2024
+Uzbekistan,Hong Kong,3,0,1,2024
+Turkmenistan,Iran,0,1,1,2024
+Philippines,Iraq,0,5,1,2024
+Vietnam,Indonesia,0,3,1,2024
+Tajikistan,Saudi Arabia,1,1,1,2024
+Jordan,Pakistan,7,0,1,2024
+Bahrain,Nepal,3,0,1,2024
+Yemen,United Arab Emirates,0,3,1,2024
+Bangladesh,Palestine,0,1,1,2024
+Australia,Lebanon,5,0,1,2024
+British Virgin Islands,United States Virgin Islands,0,0,1,2024
+Turks and Caicos Islands,Anguilla,1,1,1,2024
+Argentina,Costa Rica,3,1,0,2024
+Austria,Turkey,6,1,0,2024
+Colombia,Romania,3,2,0,2024
+Czech Republic,Armenia,2,1,0,2024
+Denmark,Faroe Islands,2,0,0,2024
+El Salvador,Honduras,1,1,0,2024
+England,Belgium,2,2,0,2024
+France,Chile,3,2,0,2024
+Germany,Netherlands,2,1,0,2024
+Hungary,Kosovo,2,0,0,2024
+Ivory Coast,Uruguay,2,1,0,2024
+Latvia,Liechtenstein,1,1,0,2024
+Malta,Belarus,0,0,0,2024
+Morocco,Mauritania,0,0,0,2024
+Nicaragua,Cuba,0,1,0,2024
+Norway,Slovakia,1,1,0,2024
+Peru,Dominican Republic,4,1,0,2024
+Republic of Ireland,Switzerland,0,1,0,2024
+Scotland,Northern Ireland,0,1,0,2024
+Senegal,Benin,1,0,0,2024
+Slovenia,Portugal,2,0,0,2024
+Spain,Brazil,3,3,0,2024
+Finland,Estonia,2,1,0,2024
+Liberia,Djibouti,0,0,1,2024
+Eswatini,Somalia,2,2,1,2024
+Mauritius,Chad,1,2,1,2024
+South Sudan,São Tomé and Príncipe,0,0,1,2024
+Tonga,Cook Islands,0,1,1,2024
+Northern Mariana Islands,Guam,2,2,1,2024
+Northern Mariana Islands,Guam,2,1,1,2024
+Trinidad and Tobago,Guyana,2,1,0,2024
+Trinidad and Tobago,Guyana,2,0,0,2024
+Grenada,Saint Vincent and the Grenadines,0,3,0,2024
+Guatemala,Nicaragua,1,1,0,2024
+Galicia,Panama,0,2,0,2024
+Basque Country,Uruguay,1,1,0,2024
+Bolivia,Mexico,0,1,0,2024
+Costa Rica,Uruguay,0,0,0,2024
+Greenland,Turkmenistan,0,5,0,2024
+Indonesia,Tanzania,0,0,0,2024
+Albania,Liechtenstein,3,0,0,2024
+Croatia,North Macedonia,3,0,0,2024
+England,Bosnia and Herzegovina,3,0,0,2024
+Germany,Ukraine,0,0,0,2024
+Gibraltar,Scotland,0,2,0,2024
+Austria,Serbia,2,1,0,2024
+Italy,Turkey,0,0,0,2024
+Portugal,Finland,4,2,0,2024
+Republic of Ireland,Hungary,2,1,0,2024
+Romania,Bulgaria,0,0,0,2024
+Slovenia,Armenia,2,1,0,2024
+Switzerland,Estonia,4,0,0,2024
+Belgium,Montenegro,2,0,0,2024
+Denmark,Sweden,2,1,0,2024
+France,Luxembourg,3,0,0,2024
+Mexico,Uruguay,0,4,0,2024
+Norway,Kosovo,3,0,0,2024
+San Marino,Slovakia,0,4,0,2024
+Spain,Andorra,5,0,0,2024
+Sierra Leone,Djibouti,2,1,1,2024
+Togo,South Sudan,1,1,1,2024
+Namibia,Liberia,1,1,1,2024
+Tunisia,Equatorial Guinea,1,0,1,2024
+Central African Republic,Chad,1,0,1,2024
+Antigua and Barbuda,Bermuda,1,1,1,2024
+Trinidad and Tobago,Grenada,2,2,1,2024
+Curaçao,Barbados,4,1,1,2024
+Nicaragua,Montserrat,4,1,1,2024
+Guatemala,Dominica,6,0,1,2024
+Suriname,Saint Vincent and the Grenadines,4,1,1,2024
+Gibraltar,Wales,0,0,0,2024
+Netherlands,Canada,4,0,0,2024
+Guinea-Bissau,Ethiopia,0,0,1,2024
+Egypt,Burkina Faso,2,1,1,2024
+Mauritania,Sudan,0,2,1,2024
+Senegal,DR Congo,1,1,1,2024
+Benin,Rwanda,1,0,1,2024
+Libya,Mauritius,2,1,1,2024
+Algeria,Guinea,1,2,1,2024
+Malawi,São Tomé and Príncipe,3,1,1,2024
+Mali,Ghana,1,2,1,2024
+Afghanistan,Qatar,0,0,1,2024
+India,Kuwait,0,0,1,2024
+Myanmar,Japan,0,5,1,2024
+North Korea,Syria,1,0,1,2024
+China,Thailand,1,1,1,2024
+Singapore,South Korea,0,7,1,2024
+Taiwan,Oman,0,3,1,2024
+Kyrgyzstan,Malaysia,1,1,1,2024
+Uzbekistan,Turkmenistan,3,1,1,2024
+Hong Kong,Iran,2,4,1,2024
+Indonesia,Iraq,0,2,1,2024
+Vietnam,Philippines,3,2,1,2024
+Jordan,Tajikistan,3,0,1,2024
+Pakistan,Saudi Arabia,0,3,1,2024
+Nepal,United Arab Emirates,0,4,1,2024
+Bahrain,Yemen,0,0,1,2024
+Bangladesh,Australia,0,2,1,2024
+Palestine,Lebanon,0,0,1,2024
+Honduras,Cuba,3,1,1,2024
+Costa Rica,Saint Kitts and Nevis,4,0,1,2024
+Haiti,Saint Lucia,2,1,1,2024
+Panama,Guyana,2,0,1,2024
+Jamaica,Dominican Republic,1,0,1,2024
+El Salvador,Puerto Rico,0,0,1,2024
+Albania,Azerbaijan,3,1,0,2024
+Armenia,Kazakhstan,2,1,0,2024
+Belarus,Russia,0,4,0,2024
+Cambodia,Mongolia,2,0,0,2024
+Czech Republic,Malta,7,1,0,2024
+England,Iceland,0,1,0,2024
+Germany,Greece,2,1,0,2024
+Peru,Paraguay,0,0,0,2024
+Poland,Ukraine,3,1,0,2024
+Romania,Liechtenstein,0,0,0,2024
+Scotland,Finland,2,2,0,2024
+Zimbabwe,Lesotho,0,2,1,2024
+Nigeria,South Africa,1,1,1,2024
+Angola,Eswatini,1,0,1,2024
+Morocco,Zambia,2,1,1,2024
+Kenya,Burundi,1,1,1,2024
+Ivory Coast,Gabon,1,0,1,2024
+Mozambique,Somalia,2,1,1,2024
+Uganda,Botswana,1,0,1,2024
+Madagascar,Comoros,2,1,1,2024
+Brunei,Sri Lanka,1,0,0,2024
+Latvia,Lithuania,0,2,1,2024
+Estonia,Faroe Islands,4,1,1,2024
+Belgium,Luxembourg,3,0,0,2024
+Denmark,Norway,3,1,0,2024
+Hungary,Israel,3,0,0,2024
+Mexico,Brazil,2,3,0,2024
+Moldova,Cyprus,3,2,0,2024
+Portugal,Croatia,1,2,0,2024
+Slovenia,Bulgaria,1,1,0,2024
+Spain,Northern Ireland,5,1,0,2024
+Sweden,Serbia,0,3,0,2024
+Switzerland,Austria,1,1,0,2024
+United States,Colombia,1,5,0,2024
+Cameroon,Cape Verde,4,1,1,2024
+Gambia,Seychelles,5,1,1,2024
+Cayman Islands,Antigua and Barbuda,1,0,1,2024
+Bahamas,Trinidad and Tobago,1,7,1,2024
+Aruba,Curaçao,0,2,1,2024
+Belize,Nicaragua,0,4,1,2024
+British Virgin Islands,Guatemala,0,3,1,2024
+Anguilla,Suriname,0,4,1,2024
+Argentina,Ecuador,1,0,0,2024
+France,Canada,0,0,0,2024
+Italy,Bosnia and Herzegovina,1,0,0,2024
+Montenegro,Georgia,1,3,0,2024
+Slovakia,Wales,4,0,0,2024
+Djibouti,Ethiopia,1,1,1,2024
+Mauritania,Senegal,0,1,1,2024
+DR Congo,Togo,1,0,1,2024
+São Tomé and Príncipe,Liberia,0,1,1,2024
+Namibia,Tunisia,0,0,1,2024
+Bermuda,Honduras,1,6,1,2024
+Grenada,Costa Rica,0,3,1,2024
+Barbados,Haiti,1,3,1,2024
+Montserrat,Panama,1,3,1,2024
+Dominica,Jamaica,2,3,1,2024
+Saint Vincent and the Grenadines,El Salvador,1,3,1,2024
+Czech Republic,North Macedonia,2,1,0,2024
+Netherlands,Iceland,4,0,0,2024
+Poland,Turkey,2,1,0,2024
+Guinea-Bissau,Egypt,1,1,1,2024
+Burkina Faso,Sierra Leone,2,2,1,2024
+Benin,Nigeria,2,1,1,2024
+Somalia,Botswana,1,3,1,2024
+Uganda,Algeria,1,2,1,2024
+Guinea,Mozambique,0,1,1,2024
+Equatorial Guinea,Malawi,1,0,1,2024
+Ghana,Central African Republic,4,3,1,2024
+Latvia,Faroe Islands,1,0,1,2024
+Lithuania,Estonia,1,1,1,2024
+Brunei,Sri Lanka,1,0,0,2024
+Andorra,Northern Ireland,0,2,0,2024
+Azerbaijan,Kazakhstan,3,2,0,2024
+Chile,Paraguay,3,0,0,2024
+Greece,Malta,2,0,0,2024
+Israel,Belarus,4,0,0,2024
+Moldova,Ukraine,0,4,0,2024
+Mongolia,Cambodia,2,1,0,2024
+Portugal,Republic of Ireland,3,0,0,2024
+San Marino,Cyprus,1,4,0,2024
+South Sudan,Sudan,0,3,1,2024
+Lesotho,Rwanda,0,1,1,2024
+South Africa,Zimbabwe,3,1,1,2024
+Cape Verde,Libya,1,0,1,2024
+Mauritius,Eswatini,2,1,1,2024
+Angola,Cameroon,1,1,1,2024
+Zambia,Tanzania,0,1,1,2024
+Morocco,Congo,6,0,1,2024
+Kenya,Ivory Coast,0,0,1,2024
+Gabon,Gambia,3,2,1,2024
+Seychelles,Burundi,1,3,1,2024
+Madagascar,Mali,0,0,1,2024
+Chad,Comoros,0,2,1,2024
+Kuwait,Afghanistan,1,0,1,2024
+Qatar,India,2,1,1,2024
+Japan,Syria,5,0,1,2024
+North Korea,Myanmar,4,1,1,2024
+Thailand,Singapore,3,1,1,2024
+South Korea,China,1,0,1,2024
+Oman,Kyrgyzstan,1,1,1,2024
+Malaysia,Taiwan,3,1,1,2024
+Turkmenistan,Hong Kong,0,0,1,2024
+Iran,Uzbekistan,0,0,1,2024
+Indonesia,Philippines,2,0,1,2024
+Iraq,Vietnam,3,1,1,2024
+Tajikistan,Pakistan,3,0,1,2024
+Saudi Arabia,Jordan,1,2,1,2024
+United Arab Emirates,Bahrain,1,1,1,2024
+Yemen,Nepal,2,2,1,2024
+Lebanon,Bangladesh,4,0,1,2024
+Australia,Palestine,5,0,1,2024
+Cuba,Cayman Islands,3,0,1,2024
+Saint Kitts and Nevis,Bahamas,1,0,1,2024
+Saint Lucia,Aruba,2,2,1,2024
+Guyana,Belize,3,1,1,2024
+Dominican Republic,British Virgin Islands,4,0,1,2024
+Puerto Rico,Anguilla,8,0,1,2024
+Ecuador,Bolivia,3,1,0,2024
+United States,Brazil,1,1,0,2024
+Germany,Scotland,5,1,1,2024
+Argentina,Guatemala,4,1,0,2024
+El Salvador,Peru,0,1,0,2024
+Hungary,Switzerland,1,3,1,2024
+Spain,Croatia,3,0,1,2024
+Italy,Albania,2,1,1,2024
+Colombia,Bolivia,3,0,0,2024
+Vanuatu,Solomon Islands,1,0,1,2024
+Ecuador,Honduras,2,1,0,2024
+Slovenia,Denmark,1,1,1,2024
+Serbia,England,0,1,1,2024
+Poland,Netherlands,1,2,1,2024
+Panama,Paraguay,0,1,0,2024
+Tahiti,Samoa,2,0,1,2024
+Fiji,Papua New Guinea,5,1,1,2024
+Austria,France,0,1,1,2024
+Romania,Ukraine,3,0,1,2024
+Belgium,Slovakia,0,1,1,2024
+Turkey,Georgia,3,1,1,2024
+Portugal,Czech Republic,2,1,1,2024
+New Zealand,Solomon Islands,3,0,1,2024
+Germany,Hungary,2,0,1,2024
+Scotland,Switzerland,1,1,1,2024
+Croatia,Albania,2,2,1,2024
+Papua New Guinea,Tahiti,1,1,1,2024
+Fiji,Samoa,9,1,1,2024
+Spain,Italy,1,0,1,2024
+Slovenia,Serbia,1,1,1,2024
+Denmark,England,1,1,1,2024
+Argentina,Canada,2,0,1,2024
+Poland,Austria,1,3,1,2024
+Netherlands,France,0,0,1,2024
+Slovakia,Ukraine,1,2,1,2024
+Vanuatu,New Zealand,0,4,1,2024
+Peru,Chile,0,0,1,2024
+Belgium,Romania,2,0,1,2024
+Georgia,Czech Republic,1,1,1,2024
+Turkey,Portugal,0,3,1,2024
+Samoa,Papua New Guinea,1,2,1,2024
+Fiji,Tahiti,1,0,1,2024
+Ecuador,Venezuela,1,2,1,2024
+Mexico,Jamaica,1,0,1,2024
+Germany,Switzerland,1,1,1,2024
+Scotland,Hungary,0,1,1,2024
+United States,Bolivia,2,0,1,2024
+Uruguay,Panama,3,1,1,2024
+Albania,Spain,0,1,1,2024
+Croatia,Italy,1,1,1,2024
+Colombia,Paraguay,2,1,1,2024
+Brazil,Costa Rica,0,0,1,2024
+England,Slovenia,0,0,1,2024
+Denmark,Serbia,0,0,1,2024
+Netherlands,Austria,2,3,1,2024
+France,Poland,1,1,1,2024
+Peru,Canada,0,1,1,2024
+Chile,Argentina,0,1,1,2024
+Slovakia,Romania,1,1,1,2024
+Ukraine,Belgium,0,0,1,2024
+Georgia,Portugal,2,0,1,2024
+Czech Republic,Turkey,1,2,1,2024
+Ecuador,Jamaica,3,1,1,2024
+Venezuela,Mexico,1,0,1,2024
+Vanuatu,Fiji,2,1,1,2024
+New Zealand,Tahiti,5,0,1,2024
+United States,Panama,1,2,1,2024
+Uruguay,Bolivia,5,0,1,2024
+Colombia,Costa Rica,3,0,1,2024
+Paraguay,Brazil,1,4,1,2024
+Switzerland,Italy,2,0,1,2024
+Germany,Denmark,2,0,1,2024
+Argentina,Peru,2,0,1,2024
+Canada,Chile,0,0,1,2024
+England,Slovakia,2,1,1,2024
+Spain,Georgia,4,1,1,2024
+Tahiti,Fiji,2,1,1,2024
+Vanuatu,New Zealand,0,3,1,2024
+Mexico,Ecuador,0,0,1,2024
+Jamaica,Venezuela,0,3,1,2024
+France,Belgium,1,0,1,2024
+Portugal,Slovenia,0,0,1,2024
+United States,Uruguay,0,1,1,2024
+Bolivia,Panama,1,3,1,2024
+Romania,Netherlands,0,3,1,2024
+Austria,Turkey,1,2,1,2024
+Brazil,Colombia,1,1,1,2024
+Costa Rica,Paraguay,2,1,1,2024
+Argentina,Ecuador,1,1,1,2024
+Germany,Spain,1,2,1,2024
+Portugal,France,0,0,1,2024
+Venezuela,Canada,1,1,1,2024
+England,Switzerland,1,1,1,2024
+Netherlands,Turkey,2,1,1,2024
+Uruguay,Brazil,0,0,1,2024
+Colombia,Panama,5,0,1,2024
+Spain,France,2,1,1,2024
+Argentina,Canada,2,0,1,2024
+Netherlands,England,1,2,1,2024
+Uruguay,Colombia,0,1,1,2024
+Canada,Uruguay,2,2,1,2024
+Spain,England,2,1,1,2024
+Argentina,Colombia,1,0,1,2024
+Guatemala,El Salvador,0,1,0,2024
+Jordan,North Korea,0,0,0,2024
+Jordan,North Korea,2,1,0,2024
+Guatemala,Uruguay,1,1,0,2024
+Fiji,Solomon Islands,1,0,1,2024
+Fiji,Hong Kong,1,1,1,2024
+India,Mauritius,0,0,1,2024
+Gibraltar,Andorra,1,0,0,2024
+Lebanon,Tajikistan,1,0,1,2024
+Malaysia,Philippines,2,1,1,2024
+Comoros,Gambia,1,1,1,2024
+Libya,Rwanda,1,1,1,2024
+Sudan,Niger,1,0,1,2024
+Tanzania,Ethiopia,0,0,1,2024
+United States Virgin Islands,Bahamas,3,3,1,2024
+Turks and Caicos Islands,Anguilla,0,2,1,2024
+Cayman Islands,British Virgin Islands,1,0,1,2024
+Hong Kong,Solomon Islands,3,0,1,2024
+Bhutan,Bangladesh,0,1,0,2024
+Vietnam,Russia,0,3,0,2024
+Sri Lanka,Cambodia,0,0,1,2024
+Timor-Leste,Mongolia,4,1,1,2024
+Tunisia,Madagascar,1,0,1,2024
+Central African Republic,Lesotho,3,1,1,2024
+Algeria,Equatorial Guinea,2,0,1,2024
+Ghana,Angola,0,1,1,2024
+Guinea-Bissau,Eswatini,1,0,1,2024
+Congo,South Sudan,1,0,1,2024
+Malawi,Burundi,2,3,1,2024
+Guyana,Suriname,1,3,1,2024
+Costa Rica,Guadeloupe,3,0,1,2024
+Guatemala,Martinique,3,1,1,2024
+Montserrat,El Salvador,1,4,1,2024
+Bonaire,Saint Vincent and the Grenadines,1,1,1,2024
+Portugal,Croatia,2,1,1,2024
+Scotland,Poland,2,3,1,2024
+Denmark,Switzerland,2,0,1,2024
+Serbia,Spain,0,0,1,2024
+Azerbaijan,Sweden,1,3,1,2024
+Estonia,Slovakia,0,1,1,2024
+Northern Ireland,Luxembourg,2,0,1,2024
+Belarus,Bulgaria,0,0,1,2024
+San Marino,Liechtenstein,1,0,1,2024
+Bolivia,Venezuela,4,0,1,2024
+Argentina,Chile,3,0,1,2024
+Qatar,United Arab Emirates,1,3,1,2024
+Uzbekistan,North Korea,1,0,1,2024
+Iran,Kyrgyzstan,1,0,1,2024
+Iraq,Oman,1,0,1,2024
+South Korea,Palestine,0,0,1,2024
+Jordan,Kuwait,1,1,1,2024
+Japan,China,7,0,1,2024
+Australia,Bahrain,0,1,1,2024
+Saudi Arabia,Indonesia,1,1,1,2024
+Syria,Mauritius,2,0,1,2024
+Brunei,Macau,3,0,1,2024
+Morocco,Gabon,4,1,1,2024
+Egypt,Cape Verde,3,0,1,2024
+Togo,Liberia,1,1,1,2024
+Sierra Leone,Chad,0,0,1,2024
+Ivory Coast,Zambia,2,0,1,2024
+DR Congo,Guinea,1,0,1,2024
+Mali,Mozambique,1,1,1,2024
+Kenya,Zimbabwe,0,0,1,2024
+South Africa,Uganda,2,2,1,2024
+Senegal,Burkina Faso,1,1,1,2024
+French Guiana,Nicaragua,0,1,1,2024
+Jamaica,Cuba,0,0,1,2024
+Honduras,Trinidad and Tobago,4,0,1,2024
+Saint Lucia,Curaçao,2,1,1,2024
+Grenada,Saint Martin,2,0,1,2024
+Sint Maarten,Aruba,2,0,1,2024
+Puerto Rico,Haiti,1,4,1,2024
+Belgium,Israel,3,1,1,2024
+France,Italy,1,3,1,2024
+Kazakhstan,Norway,0,0,1,2024
+Slovenia,Austria,1,1,1,2024
+Iceland,Montenegro,2,0,1,2024
+Wales,Turkey,0,0,1,2024
+Kosovo,Romania,0,3,1,2024
+Lithuania,Cyprus,0,1,1,2024
+Cook Islands,Tonga,1,3,1,2024
+Samoa,American Samoa,2,0,1,2024
+Peru,Colombia,1,1,1,2024
+Uruguay,Paraguay,0,0,1,2024
+Brazil,Ecuador,1,0,1,2024
+Mexico,New Zealand,3,0,0,2024
+United States,Canada,1,2,0,2024
+Mauritania,Botswana,1,0,1,2024
+Nigeria,Benin,3,0,1,2024
+Cameroon,Namibia,1,0,1,2024
+Bermuda,Dominican Republic,2,3,1,2024
+Antigua and Barbuda,Dominica,1,2,1,2024
+Bahamas,Barbados,2,3,1,2024
+Turks and Caicos Islands,Belize,0,4,1,2024
+Cayman Islands,Saint Kitts and Nevis,1,4,1,2024
+Germany,Hungary,5,0,1,2024
+Netherlands,Bosnia and Herzegovina,5,2,1,2024
+Georgia,Czech Republic,4,1,1,2024
+Ukraine,Albania,1,2,1,2024
+Republic of Ireland,England,0,2,1,2024
+Greece,Finland,3,0,1,2024
+Faroe Islands,North Macedonia,1,1,1,2024
+Armenia,Latvia,4,1,1,2024
+Moldova,Malta,2,0,1,2024
+Bhutan,Bangladesh,1,0,0,2024
+Tajikistan,Philippines,0,0,1,2024
+Malaysia,Lebanon,1,0,1,2024
+Gambia,Tunisia,1,2,1,2024
+Saint Vincent and the Grenadines,Montserrat,2,0,1,2024
+Bonaire,El Salvador,1,2,1,2024
+Portugal,Scotland,2,1,1,2024
+Croatia,Poland,1,0,1,2024
+Denmark,Serbia,2,0,1,2024
+Switzerland,Spain,1,4,1,2024
+Slovakia,Azerbaijan,2,0,1,2024
+Sweden,Estonia,3,0,1,2024
+Luxembourg,Belarus,0,1,1,2024
+Bulgaria,Northern Ireland,1,0,1,2024
+Gibraltar,Liechtenstein,2,2,1,2024
+India,Syria,0,3,1,2024
+Madagascar,Comoros,1,1,1,2024
+Morocco,Lesotho,1,0,1,2024
+Equatorial Guinea,Togo,2,2,1,2024
+Niger,Ghana,1,1,1,2024
+Angola,Sudan,2,1,1,2024
+Ethiopia,DR Congo,0,2,1,2024
+Uganda,Congo,2,0,1,2024
+Burundi,Senegal,0,1,1,2024
+Guadeloupe,Suriname,1,0,1,2024
+Martinique,Guyana,2,2,1,2024
+Guatemala,Costa Rica,0,0,1,2024
+Curaçao,Saint Martin,4,0,1,2024
+Grenada,Saint Lucia,1,2,1,2024
+Haiti,Sint Maarten,6,0,1,2024
+Puerto Rico,Aruba,1,0,1,2024
+France,Belgium,2,0,1,2024
+Israel,Italy,1,2,1,2024
+Norway,Austria,2,1,1,2024
+Slovenia,Kazakhstan,3,0,1,2024
+Montenegro,Wales,1,2,1,2024
+Turkey,Iceland,3,1,1,2024
+Cyprus,Kosovo,0,4,1,2024
+Romania,Lithuania,3,1,1,2024
+Samoa,Tonga,2,1,1,2024
+Mexico,Canada,0,0,0,2024
+Moldova,San Marino,1,0,0,2024
+United States,New Zealand,1,1,0,2024
+Vietnam,Thailand,1,2,0,2024
+Cambodia,Sri Lanka,2,2,1,2024
+Macau,Brunei,0,1,1,2024
+Mongolia,Timor-Leste,2,0,1,2024
+Gabon,Central African Republic,2,0,1,2024
+Botswana,Egypt,0,4,1,2024
+Cape Verde,Mauritania,2,0,1,2024
+Rwanda,Nigeria,0,0,1,2024
+Benin,Libya,2,1,1,2024
+Liberia,Algeria,0,3,1,2024
+Zambia,Sierra Leone,3,2,1,2024
+Chad,Ivory Coast,0,2,1,2024
+Guinea,Tanzania,1,2,1,2024
+Mozambique,Guinea-Bissau,2,1,1,2024
+Eswatini,Mali,0,1,1,2024
+Namibia,Kenya,1,2,1,2024
+South Sudan,South Africa,2,3,1,2024
+Burkina Faso,Malawi,3,1,1,2024
+Cuba,Nicaragua,1,1,1,2024
+Trinidad and Tobago,French Guiana,0,0,1,2024
+Honduras,Jamaica,1,2,1,2024
+Dominican Republic,Dominica,2,0,1,2024
+Antigua and Barbuda,Bermuda,0,1,1,2024
+United States Virgin Islands,Barbados,0,3,1,2024
+Belize,Anguilla,1,0,1,2024
+Saint Kitts and Nevis,British Virgin Islands,2,0,1,2024
+Hungary,Bosnia and Herzegovina,0,0,1,2024
+Netherlands,Germany,2,2,1,2024
+Albania,Georgia,0,1,1,2024
+Czech Republic,Ukraine,3,2,1,2024
+England,Finland,2,0,1,2024
+Republic of Ireland,Greece,0,2,1,2024
+Latvia,Faroe Islands,1,0,1,2024
+North Macedonia,Armenia,2,0,1,2024
+Andorra,Malta,0,1,1,2024
+Colombia,Argentina,2,1,1,2024
+Ecuador,Peru,1,0,1,2024
+Chile,Bolivia,1,2,1,2024
+Venezuela,Uruguay,0,0,1,2024
+Paraguay,Brazil,1,0,1,2024
+North Korea,Qatar,2,2,1,2024
+Kyrgyzstan,Uzbekistan,2,3,1,2024
+United Arab Emirates,Iran,0,1,1,2024
+Oman,South Korea,1,3,1,2024
+Kuwait,Iraq,0,0,1,2024
+Palestine,Jordan,1,3,1,2024
+Bahrain,Japan,0,5,1,2024
+Indonesia,Australia,0,0,1,2024
+China,Saudi Arabia,1,2,1,2024
+Zimbabwe,Cameroon,0,0,1,2024
+Brunei,Timor-Leste,0,1,1,2024
+Barbados,United States Virgin Islands,5,0,1,2024
+Belize,Anguilla,1,0,1,2024
+Saint Kitts and Nevis,British Virgin Islands,3,1,1,2024
+Liechtenstein,Hong Kong,1,0,0,2024
+Myanmar,Sri Lanka,2,0,0,2024
+Cape Verde,Botswana,0,1,1,2024
+Algeria,Togo,5,1,1,2024
+Ghana,Sudan,0,0,1,2024
+DR Congo,Tanzania,1,0,1,2024
+Namibia,Zimbabwe,0,1,1,2024
+Burkina Faso,Burundi,4,1,1,2024
+Cuba,Trinidad and Tobago,2,2,1,2024
+French Guiana,Honduras,2,3,1,2024
+Nicaragua,Jamaica,0,2,1,2024
+Bonaire,Montserrat,0,1,1,2024
+Saint Vincent and the Grenadines,El Salvador,2,3,1,2024
+Israel,France,1,4,1,2024
+Italy,Belgium,2,2,1,2024
+England,Greece,1,2,1,2024
+Finland,Republic of Ireland,1,2,1,2024
+Austria,Kazakhstan,4,0,1,2024
+Norway,Slovenia,3,0,1,2024
+Latvia,North Macedonia,0,3,1,2024
+Faroe Islands,Armenia,2,2,1,2024
+Gibraltar,San Marino,1,0,1,2024
+Moldova,Andorra,2,0,1,2024
+Bolivia,Colombia,1,0,1,2024
+Ecuador,Paraguay,0,0,1,2024
+Venezuela,Argentina,1,1,1,2024
+Chile,Brazil,1,2,1,2024
+Papua New Guinea,New Caledonia,1,3,1,2024
+Fiji,Solomon Islands,1,0,1,2024
+Qatar,Kyrgyzstan,3,1,1,2024
+Uzbekistan,Iran,0,0,1,2024
+United Arab Emirates,North Korea,1,1,1,2024
+Jordan,South Korea,0,2,1,2024
+Oman,Kuwait,4,0,1,2024
+Iraq,Palestine,1,0,1,2024
+Bahrain,Indonesia,2,2,1,2024
+Australia,China,3,1,1,2024
+Saudi Arabia,Japan,0,2,1,2024
+Cambodia,Taiwan,3,2,0,2024
+Madagascar,Gambia,1,1,1,2024
+Tunisia,Comoros,0,1,1,2024
+Gabon,Lesotho,0,0,1,2024
+Egypt,Mauritania,2,0,1,2024
+Benin,Rwanda,3,0,1,2024
+Nigeria,Libya,1,0,1,2024
+Equatorial Guinea,Liberia,1,0,1,2024
+Angola,Niger,2,0,1,2024
+Zambia,Chad,0,0,1,2024
+Ivory Coast,Sierra Leone,4,1,1,2024
+Mozambique,Eswatini,1,1,1,2024
+Mali,Guinea-Bissau,1,0,1,2024
+Cameroon,Kenya,4,1,1,2024
+Uganda,South Sudan,1,0,1,2024
+South Africa,Congo,5,0,1,2024
+Senegal,Malawi,4,0,1,2024
+Guadeloupe,Martinique,0,1,1,2024
+Suriname,Costa Rica,1,1,1,2024
+Guyana,Guatemala,1,3,1,2024
+Grenada,Curaçao,0,0,1,2024
+Saint Lucia,Saint Martin,2,1,1,2024
+Sint Maarten,Puerto Rico,3,2,1,2024
+Aruba,Haiti,1,3,1,2024
+Bosnia and Herzegovina,Germany,1,2,1,2024
+Hungary,Netherlands,1,1,1,2024
+Czech Republic,Albania,2,0,1,2024
+Ukraine,Georgia,1,0,1,2024
+Iceland,Wales,2,2,1,2024
+Turkey,Montenegro,1,0,1,2024
+Estonia,Azerbaijan,3,1,1,2024
+Slovakia,Sweden,2,2,1,2024
+Peru,Uruguay,1,0,1,2024
+New Zealand,Tahiti,3,0,1,2024
+Syria,Tajikistan,1,0,1,2024
+Thailand,Philippines,3,1,1,2024
+United States,Panama,2,0,0,2024
+Vietnam,India,1,1,0,2024
+Morocco,Central African Republic,5,0,1,2024
+Guinea,Ethiopia,4,1,1,2024
+Antigua and Barbuda,Dominican Republic,0,5,1,2024
+Bermuda,Dominica,6,1,1,2024
+Bahamas,United States Virgin Islands,3,1,1,2024
+Turks and Caicos Islands,Anguilla,2,1,1,2024
+Cayman Islands,British Virgin Islands,1,0,1,2024
+Croatia,Scotland,2,1,1,2024
+Poland,Portugal,1,3,1,2024
+Serbia,Switzerland,2,0,1,2024
+Spain,Denmark,1,0,1,2024
+Lithuania,Kosovo,1,2,1,2024
+Cyprus,Romania,0,3,1,2024
+Bulgaria,Luxembourg,0,0,1,2024
+Belarus,Northern Ireland,0,0,1,2024
+Vanuatu,Samoa,4,1,1,2024
+Andorra,San Marino,2,0,0,2024
+Myanmar,Sri Lanka,0,0,0,2024
+Burundi,Burkina Faso,0,2,1,2024
+Montserrat,Bonaire,0,1,1,2024
+Saint Vincent and the Grenadines,El Salvador,2,1,1,2024
+Finland,England,1,3,1,2024
+Greece,Republic of Ireland,2,0,1,2024
+Kazakhstan,Slovenia,0,1,1,2024
+Austria,Norway,5,1,1,2024
+Faroe Islands,Latvia,1,1,1,2024
+Armenia,North Macedonia,0,2,1,2024
+Liechtenstein,Gibraltar,0,0,1,2024
+Malta,Moldova,1,0,1,2024
+New Zealand,Malaysia,4,0,0,2024
+Gambia,Madagascar,1,0,1,2024
+Liberia,Equatorial Guinea,1,2,1,2024
+Togo,Algeria,0,1,1,2024
+Eswatini,Mozambique,0,3,1,2024
+Kenya,Cameroon,0,1,1,2024
+Zimbabwe,Namibia,3,1,1,2024
+Nicaragua,French Guiana,3,2,1,2024
+Jamaica,Honduras,0,0,1,2024
+Trinidad and Tobago,Cuba,3,1,1,2024
+Curaçao,Grenada,1,0,1,2024
+Saint Lucia,Saint Martin,0,4,1,2024
+Puerto Rico,Sint Maarten,2,1,1,2024
+Aruba,Haiti,3,5,1,2024
+Belgium,France,1,2,1,2024
+Italy,Israel,4,1,1,2024
+Bosnia and Herzegovina,Hungary,0,2,1,2024
+Germany,Netherlands,1,0,1,2024
+Georgia,Albania,0,1,1,2024
+Ukraine,Czech Republic,1,1,1,2024
+Iceland,Turkey,2,4,1,2024
+Wales,Montenegro,1,0,1,2024
+Azerbaijan,Slovakia,1,3,1,2024
+Estonia,Sweden,0,3,1,2024
+Tajikistan,Philippines,0,3,1,2024
+Thailand,Syria,2,1,1,2024
+Canada,Panama,2,1,0,2024
+Hong Kong,Cambodia,3,0,0,2024
+Mexico,United States,2,0,0,2024
+Comoros,Tunisia,1,1,1,2024
+Lesotho,Gabon,0,2,1,2024
+Morocco,Central African Republic,4,0,1,2024
+Mauritania,Egypt,0,1,1,2024
+Botswana,Cape Verde,1,0,1,2024
+Rwanda,Benin,2,1,1,2024
+Sudan,Ghana,2,0,1,2024
+Niger,Angola,0,1,1,2024
+Chad,Zambia,0,1,1,2024
+Sierra Leone,Ivory Coast,1,0,1,2024
+Tanzania,DR Congo,0,2,1,2024
+Ethiopia,Guinea,0,3,1,2024
+Guinea-Bissau,Mali,0,0,1,2024
+South Sudan,Uganda,1,2,1,2024
+Congo,South Africa,1,1,1,2024
+Malawi,Senegal,0,1,1,2024
+Costa Rica,Guatemala,3,0,1,2024
+Guadeloupe,Martinique,0,0,1,2024
+Suriname,Guyana,5,1,1,2024
+Dominican Republic,Antigua and Barbuda,5,0,1,2024
+Bermuda,Dominica,3,2,1,2024
+Barbados,Bahamas,6,2,1,2024
+Belize,Turks and Caicos Islands,3,0,1,2024
+Saint Kitts and Nevis,Cayman Islands,1,1,1,2024
+Scotland,Portugal,0,0,1,2024
+Poland,Croatia,3,3,1,2024
+Spain,Serbia,3,0,1,2024
+Switzerland,Denmark,2,2,1,2024
+Kosovo,Cyprus,3,0,1,2024
+Lithuania,Romania,1,2,1,2024
+Northern Ireland,Bulgaria,5,0,1,2024
+Belarus,Luxembourg,1,1,1,2024
+Colombia,Chile,4,0,1,2024
+Paraguay,Venezuela,2,1,1,2024
+Uruguay,Ecuador,0,0,1,2024
+Argentina,Bolivia,6,0,1,2024
+Brazil,Peru,4,0,1,2024
+Uzbekistan,United Arab Emirates,1,0,1,2024
+Iran,Qatar,4,1,1,2024
+Kyrgyzstan,North Korea,1,0,1,2024
+Jordan,Oman,4,0,1,2024
+Palestine,Kuwait,2,2,1,2024
+South Korea,Iraq,3,2,1,2024
+Japan,Australia,1,1,1,2024
+China,Indonesia,2,1,1,2024
+Saudi Arabia,Bahrain,0,0,1,2024
+Timor-Leste,Brunei,0,0,1,2024
+Bangladesh,Maldives,0,1,0,2024
+Tajikistan,Nepal,4,0,0,2024
+Liberia,Togo,1,0,1,2024
+Chad,Sierra Leone,1,1,1,2024
+Namibia,Cameroon,0,0,1,2024
+Belgium,Italy,0,1,1,2024
+France,Israel,0,0,1,2024
+Republic of Ireland,Finland,1,0,1,2024
+Greece,England,0,3,1,2024
+Kazakhstan,Austria,0,2,1,2024
+Slovenia,Norway,1,4,1,2024
+North Macedonia,Latvia,1,0,1,2024
+Armenia,Faroe Islands,0,1,1,2024
+Montserrat,Saint Vincent and the Grenadines,1,2,1,2024
+El Salvador,Bonaire,1,0,1,2024
+Belize,French Guiana,2,1,1,2024
+Saint Kitts and Nevis,Cuba,2,1,1,2024
+Costa Rica,Panama,0,1,1,2024
+Jamaica,United States,0,1,1,2024
+Hong Kong,Philippines,3,1,0,2024
+Malaysia,Laos,3,1,0,2024
+Malta,Liechtenstein,2,0,0,2024
+Singapore,Myanmar,3,2,0,2024
+Thailand,Lebanon,0,0,0,2024
+Venezuela,Brazil,1,1,1,2024
+Ecuador,Bolivia,4,0,1,2024
+Paraguay,Argentina,2,1,1,2024
+Solomon Islands,New Caledonia,2,3,1,2024
+Papua New Guinea,Fiji,3,3,1,2024
+North Korea,Iran,2,3,1,2024
+Qatar,Uzbekistan,3,2,1,2024
+United Arab Emirates,Kyrgyzstan,3,0,1,2024
+Kuwait,South Korea,1,3,1,2024
+Iraq,Jordan,0,0,1,2024
+Oman,Palestine,1,0,1,2024
+Bahrain,China,0,1,1,2024
+Australia,Saudi Arabia,0,0,1,2024
+Madagascar,Tunisia,2,3,1,2024
+Lesotho,Central African Republic,1,0,1,2024
+Rwanda,Libya,0,1,1,2024
+Benin,Nigeria,1,1,1,2024
+Equatorial Guinea,Algeria,0,0,1,2024
+Niger,Sudan,4,0,1,2024
+South Sudan,Congo,3,2,1,2024
+Burundi,Malawi,0,0,1,2024
+Burkina Faso,Senegal,0,1,1,2024
+Portugal,Poland,5,1,1,2024
+Scotland,Croatia,1,0,1,2024
+Denmark,Spain,1,2,1,2024
+Switzerland,Serbia,1,1,1,2024
+Cyprus,Lithuania,2,1,1,2024
+Romania,Kosovo,0,0,1,2024
+Northern Ireland,Belarus,2,0,1,2024
+Luxembourg,Bulgaria,0,1,1,2024
+San Marino,Gibraltar,1,1,1,2024
+Saint Lucia,Grenada,0,4,1,2024
+Curaçao,Saint Martin,5,0,1,2024
+Puerto Rico,Aruba,5,1,1,2024
+Sint Maarten,Haiti,0,8,1,2024
+Barbados,Guyana,1,4,1,2024
+Cayman Islands,Guadeloupe,0,6,1,2024
+Honduras,Mexico,2,0,1,2024
+Suriname,Canada,0,1,1,2024
+Peru,Chile,0,0,1,2024
+Uruguay,Colombia,3,2,1,2024
+Samoa,Tahiti,0,3,1,2024
+New Zealand,Vanuatu,8,1,1,2024
+Indonesia,Japan,0,4,1,2024
+Russia,Brunei,2,1,0,2024
+Gambia,Comoros,1,2,1,2024
+Gabon,Morocco,1,5,1,2024
+Botswana,Mauritania,1,1,1,2024
+Cape Verde,Egypt,1,1,1,2024
+Angola,Ghana,1,1,1,2024
+Zambia,Ivory Coast,1,0,1,2024
+Eswatini,Guinea-Bissau,1,1,1,2024
+Mozambique,Mali,0,1,1,2024
+Zimbabwe,Kenya,1,1,1,2024
+Uganda,South Africa,0,2,1,2024
+Germany,Bosnia and Herzegovina,7,0,1,2024
+Netherlands,Hungary,4,0,1,2024
+Albania,Czech Republic,0,0,1,2024
+Georgia,Ukraine,1,1,1,2024
+Montenegro,Iceland,0,2,1,2024
+Turkey,Wales,0,0,1,2024
+Azerbaijan,Estonia,0,0,1,2024
+Sweden,Slovakia,2,1,1,2024
+Andorra,Moldova,0,1,1,2024
+Bermuda,Antigua and Barbuda,2,1,1,2024
+Dominican Republic,Dominica,6,1,1,2024
+Bangladesh,Maldives,2,1,0,2024
+Nepal,Afghanistan,2,0,0,2024
+Sri Lanka,Yemen,1,0,0,2024
+Ethiopia,Tanzania,0,2,1,2024
+Guinea,DR Congo,1,0,1,2024
+Israel,Belgium,1,0,1,2024
+Italy,France,1,3,1,2024
+England,Republic of Ireland,5,0,1,2024
+Finland,Greece,0,2,1,2024
+Norway,Kazakhstan,5,0,1,2024
+Austria,Slovenia,1,1,1,2024
+North Macedonia,Faroe Islands,1,0,1,2024
+Latvia,Armenia,1,2,1,2024
+Saint Vincent and the Grenadines,Bonaire,3,1,1,2024
+El Salvador,Montserrat,1,0,1,2024
+Thailand,Laos,1,1,0,2024
+Fiji,New Caledonia,1,1,1,2024
+Papua New Guinea,Solomon Islands,1,2,1,2024
+Algeria,Liberia,5,1,1,2024
+Togo,Equatorial Guinea,3,0,1,2024
+Croatia,Portugal,1,1,1,2024
+Poland,Scotland,1,2,1,2024
+Serbia,Denmark,0,0,1,2024
+Spain,Switzerland,3,2,1,2024
+Kosovo,Lithuania,1,0,1,2024
+Romania,Cyprus,4,1,1,2024
+Luxembourg,Northern Ireland,2,2,1,2024
+Bulgaria,Belarus,1,1,1,2024
+Liechtenstein,San Marino,1,3,1,2024
+Grenada,Saint Martin,0,3,1,2024
+Saint Lucia,Curaçao,1,4,1,2024
+Aruba,Sint Maarten,0,1,1,2024
+Puerto Rico,Haiti,0,3,1,2024
+Cuba,Saint Kitts and Nevis,4,0,1,2024
+Panama,Costa Rica,2,2,1,2024
+United States,Jamaica,4,2,1,2024
+India,Malaysia,1,1,0,2024
+Singapore,Taiwan,2,3,0,2024
+Tahiti,Vanuatu,2,0,1,2024
+New Zealand,Samoa,8,0,1,2024
+Tunisia,Gambia,0,1,1,2024
+Comoros,Madagascar,1,0,1,2024
+Morocco,Lesotho,7,0,1,2024
+Central African Republic,Gabon,0,1,1,2024
+Nigeria,Rwanda,1,2,1,2024
+Libya,Benin,0,0,1,2024
+Ghana,Niger,1,2,1,2024
+Sudan,Angola,0,0,1,2024
+Malawi,Burkina Faso,3,0,1,2024
+Bosnia and Herzegovina,Netherlands,1,1,1,2024
+Hungary,Germany,1,1,1,2024
+Albania,Ukraine,1,2,1,2024
+Czech Republic,Georgia,2,1,1,2024
+Wales,Iceland,4,1,1,2024
+Montenegro,Turkey,3,1,1,2024
+Slovakia,Estonia,1,0,1,2024
+Sweden,Azerbaijan,6,0,1,2024
+Malta,Andorra,0,0,1,2024
+Antigua and Barbuda,Dominica,0,0,1,2024
+Dominican Republic,Bermuda,6,1,1,2024
+French Guiana,Belize,2,2,1,2024
+Guadeloupe,Cayman Islands,1,0,1,2024
+Guyana,Barbados,5,3,1,2024
+Canada,Suriname,3,0,1,2024
+Mexico,Honduras,4,0,1,2024
+Gibraltar,Moldova,1,1,0,2024
+Hong Kong,Mauritius,1,0,0,2024
+Myanmar,Lebanon,2,3,0,2024
+Russia,Syria,4,0,0,2024
+Sri Lanka,Yemen,0,2,0,2024
+Tajikistan,Afghanistan,3,1,0,2024
+Bolivia,Paraguay,2,2,1,2024
+Colombia,Ecuador,0,1,1,2024
+Argentina,Peru,1,0,1,2024
+Chile,Venezuela,4,2,1,2024
+Brazil,Uruguay,1,1,1,2024
+North Korea,Uzbekistan,0,1,1,2024
+Kyrgyzstan,Iran,2,3,1,2024
+United Arab Emirates,Qatar,5,0,1,2024
+Palestine,South Korea,1,1,1,2024
+Oman,Iraq,0,1,1,2024
+Kuwait,Jordan,1,1,1,2024
+Bahrain,Australia,2,2,1,2024
+Indonesia,Saudi Arabia,2,0,1,2024
+China,Japan,1,3,1,2024
+Egypt,Botswana,1,1,1,2024
+Mauritania,Cape Verde,1,0,1,2024
+Ivory Coast,Chad,4,0,1,2024
+Sierra Leone,Zambia,0,2,1,2024
+DR Congo,Ethiopia,1,2,1,2024
+Tanzania,Guinea,1,0,1,2024
+Mali,Eswatini,6,0,1,2024
+Guinea-Bissau,Mozambique,1,2,1,2024
+Cameroon,Zimbabwe,2,1,1,2024
+Kenya,Namibia,0,0,1,2024
+South Africa,South Sudan,3,0,1,2024
+Congo,Uganda,0,1,1,2024
+Senegal,Burundi,2,0,1,2024
+Cambodia,Malaysia,2,2,1,2024
+Timor-Leste,Thailand,0,10,1,2024
+Hong Kong,Mongolia,3,0,1,2024
+Myanmar,Indonesia,0,1,1,2024
+Laos,Vietnam,1,4,1,2024
+Solomon Islands,Vanuatu,4,1,1,2024
+Singapore,Cambodia,2,1,1,2024
+Malaysia,Timor-Leste,3,2,1,2024
+Taiwan,Mongolia,4,0,1,2024
+Philippines,Myanmar,1,1,1,2024
+Indonesia,Laos,3,3,1,2024
+Fiji,Vanuatu,1,1,1,2024
+Timor-Leste,Singapore,0,3,1,2024
+Thailand,Malaysia,1,0,1,2024
+Macau,Guam,1,2,1,2024
+Hong Kong,Taiwan,2,1,1,2024
+Laos,Philippines,1,1,1,2024
+Vietnam,Indonesia,1,0,1,2024
+Papua New Guinea,Fiji,1,1,1,2024
+Cambodia,Timor-Leste,2,1,1,2024
+Singapore,Thailand,2,4,1,2024
+Hong Kong,Guam,5,0,1,2024
+Myanmar,Laos,3,2,1,2024
+Philippines,Vietnam,1,1,1,2024
+Solomon Islands,Papua New Guinea,2,3,1,2024
+Thailand,Cambodia,3,2,1,2024
+Malaysia,Singapore,0,0,1,2024
+Vietnam,Myanmar,5,0,1,2024
+Indonesia,Philippines,0,1,1,2024
+Kuwait,Oman,1,1,1,2024
+Qatar,United Arab Emirates,1,1,1,2024
+Vanuatu,Papua New Guinea,1,2,1,2024
+Solomon Islands,Fiji,1,3,1,2024
+Iraq,Yemen,1,0,1,2024
+Saudi Arabia,Bahrain,2,3,1,2024
+Oman,Qatar,2,1,1,2024
+Kuwait,United Arab Emirates,2,1,1,2024
+Yemen,Saudi Arabia,2,3,1,2024
+Bahrain,Iraq,2,0,1,2024
+Singapore,Vietnam,0,2,1,2024
+Philippines,Thailand,2,1,1,2024
+Kuwait,Qatar,1,1,1,2024
+United Arab Emirates,Oman,1,1,1,2024
+Iraq,Saudi Arabia,1,3,1,2024
+Bahrain,Yemen,1,2,1,2024
+Vietnam,Singapore,3,1,1,2024
+Thailand,Philippines,3,1,1,2024
+Oman,Saudi Arabia,2,1,1,2024
+Kuwait,Bahrain,0,1,1,2024
+Vietnam,Thailand,2,1,1,2025
+Zanzibar,Tanzania,1,0,1,2025
+Oman,Bahrain,1,2,1,2025
+Burkina Faso,Kenya,1,1,1,2025
+Thailand,Vietnam,2,3,1,2025
+Zanzibar,Burkina Faso,0,1,1,2025
+Tanzania,Kenya,0,2,1,2025
+Tanzania,Burkina Faso,0,2,1,2025
+Zanzibar,Kenya,1,0,1,2025
+Zanzibar,Burkina Faso,2,1,1,2025
+United States,Venezuela,3,1,0,2025
+United States,Costa Rica,3,0,0,2025
+Uzbekistan,Jordan,0,0,0,2025
+Jamaica,Trinidad and Tobago,1,0,0,2025
+Chile,Panama,6,1,0,2025
+Jamaica,Trinidad and Tobago,1,1,0,2025
+Oman,Sudan,0,0,0,2025
+Saint Vincent and the Grenadines,Grenada,1,1,0,2025
+Oman,Sudan,0,0,0,2025
+Jordan,North Korea,1,1,0,2025
+Honduras,Guatemala,1,2,0,2025
+Hong Kong,Macau,2,0,0,2025
+India,Maldives,3,0,0,2025
+Vietnam,Cambodia,2,1,0,2025
+Eswatini,Cameroon,0,0,1,2025
+Liberia,Tunisia,0,1,1,2025
+Central African Republic,Madagascar,1,4,1,2025
+Kazakhstan,Curaçao,2,0,0,2025
+Russia,Grenada,5,0,0,2025
+Canada,Mexico,0,2,1,2025
+United States,Panama,0,1,1,2025
+Croatia,France,2,0,1,2025
+Denmark,Portugal,1,0,1,2025
+Italy,Germany,1,2,1,2025
+Netherlands,Spain,2,2,1,2025
+Austria,Serbia,1,1,1,2025
+Greece,Scotland,0,1,1,2025
+Turkey,Hungary,3,1,1,2025
+Ukraine,Belgium,3,1,1,2025
+Armenia,Georgia,0,3,1,2025
+Bulgaria,Republic of Ireland,1,2,1,2025
+Kosovo,Iceland,2,1,1,2025
+Slovakia,Slovenia,0,0,1,2025
+Laos,Sri Lanka,1,2,0,2025
+Tajikistan,Belarus,0,5,0,2025
+Paraguay,Chile,1,0,1,2025
+Peru,Bolivia,3,1,1,2025
+Brazil,Colombia,2,1,1,2025
+Iran,United Arab Emirates,2,0,1,2025
+Uzbekistan,Kyrgyzstan,1,0,1,2025
+Qatar,North Korea,5,1,1,2025
+South Korea,Oman,1,1,1,2025
+Iraq,Kuwait,2,2,1,2025
+Jordan,Palestine,3,1,1,2025
+Japan,Bahrain,2,0,1,2025
+Australia,Indonesia,5,1,1,2025
+Saudi Arabia,China,1,0,1,2025
+Sierra Leone,Guinea-Bissau,3,1,1,2025
+Zimbabwe,Benin,2,2,1,2025
+Cape Verde,Mauritius,1,0,1,2025
+Libya,Angola,1,1,1,2025
+Gambia,Kenya,3,3,1,2025
+Gabon,Seychelles,3,0,1,2025
+Mozambique,Uganda,3,1,1,2025
+Malawi,Namibia,0,1,1,2025
+Comoros,Mali,0,3,1,2025
+Lebanon,Timor-Leste,4,0,0,2025
+Belize,Costa Rica,0,7,1,2025
+Guyana,Guatemala,3,2,1,2025
+Bermuda,Honduras,3,5,1,2025
+Saint Vincent and the Grenadines,Jamaica,1,1,1,2025
+Suriname,Martinique,1,0,1,2025
+Guadeloupe,Nicaragua,1,0,1,2025
+Cuba,Trinidad and Tobago,1,2,1,2025
+Northern Ireland,Switzerland,1,1,0,2025
+Puerto Rico,Dominican Republic,2,2,0,2025
+Singapore,Nepal,0,1,0,2025
+Thailand,Afghanistan,2,0,0,2025
+Ecuador,Venezuela,2,1,1,2025
+Uruguay,Argentina,0,1,1,2025
+New Caledonia,Tahiti,3,0,1,2025
+New Zealand,Fiji,7,0,1,2025
+Burkina Faso,Djibouti,4,1,1,2025
+Ethiopia,Egypt,0,2,1,2025
+DR Congo,South Sudan,1,0,1,2025
+Rwanda,Nigeria,0,2,1,2025
+South Africa,Lesotho,0,3,1,2025
+Morocco,Niger,2,1,1,2025
+Burundi,Ivory Coast,0,1,1,2025
+Botswana,Algeria,1,3,1,2025
+Guinea,Somalia,0,0,1,2025
+Equatorial Guinea,São Tomé and Príncipe,2,0,1,2025
+Ghana,Chad,5,0,1,2025
+Malta,Finland,0,1,1,2025
+Poland,Lithuania,1,0,1,2025
+Cyprus,San Marino,2,0,1,2025
+Romania,Bosnia and Herzegovina,0,1,1,2025
+England,Albania,2,0,1,2025
+Andorra,Latvia,0,1,1,2025
+Azerbaijan,Haiti,0,3,0,2025
+Luxembourg,Sweden,1,0,0,2025
+Togo,Mauritania,2,2,1,2025
+Sudan,Senegal,0,0,1,2025
+Moldova,Norway,0,5,1,2025
+Israel,Estonia,2,1,1,2025
+Liechtenstein,North Macedonia,0,3,1,2025
+Wales,Kazakhstan,3,1,1,2025
+Montenegro,Gibraltar,3,1,1,2025
+Czech Republic,Faroe Islands,2,1,1,2025
+United States,Canada,1,2,1,2025
+Panama,Mexico,1,2,1,2025
+France,Croatia,2,0,1,2025
+Germany,Italy,3,3,1,2025
+Portugal,Denmark,5,2,1,2025
+Spain,Netherlands,3,3,1,2025
+Belgium,Ukraine,3,0,1,2025
+Hungary,Turkey,0,3,1,2025
+Scotland,Greece,0,3,1,2025
+Serbia,Austria,2,0,1,2025
+Georgia,Armenia,6,1,1,2025
+Iceland,Kosovo,1,3,1,2025
+Republic of Ireland,Bulgaria,2,1,1,2025
+Slovenia,Slovakia,1,0,1,2025
+Eswatini,Mauritius,3,3,1,2025
+Kenya,Gabon,1,2,1,2025
+New Zealand,New Caledonia,3,0,1,2025
+Guinea-Bissau,Burkina Faso,1,2,1,2025
+Ethiopia,Djibouti,6,1,1,2025
+Ivory Coast,Gambia,1,0,1,2025
+Namibia,Equatorial Guinea,1,1,1,2025
+Liberia,São Tomé and Príncipe,2,1,1,2025
+Tunisia,Malawi,2,0,1,2025
+Central African Republic,Mali,0,0,1,2025
+Madagascar,Ghana,0,3,1,2025
+Lithuania,Finland,2,2,1,2025
+Poland,Malta,2,0,1,2025
+Bosnia and Herzegovina,Cyprus,2,1,1,2025
+San Marino,Romania,1,5,1,2025
+England,Latvia,3,0,1,2025
+Albania,Andorra,3,0,1,2025
+Tajikistan,Timor-Leste,1,0,1,2025
+Philippines,Maldives,4,1,1,2025
+Bhutan,Yemen,0,0,1,2025
+Lebanon,Brunei,5,0,1,2025
+India,Bangladesh,0,0,1,2025
+Singapore,Hong Kong,0,0,1,2025
+Taiwan,Turkmenistan,1,2,1,2025
+Thailand,Sri Lanka,1,0,1,2025
+Myanmar,Afghanistan,2,1,1,2025
+Syria,Pakistan,2,0,1,2025
+Vietnam,Laos,5,0,1,2025
+Malaysia,Nepal,2,0,1,2025
+Costa Rica,Belize,6,1,1,2025
+Guatemala,Guyana,2,0,1,2025
+Honduras,Bermuda,2,0,1,2025
+Jamaica,Saint Vincent and the Grenadines,3,0,1,2025
+Martinique,Suriname,0,1,1,2025
+Nicaragua,Guadeloupe,0,1,1,2025
+Trinidad and Tobago,Cuba,4,0,1,2025
+Azerbaijan,Belarus,0,2,0,2025
+Russia,Zambia,5,0,0,2025
+Cambodia,Aruba,1,2,0,2025
+Dominican Republic,Puerto Rico,2,0,0,2025
+Niger,Bonaire,6,0,0,2025
+Sweden,Northern Ireland,5,1,0,2025
+Switzerland,Luxembourg,3,1,0,2025
+Bolivia,Uruguay,0,0,1,2025
+Colombia,Paraguay,2,2,1,2025
+Venezuela,Peru,1,0,1,2025
+Argentina,Brazil,4,1,1,2025
+Chile,Ecuador,0,0,1,2025
+Iran,Uzbekistan,2,2,1,2025
+Kyrgyzstan,Qatar,3,1,1,2025
+North Korea,United Arab Emirates,1,2,1,2025
+South Korea,Jordan,1,1,1,2025
+Kuwait,Oman,0,1,1,2025
+Palestine,Iraq,2,1,1,2025
+China,Australia,0,2,1,2025
+Japan,Saudi Arabia,0,0,1,2025
+Indonesia,Bahrain,1,0,1,2025
+Egypt,Sierra Leone,1,0,1,2025
+Mauritania,DR Congo,0,2,1,2025
+Senegal,Togo,2,0,1,2025
+Sudan,South Sudan,1,1,1,2025
+Benin,South Africa,0,2,1,2025
+Nigeria,Zimbabwe,1,1,1,2025
+Rwanda,Lesotho,1,1,1,2025
+Angola,Cape Verde,1,2,1,2025
+Cameroon,Libya,3,1,1,2025
+Morocco,Tanzania,2,0,1,2025
+Burundi,Seychelles,5,0,1,2025
+Uganda,Guinea,1,0,1,2025
+Botswana,Somalia,2,0,1,2025
+Algeria,Mozambique,5,1,1,2025
+Comoros,Chad,1,0,1,2025
+Moldova,Estonia,2,3,1,2025
+Israel,Norway,2,4,1,2025
+Liechtenstein,Kazakhstan,0,2,1,2025
+North Macedonia,Wales,1,1,1,2025
+Gibraltar,Czech Republic,0,4,1,2025
+Montenegro,Faroe Islands,1,0,1,2025
+Dominica,Barbados,0,0,0,2025
+Dominica,Barbados,0,0,0,2025
+Saint Kitts and Nevis,Saint Vincent and the Grenadines,1,3,0,2025
+Anguilla,Saint Kitts and Nevis,2,4,0,2025
+Saint Vincent and the Grenadines,Saint Kitts and Nevis,3,0,0,2025
+Jamaica,Trinidad and Tobago,3,2,1,2025
+Nigeria,Ghana,2,1,1,2025
+Oman,Lebanon,1,0,0,2025
+Malaysia,Cape Verde,1,1,0,2025
+Saint Vincent and the Grenadines,British Virgin Islands,1,1,0,2025
+Saudi Arabia,Jordan,2,0,0,2025
+Trinidad and Tobago,Ghana,0,4,1,2025
+Jamaica,Nigeria,2,2,1,2025
+Grenada,Anguilla,2,0,0,2025
+El Salvador,Guatemala,1,1,0,2025
+Puerto Rico,Nicaragua,1,1,0,2025
+Tunisia,Burkina Faso,2,0,0,2025
+Malaysia,Cape Verde,0,3,0,2025
+Germany,Portugal,1,2,1,2025
+Thailand,India,2,0,0,2025
+Bangladesh,Bhutan,2,0,0,2025
+Bermuda,Cayman Islands,5,0,1,2025
+Grenada,Bahamas,6,0,1,2025
+Barbados,Aruba,1,1,1,2025
+Montserrat,Belize,1,0,1,2025
+Dominica,British Virgin Islands,3,0,1,2025
+Saint Vincent and the Grenadines,Anguilla,6,0,1,2025
+Spain,France,5,4,1,2025
+Algeria,Rwanda,2,0,0,2025
+Belarus,Kazakhstan,4,1,0,2025
+Cambodia,Tajikistan,1,2,0,2025
+DR Congo,Mali,1,0,0,2025
+Georgia,Faroe Islands,1,0,0,2025
+Hong Kong,Nepal,0,0,0,2025
+Singapore,Maldives,3,1,0,2025
+Ecuador,Brazil,0,0,1,2025
+Paraguay,Uruguay,2,0,1,2025
+Chile,Argentina,0,1,1,2025
+United Arab Emirates,Uzbekistan,0,0,1,2025
+North Korea,Kyrgyzstan,2,2,1,2025
+Qatar,Iran,1,0,1,2025
+Oman,Jordan,0,3,1,2025
+Iraq,South Korea,0,2,1,2025
+Kuwait,Palestine,0,2,1,2025
+Bahrain,Saudi Arabia,0,2,1,2025
+Australia,Japan,1,0,1,2025
+Indonesia,China,1,0,1,2025
+Sri Lanka,Brunei,1,0,0,2025
+Bulgaria,Cyprus,2,2,0,2025
+Burundi,Guinea-Bissau,1,0,0,2025
+Central African Republic,Mauritania,2,1,0,2025
+Equatorial Guinea,Gambia,1,2,0,2025
+Hungary,Sweden,0,2,0,2025
+Kosovo,Armenia,5,2,0,2025
+Luxembourg,Slovenia,0,1,0,2025
+Morocco,Tunisia,2,0,0,2025
+Niger,Gabon,4,3,0,2025
+Poland,Moldova,2,0,0,2025
+Republic of Ireland,Senegal,1,1,0,2025
+Scotland,Iceland,1,3,0,2025
+South Africa,Tanzania,0,0,0,2025
+Uganda,Cameroon,0,3,0,2025
+Zimbabwe,Burkina Faso,0,2,0,2025
+Russia,Nigeria,1,1,0,2025
+Colombia,Peru,0,0,1,2025
+Venezuela,Bolivia,2,0,1,2025
+Norway,Italy,3,0,1,2025
+Estonia,Israel,1,3,1,2025
+Wales,Liechtenstein,3,0,1,2025
+North Macedonia,Belgium,1,1,1,2025
+Czech Republic,Montenegro,2,0,1,2025
+Gibraltar,Croatia,0,7,1,2025
+Antigua and Barbuda,Cuba,0,1,1,2025
+Trinidad and Tobago,Saint Kitts and Nevis,6,2,1,2025
+Curaçao,Saint Lucia,4,0,1,2025
+Nicaragua,Guyana,1,0,1,2025
+Guatemala,Dominican Republic,4,2,1,2025
+Suriname,Puerto Rico,1,0,1,2025
+Denmark,Northern Ireland,2,1,0,2025
+Greece,Slovakia,4,1,0,2025
+Latvia,Azerbaijan,0,0,0,2025
+Mexico,Switzerland,2,4,0,2025
+United States,Turkey,1,2,0,2025
+Malta,Lithuania,0,0,1,2025
+Finland,Netherlands,0,2,1,2025
+Bosnia and Herzegovina,San Marino,1,0,1,2025
+Austria,Romania,2,1,1,2025
+Andorra,England,0,1,1,2025
+Albania,Serbia,0,0,1,2025
+Canada,Ukraine,4,2,1,2025
+Ivory Coast,New Zealand,0,1,1,2025
+Kenya,Chad,0,0,0,2025
+Cayman Islands,Honduras,0,1,1,2025
+Bahamas,Costa Rica,0,8,1,2025
+Aruba,Haiti,0,5,1,2025
+Belize,Panama,0,2,1,2025
+British Virgin Islands,Jamaica,0,1,1,2025
+Anguilla,El Salvador,0,3,1,2025
+Germany,France,0,2,1,2025
+Portugal,Spain,2,2,1,2025
+DR Congo,Madagascar,3,1,0,2025
+Georgia,Cape Verde,1,1,0,2025
+Algeria,Rwanda,2,0,0,2025
+Equatorial Guinea,Cameroon,1,1,0,2025
+Gabon,Guinea-Bissau,2,0,0,2025
+Kosovo,Comoros,4,2,0,2025
+Liechtenstein,Scotland,0,4,0,2025
+Montenegro,Armenia,2,2,0,2025
+Morocco,Benin,1,0,0,2025
+Uganda,Gambia,1,1,0,2025
+Italy,Moldova,2,0,1,2025
+Estonia,Norway,0,1,1,2025
+Kazakhstan,North Macedonia,0,1,1,2025
+Belgium,Wales,4,3,1,2025
+Faroe Islands,Gibraltar,2,1,1,2025
+Croatia,Czech Republic,5,1,1,2025
+Timor-Leste,Maldives,1,0,1,2025
+Philippines,Tajikistan,2,2,1,2025
+Brunei,Bhutan,2,1,1,2025
+Yemen,Lebanon,0,0,1,2025
+Bangladesh,Singapore,1,2,1,2025
+Hong Kong,India,1,0,1,2025
+Sri Lanka,Taiwan,3,1,1,2025
+Turkmenistan,Thailand,3,1,1,2025
+Myanmar,Pakistan,1,0,1,2025
+Afghanistan,Syria,0,1,1,2025
+Laos,Nepal,2,1,1,2025
+Malaysia,Vietnam,4,0,1,2025
+Azerbaijan,Hungary,1,2,0,2025
+Burundi,Mauritania,0,0,0,2025
+Chad,Kenya,1,2,0,2025
+Denmark,Lithuania,5,0,0,2025
+England,Senegal,1,3,0,2025
+Greece,Bulgaria,4,0,0,2025
+Israel,Slovakia,1,0,0,2025
+Luxembourg,Republic of Ireland,0,0,0,2025
+Mexico,Turkey,1,0,0,2025
+Niger,Zimbabwe,1,1,0,2025
+Northern Ireland,Iceland,1,0,0,2025
+Slovenia,Bosnia and Herzegovina,2,1,0,2025
+South Africa,Mozambique,2,0,0,2025
+Sweden,Algeria,4,3,0,2025
+United States,Switzerland,0,4,0,2025
+Bolivia,Chile,2,0,1,2025
+Uruguay,Venezuela,2,0,1,2025
+Peru,Ecuador,0,0,1,2025
+Argentina,Colombia,1,1,1,2025
+Brazil,Paraguay,1,0,1,2025
+Uzbekistan,Qatar,3,0,1,2025
+Iran,North Korea,3,0,1,2025
+Kyrgyzstan,United Arab Emirates,1,1,1,2025
+South Korea,Kuwait,4,0,1,2025
+Jordan,Iraq,0,1,1,2025
+Palestine,Oman,1,1,1,2025
+China,Bahrain,1,0,1,2025
+Japan,Indonesia,6,0,1,2025
+Saudi Arabia,Australia,1,2,1,2025
+Netherlands,Malta,8,0,1,2025
+Finland,Poland,2,1,1,2025
+San Marino,Austria,0,4,1,2025
+Romania,Cyprus,2,0,1,2025
+Serbia,Andorra,3,0,1,2025
+Latvia,Albania,1,1,1,2025
+New Zealand,Ukraine,1,2,1,2025
+Canada,Ivory Coast,0,0,1,2025
+Belarus,Russia,1,4,0,2025
+Cuba,Bermuda,1,2,1,2025
+Honduras,Antigua and Barbuda,2,0,1,2025
+Saint Kitts and Nevis,Grenada,2,3,1,2025
+Costa Rica,Trinidad and Tobago,2,1,1,2025
+Saint Lucia,Barbados,2,1,1,2025
+Haiti,Curaçao,1,5,1,2025
+Guyana,Montserrat,3,0,1,2025
+Panama,Nicaragua,3,0,1,2025
+Dominican Republic,Dominica,5,0,1,2025
+Jamaica,Guatemala,3,0,1,2025
+Puerto Rico,Saint Vincent and the Grenadines,2,1,1,2025
+El Salvador,Suriname,1,1,1,2025
+Mexico,Dominican Republic,3,2,1,2025
+Costa Rica,Suriname,4,3,1,2025
+United States,Trinidad and Tobago,5,0,1,2025
+Haiti,Saudi Arabia,0,1,1,2025
+Panama,Guadeloupe,5,2,1,2025
+Jamaica,Guatemala,0,1,1,2025
+Curaçao,El Salvador,0,0,1,2025
+Canada,Honduras,6,0,1,2025
+Costa Rica,Dominican Republic,2,1,1,2025
+Suriname,Mexico,0,2,1,2025
+Trinidad and Tobago,Haiti,1,1,1,2025
+United States,Saudi Arabia,1,0,1,2025
+Jamaica,Guadeloupe,2,1,1,2025
+Guatemala,Panama,0,1,1,2025
+Curaçao,Canada,1,1,1,2025
+Honduras,El Salvador,2,0,1,2025
+Mexico,Costa Rica,0,0,1,2025
+Dominican Republic,Suriname,0,0,1,2025
+Saudi Arabia,Trinidad and Tobago,1,1,1,2025
+United States,Haiti,2,1,1,2025
+Honduras,Curaçao,2,1,1,2025
+Canada,El Salvador,2,0,1,2025
+Panama,Jamaica,4,1,1,2025
+Guadeloupe,Guatemala,2,3,1,2025
+Panama,Honduras,1,1,1,2025
+Mexico,Saudi Arabia,2,0,1,2025
+Canada,Guatemala,1,1,1,2025
+United States,Costa Rica,2,2,1,2025
+Tamil Eelam,Tibet,4,0,1,2025
+United States,Guatemala,2,1,1,2025
+Mexico,Honduras,1,0,1,2025
+Tamil Eelam,East Turkestan,2,1,1,2025
+Tibet,East Turkestan,4,6,1,2025
+Tamil Eelam,East Turkestan,5,0,1,2025
+United States,Mexico,1,2,1,2025
+Hitra,Isle of Man,2,7,1,2025
+Orkney,Frøya,3,0,1,2025
+Gozo,Shetland,0,0,1,2025
+Orkney,Hitra,3,2,1,2025
+Isle of Man,Frøya,10,1,1,2025
+Jersey,Gozo,2,0,1,2025
+Ynys Môn,Western Isles,1,0,1,2025
+Orkney,Isle of Man,1,3,1,2025
+Frøya,Hitra,0,6,1,2025
+Jersey,Shetland,2,2,1,2025
+Hitra,Frøya,3,0,1,2025
+Gozo,Western Isles,3,3,1,2025
+Orkney,Shetland,3,2,1,2025
+Isle of Man,Ynys Môn,0,1,1,2025
+Isle of Man,Jersey,3,2,1,2025
+United States Virgin Islands,Turks and Caicos Islands,1,1,1,2025
+Marshall Islands,United States Virgin Islands,0,4,1,2025
+Turks and Caicos Islands,Marshall Islands,3,2,1,2025
+Qatar,Lebanon,2,2,0,2025
+Qatar,Bahrain,2,2,0,2025
+Seychelles,Gabon,0,4,1,2025
+Gibraltar,Albania,0,1,0,2025
+Malaysia,Singapore,2,1,0,2025
+Norway,Finland,1,0,0,2025
+Russia,Jordan,0,0,0,2025
+Saudi Arabia,North Macedonia,2,1,0,2025
+United Arab Emirates,Syria,3,1,0,2025
+Colombia,Bolivia,3,0,1,2025
+Argentina,Venezuela,3,0,1,2025
+Paraguay,Ecuador,0,0,1,2025
+Uruguay,Peru,3,0,1,2025
+Brazil,Chile,3,0,1,2025
+Guinea-Bissau,Sierra Leone,1,1,1,2025
+Angola,Libya,0,1,1,2025
+Cameroon,Eswatini,3,0,1,2025
+Mauritius,Cape Verde,0,2,1,2025
+Algeria,Botswana,3,1,1,2025
+São Tomé and Príncipe,Equatorial Guinea,2,3,1,2025
+Tunisia,Liberia,3,0,1,2025
+Chad,Ghana,1,1,1,2025
+Madagascar,Central African Republic,2,0,1,2025
+Mali,Comoros,3,0,1,2025
+Luxembourg,Northern Ireland,1,3,1,2025
+Slovakia,Germany,2,0,1,2025
+Georgia,Turkey,2,3,1,2025
+Bulgaria,Spain,0,3,1,2025
+Lithuania,Malta,1,1,1,2025
+Netherlands,Poland,1,1,1,2025
+Kazakhstan,Wales,0,1,1,2025
+Liechtenstein,Belgium,0,6,1,2025
+Iraq,Hong Kong,2,1,1,2025
+Thailand,Fiji,3,0,1,2025
+Suriname,Panama,0,0,1,2025
+Guatemala,El Salvador,0,1,1,2025
+Australia,New Zealand,1,0,1,2025
+Indonesia,Taiwan,6,0,0,2025
+Romania,Canada,0,3,0,2025
+Djibouti,Burkina Faso,0,6,1,2025
+Egypt,Ethiopia,2,0,1,2025
+South Sudan,DR Congo,1,4,1,2025
+Mauritania,Togo,2,0,1,2025
+Senegal,Sudan,2,0,1,2025
+Benin,Zimbabwe,1,0,1,2025
+South Africa,Lesotho,3,0,1,2025
+Congo,Tanzania,1,1,1,2025
+Morocco,Niger,5,0,1,2025
+Kenya,Gambia,1,3,1,2025
+Ivory Coast,Burundi,1,0,1,2025
+Somalia,Guinea,0,3,1,2025
+Uganda,Mozambique,4,0,1,2025
+Namibia,Malawi,1,2,1,2025
+Slovenia,Sweden,2,2,1,2025
+Switzerland,Kosovo,4,0,1,2025
+Denmark,Scotland,0,0,1,2025
+Greece,Belarus,5,1,1,2025
+Iceland,Azerbaijan,5,0,1,2025
+Ukraine,France,0,2,1,2025
+Italy,Estonia,5,0,1,2025
+Moldova,Israel,0,4,1,2025
+Faroe Islands,Croatia,0,1,1,2025
+Montenegro,Czech Republic,0,2,1,2025
+Bermuda,Jamaica,0,4,1,2025
+Trinidad and Tobago,Curaçao,0,0,1,2025
+Haiti,Honduras,0,0,1,2025
+Nicaragua,Costa Rica,1,1,1,2025
+Sri Lanka,Maldives,0,3,1,2025
+Mexico,Japan,0,0,0,2025
+Nepal,Bangladesh,0,0,0,2025
+United States,South Korea,0,2,0,2025
+Nigeria,Rwanda,1,0,1,2025
+Republic of Ireland,Hungary,2,2,1,2025
+Armenia,Portugal,0,5,1,2025
+Austria,Cyprus,1,0,1,2025
+San Marino,Bosnia and Herzegovina,0,6,1,2025
+Latvia,Serbia,0,1,1,2025
+England,Andorra,2,0,1,2025
+Central African Republic,Comoros,0,2,1,2025
+Germany,Northern Ireland,3,1,1,2025
+Luxembourg,Slovakia,0,1,1,2025
+Georgia,Bulgaria,3,0,1,2025
+Turkey,Spain,0,6,1,2025
+Lithuania,Netherlands,2,3,1,2025
+Poland,Finland,3,1,1,2025
+North Macedonia,Liechtenstein,5,0,1,2025
+Belgium,Kazakhstan,6,0,1,2025
+Qatar,Russia,1,4,0,2025
+Fiji,Hong Kong,0,8,1,2025
+Thailand,Iraq,0,1,1,2025
+Czech Republic,Saudi Arabia,1,1,0,2025
+Indonesia,Lebanon,0,0,0,2025
+Malaysia,Palestine,1,0,0,2025
+Syria,Kuwait,2,2,0,2025
+United Arab Emirates,Bahrain,1,0,0,2025
+Guinea-Bissau,Djibouti,2,0,1,2025
+Libya,Eswatini,2,0,1,2025
+Zambia,Morocco,0,2,1,2025
+Mozambique,Botswana,2,0,1,2025
+Guinea,Algeria,0,0,1,2025
+Uganda,Somalia,2,0,1,2025
+Equatorial Guinea,Tunisia,0,1,1,2025
+Malawi,Liberia,2,2,1,2025
+Madagascar,Chad,3,1,1,2025
+Ghana,Mali,1,0,1,2025
+Kosovo,Sweden,2,0,1,2025
+Switzerland,Slovenia,3,0,1,2025
+Belarus,Scotland,0,2,1,2025
+Greece,Denmark,0,3,1,2025
+Israel,Italy,4,5,1,2025
+Croatia,Montenegro,4,0,1,2025
+Gibraltar,Faroe Islands,0,1,1,2025
+El Salvador,Suriname,1,2,1,2025
+Panama,Guatemala,1,1,1,2025
+Estonia,Andorra,0,0,0,2025
+Jordan,Dominican Republic,3,0,0,2025
+Malta,San Marino,3,1,0,2025
+Mexico,South Korea,2,2,0,2025
+New Zealand,Australia,1,3,1,2025
+Singapore,Myanmar,1,1,0,2025
+Sri Lanka,Maldives,1,1,0,2025
+United States,Japan,2,0,0,2025
+Wales,Canada,0,1,0,2025
+Ecuador,Argentina,1,0,1,2025
+Peru,Paraguay,0,1,1,2025
+Bolivia,Brazil,1,0,1,2025
+Venezuela,Colombia,3,6,1,2025
+Chile,Uruguay,0,0,1,2025
+Sierra Leone,Ethiopia,2,0,1,2025
+Burkina Faso,Egypt,0,0,1,2025
+Togo,Sudan,1,0,1,2025
+DR Congo,Senegal,2,3,1,2025
+Mauritania,South Sudan,0,0,1,2025
+Zimbabwe,Rwanda,0,1,1,2025
+South Africa,Nigeria,1,1,1,2025
+Benin,Lesotho,4,0,1,2025
+Cape Verde,Cameroon,1,0,1,2025
+Angola,Mauritius,3,1,1,2025
+Tanzania,Niger,0,1,1,2025
+Kenya,Seychelles,5,0,1,2025
+Gabon,Ivory Coast,0,0,1,2025
+Gambia,Burundi,2,0,1,2025
+Namibia,São Tomé and Príncipe,3,0,1,2025
+Azerbaijan,Ukraine,1,1,1,2025
+France,Iceland,2,1,1,2025
+Armenia,Republic of Ireland,2,1,1,2025
+Hungary,Portugal,2,3,1,2025
+Bosnia and Herzegovina,Austria,1,2,1,2025
+Cyprus,Romania,2,2,1,2025
+Norway,Moldova,11,1,1,2025
+Albania,Latvia,1,0,1,2025
+Serbia,England,0,5,1,2025
+Jamaica,Trinidad and Tobago,2,0,1,2025
+Curaçao,Bermuda,3,2,1,2025
+Costa Rica,Haiti,3,3,1,2025
+Honduras,Nicaragua,2,0,1,2025
+Saint Kitts and Nevis,Saint Martin,5,0,0,2025
+Saint Kitts and Nevis,Saint Martin,2,1,0,2025
+Saint Vincent and the Grenadines,Cuba,7,0,0,2025
+Qatar,Oman,0,0,1,2025
+Saudi Arabia,Indonesia,3,2,1,2025
+Ethiopia,Guinea-Bissau,1,0,1,2025
+Sierra Leone,Burkina Faso,0,1,1,2025
+Djibouti,Egypt,0,3,1,2025
+Libya,Cape Verde,3,3,1,2025
+Eswatini,Angola,2,2,1,2025
+Mauritius,Cameroon,0,2,1,2025
+Niger,Congo,3,1,1,2025
+Tanzania,Zambia,0,1,1,2025
+Comoros,Madagascar,1,2,1,2025
+Central African Republic,Ghana,0,5,1,2025
+Chad,Mali,0,2,1,2025
+Gibraltar,New Caledonia,0,2,0,2025
+Saint Vincent and the Grenadines,Cuba,1,0,0,2025
+England,Wales,3,0,0,2025
+Poland,New Zealand,1,0,0,2025
+Romania,Moldova,2,1,0,2025
+Morocco,Bahrain,1,0,0,2025
+Grenada,British Virgin Islands,4,1,0,2025
+Burundi,Kenya,0,1,1,2025
+Algeria,Somalia,3,0,1,2025
+Botswana,Uganda,0,1,1,2025
+Mozambique,Guinea,1,2,1,2025
+Malawi,Equatorial Guinea,3,0,1,2025
+Scotland,Greece,3,1,1,2025
+Belarus,Denmark,0,6,1,2025
+Malta,Netherlands,0,4,1,2025
+Finland,Lithuania,2,1,1,2025
+Austria,San Marino,10,0,1,2025
+Cyprus,Bosnia and Herzegovina,2,2,1,2025
+Faroe Islands,Montenegro,4,0,1,2025
+Czech Republic,Croatia,0,0,1,2025
+Tajikistan,Maldives,2,0,1,2025
+Timor-Leste,Philippines,1,4,1,2025
+Brunei,Yemen,0,2,1,2025
+Lebanon,Bhutan,2,0,1,2025
+Singapore,India,1,1,1,2025
+Bangladesh,Hong Kong,3,4,1,2025
+Sri Lanka,Turkmenistan,1,0,1,2025
+Thailand,Taiwan,2,0,1,2025
+Pakistan,Afghanistan,0,0,1,2025
+Syria,Myanmar,5,1,1,2025
+Laos,Malaysia,0,3,1,2025
+Vietnam,Nepal,3,1,1,2025
+Liberia,Namibia,3,1,1,2025
+Nicaragua,Haiti,0,3,1,2025
+Honduras,Costa Rica,0,0,1,2025
+Argentina,Venezuela,1,0,0,2025
+Chile,Peru,2,1,0,2025
+Canada,Australia,0,1,0,2025
+Russia,Iran,2,1,0,2025
+Japan,Paraguay,2,2,1,2025
+Uzbekistan,Kuwait,2,0,0,2025
+Jordan,Bolivia,0,1,0,2025
+South Korea,Brazil,0,5,0,2025
+Uruguay,Dominican Republic,1,0,0,2025
+United States,Ecuador,1,1,0,2025
+Togo,DR Congo,0,1,1,2025
+South Sudan,Senegal,0,5,1,2025
+Sudan,Mauritania,0,0,1,2025
+Lesotho,Nigeria,1,2,1,2025
+Rwanda,Benin,0,1,1,2025
+South Africa,Zimbabwe,0,0,1,2025
+Gambia,Gabon,3,4,1,2025
+Seychelles,Ivory Coast,0,7,1,2025
+Tunisia,São Tomé and Príncipe,6,0,1,2025
+Northern Ireland,Slovakia,2,0,1,2025
+Germany,Luxembourg,4,0,1,2025
+Kosovo,Slovenia,0,0,1,2025
+Sweden,Switzerland,0,2,1,2025
+Iceland,Ukraine,3,5,1,2025
+France,Azerbaijan,3,0,1,2025
+Kazakhstan,Liechtenstein,4,0,1,2025
+Belgium,North Macedonia,0,0,1,2025
+Suriname,Guatemala,1,1,1,2025
+El Salvador,Panama,0,1,1,2025
+Bermuda,Trinidad and Tobago,0,3,1,2025
+Curaçao,Jamaica,2,0,1,2025
+Grenada,Cuba,2,0,0,2025
+Mexico,Colombia,0,4,0,2025
+United Arab Emirates,Oman,2,1,1,2025
+Iraq,Indonesia,1,0,1,2025
+Spain,Georgia,2,0,1,2025
+Bulgaria,Turkey,1,6,1,2025
+Hungary,Armenia,2,0,1,2025
+Portugal,Republic of Ireland,1,0,1,2025
+Norway,Israel,5,0,1,2025
+Estonia,Italy,1,3,1,2025
+Latvia,Andorra,2,2,1,2025
+Serbia,Albania,0,1,1,2025
+Malta,Bosnia and Herzegovina,1,4,0,2025
+Burkina Faso,Ethiopia,3,1,1,2025
+Djibouti,Sierra Leone,1,2,1,2025
+Egypt,Guinea-Bissau,1,0,1,2025
+Zambia,Niger,0,1,1,2025
+Chad,Central African Republic,2,3,1,2025
+Ghana,Comoros,1,0,1,2025
+Mali,Madagascar,4,1,1,2025
+Scotland,Belarus,2,1,1,2025
+Denmark,Greece,3,1,1,2025
+Netherlands,Finland,4,0,1,2025
+Lithuania,Poland,0,2,1,2025
+San Marino,Cyprus,0,4,1,2025
+Romania,Austria,1,0,1,2025
+Faroe Islands,Czech Republic,2,1,1,2025
+Croatia,Gibraltar,3,0,1,2025
+Montenegro,Liechtenstein,2,1,0,2025
+Uzbekistan,Uruguay,1,2,0,2025
+South Sudan,Togo,0,0,1,2025
+Lesotho,Zimbabwe,1,0,1,2025
+Cape Verde,Eswatini,3,0,1,2025
+Cameroon,Angola,0,0,1,2025
+Mauritius,Libya,0,0,1,2025
+Equatorial Guinea,Liberia,1,1,1,2025
+São Tomé and Príncipe,Malawi,1,0,1,2025
+Tunisia,Namibia,3,0,1,2025
+Northern Ireland,Germany,0,1,1,2025
+Slovakia,Luxembourg,2,0,1,2025
+Slovenia,Switzerland,0,0,1,2025
+Sweden,Kosovo,0,1,1,2025
+Iceland,France,2,2,1,2025
+Ukraine,Azerbaijan,2,1,1,2025
+Wales,Belgium,2,4,1,2025
+North Macedonia,Kazakhstan,1,1,1,2025
+Honduras,Haiti,3,0,1,2025
+Costa Rica,Nicaragua,4,1,1,2025
+Albania,Jordan,4,2,0,2025
+Japan,Brazil,3,2,1,2025
+Iran,Tanzania,2,0,0,2025
+Canada,Colombia,0,0,0,2025
+South Korea,Paraguay,2,0,0,2025
+Mexico,Ecuador,1,1,0,2025
+Norway,New Zealand,1,1,0,2025
+Puerto Rico,Argentina,0,6,0,2025
+Russia,Bolivia,3,0,0,2025
+United States,Australia,2,1,0,2025
+Qatar,United Arab Emirates,2,1,1,2025
+Saudi Arabia,Iraq,0,0,1,2025
+Senegal,Mauritania,4,0,1,2025
+DR Congo,Sudan,1,0,1,2025
+Nigeria,Benin,4,0,1,2025
+South Africa,Rwanda,3,0,1,2025
+Morocco,Congo,1,0,1,2025
+Seychelles,Gambia,0,7,1,2025
+Ivory Coast,Kenya,3,0,1,2025
+Gabon,Burundi,2,0,1,2025
+Algeria,Uganda,2,1,1,2025
+Guinea,Botswana,2,2,1,2025
+Somalia,Mozambique,0,1,1,2025
+Spain,Bulgaria,4,0,1,2025
+Turkey,Georgia,4,1,1,2025
+Portugal,Hungary,2,2,1,2025
+Republic of Ireland,Armenia,1,0,1,2025
+Estonia,Moldova,1,1,1,2025
+Italy,Israel,3,0,1,2025
+Andorra,Serbia,1,3,1,2025
+Latvia,England,0,5,1,2025
+Maldives,Tajikistan,0,3,1,2025
+Philippines,Timor-Leste,3,1,1,2025
+Bhutan,Lebanon,0,4,1,2025
+Yemen,Brunei,9,0,1,2025
+India,Singapore,1,2,1,2025
+Hong Kong,Bangladesh,1,1,1,2025
+Taiwan,Thailand,1,6,1,2025
+Turkmenistan,Sri Lanka,2,1,1,2025
+Myanmar,Syria,0,3,1,2025
+Afghanistan,Pakistan,1,1,1,2025
+Vietnam,Nepal,1,0,1,2025
+Malaysia,Laos,5,1,1,2025
+Panama,Suriname,1,1,1,2025
+El Salvador,Guatemala,0,1,1,2025
+Curaçao,Trinidad and Tobago,1,1,1,2025
+Jamaica,Bermuda,4,0,1,2025
+Tunisia,Mauritania,1,1,0,2025
+Russia,Peru,1,1,0,2025
+Cuba,Saint Lucia,3,0,1,2025
+Dominican Republic,Saint Vincent and the Grenadines,2,0,1,2025
+Dominica,Saint Martin,1,2,1,2025
+Saint Kitts and Nevis,Sint Maarten,0,0,1,2025
+Barbados,Bonaire,3,2,1,2025
+Antigua and Barbuda,Aruba,0,0,1,2025
+Bahamas,Anguilla,1,2,1,2025
+Cayman Islands,British Virgin Islands,1,2,1,2025
+Algeria,Zimbabwe,3,1,0,2025
+Bangladesh,Nepal,2,2,0,2025
+Canada,Ecuador,0,0,0,2025
+Czech Republic,San Marino,1,0,0,2025
+Hong Kong,Cambodia,1,1,0,2025
+Lithuania,Israel,0,0,0,2025
+North Macedonia,Latvia,0,0,0,2025
+Thailand,Singapore,3,2,0,2025
+United Arab Emirates,Iraq,1,1,1,2025
+Cameroon,DR Congo,0,1,1,2025
+Nigeria,Gabon,4,1,1,2025
+France,Ukraine,4,0,1,2025
+Azerbaijan,Iceland,0,2,1,2025
+Republic of Ireland,Portugal,2,0,1,2025
+Armenia,Hungary,0,1,1,2025
+Norway,Estonia,4,1,1,2025
+Moldova,Italy,0,2,1,2025
+England,Serbia,2,0,1,2025
+Andorra,Albania,0,1,1,2025
+Iran,Cape Verde,0,0,1,2025
+Papua New Guinea,Solomon Islands,1,0,1,2025
+Suriname,El Salvador,4,0,1,2025
+Guatemala,Panama,2,3,1,2025
+Bermuda,Curaçao,0,7,1,2025
+Trinidad and Tobago,Jamaica,1,1,1,2025
+Haiti,Costa Rica,1,0,1,2025
+Nicaragua,Honduras,2,0,1,2025
+Angola,Argentina,0,2,0,2025
+Australia,Venezuela,0,1,0,2025
+South Korea,Bolivia,2,0,0,2025
+Morocco,Mozambique,1,0,0,2025
+Oman,Sudan,2,0,0,2025
+Comoros,Namibia,1,0,0,2025
+Uganda,Chad,2,1,0,2025
+Burkina Faso,Niger,3,2,0,2025
+Japan,Ghana,2,0,1,2025
+Saudi Arabia,Ivory Coast,1,0,0,2025
+Tunisia,Jordan,3,2,0,2025
+Luxembourg,Germany,0,2,1,2025
+Slovakia,Northern Ireland,1,0,1,2025
+Finland,Malta,0,1,1,2025
+Poland,Netherlands,1,1,1,2025
+Croatia,Faroe Islands,3,1,1,2025
+Gibraltar,Montenegro,1,2,1,2025
+Uzbekistan,Egypt,2,0,1,2025
+Russia,Chile,0,2,0,2025
+Libya,Mauritania,1,0,0,2025
+Kuwait,Tanzania,4,3,0,2025
+Lesotho,Malawi,0,0,0,2025
+Guinea,Liberia,2,0,0,2025
+Brazil,Senegal,2,0,0,2025
+Colombia,New Zealand,2,1,0,2025
+Mexico,Uruguay,0,0,0,2025
+South Africa,Zambia,3,1,0,2025
+United States,Paraguay,2,1,0,2025
+Slovenia,Kosovo,0,2,1,2025
+Switzerland,Sweden,4,1,1,2025
+Denmark,Belarus,2,2,1,2025
+Greece,Scotland,3,2,1,2025
+Turkey,Bulgaria,2,0,1,2025
+Georgia,Spain,0,4,1,2025
+Cyprus,Austria,0,2,1,2025
+Bosnia and Herzegovina,Romania,3,1,1,2025
+Liechtenstein,Wales,0,1,1,2025
+Kazakhstan,Belgium,1,1,1,2025
+Martinique,Cuba,0,2,1,2025
+Saint Vincent and the Grenadines,Saint Lucia,3,1,1,2025
+Dominica,Sint Maarten,2,3,1,2025
+Saint Martin,Belize,0,1,1,2025
+Barbados,Aruba,0,3,1,2025
+Guyana,Bonaire,2,1,1,2025
+Bahamas,British Virgin Islands,0,6,1,2025
+Cayman Islands,Anguilla,4,0,1,2025
+Basque Country,Palestine,3,0,0,2025
+Nigeria,DR Congo,1,1,1,2025
+Ukraine,Iceland,2,0,1,2025
+Azerbaijan,France,1,3,1,2025
+Portugal,Armenia,9,1,1,2025
+Hungary,Republic of Ireland,2,3,1,2025
+Moldova,Israel,1,4,1,2025
+Italy,Norway,1,4,1,2025
+Albania,England,0,2,1,2025
+Serbia,Latvia,2,1,1,2025
+Comoros,Namibia,4,0,0,2025
+Mozambique,Chad,2,2,0,2025
+Madagascar,Equatorial Guinea,2,0,0,2025
+Finland,Andorra,4,0,0,2025
+Qatar,Zimbabwe,1,2,0,2025
+Bahrain,Somalia,1,2,0,2025
+Northern Ireland,Luxembourg,1,0,1,2025
+Germany,Slovakia,6,0,1,2025
+Malta,Poland,2,3,1,2025
+Netherlands,Lithuania,4,0,1,2025
+Czech Republic,Gibraltar,6,0,1,2025
+Montenegro,Croatia,2,3,1,2025
+Cape Verde,Egypt,1,1,1,2025
+Vanuatu,Fiji,2,0,1,2025
+Angola,Zambia,3,2,0,2025
+Morocco,Uganda,4,0,0,2025
+Oman,Ivory Coast,0,2,0,2025
+Saudi Arabia,Algeria,0,2,0,2025
+Guinea,Niger,1,1,0,2025
+Kenya,Senegal,0,8,0,2025
+Benin,Burkina Faso,0,3,0,2025
+Japan,Bolivia,3,0,1,2025
+Mali,Jordan,3,2,0,2025
+Kuwait,Gambia,2,2,0,2025
+Lesotho,Malawi,0,1,0,2025
+Maldives,Philippines,0,2,1,2025
+Timor-Leste,Tajikistan,0,5,1,2025
+Yemen,Bhutan,7,1,1,2025
+Brunei,Lebanon,0,3,1,2025
+Bangladesh,India,1,0,1,2025
+Hong Kong,Singapore,1,2,1,2025
+Sri Lanka,Thailand,0,4,1,2025
+Turkmenistan,Taiwan,3,1,1,2025
+Pakistan,Syria,0,5,1,2025
+Malaysia,Nepal,1,0,1,2025
+Brazil,Tunisia,1,1,0,2025
+Canada,Venezuela,2,0,0,2025
+Chile,Peru,2,1,0,2025
+Colombia,Australia,3,0,0,2025
+Cyprus,Estonia,2,4,0,2025
+Ecuador,New Zealand,2,0,0,2025
+Faroe Islands,Kazakhstan,1,0,0,2025
+South Korea,Ghana,1,0,0,2025
+Mexico,Paraguay,1,2,0,2025
+United States,Uruguay,5,1,0,2025
+Iraq,United Arab Emirates,2,1,1,2025
+Kosovo,Switzerland,1,1,1,2025
+Sweden,Slovenia,1,1,1,2025
+Scotland,Denmark,4,2,1,2025
+Belarus,Greece,0,0,1,2025
+Spain,Turkey,2,2,1,2025
+Bulgaria,Georgia,2,1,1,2025
+Austria,Bosnia and Herzegovina,1,1,1,2025
+Romania,San Marino,7,1,1,2025
+Wales,North Macedonia,7,1,1,2025
+Belgium,Liechtenstein,7,0,1,2025
+Dominican Republic,Martinique,0,0,1,2025
+Saint Kitts and Nevis,Belize,2,6,1,2025
+Antigua and Barbuda,Guyana,1,4,1,2025
+Iran,Uzbekistan,0,0,1,2025
+Guatemala,Suriname,3,1,1,2025
+Panama,El Salvador,3,0,1,2025
+Jamaica,Curaçao,0,0,1,2025
+Trinidad and Tobago,Bermuda,2,2,1,2025
+Costa Rica,Honduras,0,0,1,2025
+Haiti,Nicaragua,2,0,1,2025
+Laos,Vietnam,0,2,1,2025
+Vanuatu,Solomon Islands,2,1,1,2025
+Papua New Guinea,Fiji,2,0,1,2025
+Papua New Guinea,Vanuatu,2,2,1,2025
+Mauritania,Kuwait,0,2,1,2025
+Syria,South Sudan,2,0,1,2025
+Palestine,Libya,0,0,1,2025
+Oman,Somalia,0,0,1,2025
+Bahrain,Djibouti,1,0,1,2025
+Sudan,Lebanon,2,1,1,2025
+Comoros,Yemen,4,4,1,2025
+Tunisia,Syria,0,1,1,2025
+Qatar,Palestine,0,1,1,2025
+Morocco,Comoros,3,1,1,2025
+Saudi Arabia,Oman,2,1,1,2025
+Egypt,Kuwait,1,1,1,2025
+Jordan,United Arab Emirates,2,1,1,2025
+Algeria,Sudan,0,0,1,2025
+Iraq,Bahrain,2,1,1,2025
+Palestine,Tunisia,2,2,1,2025
+Qatar,Syria,1,1,1,2025
+Oman,Morocco,0,0,1,2025
+Comoros,Saudi Arabia,1,3,1,2025
+Kuwait,Jordan,1,3,1,2025
+United Arab Emirates,Egypt,1,1,1,2025
+Bahrain,Algeria,1,5,1,2025
+Sudan,Iraq,0,2,1,2025
+Qatar,Tunisia,0,3,1,2025
+Syria,Palestine,0,0,1,2025
+Morocco,Saudi Arabia,1,0,1,2025
+Oman,Comoros,2,1,1,2025
+Egypt,Jordan,0,3,1,2025
+United Arab Emirates,Kuwait,3,1,1,2025
+Algeria,Iraq,2,0,1,2025
+Bahrain,Sudan,3,1,1,2025
+Morocco,Syria,1,0,1,2025
+Palestine,Saudi Arabia,1,2,1,2025
+Jordan,Iraq,1,0,1,2025
+Algeria,United Arab Emirates,1,1,1,2025
+Morocco,United Arab Emirates,3,0,1,2025
+Saudi Arabia,Jordan,0,1,1,2025
+Jordan,Morocco,2,3,1,2025
+Morocco,Comoros,2,0,1,2025
+Mali,Zambia,1,1,1,2025
+South Africa,Angola,2,1,1,2025
+Egypt,Zimbabwe,2,1,1,2025
+Nigeria,Tanzania,2,1,1,2025
+Tunisia,Uganda,3,1,1,2025
+DR Congo,Benin,1,0,1,2025
+Senegal,Botswana,3,0,1,2025
+Burkina Faso,Equatorial Guinea,2,1,1,2025
+Algeria,Sudan,3,0,1,2025
+Ivory Coast,Mozambique,1,0,1,2025
+Cameroon,Gabon,1,0,1,2025
+Zambia,Comoros,0,0,1,2025
+Morocco,Mali,1,1,1,2025
+Angola,Zimbabwe,1,1,1,2025
+Egypt,South Africa,1,0,1,2025
+Uganda,Tanzania,1,1,1,2025
+Nigeria,Tunisia,3,2,1,2025
+Benin,Botswana,1,0,1,2025
+Senegal,DR Congo,1,1,1,2025
+Equatorial Guinea,Sudan,0,1,1,2025
+Algeria,Burkina Faso,1,0,1,2025
+Gabon,Mozambique,2,3,1,2025
+Ivory Coast,Cameroon,1,1,1,2025
+Morocco,Zambia,3,0,1,2025
+Comoros,Mali,0,0,1,2025
+Angola,Egypt,0,0,1,2025
+Zimbabwe,South Africa,2,3,1,2025
+Uganda,Nigeria,1,3,1,2025
+Tanzania,Tunisia,1,1,1,2025
+Benin,Senegal,0,3,1,2025
+Botswana,DR Congo,0,3,1,2025
+Equatorial Guinea,Algeria,1,3,1,2025
+Sudan,Burkina Faso,0,2,1,2025
+Gabon,Ivory Coast,2,3,1,2025
+Mozambique,Cameroon,1,2,1,2025
+Senegal,Sudan,3,1,1,2026
+Mali,Tunisia,1,1,1,2026
+Morocco,Tanzania,1,0,1,2026
+South Africa,Cameroon,1,2,1,2026
+Egypt,Benin,3,1,1,2026
+Nigeria,Mozambique,4,0,1,2026
+Algeria,DR Congo,1,0,1,2026
+Ivory Coast,Burkina Faso,3,0,1,2026
+Mali,Senegal,0,1,1,2026
+Morocco,Cameroon,2,0,1,2026
+Algeria,Nigeria,0,2,1,2026
+Egypt,Ivory Coast,3,2,1,2026
+Senegal,Egypt,1,0,1,2026
+Morocco,Nigeria,0,0,1,2026
+Egypt,Nigeria,0,0,1,2026
+Morocco,Senegal,3,0,1,2026
+Bolivia,Panama,1,1,0,2026
+Grenada,Jamaica,0,1,0,2026
+Panama,Mexico,0,1,0,2026
+Bolivia,Mexico,0,1,0,2026
+Uzbekistan,China,2,2,0,2026
+Mexico,Iceland,4,0,0,2026
+Bolivia,Trinidad and Tobago,3,0,0,2026
+Bermuda,DR Congo,0,2,0,2026
+Equatorial Guinea,Kyrgyzstan,1,0,0,2026
+Kazakhstan,Namibia,2,0,1,2026
+United States Virgin Islands,American Samoa,5,2,1,2026
+Puerto Rico,Guam,4,0,1,2026
+Brazil,France,1,2,0,2026
+Colombia,Croatia,1,2,0,2026
+Cyprus,Belarus,0,1,0,2026
+Georgia,Israel,2,2,0,2026
+Moldova,Lithuania,0,2,0,2026
+Vietnam,Bangladesh,3,0,0,2026
+New Caledonia,Jamaica,0,1,1,2026
+Bolivia,Suriname,2,1,1,2026
+Italy,Northern Ireland,2,0,1,2026
+Wales,Bosnia and Herzegovina,1,1,1,2026
+Poland,Albania,2,1,1,2026
+Ukraine,Sweden,1,3,1,2026
+Slovakia,Kosovo,3,4,1,2026
+Turkey,Romania,1,0,1,2026
+Czech Republic,Republic of Ireland,2,2,1,2026
+Denmark,North Macedonia,4,0,1,2026
+Aruba,Macau,4,1,1,2026
+Tanzania,Liechtenstein,0,1,1,2026
+Martinique,Cuba,2,2,1,2026
+Dominican Republic,El Salvador,2,2,1,2026
+Saint Martin,Barbados,3,1,1,2026
+Bonaire,Saint Vincent and the Grenadines,3,1,1,2026
+Bahamas,Anguilla,1,3,1,2026
+Cayman Islands,British Virgin Islands,1,1,1,2026
+Algeria,Guatemala,7,0,0,2026
+Argentina,Mauritania,2,1,0,2026
+Austria,Ghana,5,1,0,2026
+England,Uruguay,1,1,0,2026
+Greece,Paraguay,0,1,0,2026
+Guinea,Togo,2,2,1,2026
+Liberia,Benin,0,1,1,2026
+Libya,Niger,0,0,1,2026
+Montenegro,Andorra,2,0,0,2026
+Morocco,Ecuador,1,1,0,2026
+Netherlands,Norway,2,1,0,2026
+Saudi Arabia,Egypt,0,4,0,2026
+South Africa,Panama,1,1,0,2026
+Spain,Serbia,3,0,0,2026
+Russia,Nicaragua,3,1,0,2026
+Switzerland,Germany,3,4,0,2026
+Costa Rica,Jordan,2,2,0,2026
+Iran,Nigeria,1,2,0,2026
+China,Curaçao,2,0,1,2026
+Australia,Cameroon,1,0,1,2026
+Azerbaijan,Saint Lucia,6,1,1,2026
+Solomon Islands,Bulgaria,2,10,1,2026
+Indonesia,Saint Kitts and Nevis,4,0,1,2026
+Chile,Cape Verde,4,2,1,2026
+New Zealand,Finland,0,2,1,2026
+Kenya,Estonia,1,1,1,2026
+Rwanda,Grenada,4,0,1,2026
+Venezuela,Trinidad and Tobago,4,1,1,2026
+Uzbekistan,Gabon,3,1,1,2026
+Guyana,Dominica,2,0,1,2026
+Belize,Sint Maarten,2,3,1,2026
+Burkina Faso,Guinea-Bissau,5,0,0,2026
+Canada,Iceland,2,2,0,2026
+Haiti,Tunisia,0,1,0,2026
+Hungary,Slovenia,1,0,0,2026
+Ivory Coast,South Korea,4,0,0,2026
+Mexico,Portugal,0,0,0,2026
+San Marino,Faroe Islands,1,2,0,2026
+Scotland,Japan,0,1,0,2026
+Senegal,Peru,2,0,0,2026
+United States,Belgium,2,5,0,2026
+Kyrgyzstan,Madagascar,2,5,0,2026
+Botswana,Zimbabwe,0,3,1,2026
+Namibia,Comoros,0,0,1,2026
+American Samoa,Guam,0,6,1,2026
+Puerto Rico,United States Virgin Islands,2,0,1,2026
+Armenia,Belarus,1,2,0,2026
+Colombia,France,1,3,0,2026
+Lithuania,Georgia,0,2,0,2026
+Macau,Tanzania,0,6,1,2026
+Aruba,Liechtenstein,4,1,1,2026
+Martinique,El Salvador,0,1,1,2026
+Dominican Republic,Cuba,1,1,1,2026
+Barbados,Saint Vincent and the Grenadines,2,3,1,2026
+Bonaire,Saint Martin,0,3,1,2026
+British Virgin Islands,Anguilla,4,0,1,2026
+Cayman Islands,Bahamas,1,0,1,2026
+Cyprus,Moldova,3,2,0,2026
+Germany,Ghana,2,1,0,2026
+Azerbaijan,Sierra Leone,1,1,1,2026
+Saint Kitts and Nevis,Solomon Islands,4,2,1,2026
+Indonesia,Bulgaria,0,1,1,2026
+Cape Verde,Finland,1,1,1,2026
+New Zealand,Chile,4,1,1,2026
+Grenada,Kenya,0,3,1,2026
+Rwanda,Estonia,2,0,1,2026
+Gabon,Trinidad and Tobago,2,2,1,2026
+Uzbekistan,Venezuela,0,0,1,2026
+Guyana,Belize,3,1,1,2026
+Dominica,Sint Maarten,0,0,1,2026
+Algeria,Uruguay,0,0,0,2026
+Argentina,Zambia,5,0,0,2026
+Austria,South Korea,1,0,0,2026
+Benin,Guinea,1,0,1,2026
+Brazil,Croatia,3,1,0,2026
+Burkina Faso,Guinea-Bissau,1,1,0,2026
+Canada,Tunisia,0,0,0,2026
+Costa Rica,Iran,0,5,0,2026
+England,Japan,0,1,0,2026
+Equatorial Guinea,Madagascar,1,1,0,2026
+Haiti,Iceland,1,1,0,2026
+Hungary,Greece,0,0,0,2026
+Ivory Coast,Scotland,1,0,0,2026
+Jordan,Nigeria,2,2,0,2026
+Liberia,Libya,2,2,1,2026
+Botswana,Malawi,1,0,1,2026
+Mexico,Belgium,1,1,0,2026
+Montenegro,Slovenia,2,3,0,2026
+Morocco,Paraguay,2,1,0,2026
+Netherlands,Ecuador,1,1,0,2026
+Niger,Togo,0,1,1,2026
+Norway,Switzerland,0,0,0,2026
+Peru,Honduras,2,2,0,2026
+Russia,Mali,0,0,0,2026
+Republic of Ireland,North Macedonia,0,0,0,2026
+San Marino,Andorra,0,0,0,2026
+Senegal,Gambia,3,1,0,2026
+Serbia,Saudi Arabia,2,1,0,2026
+Slovakia,Romania,2,0,0,2026
+South Africa,Panama,1,2,0,2026
+Spain,Egypt,0,0,0,2026
+Ukraine,Albania,1,0,0,2026
+United States,Portugal,0,2,0,2026
+Wales,Northern Ireland,1,1,0,2026
+DR Congo,Jamaica,1,0,1,2026
+Iraq,Bolivia,2,1,1,2026
+Bosnia and Herzegovina,Italy,1,1,1,2026
+Sweden,Poland,3,2,1,2026
+Kosovo,Turkey,0,1,1,2026
+Czech Republic,Denmark,2,2,1,2026
+Cameroon,China,2,0,1,2026
+Australia,Curaçao,5,1,1,2026
+Kazakhstan,Comoros,1,0,1,2026
+Republic of Ireland,Grenada,5,0,0,2026
+Mexico,Ghana,2,0,0,2026
+Morocco,Burundi,5,0,0,2026
+Nigeria,Zimbabwe,2,0,1,2026
+India,Jamaica,0,2,1,2026
+Republic of Ireland,Qatar,1,0,0,2026
+Egypt,Russia,1,0,0,2026
+Andorra,Iraq,0,1,0,2026
+Bosnia and Herzegovina,North Macedonia,0,0,0,2026
+Iran,Gambia,3,1,0,2026
+South Africa,Nicaragua,0,0,0,2026
+Ecuador,Saudi Arabia,2,1,0,2026
+South Korea,Trinidad and Tobago,5,0,0,2026
+Mexico,Australia,1,0,0,2026
+Scotland,Curaçao,4,1,0,2026
+Zimbabwe,India,1,0,1,2026
+Nigeria,Jamaica,3,0,1,2026
+Brazil,Panama,6,2,0,2026
+Cape Verde,Serbia,3,0,0,2026
+Czech Republic,Kosovo,2,1,0,2026
+Germany,Finland,4,0,0,2026
+Poland,Ukraine,0,2,0,2026
+Singapore,Mongolia,4,0,0,2026
+Switzerland,Jordan,4,1,0,2026
+United States,Senegal,3,2,0,2026
+Japan,Iceland,1,0,0,2026
+Austria,Tunisia,1,0,0,2026
+Bulgaria,Montenegro,0,1,0,2026
+Canada,Uzbekistan,2,0,0,2026
+Colombia,Costa Rica,3,1,0,2026
+Norway,Sweden,3,1,0,2026
+Slovakia,Malta,2,1,0,2026
+Turkey,North Macedonia,4,0,0,2026
+Maldives,Afghanistan,0,1,1,2026
+Croatia,Belgium,0,2,0,2026
+Georgia,Romania,1,1,0,2026
+Haiti,New Zealand,4,0,0,2026
+Morocco,Madagascar,4,0,0,2026
+Wales,Ghana,1,1,0,2026
+Albania,Israel,0,1,0,2026
+DR Congo,Denmark,0,0,0,2026
+Gibraltar,British Virgin Islands,4,0,0,2026
+South Korea,El Salvador,1,0,0,2026
+Luxembourg,Italy,0,1,0,2026
+Netherlands,Algeria,0,1,0,2026
+Panama,Dominican Republic,4,2,0,2026
+Poland,Nigeria,2,2,0,2026
+Philippines,Guam,5,1,0,2026
+Maldives,Pakistan,0,3,1,2026
+Andorra,Liechtenstein,2,0,0,2026
+Cambodia,Bhutan,4,0,0,2026
+France,Ivory Coast,1,2,0,2026
+Guatemala,Czech Republic,1,5,0,2026
+Iran,Mali,2,0,0,2026
+Lesotho,Kenya,1,1,0,2026
+Mexico,Serbia,5,1,0,2026
+Northern Ireland,Guinea,1,0,0,2026
+Slovenia,Cyprus,1,1,0,2026
+Spain,Iraq,1,1,0,2026
+Sweden,Greece,2,2,0,2026
+Angola,Mauritania,1,1,0,2026
+Azerbaijan,Malta,0,2,0,2026
+Belarus,Syria,4,1,0,2026
+Canada,Republic of Ireland,1,1,0,2026
+Georgia,Bahrain,2,0,0,2026
+Haiti,Peru,1,2,0,2026
+Hong Kong,Mongolia,2,0,0,2026
+Hungary,Finland,2,1,0,2026
+Indonesia,Oman,3,0,0,2026
+Moldova,Bulgaria,2,2,0,2026
+Paraguay,Nicaragua,4,0,0,2026
+San Marino,Bangladesh,1,2,0,2026
+Singapore,China,1,2,0,2026
+Slovakia,Montenegro,2,2,0,2026
+Tajikistan,India,3,1,0,2026
+Thailand,Kuwait,2,2,0,2026
+Russia,Burkina Faso,3,0,0,2026
+Benin,Niger,1,1,0,2026
+Central African Republic,Togo,1,1,0,2026
+Puerto Rico,Saudi Arabia,0,3,0,2026
+Vanuatu,Fiji,2,1,0,2026
+Albania,Luxembourg,0,1,0,2026
+Argentina,Honduras,2,0,0,2026
+Armenia,Kazakhstan,1,1,0,2026
+Australia,Switzerland,1,1,0,2026
+Belgium,Tunisia,5,0,0,2026
+Bermuda,Cape Verde,3,0,0,2026
+Bolivia,Scotland,0,4,0,2026
+Brazil,Egypt,2,1,0,2026
+Curaçao,Aruba,4,0,0,2026
+England,New Zealand,1,0,0,2026
+Sierra Leone,Liberia,1,0,0,2026
+Ethiopia,Malawi,1,0,0,2026
+Gibraltar,Cayman Islands,4,1,0,2026
+Jamaica,South Africa,0,1,0,2026
+Kyrgyzstan,Palestine,0,0,0,2026
+Panama,Bosnia and Herzegovina,1,1,0,2026
+Portugal,Chile,2,1,0,2026
+Qatar,El Salvador,0,0,0,2026
+Romania,Wales,2,1,0,2026
+United States,Germany,1,2,0,2026
+British Virgin Islands,Bonaire,2,0,0,2026
+Gibraltar,Cayman Islands,4,1,0,2026
+Venezuela,Turkey,1,2,0,2026
+Myanmar,Guam,6,1,1,2026
+Lithuania,Latvia,1,1,1,2026
+Estonia,Faroe Islands,1,0,1,2026
+Afghanistan,Pakistan,0,2,1,2026
+Croatia,Slovenia,2,1,0,2026
+Ecuador,Guatemala,3,0,0,2026
+Greece,Italy,0,1,0,2026
+Jordan,Colombia,0,2,0,2026
+Kosovo,Andorra,3,0,0,2026
+Liechtenstein,Cyprus,0,2,0,2026
+Morocco,Norway,1,1,0,2026
+Denmark,Ukraine,2,1,0,2026
+France,Northern Ireland,3,1,0,2026
+Netherlands,Uzbekistan,2,1,0,2026
+Peru,Spain,1,3,0,2026
+Mauritania,Niger,1,0,0,2026
+Angola,Central African Republic,3,0,0,2026
+Argentina,Iceland,3,0,0,2026
+Armenia,Moldova,1,1,0,2026
+Azerbaijan,San Marino,2,1,0,2026
+Belarus,Burkina Faso,2,2,0,2026
+Cambodia,Hong Kong,2,0,0,2026
+China,Thailand,0,0,0,2026
+DR Congo,Chile,1,2,0,2026
+Equatorial Guinea,Comoros,0,1,0,2026
+Ethiopia,Malawi,1,1,0,2026
+Hungary,Kazakhstan,3,1,0,2026
+Indonesia,Mozambique,1,0,0,2026
+Kyrgyzstan,Palestine,0,0,0,2026
+Saudi Arabia,Senegal,0,0,0,2026
+Tajikistan,India,1,1,0,2026
+Philippines,Myanmar,5,1,1,2026
+Latvia,Faroe Islands,0,1,1,2026
+Estonia,Lithuania,1,0,1,2026
+Russia,Trinidad and Tobago,3,0,0,2026
+Togo,Benin,5,1,0,2026
+Liberia,Sierra Leone,3,1,0,2026
+Iraq,Venezuela,0,2,0,2026
+Bolivia,Algeria,0,4,0,2026
+England,Costa Rica,3,0,0,2026
+Portugal,Nigeria,2,1,0,2026
+Afghanistan,Pakistan,0,2,1,2026

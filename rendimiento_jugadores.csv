@@ -171,9 +171,9 @@ Georgia,G. Mamardashvili,POR,15,80,80
 Georgia,G. Kashia,DEF,28,77,80
 Georgia,Vako,MED,73,36,62
 Georgia,K. Kvaratskhelia,DEL,80,41,71
-Germany,M. Neuer,POR,15,74,92
+Germany,M. Neuer,POR,15,72,92
 Germany,J. Boateng,DEF,50,90,85
-Germany,T. Kroos,MED,82,74,69
+Germany,T. Kroos,MED,72,72,69
 Germany,T. Müller,DEL,83,46,72
 Ghana,L. Zigi,POR,15,63,74
 Ghana,J. Aidoo,DEF,27,78,88
@@ -222,7 +222,7 @@ Italy,L. Insigne,DEL,76,36,50
 Ivory Coast,S. Mandé,POR,15,70,70
 Ivory Coast,E. Bailly,DEF,42,84,84
 Ivory Coast,Y. Touré,MED,82,80,90
-Ivory Coast,S. Haller,DEL,81,52,81
+Ivory Coast,S. Haller,DEL,75,52,81
 Jamaica,A. Blake,POR,15,78,78
 Jamaica,E. Pinnock,DEF,37,80,82
 Jamaica,L. Bailey,MED,78,33,64
@@ -575,7 +575,7 @@ Türkiye,Cakir,MED,45,45,75
 Türkiye,Calhanoglu,MED,61,61,75
 Türkiye,Demiral,DEF,64,59,75
 Türkiye,Celik,MED,49,49,75
-Germany,Kimmich,DEF,87,87,75
+Germany,Kimmich,DEF,87,65,75
 Germany,Tah,DEF,77,77,75
 Germany,Schlotterbeck,DEF,85,85,75
 Germany,Brown,DEF,88,88,75
@@ -619,9 +619,9 @@ Ivory Coast,Singo,MED,60,60,75
 Ivory Coast,Pepe,MED,55,55,75
 Ivory Coast,Wahi,MED,62,62,75
 Ivory Coast,Kessie,MED,63,63,75
-Ivory Coast,Fofana,MED,63,63,75
+Ivory Coast,Fofana,MED,65,65,75
 Ivory Coast,Agbadou,MED,65,65,75
-Ivory Coast,Konan,MED,55,55,75
+Ivory Coast,Konan,DEF,55,55,75
 Ivory Coast,Diomande,MED,66,66,75
 Ivory Coast,Toure,MED,59,59,75
 Ecuador,Yeboah,MED,59,59,75
@@ -946,3 +946,18 @@ Netherlands,Brobbey,DEL,89,50,75
 Sweden,Lindelöf,DEF,50,67,75
 Sweden,Karlström,MED,70,70,75
 Sweden,Gyökeres,DEL,76,50,75
+Germany,Rüdiger,DEF,50,80,75
+Germany,Süle,DEF,50,68,75
+Germany,Raum,DEF,50,70,75
+Germany,Gündoğan,MED,68,68,75
+Germany,Goretzka,MED,70,70,75
+Germany,Sané,DEL,84,50,75
+Germany,Gnabry,DEL,78,50,75
+Germany,Füllkrug,DEL,80,50,75
+Ivory Coast,Kossounou,DEF,50,58,75
+Ivory Coast,Ndicka,DEF,50,62,75
+Ivory Coast,Aurier,DEF,50,65,75
+Ivory Coast,Kessié,MED,72,72,75
+Ivory Coast,Sangaré,MED,68,68,75
+Ivory Coast,Pépé,DEL,70,50,75
+Ivory Coast,Zaha,DEL,68,50,75
