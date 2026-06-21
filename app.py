@@ -273,31 +273,33 @@ with col_principal:
             ('Ecuador', 'Curaçao')
         ]
         
-        # --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE (Combinado en vivo) ---
-        def obtener_historial_reciente(equipo, limite=5):
+# --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE (10 Partidos + Fecha Exacta) ---
+        def obtener_historial_reciente(equipo, limite=10):
             try:
-                # 1. Cargamos el pasado (Kaggle/Eliminatorias)
+                # 1. Cargamos y combinamos
                 df_historico = pd.read_csv('historial_selecciones_combinado.csv')
-                
-                # 2. Cargamos el presente (Mundial 2026 Manual)
                 try:
                     df_manual = pd.read_csv('partidos_manuales.csv')
                     df_combinado = pd.concat([df_historico, df_manual], ignore_index=True)
                 except FileNotFoundError:
                     df_combinado = df_historico
                     
-                # 3. Filtramos solo los partidos de este equipo
+                # 2. Filtramos al equipo
                 partidos_equipo = df_combinado[(df_combinado['local'] == equipo) | (df_combinado['visita'] == equipo)].copy()
                 
-                # 4. Tomamos los últimos partidos
-                ultimos = partidos_equipo.tail(limite)
+                # 3. ORDEN CRONOLÓGICO PERFECTO (Usando tu fecha real)
+                if 'date' in partidos_equipo.columns:
+                    partidos_equipo['date'] = pd.to_datetime(partidos_equipo['date'], errors='coerce')
+                    partidos_equipo = partidos_equipo.sort_values(by='date', ascending=True)
+                
+                # 4. Tomamos los últimos 10 y los invertimos (el más nuevo hasta arriba)
+                ultimos = partidos_equipo.tail(limite).iloc[::-1]
                 
                 resultados = []
                 for _, p in ultimos.iterrows():
                     es_local = (p['local'] == equipo)
                     rival = p['visita'] if es_local else p['local']
                     
-                    # Extraemos los goles y los pasamos a enteros limpios
                     gf = int(p['goles_local'] if es_local else p['goles_visita'])
                     gc = int(p['goles_visita'] if es_local else p['goles_local'])
                     
@@ -305,8 +307,14 @@ with col_principal:
                     elif gf < gc: res = "❌ Derrota "
                     else: res = "➖ Empate "
                     
-                    # Formato hiper claro: Resultado vs Rival (Goles)
-                    resultados.append(f"{res} vs **{rival}** | Goles: **{gf} - {gc}**")
+                    # Extraemos la fecha para mostrarla en la interfaz
+                    try:
+                        fecha_str = p['date'].strftime('%Y-%m-%d')
+                    except:
+                        fecha_str = "Fecha N/D"
+                        
+                    # Agregamos la fecha al texto que verá el usuario
+                    resultados.append(f"📅 {fecha_str} | {res} vs **{rival}** ({gf} - {gc})")
                     
                 if not resultados:
                     return ["Aún no hay historial registrado."]
