@@ -107,6 +107,7 @@ DICT_BANDERAS = {
     'Hungary': '🇭🇺', 'Romania': '🇷🇴', 'Slovakia': '🇸🇰', 'Slovenia': '🇸🇮',
     'Albania': '🇦🇱', 'Georgia': '🇬🇪', 'China PR': '🇨🇳', 'China': '🇨🇳', 
     'UAE': '🇦🇪', 'Oman': '🇴🇲', 'Bahrain': '🇧🇭', 'Syria': '🇸🇾',
+    'Curaçao': '🇨🇼', 'Curacao': '🇨🇼',
     'North Macedonia': '🇲🇰', 'Macedonia': '🇲🇰', 'Republic of Ireland': '🇮🇪'
 }
 
@@ -121,7 +122,21 @@ def calcular_power_ranking():
     ranking = []
     stats_df = mh.estadisticas.set_index('equipo')
     
+    # --- FILTRO DEL MUNDIAL ---
+    try:
+        # Leemos el catálogo de jugadores para saber quiénes sí fueron al mundial
+        df_jugadores = pd.read_csv('rendimiento_jugadores.csv')
+        equipos_clasificados = df_jugadores['equipo'].unique()
+    except FileNotFoundError:
+        # Si por algo falla, usamos todos (fallback)
+        equipos_clasificados = mh.dict_fa.keys()
+    # --------------------------
+    
     for equipo in mh.dict_fa.keys():
+        # ¡Magia! Si el equipo no está en la lista de clasificados, lo ignoramos
+        if equipo not in equipos_clasificados:
+            continue
+            
         try:
             partidos_jugados = stats_df.loc[equipo, 'partidos']
         except KeyError:
