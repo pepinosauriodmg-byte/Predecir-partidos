@@ -122,18 +122,19 @@ def calcular_power_ranking():
     ranking = []
     stats_df = mh.estadisticas.set_index('equipo')
     
-    # --- FILTRO DEL MUNDIAL ---
+    # --- NUEVO FILTRO: TU LISTA MANUAL ---
     try:
-        # Leemos el catálogo de jugadores para saber quiénes sí fueron al mundial
-        df_jugadores = pd.read_csv('rendimiento_jugadores.csv')
-        equipos_clasificados = df_jugadores['equipo'].unique()
+        # Leemos exclusivamente los partidos que tú has registrado
+        df_manuales = pd.read_csv('partidos_manuales.csv')
+        # Unimos las columnas de local y visita para sacar la lista única de participantes reales
+        equipos_clasificados = pd.concat([df_manuales['local'], df_manuales['visita']]).unique()
     except FileNotFoundError:
-        # Si por algo falla, usamos todos (fallback)
+        # Fallback de seguridad en caso de que el archivo no exista
         equipos_clasificados = mh.dict_fa.keys()
-    # --------------------------
+    # -------------------------------------
     
     for equipo in mh.dict_fa.keys():
-        # ¡Magia! Si el equipo no está en la lista de clasificados, lo ignoramos
+        # El muro: Si el equipo no está en tu lista manual de partidos, lo ignoramos
         if equipo not in equipos_clasificados:
             continue
             
