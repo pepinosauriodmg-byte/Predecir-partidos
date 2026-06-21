@@ -273,10 +273,10 @@ with col_principal:
             ('Ecuador', 'Curaçao')
         ]
         
-# --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE (Regex Anti-Errores) ---
+# --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE (Regex Inteligente Año/Fecha) ---
         def obtener_historial_reciente(equipo, limite=10):
             try:
-                import re  # Importamos la librería de expresiones regulares
+                import re
                 
                 # 1. Carga de datos
                 df_historico = pd.read_csv('historial_selecciones_combinado.csv')
@@ -295,16 +295,24 @@ with col_principal:
                 
                 partidos_equipo = df_combinado[(df_combinado[col_local] == equipo) | (df_combinado[col_visita] == equipo)].copy()
                 
-                # 2. EL ESCÁNER DE FECHAS (Adiós a los errores de Pandas)
+                # 2. EL ESCÁNER DE FECHAS MEJORADO
                 def escudrinar_fecha(fila):
+                    # Primero intentamos buscar la fecha completa (Tus partidos manuales)
                     for valor in fila.values:
-                        # Busca cualquier patrón de 4 números - 2 números - 2 números
-                        match = re.search(r'\d{4}[-/]\d{2}[-/]\d{2}', str(valor))
-                        if match:
-                            return match.group(0)
-                    return '1900-01-01' # Si de verdad no hay fecha, manda esto al fondo
+                        match_full = re.search(r'\d{4}[-/]\d{2}[-/]\d{2}', str(valor))
+                        if match_full:
+                            return match_full.group(0)
+                    
+                    # Si no hay fecha completa, buscamos al menos el año (Los de Kaggle)
+                    for valor in fila.values:
+                        # Busca cualquier número de 4 dígitos que empiece con 19 o 20
+                        match_year = re.search(r'\b(19|20)\d{2}\b', str(valor))
+                        if match_year:
+                            return match_year.group(0)
+                            
+                    return '1900' # Si de verdad no hay nada
                 
-                # Extraemos las fechas a la fuerza bruta y ordenamos
+                # Extraemos y ordenamos
                 partidos_equipo['fecha_exacta'] = partidos_equipo.apply(escudrinar_fecha, axis=1)
                 partidos_equipo = partidos_equipo.sort_values(by='fecha_exacta', ascending=True)
                 
@@ -324,7 +332,7 @@ with col_principal:
                     else: res = "➖ Empate "
                     
                     fecha_str = p['fecha_exacta']
-                    if fecha_str == '1900-01-01': 
+                    if fecha_str == '1900': 
                         fecha_str = "N/D"
                         
                     resultados.append(f"📅 {fecha_str} | {res} vs **{rival}** ({gf} - {gc})")
