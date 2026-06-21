@@ -7,9 +7,19 @@ print("Inicializando Motor Elo con Calibración Oficial FIFA (211 Equipos)...")
 df_api = pd.read_csv('historial_selecciones_combinado.csv')
 df_api['origen'] = 'historia' 
 
+# Rescatamos tu sistema 0 y 1 de Kaggle (asumiendo que está en 'torneo_id')
+if 'torneo_id' in df_api.columns:
+    df_api['importancia'] = df_api['torneo_id']
+else:
+    df_api['importancia'] = 1
+
 if os.path.exists('partidos_manuales.csv'):
     df_manual = pd.read_csv('partidos_manuales.csv')
     df_manual['origen'] = 'mundial_2026'
+    
+    # ---> ¡EL TOQUE MAESTRO! Los partidos del Mundial valen 2 <---
+    df_manual['importancia'] = 2  
+    
     df = pd.concat([df_api, df_manual], ignore_index=True)
 else:
     df = df_api.copy()

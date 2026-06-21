@@ -66,12 +66,16 @@ df_ml['resultado_real'] = df_ml.apply(determinar_resultado, axis=1)
 
 # === PONDERACIÓN DE MUESTRAS ===
 def calcular_peso_importancia(fila):
-    if str(fila.get('torneo_id', '')) == '1' or int(fila.get('temporada', 0)) == 2026:
-        return 3.0  # Triple de prioridad [cite: 5]
-    return 1.0  # Prioridad normal
+    nivel = fila.get('importancia', 1)
+    
+    if nivel == 2:
+        return 3.0  # ¡NIVEL MUNDIAL! Pesa el triple en la red neuronal
+    elif nivel == 1:
+        return 1.0  # Torneos Oficiales y Eliminatorias (Peso normal)
+    else:
+        return 0.2  # Amistosos (Peso casi nulo para que no ensucien la estadística)
 
 df_ml['peso_entrenamiento'] = df_ml.apply(calcular_peso_importancia, axis=1)
-# ================================================================
 
 # === INYECCIÓN ELO: Ahora la red neuronal también aprende del puntaje Elo ===
 X = df_ml[['FA_local', 'FD_local', 'FA_visita', 'FD_visita', 'diferencia_FA', 'diferencia_FD', 'dif_Plantilla_Atq', 'dif_Plantilla_Def', 'elo_local', 'elo_visita']]
