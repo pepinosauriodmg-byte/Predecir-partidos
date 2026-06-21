@@ -119,15 +119,15 @@ st.markdown("""
 # 1.5 MOTOR DE ICONOS FRUTIGER AERO (OXYGEN KDE 4)
 # ==========================================
 ICONS = {
-    "balon": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg",
-    "check": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Oxygen480-actions-dialog-ok.svg",
-    "cross": "https://upload.wikimedia.org/wikipedia/commons/9/97/Oxygen480-actions-dialog-close.svg",
-    "empate": "https://upload.wikimedia.org/wikipedia/commons/0/03/Oxygen480-actions-list-remove.svg",
-    "star": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Oxygen480-status-rating.svg",
-    "calendar": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Oxygen480-mimetypes-x-office-calendar.svg",
-    "chart": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Oxygen480-apps-utilities-system-monitor.svg",
-    "search": "https://upload.wikimedia.org/wikipedia/commons/6/61/Oxygen480-actions-system-search.svg",
-    "trophy": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Oxygen480-categories-applications-games.svg"
+    "balon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/48px-Soccerball.svg.png",
+    "check": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Oxygen480-actions-dialog-ok.svg/48px-Oxygen480-actions-dialog-ok.svg.png",
+    "cross": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Oxygen480-actions-dialog-close.svg/48px-Oxygen480-actions-dialog-close.svg.png",
+    "empate": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Oxygen480-actions-list-remove.svg/48px-Oxygen480-actions-list-remove.svg.png",
+    "star": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Oxygen480-status-rating.svg/48px-Oxygen480-status-rating.svg.png",
+    "calendar": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Oxygen480-mimetypes-x-office-calendar.svg/48px-Oxygen480-mimetypes-x-office-calendar.svg.png",
+    "chart": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Oxygen480-apps-utilities-system-monitor.svg/48px-Oxygen480-apps-utilities-system-monitor.svg.png",
+    "search": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Oxygen480-actions-system-search.svg/48px-Oxygen480-actions-system-search.svg.png",
+    "trophy": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Oxygen480-categories-applications-games.svg/48px-Oxygen480-categories-applications-games.svg.png"
 }
 
 def icon(name, size=24):
