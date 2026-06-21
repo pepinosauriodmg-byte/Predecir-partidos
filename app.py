@@ -73,42 +73,44 @@ st.markdown("""
         text-shadow: 0 -1px 1px rgba(0,0,0,0.6);
     }
     
-    /* 7. El icónico Botón Verde Glossy tridimensional */
+/* 7. El icónico Botón Verde Glossy tridimensional */
     .stButton>button {
         background: linear-gradient(to bottom, #8fde62 0%, #57b32c 49%, #368a12 50%, #46a31d 100%) !important;
         color: white !important; border: 1px solid #1a4d04 !important;
         border-radius: 20px !important; padding: 10px 24px !important; font-weight: bold !important;
         box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.7), 0 4px 8px rgba(0,0,0,0.5) !important;
-        transition: all 0.2s ease !important; text-shadow: 0 -1px 1px rgba(0,0,0,0.6) !important;
+        transition: all 0.2s ease-in-out !important; text-shadow: 0 -1px 1px rgba(0,0,0,0.6) !important;
     }
     
+    /* EL RESPLANDOR WINDOWS 7 (HOVER) */
     .stButton>button:hover {
-        background: linear-gradient(to bottom, #a4e67d 0%, #6bc241 49%, #479e22 50%, #57b82c 100%) !important;
-        box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.9), 0 6px 12px rgba(0,0,0,0.6) !important;
-        transform: scale(1.02);
+        background: linear-gradient(to bottom, #bdf09e 0%, #7ce053 49%, #58b82a 50%, #76d640 100%) !important;
+        /* El secreto: una sombra exterior verde brillante combinada con un halo blanco interior */
+        box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.9), 0 0 15px rgba(164, 230, 125, 0.9), 0 4px 10px rgba(0,0,0,0.5) !important;
+        border: 1px solid #c2f59d !important;
     }
 
     /* 8. MAGIA 2000s: Convertir las pestañas (Tabs) en botones de Windows */
-    /* Apagar la línea roja de Streamlit */
-    div[data-baseweb="tab-highlight"] {
-        display: none !important;
-    }
-    /* Estilo del botón inactivo (Gris Metálico) */
+    div[data-baseweb="tab-highlight"] { display: none !important; }
+    
     button[data-baseweb="tab"] {
         background: linear-gradient(to bottom, #fcfcfc 0%, #e6e6e6 49%, #d4d4d4 50%, #e2e2e2 100%) !important;
-        border: 1px solid #8e8f8f !important;
-        border-radius: 5px !important;
-        color: #333333 !important;
-        padding: 6px 18px !important;
-        margin-right: 8px !important;
-        font-weight: bold !important;
-        box-shadow: inset 0 1px 2px #ffffff, 0 2px 4px rgba(0,0,0,0.3) !important;
+        border: 1px solid #8e8f8f !important; border-radius: 5px !important;
+        color: #333333 !important; padding: 6px 18px !important; margin-right: 8px !important;
+        font-weight: bold !important; box-shadow: inset 0 1px 2px #ffffff, 0 2px 4px rgba(0,0,0,0.3) !important;
+        transition: all 0.2s ease !important;
     }
-/* Estilo del botón ACTIVO (Azul Cristal de Windows Vista) */
+    
+    /* RESPLANDOR AZUL VISTA/7 EN PESTAÑAS INACTIVAS */
+    button[data-baseweb="tab"]:hover {
+        background: linear-gradient(to bottom, #f2fafe 0%, #ccedfb 49%, #aedef7 50%, #cdeaf8 100%) !important;
+        border: 1px solid #75b4e3 !important;
+        box-shadow: inset 0 0 8px rgba(255,255,255,1), 0 0 12px rgba(117, 180, 227, 0.8) !important;
+    }
+    
     button[data-baseweb="tab"][aria-selected="true"] {
         background: linear-gradient(to bottom, #dcedf8 0%, #8ebce3 49%, #5c9cdb 50%, #85bce4 100%) !important;
-        border: 1px solid #1a3b5c !important;
-        color: #ffffff !important;
+        border: 1px solid #1a3b5c !important; color: #ffffff !important;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.7) !important;
         box-shadow: inset 0 1px 3px rgba(255,255,255,0.6), 0 3px 6px rgba(0,0,0,0.4) !important;
     }
@@ -127,17 +129,24 @@ ICONS = {
     "calendar": "https://img.icons8.com/color/96/calendar.png",
     "chart": "https://img.icons8.com/color/96/line-chart.png",
     "search": "https://img.icons8.com/color/96/search.png",
-    "trophy": "https://img.icons8.com/color/96/trophy.png"
+    "trophy": "https://img.icons8.com/color/96/trophy.png",
+    "simulador": "https://img.icons8.com/color/96/crystal-ball.png",
+    "historial": "https://img.icons8.com/color/96/time-machine.png",
+    "handshake": "https://img.icons8.com/color/96/handshake.png",
+    "robot": "https://img.icons8.com/color/96/bot.png"
 }
 
 def icon(name, size=24):
-    """Genera una etiqueta de imagen HTML con estilo glossy y sombra."""
     url = ICONS.get(name, ICONS["balon"])
     return f"<img src='{url}' width='{size}' height='{size}' style='vertical-align: text-bottom; margin-right: 6px; filter: drop-shadow(2px 4px 4px rgba(0,0,0,0.6));'>"
 
-# AHORA SÍ: Imprimimos el título porque la función icon() ya existe
-st.markdown(f"<h1 class='frutiger-title'>{icon('balon', 45)} Plataforma Predictiva Híbrida - Mundial 2026</h1>", unsafe_allow_html=True)
-
+# El título ahora está blindado en un contenedor para que no se rompa la imagen
+st.markdown(f"""
+<div style='display: flex; align-items: center; margin-bottom: 25px;'>
+    {icon('balon', 55)}
+    <h1 class='frutiger-title' style='margin-bottom: 0; margin-left: 10px;'>Plataforma Predictiva Híbrida - Mundial 2026</h1>
+</div>
+""", unsafe_allow_html=True)
 # ==========================================
 # 2. DICCIONARIO MAESTRO DE BANDERAS (ULTRA EXPANDIDO)
 # ==========================================
@@ -230,7 +239,8 @@ col_principal, col_ranking = st.columns([2, 1])
 
 with col_ranking:
     st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
-    st.subheader("🏆 Power Ranking Top 5")
+    # Adiós emoji de trofeo, hola trofeo 3D
+    st.markdown(f"<h3 style='color: white; margin-bottom: 5px;'>{icon('trophy', 32)} Power Ranking Top 5</h3>", unsafe_allow_html=True)
     st.caption("Algoritmo híbrido FA/FD con suavizado de Laplace")
     df_ranking = calcular_power_ranking()
     
@@ -240,23 +250,25 @@ with col_ranking:
     st.markdown("</div>", unsafe_allow_html=True)
 
 with col_principal:
-    tab1, tab2, tab3 = st.tabs(["🔮 Simulador", "📊 Partidos Recientes", "📅 Próxima Jornada"])
+    # Quitamos los emojis planos de las pestañas para un look más "Windows puro"
+    tab1, tab2, tab3 = st.tabs(["Simulador Aero", "Partidos Recientes", "Próxima Jornada"])
 
     # --- PESTAÑA 1: SIMULADOR MANUAL ---
     with tab1:
         st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
-        st.subheader("Simulador de Enfrentamientos Directos")
+        st.markdown(f"<h3 style='color: white; margin-bottom: 20px;'>{icon('simulador', 32)} Simulador de Enfrentamientos Directos</h3>", unsafe_allow_html=True)
         equipos = sorted(list(mh.dict_fa.keys()))
         
         c1, c2 = st.columns(2)
         with c1:
             idx_local = equipos.index('Scotland') if 'Scotland' in equipos else 0
             local = st.selectbox("Equipo Local:", equipos, index=idx_local)
+    
         with c2:
             idx_visita = equipos.index('Morocco') if 'Morocco' in equipos else 1
             visitante = st.selectbox("Equipo Visitante:", equipos, index=idx_visita)
             
-        if st.button("PREDECIR", use_container_width=True):
+        if st.button("CALCULAR PREDICCIÓN AI", use_container_width=True):
             xg_l, xg_v, paquete_probs = mh.predecir_partido(local, visitante)
             probs_flat = np.array(paquete_probs).flatten()
             
@@ -264,38 +276,39 @@ with col_principal:
             p_empate = float(probs_flat[1])
             p_local = float(probs_flat[2])
             
-            st.success("Cómputo Neuronal Exitoso")
+            # Reemplazamos el success por un mensaje con ícono de robot
+            st.markdown(f"<div style='background-color: #2e4a23; padding: 10px; border-radius: 5px; border: 1px solid #a4e67d; color: white;'>{icon('robot', 20)} <b>Cómputo Neuronal Exitoso</b></div>", unsafe_allow_html=True)
             
             bandera_l = obtener_bandera(local)
             bandera_v = obtener_bandera(visitante)
             
             st.markdown(f"""
-            <div style='background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); margin: 15px 0; text-align: center;'>
+            <div style='background: rgba(0,0,0,0.3); box-shadow: inset 0 3px 8px rgba(0,0,0,0.5); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); margin: 15px 0; text-align: center;'>
                 <div style='font-size: 2.2rem; margin-bottom: 5px;'>
                     {bandera_l} <span style='font-weight: 800; color: #fff;'>{local}</span> 
-                    <span style='color: #4ade80;'>vs</span> 
+                    <span style='color: #a4e67d;'>vs</span> 
                     <span style='font-weight: 800; color: #fff;'>{visitante}</span> {bandera_v}
                 </div>
-                <div style='font-size: 1.3rem; color: #38bdf8; font-weight: 600; font-family: monospace;'>
+                <div style='font-size: 1.3rem; color: #8ebce3; font-weight: 600; font-family: Tahoma;'>
                     xG Estimado: {float(xg_l):.2f} - {float(xg_v):.2f}
                 </div>
             </div>
             """, unsafe_allow_html=True)
             
-            st.write(f"**Probabilidad Gana {local} {bandera_l}: {p_local*100:.1f}%**")
+            st.markdown(f"<p style='margin-bottom: 5px;'><b>Probabilidad Gana {local} {bandera_l}: {p_local*100:.1f}%</b></p>", unsafe_allow_html=True)
             st.progress(p_local)
             
-            st.write(f"**Probabilidad de Empate 🤝: {p_empate*100:.1f}%**")
+            st.markdown(f"<p style='margin-bottom: 5px; margin-top: 10px;'>{icon('handshake', 20)} <b>Probabilidad de Empate: {p_empate*100:.1f}%</b></p>", unsafe_allow_html=True)
             st.progress(p_empate)
             
-            st.write(f"**Probabilidad Gana {visitante} {bandera_v}: {p_visita*100:.1f}%**")
+            st.markdown(f"<p style='margin-bottom: 5px; margin-top: 10px;'><b>Probabilidad Gana {visitante} {bandera_v}: {p_visita*100:.1f}%</b></p>", unsafe_allow_html=True)
             st.progress(p_visita)
         st.markdown("</div>", unsafe_allow_html=True)
 
     # --- PESTAÑA 2: RESULTADOS RECIENTES ---
     with tab2:
         st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
-        st.subheader("🏁 Historial de Partidos Jugados (Control Manual)")
+        st.markdown(f"<h3 style='color: white; margin-bottom: 20px;'>{icon('historial', 32)} Historial de Partidos (Control Manual)</h3>", unsafe_allow_html=True)
         try:
             df_partidos = pd.read_csv('partidos_manuales.csv')
             df_recientes = df_partidos.iloc[::-1]
@@ -319,7 +332,7 @@ with col_principal:
         except KeyError:
             st.error("Error leyendo las columnas del CSV. Verifica los nombres 'local', 'visita', 'goles_local', 'goles_visita'.")
         st.markdown("</div>", unsafe_allow_html=True)
-
+        
 # --- PESTAÑA 3: PRÓXIMA JORNADA ---
     with tab3:
         st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
