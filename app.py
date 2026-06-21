@@ -18,30 +18,29 @@ st.markdown("""
         background-attachment: fixed;
     }
     
-    /* 2. Forzar tipografía nativa de Windows (Segoe UI) en toda la app */
+    /* 2. TIPOGRAFÍA 2000s: Tahoma y Trebuchet MS fueron los reyes de esa época */
     html, body, [class*="css"] {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        font-family: Tahoma, 'Trebuchet MS', Arial, sans-serif !important;
     }
 
     /* 3. Título con relieve de cristal translúcido */
     .frutiger-title {
-        font-weight: 400;
+        font-weight: bold;
         color: #ffffff;
-        text-shadow: 0px 0px 10px rgba(255,255,255,0.4), 0px 4px 5px rgba(0,0,0,0.8);
+        text-shadow: 0px 0px 10px rgba(255,255,255,0.4), 2px 4px 5px rgba(0,0,0,0.8);
         margin-bottom: 20px;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
     }
 
     /* 4. Marcos Aero Glass (Ventanas de Vista) */
     .frutiger-card {
-        background: rgba(20, 30, 40, 0.45); /* Cristal oscuro tintado */
+        background: rgba(20, 30, 40, 0.45);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
-        /* El truco de Vista: Borde superior muy blanco simulando el reflejo del vidrio */
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 8px; /* Menos redondeado que el diseño móvil actual */
+        border-radius: 8px;
         padding: 20px;
         box-shadow: 0 15px 30px rgba(0,0,0,0.6), inset 0 1px 2px rgba(255,255,255,0.2);
         margin-bottom: 15px;
@@ -50,20 +49,17 @@ st.markdown("""
     
     /* 5. Cajas interiores simulando paneles hundidos */
     .match-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: rgba(0, 0, 0, 0.35); /* Fondo hundido */
+        display: flex; justify-content: space-between; align-items: center;
+        background: rgba(0, 0, 0, 0.35);
         border: 1px solid rgba(255, 255, 255, 0.05);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Reflejo en la base */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 6px;
-        padding: 12px 25px;
-        margin-bottom: 10px;
+        padding: 12px 25px; margin-bottom: 10px;
         box-shadow: inset 0 3px 8px rgba(0,0,0,0.5);
     }
     
     .team-box {
-        font-size: 1.15rem; font-weight: 600; display: flex; align-items: center; gap: 10px; 
+        font-size: 1.15rem; font-weight: bold; display: flex; align-items: center; gap: 10px; 
         color: #ffffff; text-shadow: 1px 1px 3px black; 
     }
     
@@ -71,11 +67,8 @@ st.markdown("""
     .score-box {
         background: linear-gradient(to bottom, #59c0ea 0%, #2098d3 49%, #0570b0 50%, #0087ce 100%);
         border: 1px solid #002244;
-        padding: 4px 16px;
-        border-radius: 12px;
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #fff;
+        padding: 4px 16px; border-radius: 12px;
+        font-size: 1.2rem; font-weight: bold; color: #fff;
         box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.6), 0 2px 5px rgba(0,0,0,0.5);
         text-shadow: 0 -1px 1px rgba(0,0,0,0.6);
     }
@@ -83,20 +76,46 @@ st.markdown("""
     /* 7. El icónico Botón Verde Glossy tridimensional */
     .stButton>button {
         background: linear-gradient(to bottom, #8fde62 0%, #57b32c 49%, #368a12 50%, #46a31d 100%) !important;
-        color: white !important;
-        border: 1px solid #1a4d04 !important;
-        border-radius: 20px !important;
-        padding: 10px 24px !important;
-        font-weight: bold !important;
+        color: white !important; border: 1px solid #1a4d04 !important;
+        border-radius: 20px !important; padding: 10px 24px !important; font-weight: bold !important;
         box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.7), 0 4px 8px rgba(0,0,0,0.5) !important;
-        transition: all 0.2s ease !important;
-        text-shadow: 0 -1px 1px rgba(0,0,0,0.6) !important;
+        transition: all 0.2s ease !important; text-shadow: 0 -1px 1px rgba(0,0,0,0.6) !important;
     }
     
     .stButton>button:hover {
         background: linear-gradient(to bottom, #a4e67d 0%, #6bc241 49%, #479e22 50%, #57b82c 100%) !important;
         box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.9), 0 6px 12px rgba(0,0,0,0.6) !important;
         transform: scale(1.02);
+    }
+
+    /* 8. MAGIA 2000s: Convertir las pestañas (Tabs) en botones de Windows */
+    /* Apagar la línea roja de Streamlit */
+    div[data-baseweb="tab-highlight"] {
+        display: none !important;
+    }
+    /* Estilo del botón inactivo (Gris Metálico) */
+    button[data-baseweb="tab"] {
+        background: linear-gradient(to bottom, #fcfcfc 0%, #e6e6e6 49%, #d4d4d4 50%, #e2e2e2 100%) !important;
+        border: 1px solid #8e8f8f !important;
+        border-radius: 5px !important;
+        color: #333333 !important;
+        padding: 6px 18px !important;
+        margin-right: 8px !important;
+        font-weight: bold !important;
+        box-shadow: inset 0 1px 2px #ffffff, 0 2px 4px rgba(0,0,0,0.3) !important;
+    }
+    /* Estilo Hover */
+    button[data-baseweb="tab"]:hover {
+        background: linear-gradient(to bottom, #f2fafe 0%, #ccedfb 49%, #aedef7 50%, #cdeaf8 100%) !important;
+        border: 1px solid #3c7fb1 !important;
+    }
+    /* Estilo del botón ACTIVO (Azul Cristal de Windows Vista) */
+    button[data-baseweb="tab"][aria-selected="true"] {
+        background: linear-gradient(to bottom, #dcedf8 0%, #8ebce3 49%, #5c9cdb 50%, #85bce4 100%) !important;
+        border: 1px solid #1a3b5c !important;
+        color: #ffffff !important;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7) !important;
+        box-shadow: inset 0 1px 3px rgba(255,255,255,0.6), 0 3px 6px rgba(0,0,0,0.4) !important;
     }
 </style>
 """, unsafe_allow_html=True)
