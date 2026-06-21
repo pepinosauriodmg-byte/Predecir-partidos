@@ -273,42 +273,58 @@ with col_principal:
             ('Ecuador', 'Curaçao')
         ]
         
-        # --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE (10 Partidos + Fecha Blindada) ---
+      # --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE (10 Partidos + Fecha Estandarizada) ---
         def obtener_historial_reciente(equipo, limite=10):
             try:
+                # 1. Cargamos el pasado
                 df_historico = pd.read_csv('historial_selecciones_combinado.csv')
+                
+                # 2. Cargamos el presente
                 try:
                     df_manual = pd.read_csv('partidos_manuales.csv')
                     df_combinado = pd.concat([df_historico, df_manual], ignore_index=True)
                 except FileNotFoundError:
                     df_combinado = df_historico
-                    
-                partidos_equipo = df_combinado[(df_combinado['local'] == equipo) | (df_combinado['visita'] == equipo)].copy()
                 
-                # Buscamos dinámicamente si la columna se llama 'date' o 'fecha'
-                col_fecha = 'date' if 'date' in partidos_equipo.columns else 'fecha' if 'fecha' in partidos_equipo.columns else None
+                # 3. LIMPIEZA TOTAL DE COLUMNAS (Adiós errores por Mayúsculas o Espacios)
+                df_combinado.columns = df_combinado.columns.str.strip().str.lower()
                 
+                # 4. Mapeo dinámico de columnas clave por si cambian de nombre
+                col_local = [c for c in df_combinado.columns if 'local' in c or 'home' in c][0]
+                col_visita = [c for c in df_combinado.columns if 'visit' in c or 'away' in c][0]
+                col_g_loc = [c for c in df_combinado.columns if 'goles_local' in c or 'score' in c or 'goles_l' in c][0]
+                col_g_vis = [c for c in df_combinado.columns if 'goles_visita' in c or 'score' in c or 'goles_v' in c][0]
+                
+                # Buscador elástico de fecha (detecta 'date', 'fecha', 'fecha_partido', etc.)
+                col_fecha = [c for c in df_combinado.columns if 'dat' in c or 'fech' in c]
+                col_fecha = col_fecha[0] if col_fecha else None
+                
+                # 5. Filtramos al equipo utilizando las columnas normalizadas
+                partidos_equipo = df_combinado[(df_combinado[col_local] == equipo) | (df_combinado[col_visita] == equipo)].copy()
+                
+                # 6. ORDEN CRONOLÓGICO SEGURO
                 if col_fecha:
                     partidos_equipo[col_fecha] = pd.to_datetime(partidos_equipo[col_fecha], errors='coerce')
                     partidos_equipo = partidos_equipo.sort_values(by=col_fecha, ascending=True)
                 
+                # 7. Tomamos los últimos 10 y los invertimos para que el más nuevo salga arriba
                 ultimos = partidos_equipo.tail(limite).iloc[::-1]
                 
                 resultados = []
                 for _, p in ultimos.iterrows():
-                    es_local = (p['local'] == equipo)
-                    rival = p['visita'] if es_local else p['local']
+                    es_local = (p[col_local] == equipo)
+                    rival = p[col_visita] if es_local else p[col_local]
                     
-                    gf = int(p['goles_local'] if es_local else p['goles_visita'])
-                    gc = int(p['goles_visita'] if es_local else p['goles_local'])
+                    gf = int(p[col_g_loc] if es_local else p[col_g_vis])
+                    gc = int(p[col_g_vis] if es_local else p[col_g_loc])
                     
-                    if gf > gc: res = "✅ V"
-                    elif gf < gc: res = "❌ D"
-                    else: res = "➖ E"
+                    if gf > gc: res = "✅ Victoria"
+                    elif gf < gc: res = "❌ Derrota "
+                    else: res = "➖ Empate "
                     
-                    # Extracción de fecha a prueba de fallos
+                    # Formateo de fecha ultra-limpio sin importar el formato origen
                     if col_fecha and not pd.isna(p[col_fecha]):
-                        fecha_str = str(p[col_fecha]).split(' ')[0] # Corta directo a "YYYY-MM-DD"
+                        fecha_str = str(p[col_fecha]).split(' ')[0] # Corta a "YYYY-MM-DD"
                     else:
                         fecha_str = "Fecha N/D"
                         
