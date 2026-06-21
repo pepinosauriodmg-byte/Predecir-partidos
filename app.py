@@ -120,7 +120,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<h1 class='frutiger-title'>⚽ Plataforma Predictiva Híbrida - Mundial 2026</h1>", unsafe_allow_html=True)
+st.markdown(f"<h1 class='frutiger-title'>{icon('balon', 45)} Plataforma Predictiva Híbrida - Mundial 2026</h1>", unsafe_allow_html=True)
 
 # ==========================================
 # 2. DICCIONARIO MAESTRO DE BANDERAS (ULTRA EXPANDIDO)
@@ -157,6 +157,26 @@ DICT_BANDERAS = {
 
 def obtener_bandera(equipo):
     return DICT_BANDERAS.get(equipo, '⚽')
+
+# ==========================================
+# 2.5 MOTOR DE ICONOS FRUTIGER AERO (OXYGEN KDE 4)
+# ==========================================
+ICONS = {
+    "balon": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg",
+    "check": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Oxygen480-actions-dialog-ok.svg",
+    "cross": "https://upload.wikimedia.org/wikipedia/commons/9/97/Oxygen480-actions-dialog-close.svg",
+    "empate": "https://upload.wikimedia.org/wikipedia/commons/0/03/Oxygen480-actions-list-remove.svg",
+    "star": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Oxygen480-status-rating.svg",
+    "calendar": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Oxygen480-mimetypes-x-office-calendar.svg",
+    "chart": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Oxygen480-apps-utilities-system-monitor.svg",
+    "search": "https://upload.wikimedia.org/wikipedia/commons/6/61/Oxygen480-actions-system-search.svg",
+    "trophy": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Oxygen480-categories-applications-games.svg"
+}
+
+def icon(name, size=24):
+    """Genera una etiqueta de imagen HTML con estilo glossy y sombra."""
+    url = ICONS.get(name, ICONS["balon"])
+    return f"<img src='{url}' width='{size}' height='{size}' style='vertical-align: text-bottom; margin-right: 6px; filter: drop-shadow(2px 4px 4px rgba(0,0,0,0.6));'>"
 
 # ==========================================
 # 3. MOTOR DE POWER RANKING
@@ -307,22 +327,21 @@ with col_principal:
 # --- PESTAÑA 3: PRÓXIMA JORNADA ---
     with tab3:
         st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
-        st.subheader("📅 Predicciones automáticas para Mañana")
-        st.caption("Análisis avanzado y contexto histórico de los contendientes.")
+        # Reemplazamos subheader por HTML con icono 3D
+        st.markdown(f"<h3 style='color: white; margin-bottom: 5px;'>{icon('calendar', 32)} Predicciones automáticas para Mañana</h3>", unsafe_allow_html=True)
+        st.markdown("<p style='color: #aedef7; font-size: 0.9rem; margin-bottom: 20px;'>Análisis avanzado y contexto histórico de los contendientes.</p>", unsafe_allow_html=True)
         
         partidos_manana = [
-            ('Spain', 'Saudi Arabia'), 
-            ('Belgium', 'Iran'),     
-            ('Uruguay', 'Cabo Verde'),
-            ('New Zealand', 'Egypt')
+            ('Netherlands', 'Sweden'), 
+            ('Germany', 'Ivory Coast'),     
+            ('Tunisia', 'Japan'),
+            ('Ecuador', 'Curaçao')
         ]
         
-# --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE (Regex Inteligente Año/Fecha) ---
+        # --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE ---
         def obtener_historial_reciente(equipo, limite=10):
             try:
                 import re
-                
-                # 1. Carga de datos
                 df_historico = pd.read_csv('historial_selecciones_combinado.csv')
                 try:
                     df_manual = pd.read_csv('partidos_manuales.csv')
@@ -339,28 +358,18 @@ with col_principal:
                 
                 partidos_equipo = df_combinado[(df_combinado[col_local] == equipo) | (df_combinado[col_visita] == equipo)].copy()
                 
-                # 2. EL ESCÁNER DE FECHAS MEJORADO
                 def escudrinar_fecha(fila):
-                    # Primero intentamos buscar la fecha completa (Tus partidos manuales)
                     for valor in fila.values:
                         match_full = re.search(r'\d{4}[-/]\d{2}[-/]\d{2}', str(valor))
-                        if match_full:
-                            return match_full.group(0)
-                    
-                    # Si no hay fecha completa, buscamos al menos el año (Los de Kaggle)
+                        if match_full: return match_full.group(0)
                     for valor in fila.values:
-                        # Busca cualquier número de 4 dígitos que empiece con 19 o 20
                         match_year = re.search(r'\b(19|20)\d{2}\b', str(valor))
-                        if match_year:
-                            return match_year.group(0)
-                            
-                    return '1900' # Si de verdad no hay nada
+                        if match_year: return match_year.group(0)
+                    return '1900'
                 
-                # Extraemos y ordenamos
                 partidos_equipo['fecha_exacta'] = partidos_equipo.apply(escudrinar_fecha, axis=1)
                 partidos_equipo = partidos_equipo.sort_values(by='fecha_exacta', ascending=True)
                 
-                # 3. Tomamos los 10 últimos y los invertimos
                 ultimos = partidos_equipo.tail(limite).iloc[::-1]
                 
                 resultados = []
@@ -371,15 +380,15 @@ with col_principal:
                     gf = int(p[col_g_loc] if es_local else p[col_g_vis])
                     gc = int(p[col_g_vis] if es_local else p[col_g_loc])
                     
-                    if gf > gc: res = "✅ Victoria"
-                    elif gf < gc: res = "❌ Derrota "
-                    else: res = "➖ Empate "
+                    # ICONOS 3D EN LUGAR DE EMOJIS
+                    if gf > gc: res = f"{icon('check', 18)} <span style='color:#a4e67d; font-weight:bold;'>Victoria</span>"
+                    elif gf < gc: res = f"{icon('cross', 18)} <span style='color:#ff8a8a; font-weight:bold;'>Derrota</span>"
+                    else: res = f"{icon('empate', 18)} <span style='color:#cdeaf8; font-weight:bold;'>Empate</span>"
                     
                     fecha_str = p['fecha_exacta']
-                    if fecha_str == '1900': 
-                        fecha_str = "N/D"
+                    if fecha_str == '1900': fecha_str = "N/D"
                         
-                    resultados.append(f"📅 {fecha_str} | {res} vs **{rival}** ({gf} - {gc})")
+                    resultados.append(f"<div style='margin-bottom: 5px; font-size: 0.95rem;'>{icon('calendar', 16)} <span style='color:#8ebce3;'>{fecha_str}</span> | {res} vs <b>{rival}</b> ({gf} - {gc})</div>")
                     
                 if not resultados:
                     return ["Aún no hay historial registrado."]
@@ -387,43 +396,35 @@ with col_principal:
             except Exception as e:
                 return [f"Error al cargar historial: {e}"]
 
-        # --- FUNCIÓN AUXILIAR: TOP JUGADORES (Búsqueda Blindada) ---
+        # --- FUNCIÓN AUXILIAR: TOP JUGADORES ---
         def obtener_top_jugadores(equipo, top=3):
             try:
                 df_jugadores = pd.read_csv('rendimiento_jugadores.csv')
-                
-                # Limpiamos todos los nombres de columnas (quitar espacios invisibles y mayúsculas)
                 df_jugadores.columns = df_jugadores.columns.str.strip().str.lower()
                 
-                # Encontramos las columnas sin importar cómo se llamen (usamos índices si fallan los nombres)
                 col_eq = [c for c in df_jugadores.columns if 'equip' in c or 'team' in c]
                 col_eq = col_eq[0] if col_eq else df_jugadores.columns[0]
-                
                 col_nom = [c for c in df_jugadores.columns if 'nom' in c or 'jug' in c or 'play' in c]
                 col_nom = col_nom[0] if col_nom else df_jugadores.columns[1]
-                
                 col_rat = [c for c in df_jugadores.columns if 'rat' in c or 'cal' in c or 'pun' in c]
                 col_rat = col_rat[0] if col_rat else df_jugadores.columns[2]
-                
                 col_pos = [c for c in df_jugadores.columns if 'pos' in c]
                 col_pos = col_pos[0] if col_pos else df_jugadores.columns[3]
                 
-                # Filtramos el equipo (ignoramos mayúsculas/minúsculas para que sea perfecto)
                 plantilla = df_jugadores[df_jugadores[col_eq].astype(str).str.contains(equipo, case=False, na=False)].copy()
                 
                 if plantilla.empty:
                     return [f"Sin datos registrados para {equipo}"]
                 
-                # Convertimos calificaciones a números forzosamente y ordenamos
                 plantilla[col_rat] = pd.to_numeric(plantilla[col_rat], errors='coerce').fillna(0)
                 plantilla = plantilla.sort_values(by=col_rat, ascending=False).head(top)
                 
                 top_str = []
                 for _, j in plantilla.iterrows():
-                    top_str.append(f"⭐ {j[col_nom]} ({j[col_pos]}): **{j[col_rat]}**")
+                    # ESTRELLA 3D GLOSSY A LA IZQUIERDA DEL JUGADOR
+                    top_str.append(f"<div style='margin-bottom: 4px; font-size: 1rem;'>{icon('star', 20)} {j[col_nom]} ({j[col_pos]}): <b style='color:#a4e67d;'>{j[col_rat]}</b></div>")
                 return top_str
             except Exception as e:
-                # Si llega a fallar, te mostrará el error exacto en pantalla para debuggear
                 return [f"Error leyendo jugadores: {str(e)[:40]}"]
 
         # --- RENDERIZADO DE PARTIDOS ---
@@ -441,7 +442,7 @@ with col_principal:
                     p_l = float(probs_flat[2])
                     
                     st.markdown(f"""
-                    <div style='text-align: center; margin-bottom: 15px; font-family: monospace; font-size: 1.1rem; color: #4ade80;'>
+                    <div style='text-align: center; margin-bottom: 15px; font-family: Tahoma; font-size: 1.1rem; color: #a4e67d; text-shadow: 1px 1px 2px black;'>
                         <b>xG Esperado de Poisson:</b> {float(xg_l):.2f} - {float(xg_v):.2f}
                     </div>
                     """, unsafe_allow_html=True)
@@ -453,33 +454,33 @@ with col_principal:
                     
                     st.divider()
                     
-                    st.markdown("##### 🔍 Justificación Estadística en Vivo")
+                    st.markdown(f"<h5 style='color:white;'>{icon('search', 24)} Justificación Estadística en Vivo</h5>", unsafe_allow_html=True)
                     
                     col_info_l, col_info_v = st.columns(2)
                     
                     with col_info_l:
-                        st.markdown(f"**{b_l} Estado de {eq_l}**")
+                        st.markdown(f"<strong style='font-size: 1.1rem; color: #ffffff;'>{b_l} Estado de {eq_l}</strong>", unsafe_allow_html=True)
                         
-                        st.caption("🌟 MVPs del Torneo:")
+                        st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('trophy', 16)} MVPs del Torneo:</p>", unsafe_allow_html=True)
                         for j in obtener_top_jugadores(eq_l):
-                            st.write(f"<small>{j}</small>", unsafe_allow_html=True)
+                            st.write(j, unsafe_allow_html=True)
                         
                         st.write("") 
-                        st.caption("📈 Últimos 10 Partidos:") # <- ¡Ya dice 10!
+                        st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('chart', 16)} Últimos 10 Partidos:</p>", unsafe_allow_html=True)
                         for h in obtener_historial_reciente(eq_l):
-                            st.write(f"<small>{h}</small>", unsafe_allow_html=True)
+                            st.write(h, unsafe_allow_html=True)
 
                     with col_info_v:
-                        st.markdown(f"**{b_v} Estado de {eq_v}**")
+                        st.markdown(f"<strong style='font-size: 1.1rem; color: #ffffff;'>{b_v} Estado de {eq_v}</strong>", unsafe_allow_html=True)
                         
-                        st.caption("🌟 MVPs del Torneo:")
+                        st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('trophy', 16)} MVPs del Torneo:</p>", unsafe_allow_html=True)
                         for j in obtener_top_jugadores(eq_v):
-                            st.write(f"<small>{j}</small>", unsafe_allow_html=True)
+                            st.write(j, unsafe_allow_html=True)
                         
                         st.write("") 
-                        st.caption("📈 Últimos 10 Partidos:") # <- ¡Ya dice 10!
+                        st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('chart', 16)} Últimos 10 Partidos:</p>", unsafe_allow_html=True)
                         for h in obtener_historial_reciente(eq_v):
-                            st.write(f"<small>{h}</small>", unsafe_allow_html=True)
+                            st.write(h, unsafe_allow_html=True)
 
             else:
                 st.warning(f"Error de nombre en la base: {eq_l} vs {eq_v}")
