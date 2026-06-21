@@ -338,10 +338,10 @@ with col_principal:
         st.markdown("<p style='color: #aedef7; font-size: 0.9rem; margin-bottom: 20px;'>Análisis avanzado y contexto histórico de los contendientes.</p>", unsafe_allow_html=True)
         
         partidos_manana = [
-            ('Netherlands', 'Sweden'), 
-            ('Germany', 'Ivory Coast'),     
-            ('Tunisia', 'Japan'),
-            ('Ecuador', 'Curaçao')
+            ('Spain', 'Saudi Arabia'), 
+            ('Belgium', 'Iran'),     
+            ('Uruguay', 'Cabo Verde'),
+            ('New Zealand', 'Egypt')
         ]
         
         # --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE ---
