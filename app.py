@@ -267,10 +267,10 @@ with col_principal:
         st.caption("Análisis avanzado y contexto histórico de los contendientes.")
         
         partidos_manana = [
-            ('Netherlands', 'Sweden'), 
-            ('Germany', 'Ivory Coast'),     
-            ('Tunisia', 'Japan'),
-            ('Ecuador', 'Curaçao')
+            ('Spain', 'Saudi Arabia'), 
+            ('Belgium', 'Iran'),     
+            ('Uruguay', 'Cabo Verde'),
+            ('New Zealand', 'Egypt')
         ]
         
 # --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE (Regex Inteligente Año/Fecha) ---
