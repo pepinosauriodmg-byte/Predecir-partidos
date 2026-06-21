@@ -260,19 +260,78 @@ with col_principal:
             st.error("Error leyendo las columnas del CSV. Verifica los nombres 'local', 'visita', 'goles_local', 'goles_visita'.")
         st.markdown("</div>", unsafe_allow_html=True)
 
-    # --- PESTAÑA 3: PRÓXIMA JORNADA ---
+  # --- PESTAÑA 3: PRÓXIMA JORNADA ---
     with tab3:
         st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
         st.subheader("📅 Predicciones automáticas para Mañana")
-        st.caption("Lote diario precargado.")
+        st.caption("Análisis avanzado y contexto histórico de los contendientes.")
         
         partidos_manana = [
-            ('Spain', 'Saudi Arabia'), 
-            ('Belgium', 'Iran'),     
-            ('Uruguay', 'Cabo Verde'),
-            ('New Zealand', 'Egypt')
+            ('Netherlands', 'Sweden'), 
+            ('Germany', 'Ivory Coast'),     
+            ('Tunisia', 'Japan'),
+            ('Ecuador', 'Curaçao')
         ]
         
+        # --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE (Combinado en vivo) ---
+        def obtener_historial_reciente(equipo, limite=5):
+            try:
+                # 1. Cargamos el pasado (Kaggle/Eliminatorias)
+                df_historico = pd.read_csv('historial_selecciones_combinado.csv')
+                
+                # 2. Cargamos el presente (Mundial 2026 Manual)
+                try:
+                    df_manual = pd.read_csv('partidos_manuales.csv')
+                    df_combinado = pd.concat([df_historico, df_manual], ignore_index=True)
+                except FileNotFoundError:
+                    df_combinado = df_historico
+                    
+                # 3. Filtramos solo los partidos de este equipo
+                partidos_equipo = df_combinado[(df_combinado['local'] == equipo) | (df_combinado['visita'] == equipo)].copy()
+                
+                # 4. Tomamos los últimos partidos
+                ultimos = partidos_equipo.tail(limite)
+                
+                resultados = []
+                for _, p in ultimos.iterrows():
+                    es_local = (p['local'] == equipo)
+                    rival = p['visita'] if es_local else p['local']
+                    
+                    # Extraemos los goles y los pasamos a enteros limpios
+                    gf = int(p['goles_local'] if es_local else p['goles_visita'])
+                    gc = int(p['goles_visita'] if es_local else p['goles_local'])
+                    
+                    if gf > gc: res = "✅ Victoria"
+                    elif gf < gc: res = "❌ Derrota "
+                    else: res = "➖ Empate "
+                    
+                    # Formato hiper claro: Resultado vs Rival (Goles)
+                    resultados.append(f"{res} vs **{rival}** | Goles: **{gf} - {gc}**")
+                    
+                if not resultados:
+                    return ["Aún no hay historial registrado."]
+                return resultados
+            except Exception as e:
+                return [f"Error al cargar datos: {e}"]
+
+        # --- FUNCIÓN AUXILIAR: TOP JUGADORES ---
+        def obtener_top_jugadores(equipo, top=3):
+            try:
+                df_jugadores = pd.read_csv('rendimiento_jugadores.csv')
+                plantilla = df_jugadores[df_jugadores['equipo'] == equipo].copy()
+                if plantilla.empty:
+                    return ["Sin datos de plantilla"]
+                
+                plantilla = plantilla.sort_values(by='rating', ascending=False).head(top)
+                
+                top_str = []
+                for _, j in plantilla.iterrows():
+                    top_str.append(f"⭐ {j['nombre']} ({j['posicion']}): **{j['rating']}**")
+                return top_str
+            except:
+                return ["Sin datos de plantilla"]
+
+        # --- RENDERIZADO DE PARTIDOS ---
         for eq_l, eq_v in partidos_manana:
             if eq_l in equipos and eq_v in equipos:
                 b_l = obtener_bandera(eq_l)
@@ -286,6 +345,7 @@ with col_principal:
                     p_e = float(probs_flat[1])
                     p_l = float(probs_flat[2])
                     
+                    # 1. PREDICCIÓN PRINCIPAL
                     st.markdown(f"""
                     <div style='text-align: center; margin-bottom: 15px; font-family: monospace; font-size: 1.1rem; color: #4ade80;'>
                         <b>xG Esperado de Poisson:</b> {float(xg_l):.2f} - {float(xg_v):.2f}
@@ -296,6 +356,38 @@ with col_principal:
                     m1.metric(label=f"Gana {eq_l} {b_l}", value=f"{p_l*100:.1f}%")
                     m2.metric(label="Empate 🤝", value=f"{p_e*100:.1f}%")
                     m3.metric(label=f"Gana {eq_v} {b_v}", value=f"{p_v*100:.1f}%")
+                    
+                    st.divider()
+                    
+                    # 2. CONTEXTO ESTADÍSTICO
+                    st.markdown("##### 🔍 Justificación Estadística en Vivo")
+                    
+                    col_info_l, col_info_v = st.columns(2)
+                    
+                    with col_info_l:
+                        st.markdown(f"**{b_l} Estado de {eq_l}**")
+                        
+                        st.caption("🌟 MVPs del Torneo:")
+                        for j in obtener_top_jugadores(eq_l):
+                            st.write(f"<small>{j}</small>", unsafe_allow_html=True)
+                        
+                        st.write("") # Espacio en blanco
+                        st.caption("📈 Últimos 5 Partidos:")
+                        for h in obtener_historial_reciente(eq_l):
+                            st.write(f"<small>{h}</small>", unsafe_allow_html=True)
+
+                    with col_info_v:
+                        st.markdown(f"**{b_v} Estado de {eq_v}**")
+                        
+                        st.caption("🌟 MVPs del Torneo:")
+                        for j in obtener_top_jugadores(eq_v):
+                            st.write(f"<small>{j}</small>", unsafe_allow_html=True)
+                        
+                        st.write("") # Espacio en blanco
+                        st.caption("📈 Últimos 5 Partidos:")
+                        for h in obtener_historial_reciente(eq_v):
+                            st.write(f"<small>{h}</small>", unsafe_allow_html=True)
+
             else:
                 st.warning(f"Error de nombre en la base: {eq_l} vs {eq_v}")
         st.markdown("</div>", unsafe_allow_html=True)
