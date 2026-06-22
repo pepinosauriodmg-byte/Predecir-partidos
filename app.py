@@ -559,55 +559,82 @@ with col_principal:
             except Exception as e:
                 return [f"Error al cargar historial: {e}"]
 
-# --- FUNCIÓN AUXILIAR: TOP JUGADORES (INTELIGENTE POR POSICIÓN) ---
-        def obtener_top_jugadores(equipo, top=3):
-            try:
-                df_jugadores = pd.read_csv('rendimiento_jugadores.csv')
-                df_jugadores.columns = df_jugadores.columns.str.strip().str.lower()
+# --- FUNCIÓN AUXILIAR: TOP JUGADORES (INTELIGENTE + WHITELIST FIFA) ---
+def obtener_top_jugadores(equipo, top=3):
+    try:
+        df_jugadores = pd.read_csv('rendimiento_jugadores.csv')
+        df_jugadores.columns = df_jugadores.columns.str.strip().str.lower()
+        
+        col_eq = [c for c in df_jugadores.columns if 'equip' in c or 'team' in c][0]
+        col_nom = [c for c in df_jugadores.columns if 'nom' in c or 'jug' in c or 'play' in c][0]
+        col_pos = [c for c in df_jugadores.columns if 'pos' in c][0]
+        col_rat_atq = [c for c in df_jugadores.columns if 'ataque' in c or 'atq' in c][0]
+        col_rat_def = [c for c in df_jugadores.columns if 'defensa' in c or 'def' in c][0]
+        
+        # 1. Filtramos primero a los jugadores de este equipo (Ahorro masivo de memoria)
+        plantilla = df_jugadores[df_jugadores[col_eq].astype(str).str.contains(equipo, case=False, na=False)].copy()
+        
+        if plantilla.empty:
+            return [f"Sin datos registrados para {equipo}"]
+        
+        # ==========================================
+        # 🚧 ESCÁNER WHITELIST (LISTA OFICIAL DE LA FIFA) 🚧
+        # ==========================================
+        try:
+            df_oficial = pd.read_csv('convocados_oficiales.csv')
+            plantilla_oficial = df_oficial[df_oficial['Equipo'].str.contains(equipo, case=False, na=False)]
+            
+            if not plantilla_oficial.empty:
+                nombres_oficiales = plantilla_oficial['Jugador_Oficial'].astype(str).str.lower().tolist()
                 
-                # 1. Identificamos las columnas exactas
-                col_eq = [c for c in df_jugadores.columns if 'equip' in c or 'team' in c][0]
-                col_nom = [c for c in df_jugadores.columns if 'nom' in c or 'jug' in c or 'play' in c][0]
-                col_pos = [c for c in df_jugadores.columns if 'pos' in c][0]
+                # Función para eliminar tildes y hacer comparaciones perfectas
+                def quitar_acentos(s):
+                    reemplazos = {'á':'a', 'é':'e', 'í':'i', 'ó':'o', 'ú':'u', 'ñ':'n', 'č':'c', 'ć':'c', 'š':'s', 'ë':'e', 'ö':'o', 'ü':'u'}
+                    for a, b in reemplazos.items(): s = s.replace(a, b)
+                    return s
                 
-                # Buscamos las dos columnas de rating generadas por tu IA
-                col_rat_atq = [c for c in df_jugadores.columns if 'ataque' in c or 'atq' in c][0]
-                col_rat_def = [c for c in df_jugadores.columns if 'defensa' in c or 'def' in c][0]
+                nombres_of_limpios = [quitar_acentos(n) for n in nombres_oficiales]
                 
-                # 2. Filtramos la plantilla del equipo
-                plantilla = df_jugadores[df_jugadores[col_eq].astype(str).str.contains(equipo, case=False, na=False)].copy()
+                # Función evaluadora: ¿El jugador de la BD existe en la lista oficial?
+                def es_convocado(nombre_db):
+                    nom_db_limpio = quitar_acentos(str(nombre_db).lower())
+                    for nom_oficial in nombres_of_limpios:
+                        # Si el apellido oficial está en la BD (Ej: Oficial='OCHOA' | BD='G. Ochoa') -> Aprobado
+                        if nom_oficial in nom_db_limpio or nom_db_limpio in nom_oficial:
+                            return True
+                    return False
                 
-                if plantilla.empty:
-                    return [f"Sin datos registrados para {equipo}"]
+                # LA DESTRUCCIÓN: Mantenemos estrictamente a los jugadores que aprueban el escáner
+                plantilla_filtrada = plantilla[plantilla[col_nom].apply(es_convocado)]
                 
-                # 3. Lógica para elegir el rating correcto según la posición
-                def calcular_rating_real(fila):
-                    pos = str(fila[col_pos]).upper()
-                    atq = pd.to_numeric(fila[col_rat_atq], errors='coerce')
-                    dfn = pd.to_numeric(fila[col_rat_def], errors='coerce')
-                    
-                    if pos == 'DEL':
-                        return atq
-                    elif pos in ['DEF', 'POR']:
-                        return dfn
-                    else: # MED o cualquier otro
-                        return (atq + dfn) / 2
-                
-                # 4. Aplicamos el rating real, ordenamos de mejor a peor y cortamos el Top 3
-                plantilla['rating_real'] = plantilla.apply(calcular_rating_real, axis=1).fillna(0)
-                plantilla = plantilla.sort_values(by='rating_real', ascending=False).head(top)
-                
-                # 5. Renderizado Frutiger Aero
-                top_str = []
-                for _, j in plantilla.iterrows():
-                    rating_final = int(j['rating_real'])
-                    # Ponemos color verde si es bueno, rojo si es un MVP caído
-                    color_rat = "#a4e67d" if rating_final >= 70 else "#ff8a8a"
-                    
-                    top_str.append(f"<div style='margin-bottom: 4px; font-size: 1rem;'>{icon('star', 20)} {j[col_nom]} ({j[col_pos]}): <b style='color:{color_rat};'>{rating_final}</b></div>")
-                return top_str
-            except Exception as e:
-                return [f"Error leyendo jugadores: {str(e)[:40]}"]
+                # Sistema de seguridad: si el filtro fue muy agresivo, no dejamos al equipo vacío
+                if not plantilla_filtrada.empty:
+                    plantilla = plantilla_filtrada
+
+        except FileNotFoundError:
+            pass # Si el CSV oficial no existe, usa la lista sucia por defecto
+        # ==========================================
+        
+        # 2. Lógica de rating matemático (Ataque, Defensa o Promedio)
+        def calcular_rating_real(fila):
+            pos = str(fila[col_pos]).upper()
+            atq = pd.to_numeric(fila[col_rat_atq], errors='coerce')
+            dfn = pd.to_numeric(fila[col_rat_def], errors='coerce')
+            if pos == 'DEL': return atq
+            elif pos in ['DEF', 'POR']: return dfn
+            else: return (atq + dfn) / 2
+        
+        plantilla['rating_real'] = plantilla.apply(calcular_rating_real, axis=1).fillna(0)
+        plantilla = plantilla.sort_values(by='rating_real', ascending=False).head(top)
+        
+        top_str = []
+        for _, j in plantilla.iterrows():
+            rating_final = int(j['rating_real'])
+            color_rat = "#a4e67d" if rating_final >= 70 else "#ff8a8a"
+            top_str.append(f"<div style='margin-bottom: 4px; font-size: 1rem;'>{icon('star', 20)} {j[col_nom]} ({j[col_pos]}): <b style='color:{color_rat};'>{rating_final}</b></div>")
+        return top_str
+    except Exception as e:
+        return [f"Error leyendo jugadores: {str(e)[:40]}"]
 
         # --- RENDERIZADO DE PARTIDOS ---
         for eq_l, eq_v in partidos_manana:
