@@ -406,8 +406,6 @@ with col_principal:
             
             st.markdown(f"<p style='margin-bottom: 5px; margin-top: 10px;'><b>Probabilidad Gana {visitante} {bandera_v}: {p_visita*100:.1f}%</b></p>", unsafe_allow_html=True)
             st.progress(p_visita)
-
-            st.progress(p_visita)
             
             # --- NUEVA SECCIÓN: ESTADÍSTICAS EN EL SIMULADOR ---
             st.divider()
