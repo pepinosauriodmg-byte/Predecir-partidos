@@ -10,6 +10,24 @@ print("Inicializando Motor Predictivo Híbrido con Sistema ELO + Poisson...")
 # 1. Cargar Datos (Ahora leemos directamente el historial inteligente)
 df_combinado = pd.read_csv('historial_con_elo.csv')
 
+# --- TRADUCTOR DE NACIONES BLINDADO ---
+mapeo_naciones = {
+    'Cape Verde': 'Cabo Verde', 'Cape Verde Islands': 'Cabo Verde',
+    'United States': 'USA', 'Korea Republic': 'South Korea',
+    'Korea DPR': 'North Korea', "Côte d'Ivoire": 'Ivory Coast',
+    'Czech Republic': 'Czechia', 'Turkey': 'Türkiye',
+    'IR Iran': 'Iran', 'Republic of Ireland': 'Ireland',
+    'Bosnia-Herzegovina': 'Bosnia and Herzegovina'
+}
+
+# Seguimos leyendo tu archivo manual SOLO para saber qué equipos proteger en el filtro blindado
+equipos_manuales = []
+if os.path.exists('partidos_manuales.csv') and os.path.getsize('partidos_manuales.csv') > 10:
+    df_manual = pd.read_csv('partidos_manuales.csv')
+    df_manual['local'] = df_manual['local'].astype(str).str.strip().replace(mapeo_naciones)
+    df_manual['visita'] = df_manual['visita'].astype(str).str.strip().replace(mapeo_naciones)
+    equipos_manuales = pd.concat([df_manual['local'], df_manual['visita']]).unique()
+
 # Seguimos leyendo tu archivo manual SOLO para saber qué equipos proteger en el filtro blindado
 equipos_manuales = []
 if os.path.exists('partidos_manuales.csv') and os.path.getsize('partidos_manuales.csv') > 10:
