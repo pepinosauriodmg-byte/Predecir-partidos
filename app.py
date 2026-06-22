@@ -565,31 +565,67 @@ with col_principal:
                 df_jugadores = pd.read_csv('rendimiento_jugadores.csv')
                 df_jugadores.columns = df_jugadores.columns.str.strip().str.lower()
                 
-                col_eq = [c for c in df_jugadores.columns if 'equip' in c or 'team' in c]
-                col_eq = col_eq[0] if col_eq else df_jugadores.columns[0]
-                col_nom = [c for c in df_jugadores.columns if 'nom' in c or 'jug' in c or 'play' in c]
-                col_nom = col_nom[0] if col_nom else df_jugadores.columns[1]
-                col_rat = [c for c in df_jugadores.columns if 'rat' in c or 'cal' in c or 'pun' in c]
-                col_rat = col_rat[0] if col_rat else df_jugadores.columns[2]
-                col_pos = [c for c in df_jugadores.columns if 'pos' in c]
-                col_pos = col_pos[0] if col_pos else df_jugadores.columns[3]
+                col_eq = [c for c in df_jugadores.columns if 'equip' in c or 'team' in c][0]
+                col_nom = [c for c in df_jugadores.columns if 'nom' in c or 'jug' in c or 'play' in c][0]
+                col_pos = [c for c in df_jugadores.columns if 'pos' in c][0]
+                col_rat_atq = [c for c in df_jugadores.columns if 'ataque' in c or 'atq' in c][0]
+                col_rat_def = [c for c in df_jugadores.columns if 'defensa' in c or 'def' in c][0]
                 
                 plantilla = df_jugadores[df_jugadores[col_eq].astype(str).str.contains(equipo, case=False, na=False)].copy()
                 
                 if plantilla.empty:
                     return [f"Sin datos registrados para {equipo}"]
-                
-                plantilla[col_rat] = pd.to_numeric(plantilla[col_rat], errors='coerce').fillna(0)
-                plantilla = plantilla.sort_values(by=col_rat, ascending=False).head(top)
-                
+                try:
+                    df_oficial = pd.read_csv('convocados_oficiales.csv')
+
+                    def normalizar_texto(t):
+                        reemplazos = {'á':'a', 'é':'e', 'í':'i', 'ó':'o', 'ú':'u', 'ñ':'n'}
+                        t = str(t).strip().lower()
+                        for a, b in reemplazos.items(): t = t.replace(a, b)
+                        return t
+                    equipo_norm = normalizar_texto(equipo)
+                    df_oficial['equipo_Norm'] = df_oficial['equipo'].apply(normalizar_texto)
+
+                    plantilla_oficial = df_oficial[df_oficial['equipo_Norm'] == equipo_norm]
+
+                    if not plantilla_oficial.empty:
+                        nombres_of_limpios = [normalizar_texto(n) for n in plantilla_oficial['Jugador_Oficial'].tolist()]
+
+                        def es_convocado(nombre_db):
+                            nom_db_limpio = normalizar_texto(nombre_db)
+                            for nom_oficial in nombres_of_limpios:
+                                if nom_oficial in nom_db_limpio or nom_db_limpio in nom_oficial:
+                                    return True
+                            return False
+                        
+                        plantilla_filtrada = plantilla[plantilla[col_nom].apply(es_convocado)]
+                        if not plantilla_filtrada.empty:
+                            plantilla = plantilla_filtrada
+                        else:
+                            return ["Los nombres de la BD no coinciden con la lista oficial."]
+                except FileNotFoundError:
+                    pass
+
+                def calcular_rating_real(fila):
+                    pos = str(fila[col_pos]).upper()
+                    atq = pd.to_numeric(fila[col_rat_atq], errors='coerce')
+                    dfn = pd.to_numeric(fila[col_rat_def], errors='coerce')
+                    if pos == 'DEL': return atq
+                    elif pos in ['DEF', 'POR']: return dfn
+                    else: return (atq + dfn) / 2
+
+                plantilla['rating_real'] = plantilla.apply(calcular_rating_real, axis=1).fillna(0)
+                plantilla = plantilla.sort_values(by='rating_real', ascending=False).head(top)
+
                 top_str = []
                 for _, j in plantilla.iterrows():
-                    # ESTRELLA 3D GLOSSY A LA IZQUIERDA DEL JUGADOR
-                    top_str.append(f"<div style='margin-bottom: 4px; font-size: 1rem;'>{icon('star', 20)} {j[col_nom]} ({j[col_pos]}): <b style='color:#a4e67d;'>{j[col_rat]}</b></div>")
+                    rating_final = int(j['rating_real'])
+                    color_rat = "#a4e67d" if rating_final >= 70 else "#ff8a8a"
+                    top_str.append(f"<div style='margin-bottom: 4px; font-size: 1rem;'>{icon('star', 20)} {j[col_nom]} ({j[col_pos]}): <b style='color:{color_rat};'>{rating_final}</b></div>")
                 return top_str
             except Exception as e:
                 return [f"Error leyendo jugadores: {str(e)[:40]}"]
-
+                
         # --- RENDERIZADO DE PARTIDOS ---
         for eq_l, eq_v in partidos_manana:
             if eq_l in equipos and eq_v in equipos:
