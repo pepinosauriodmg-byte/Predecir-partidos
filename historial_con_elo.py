@@ -6,22 +6,26 @@ print("Inicializando Motor Elo con Calibración Oficial FIFA (211 Equipos)...")
 # 1. Cargar el historial completo
 df_api = pd.read_csv('historial_selecciones_combinado.csv')
 
-# --- TRADUCTOR DE NACIONES (Blindaje de Identidades) ---
+# 1. Cargar el historial completo
+df_api = pd.read_csv('historial_selecciones_combinado.csv')
+
+# --- TRADUCTOR DE NACIONES BLINDADO (Anti-Espacios) ---
 mapeo_naciones = {
-    'Cape Verde': 'Cabo Verde',
-    'United States': 'USA',
-    'Korea Republic': 'South Korea',
-    'Korea DPR': 'North Korea',
-    "Côte d'Ivoire": 'Ivory Coast',
-    'Czech Republic': 'Czechia',
-    'Turkey': 'Türkiye',
-    'IR Iran': 'Iran',
-    'Republic of Ireland': 'Ireland',
+    'Cape Verde': 'Cabo Verde', 'Cape Verde Islands': 'Cabo Verde',
+    'United States': 'USA', 'Korea Republic': 'South Korea',
+    'Korea DPR': 'North Korea', "Côte d'Ivoire": 'Ivory Coast',
+    'Czech Republic': 'Czechia', 'Turkey': 'Türkiye',
+    'IR Iran': 'Iran', 'Republic of Ireland': 'Ireland',
     'Bosnia-Herzegovina': 'Bosnia and Herzegovina'
 }
-# Aplicar la traducción a las columnas de local y visita
-df_api['local'] = df_api['local'].replace(mapeo_naciones)
-df_api['visita'] = df_api['visita'].replace(mapeo_naciones)
+
+# Aplicamos el filtro limpiador de espacios a Kaggle
+if 'local' in df_api.columns and 'visita' in df_api.columns:
+    df_api['local'] = df_api['local'].astype(str).str.strip().replace(mapeo_naciones)
+    df_api['visita'] = df_api['visita'].astype(str).str.strip().replace(mapeo_naciones)
+elif 'home_team' in df_api.columns: # Por si Kaggle usa columnas en inglés
+    df_api['home_team'] = df_api['home_team'].astype(str).str.strip().replace(mapeo_naciones)
+    df_api['away_team'] = df_api['away_team'].astype(str).str.strip().replace(mapeo_naciones)
 
 df_api['origen'] = 'historia'
 
