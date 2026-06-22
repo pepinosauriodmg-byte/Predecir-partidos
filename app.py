@@ -341,32 +341,15 @@ with col_principal:
             ('Netherlands', 'Sweden'), 
             ('Germany', 'Ivory Coast'),     
             ('Tunisia', 'Japan'),
-            ('Ecuador', 'Cabo Verde')
+            ('Ecuador', 'Curaçao')
         ]
         
-        # --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE ---
+# --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE ---
         def obtener_historial_reciente(equipo, limite=10):
             try:
-                df_historico = pd.read_csv('historial_selecciones_combinado.csv')
-                
-                # --- TRADUCTOR DE NACIONES VISUAL ---
-                mapeo_naciones = {
-                    'Cape Verde': 'Cabo Verde', 'United States': 'USA',
-                    'Korea Republic': 'South Korea', 'Korea DPR': 'North Korea',
-                    "Côte d'Ivoire": 'Ivory Coast', 'Czech Republic': 'Czechia',
-                    'Turkey': 'Türkiye', 'IR Iran': 'Iran', 'Republic of Ireland': 'Ireland',
-                    'Bosnia-Herzegovina': 'Bosnia and Herzegovina'
-                }
-                df_historico['local'] = df_historico['local'].replace(mapeo_naciones)
-                df_historico['visita'] = df_historico['visita'].replace(mapeo_naciones)
-                
-                try:
-                    df_manual = pd.read_csv('partidos_manuales.csv')
-                    df_combinado = pd.concat([df_historico, df_manual], ignore_index=True)
-                except FileNotFoundError:
-                    df_combinado = df_historico
-                    
                 import re
+                
+                # 1. Cargar ambas bases
                 df_historico = pd.read_csv('historial_selecciones_combinado.csv')
                 try:
                     df_manual = pd.read_csv('partidos_manuales.csv')
@@ -374,13 +357,30 @@ with col_principal:
                 except FileNotFoundError:
                     df_combinado = df_historico
                 
+                # 2. Limpiar nombres de las columnas
                 df_combinado.columns = df_combinado.columns.str.strip().str.lower()
                 
+                # 3. Mapeo dinámico de columnas
                 col_local = [c for c in df_combinado.columns if 'local' in c or 'home' in c][0]
                 col_visita = [c for c in df_combinado.columns if 'visit' in c or 'away' in c][0]
                 col_g_loc = [c for c in df_combinado.columns if 'goles_local' in c or 'score' in c or 'goles_l' in c][0]
                 col_g_vis = [c for c in df_combinado.columns if 'goles_visita' in c or 'score' in c or 'goles_v' in c][0]
                 
+                # 4. TRADUCTOR DE NACIONES BLINDADO (Anti-Espacios)
+                mapeo_naciones = {
+                    'Cape Verde': 'Cabo Verde', 'Cape Verde Islands': 'Cabo Verde', 
+                    'United States': 'USA', 'Korea Republic': 'South Korea', 
+                    'Korea DPR': 'North Korea', "Côte d'Ivoire": 'Ivory Coast', 
+                    'Czech Republic': 'Czechia', 'Turkey': 'Türkiye', 
+                    'IR Iran': 'Iran', 'Republic of Ireland': 'Ireland',
+                    'Bosnia-Herzegovina': 'Bosnia and Herzegovina'
+                }
+                
+                # .str.strip() destruye los espacios invisibles antes de traducir
+                df_combinado[col_local] = df_combinado[col_local].astype(str).str.strip().replace(mapeo_naciones)
+                df_combinado[col_visita] = df_combinado[col_visita].astype(str).str.strip().replace(mapeo_naciones)
+                
+                # 5. Filtrar el equipo
                 partidos_equipo = df_combinado[(df_combinado[col_local] == equipo) | (df_combinado[col_visita] == equipo)].copy()
                 
                 def escudrinar_fecha(fila):
