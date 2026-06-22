@@ -564,19 +564,22 @@ def obtener_top_jugadores(equipo, top=3):
     try:
         df_jugadores = pd.read_csv('rendimiento_jugadores.csv')
         df_jugadores.columns = df_jugadores.columns.str.strip().str.lower()
-        
+       
         # Identificación de columnas
         col_eq = [c for c in df_jugadores.columns if 'equip' in c or 'team' in c][0]
         col_nom = [c for c in df_jugadores.columns if 'nom' in c or 'jug' in c or 'play' in c][0]
         col_pos = [c for c in df_jugadores.columns if 'pos' in c][0]
         col_atq = [c for c in df_jugadores.columns if 'ataque' in c or 'atq' in c][0]
         col_def = [c for c in df_jugadores.columns if 'defensa' in c or 'def' in c][0]
-        
+       
         # 1. Filtro inicial del equipo
-        plantilla = df_jugadores[df_jugadores[col_eq].astype(str).str.contains(equipo, case=False, na=False)].copy()
+        plantilla = df_jugadores[
+            df_jugadores[col_eq].astype(str).str.contains(equipo, case=False, na=False)
+        ].copy()
+        
         if plantilla.empty:
             return [f"Sin datos registrados para {equipo}"]
-
+        
         # 2. ESCÁNER DE WHITELIST
         def normalizar(t):
             reemplazos = {'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u', 'ñ': 'n'}
@@ -584,25 +587,26 @@ def obtener_top_jugadores(equipo, top=3):
             for a, b in reemplazos.items():
                 t = t.replace(a, b)
             return t
-
+        
         try:
             df_oficial = pd.read_csv('convocados_oficiales.csv')
             eq_norm = normalizar(equipo)
             df_oficial['eq_n'] = df_oficial['Equipo'].apply(normalizar)
-            
+           
             lista_oficial = df_oficial[df_oficial['eq_n'] == eq_norm]['Jugador_Oficial'].tolist()
+            
             if lista_oficial:
                 nombres_limpios = [normalizar(n) for n in lista_oficial]
                 plantilla = plantilla[plantilla[col_nom].apply(
-                    lambda x: any(n in normalizar(str(x)) or normalizar(str(x)) in n for n in nombres_limpios)
+                    lambda x: any(n in normalizar(x) or normalizar(x) in n for n in nombres_limpios)
                 )]
                 if plantilla.empty:
                     return ["Los nombres de la BD no coinciden con la lista oficial."]
         except FileNotFoundError:
             pass
-        except Exception:
-            pass
-
+        except Exception as e_whitelist:
+            print(f"Advertencia whitelist: {e_whitelist}")
+        
         # 3. Cálculo de rating
         def calcular_rating(fila):
             pos = str(fila[col_pos]).upper()
@@ -616,7 +620,7 @@ def obtener_top_jugadores(equipo, top=3):
         
         plantilla['rating_real'] = plantilla.apply(calcular_rating, axis=1).fillna(0)
         plantilla = plantilla.sort_values(by='rating_real', ascending=False).head(top)
-        
+       
         # 4. Generación de salida
         resultados = []
         for _, j in plantilla.iterrows():
@@ -627,68 +631,67 @@ def obtener_top_jugadores(equipo, top=3):
                 f"{icon('star', 20)} {j[col_nom]} ({j[col_pos]}): "
                 f"<b style='color:{color};'>{rat}</b></div>"
             )
-            
+           
         return resultados
-
+        
     except Exception as e:
         return [f"Error leyendo jugadores: {str(e)[:40]}"]
 
-
-# ==========================================
-# RENDERIZADO DE PARTIDOS PARA PRÓXIMA JORNADA
-# ==========================================
-for eq_l, eq_v in partidos_manana:
-    if eq_l in equipos and eq_v in equipos:
-        b_l = obtener_bandera(eq_l)
-        b_v = obtener_bandera(eq_v)
-        
-        with st.expander(f"🏟️ {b_l} {eq_l} vs {eq_v} {b_v}"):
-            xg_l, xg_v, paquete_probs = mh.predecir_partido(eq_l, eq_v)
-            probs_flat = np.array(paquete_probs).flatten()
-            
-            p_v = float(probs_flat[0])
-            p_e = float(probs_flat[1])
-            p_l = float(probs_flat[2])
-            
-            st.markdown(f"""
-            <div style='text-align: center; margin-bottom: 15px; font-family: Tahoma; font-size: 1.1rem; color: #a4e67d; text-shadow: 1px 1px 2px black;'>
-                <b>xG Esperado de Poisson:</b> {float(xg_l):.2f} - {float(xg_v):.2f}
-            </div>
-            """, unsafe_allow_html=True)
-            
-            m1, m2, m3 = st.columns(3)
-            m1.metric(label=f"Gana {eq_l} {b_l}", value=f"{p_l*100:.1f}%")
-            m2.metric(label="Empate 🤝", value=f"{p_e*100:.1f}%")
-            m3.metric(label=f"Gana {eq_v} {b_v}", value=f"{p_v*100:.1f}%")
-            
-            st.divider()
-            
-            st.markdown(f"<h5 style='color:white;'>{icon('search', 24)} Justificación Estadística en Vivo</h5>", unsafe_allow_html=True)
-            
-            col_info_l, col_info_v = st.columns(2)
-            
-            with col_info_l:
-                st.markdown(f"<strong style='font-size: 1.1rem; color: #ffffff;'>{b_l} Estado de {eq_l}</strong>", unsafe_allow_html=True)
-                st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('trophy', 16)} MVPs del Torneo:</p>", unsafe_allow_html=True)
-                for j in obtener_top_jugadores(eq_l):
-                    st.write(j, unsafe_allow_html=True)
+        # --- RENDERIZADO DE PARTIDOS ---
+        for eq_l, eq_v in partidos_manana:
+            if eq_l in equipos and eq_v in equipos:
+                b_l = obtener_bandera(eq_l)
+                b_v = obtener_bandera(eq_v)
                 
-                st.write("") 
-                st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('chart', 16)} Últimos 10 Partidos:</p>", unsafe_allow_html=True)
-                for h in obtener_historial_reciente(eq_l):
-                    st.write(h, unsafe_allow_html=True)
+                with st.expander(f"🏟️ {b_l} {eq_l} vs {eq_v} {b_v}"):
+                    xg_l, xg_v, paquete_probs = mh.predecir_partido(eq_l, eq_v)
+                    probs_flat = np.array(paquete_probs).flatten()
+                    
+                    p_v = float(probs_flat[0])
+                    p_e = float(probs_flat[1])
+                    p_l = float(probs_flat[2])
+                    
+                    st.markdown(f"""
+                    <div style='text-align: center; margin-bottom: 15px; font-family: Tahoma; font-size: 1.1rem; color: #a4e67d; text-shadow: 1px 1px 2px black;'>
+                        <b>xG Esperado de Poisson:</b> {float(xg_l):.2f} - {float(xg_v):.2f}
+                    </div>
+                    """, unsafe_allow_html=True)
+                    
+                    m1, m2, m3 = st.columns(3)
+                    m1.metric(label=f"Gana {eq_l} {b_l}", value=f"{p_l*100:.1f}%")
+                    m2.metric(label="Empate 🤝", value=f"{p_e*100:.1f}%")
+                    m3.metric(label=f"Gana {eq_v} {b_v}", value=f"{p_v*100:.1f}%")
+                    
+                    st.divider()
+                    
+                    st.markdown(f"<h5 style='color:white;'>{icon('search', 24)} Justificación Estadística en Vivo</h5>", unsafe_allow_html=True)
+                    
+                    col_info_l, col_info_v = st.columns(2)
+                    
+                    with col_info_l:
+                        st.markdown(f"<strong style='font-size: 1.1rem; color: #ffffff;'>{b_l} Estado de {eq_l}</strong>", unsafe_allow_html=True)
+                        
+                        st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('trophy', 16)} MVPs del Torneo:</p>", unsafe_allow_html=True)
+                        for j in obtener_top_jugadores(eq_l):
+                            st.write(j, unsafe_allow_html=True)
+                        
+                        st.write("") 
+                        st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('chart', 16)} Últimos 10 Partidos:</p>", unsafe_allow_html=True)
+                        for h in obtener_historial_reciente(eq_l):
+                            st.write(h, unsafe_allow_html=True)
 
-            with col_info_v:
-                st.markdown(f"<strong style='font-size: 1.1rem; color: #ffffff;'>{b_v} Estado de {eq_v}</strong>", unsafe_allow_html=True)
-                st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('trophy', 16)} MVPs del Torneo:</p>", unsafe_allow_html=True)
-                for j in obtener_top_jugadores(eq_v):
-                    st.write(j, unsafe_allow_html=True)
-                
-                st.write("") 
-                st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('chart', 16)} Últimos 10 Partidos:</p>", unsafe_allow_html=True)
-                for h in obtener_historial_reciente(eq_v):
-                    st.write(h, unsafe_allow_html=True)
+                    with col_info_v:
+                        st.markdown(f"<strong style='font-size: 1.1rem; color: #ffffff;'>{b_v} Estado de {eq_v}</strong>", unsafe_allow_html=True)
+                        
+                        st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('trophy', 16)} MVPs del Torneo:</p>", unsafe_allow_html=True)
+                        for j in obtener_top_jugadores(eq_v):
+                            st.write(j, unsafe_allow_html=True)
+                        
+                        st.write("") 
+                        st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('chart', 16)} Últimos 10 Partidos:</p>", unsafe_allow_html=True)
+                        for h in obtener_historial_reciente(eq_v):
+                            st.write(h, unsafe_allow_html=True)
 
-    else:
-        st.warning(f"Error de nombre en la base: {eq_l} vs {eq_v}")
-st.markdown("</div>", unsafe_allow_html=True)
+            else:
+                st.warning(f"Error de nombre en la base: {eq_l} vs {eq_v}")
+        st.markdown("</div>", unsafe_allow_html=True)
