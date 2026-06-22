@@ -142,7 +142,7 @@ Ecuador,S. Mandíquez,DEL,80,29,80
 Egypt,M. El Shenawy,POR,15,73,73
 Egypt,A. Hegazi,DEF,20,77,86
 Egypt,M. Elneny,MED,62,73,75
-Egypt,M. Salah,DEL,56,45,75
+Egypt,M. Salah,DEL,78,45,75
 El Salvador,T. Romero,POR,15,61,61
 El Salvador,A. Roldan,DEF,56,60,69
 El Salvador,D. Cerén,MED,57,64,74
@@ -270,7 +270,7 @@ New Caledonia,C. Zeoula,DEL,63,38,52
 New Zealand,S. Marinović,POR,15,71,71
 New Zealand,W. Reid,DEF,52,82,80
 New Zealand,R. Thomas,MED,66,60,66
-New Zealand,C. Wood,DEL,58,40,81
+New Zealand,C. Wood,DEL,56,40,81
 Nicaragua,Reserva POR,POR,60,60,60
 Nicaragua,L. Copete,DEF,43,65,74
 Nicaragua,J. Barrera,MED,54,34,53
@@ -407,9 +407,9 @@ Ukraine,A. Pyatov,POR,15,80,80
 Ukraine,O. Zinchenko,DEF,66,78,69
 Ukraine,Y. Konoplyanka,MED,79,33,58
 Ukraine,R. Malinovskyi,DEL,81,64,80
-Uruguay,F. Muslera,POR,15,58,83
+Uruguay,F. Muslera,POR,15,52,83
 Uruguay,D. Godín,DEF,48,89,84
-Uruguay,F. Valverde,MED,49,49,82
+Uruguay,F. Valverde,MED,63,63,82
 Uruguay,L. Suárez,DEL,90,42,81
 Venezuela,J. Graterol,POR,15,75,75
 Venezuela,F. Amorebielsa,DEF,47,81,85
@@ -672,9 +672,9 @@ Cabo Verde,Mendes,MED,54,54,75
 Cabo Verde,Duarte,MED,50,50,75
 Cabo Verde,Pina,MED,57,57,75
 Cabo Verde,Lopes,DEF,58,58,75
-Cabo Verde,Diney,DEF,63,63,75
-Cabo Verde,Moreira,DEF,45,45,75
-Cabo Verde,Vozinha,POR,85,85,75
+Cabo Verde,Diney,DEF,63,59,75
+Cabo Verde,Moreira,DEF,45,57,75
+Cabo Verde,Vozinha,POR,85,45,75
 Belgium,Meunier,DEF,52,45,75
 Belgium,Ngoy,DEF,59,49,75
 Belgium,Mechele,DEF,61,53,75
@@ -684,16 +684,16 @@ Belgium,Tielemans,MED,53,53,75
 Belgium,Trossard,DEL,56,51,75
 Belgium,Doku,MED,45,45,75
 Belgium,De Ketelaere,MED,54,54,75
-Egypt,Marmoush,MED,48,48,75
-Egypt,Ziko,MED,50,50,75
-Egypt,Ashour,MED,66,66,75
-Egypt,Attia,MED,47,47,75
-Egypt,Fotouh,MED,52,52,75
+Egypt,Marmoush,DEL,63,48,75
+Egypt,Ziko,DEL,72,50,75
+Egypt,Ashour,MED,62,62,75
+Egypt,Attia,MED,62,62,75
+Egypt,Fotouh,DEF,52,72,75
 Egypt,Fathy,MED,59,59,75
 Egypt,Ibrahim,MED,60,60,75
-Egypt,Shobeir,MED,55,55,75
-Egypt,Lasheen,MED,61,61,75
-Egypt,Hany,MED,56,56,75
+Egypt,Shobeir,POR,55,72,75
+Egypt,Lasheen,MED,73,73,75
+Egypt,Hany,DEF,56,73,75
 Saudi Arabia,Al-Owais,POR,75,45,75
 Saudi Arabia,Abdulhamid,DEF,47,52,75
 Saudi Arabia,Tambakti,DEF,47,53,75
@@ -709,11 +709,11 @@ Uruguay,Araujo,MED,72,72,75
 Uruguay,Vina,MED,45,45,75
 Uruguay,Nunez,MED,56,56,75
 Uruguay,Vinas,MED,56,56,75
-Uruguay,Bentancur,MED,61,61,75
-Uruguay,Ugarte,MED,62,62,75
-Uruguay,Olivera,MED,62,62,75
+Uruguay,Bentancur,MED,64,64,75
+Uruguay,Ugarte,MED,66,66,75
+Uruguay,Olivera,DEF,62,62,75
 Uruguay,Caceres,MED,58,58,75
-Uruguay,Varela,MED,69,69,75
+Uruguay,Varela,DEF,69,64,75
 Iran,Beiranvand,POR,48,79,75
 Iran,Rezaeian,DEF,83,61,75
 Iran,Khalilzadeh,DEF,55,69,75
@@ -723,16 +723,16 @@ Iran,Ghoddos,MED,48,48,75
 Iran,Ezatolahi,MED,57,57,75
 Iran,Yousefi,MED,61,61,75
 Iran,Moghanlou,MED,61,61,75
-New Zealand,McCowatt,MED,57,57,75
+New Zealand,McCowatt,DEL,54,57,75
 New Zealand,Singh,MED,47,47,75
-New Zealand,Just,MED,80,80,75
+New Zealand,Just,DEL,60,80,75
 New Zealand,Stamenic,MED,54,54,75
-New Zealand,Cacace,MED,56,56,75
-New Zealand,Boxall,MED,56,56,75
+New Zealand,Cacace,DEF,56,61,75
+New Zealand,Boxall,DEF,56,55,75
 New Zealand,Bell,MED,54,54,75
-New Zealand,Surman,MED,59,59,75
-New Zealand,Payne,MED,51,51,75
-New Zealand,Crocombe,MED,45,45,75
+New Zealand,Surman,DEF,59,67,75
+New Zealand,Payne,DEF,51,58,75
+New Zealand,Crocombe,POR,45,47,75
 France,Kounde,DEF,58,58,75
 France,Maignan,POR,46,46,75
 France,Upamecano,DEF,68,68,75
@@ -992,3 +992,19 @@ Belgium,Lukaku,DEL,46,50,75
 Iran,Hardani,DEF,50,50,75
 Iran,Kanaanizadegan,DEF,50,61,75
 Iran,Hajsafi,MED,52,52,75
+Uruguay,Cáceres,DEF,50,74,75
+Uruguay,Sanabria,MED,62,62,75
+Uruguay,Canobbio,DEL,75,50,75
+Uruguay,Araújo,DEL,74,50,75
+Uruguay,Viñas,DEL,65,50,75
+Cabo Verde,R. Lopes,DEF,50,76,75
+Cabo Verde,S. Lopes Cabral,DEF,50,60,75
+Cabo Verde,K. Pina,MED,75,75,75
+Cabo Verde,T. Arcanjo,MED,67,67,75
+Cabo Verde,R. Mendes,MED,64,64,75
+Cabo Verde,J. Monteiro,DEL,63,50,75
+Cabo Verde,G. Rodrigues,DEL,68,50,75
+Cabo Verde,G. Tavares,DEL,62,50,75
+New Zealand,Stamenić,MED,64,64,75
+Egypt,Y. Ibrahim,DEF,50,69,75
+Egypt,H. Fathy,DEF,50,66,75
