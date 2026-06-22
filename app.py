@@ -338,15 +338,34 @@ with col_principal:
         st.markdown("<p style='color: #aedef7; font-size: 0.9rem; margin-bottom: 20px;'>Análisis avanzado y contexto histórico de los contendientes.</p>", unsafe_allow_html=True)
         
         partidos_manana = [
-            ('Spain', 'Saudi Arabia'), 
-            ('Belgium', 'Iran'),     
-            ('Uruguay', 'Cabo Verde'),
-            ('New Zealand', 'Egypt')
+            ('Netherlands', 'Sweden'), 
+            ('Germany', 'Ivory Coast'),     
+            ('Tunisia', 'Japan'),
+            ('Ecuador', 'Curaçao')
         ]
         
         # --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE ---
         def obtener_historial_reciente(equipo, limite=10):
             try:
+                df_historico = pd.read_csv('historial_selecciones_combinado.csv')
+                
+                # --- TRADUCTOR DE NACIONES VISUAL ---
+                mapeo_naciones = {
+                    'Cape Verde': 'Cabo Verde', 'United States': 'USA',
+                    'Korea Republic': 'South Korea', 'Korea DPR': 'North Korea',
+                    "Côte d'Ivoire": 'Ivory Coast', 'Czech Republic': 'Czechia',
+                    'Turkey': 'Türkiye', 'IR Iran': 'Iran', 'Republic of Ireland': 'Ireland',
+                    'Bosnia-Herzegovina': 'Bosnia and Herzegovina'
+                }
+                df_historico['local'] = df_historico['local'].replace(mapeo_naciones)
+                df_historico['visita'] = df_historico['visita'].replace(mapeo_naciones)
+                
+                try:
+                    df_manual = pd.read_csv('partidos_manuales.csv')
+                    df_combinado = pd.concat([df_historico, df_manual], ignore_index=True)
+                except FileNotFoundError:
+                    df_combinado = df_historico
+                    
                 import re
                 df_historico = pd.read_csv('historial_selecciones_combinado.csv')
                 try:

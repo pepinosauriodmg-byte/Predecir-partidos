@@ -5,7 +5,25 @@ print("Inicializando Motor Elo con Calibración Oficial FIFA (211 Equipos)...")
 
 # 1. Cargar el historial completo
 df_api = pd.read_csv('historial_selecciones_combinado.csv')
-df_api['origen'] = 'historia' 
+
+# --- TRADUCTOR DE NACIONES (Blindaje de Identidades) ---
+mapeo_naciones = {
+    'Cape Verde': 'Cabo Verde',
+    'United States': 'USA',
+    'Korea Republic': 'South Korea',
+    'Korea DPR': 'North Korea',
+    "Côte d'Ivoire": 'Ivory Coast',
+    'Czech Republic': 'Czechia',
+    'Turkey': 'Türkiye',
+    'IR Iran': 'Iran',
+    'Republic of Ireland': 'Ireland',
+    'Bosnia-Herzegovina': 'Bosnia and Herzegovina'
+}
+# Aplicar la traducción a las columnas de local y visita
+df_api['local'] = df_api['local'].replace(mapeo_naciones)
+df_api['visita'] = df_api['visita'].replace(mapeo_naciones)
+
+df_api['origen'] = 'historia'
 
 # Rescatamos tu sistema 0 y 1 de Kaggle (asumiendo que está en 'torneo_id')
 if 'torneo_id' in df_api.columns:
