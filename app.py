@@ -341,7 +341,7 @@ with col_principal:
             ('Netherlands', 'Sweden'), 
             ('Germany', 'Ivory Coast'),     
             ('Tunisia', 'Japan'),
-            ('Ecuador', 'Curaçao')
+            ('Ecuador', 'Cabo Verde')
         ]
         
 # --- FUNCIÓN AUXILIAR: HISTORIAL RECIENTE ---
