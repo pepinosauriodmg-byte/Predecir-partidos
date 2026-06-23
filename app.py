@@ -217,11 +217,16 @@ def obtener_top_jugadores(equipo, top=3):
         try:
             df_oficial = pd.read_csv('convocados_oficiales.csv')
             
-            # Normalizador absoluto de texto
+# Normalizador absoluto de texto con homologación de nombres
             def normalizar_texto(t):
                 reemplazos = {'á':'a', 'é':'e', 'í':'i', 'ó':'o', 'ú':'u', 'ñ':'n'}
                 t = str(t).strip().lower()
                 for a, b in reemplazos.items(): t = t.replace(a, b)
+                
+                # 🇨🇩 Homologación automática para la República Democrática del Congo
+                if 'dr congo' in t or 'congo dr' in t:
+                    return 'congo dr'
+                    
                 return t
             
             equipo_norm = normalizar_texto(equipo)

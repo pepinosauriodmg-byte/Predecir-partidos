@@ -5,8 +5,8 @@ Albania,N. Bajrami,MED,68,59,66
 Albania,M. Uzuni,DEL,79,32,65
 Algeria,A. Oukidja,POR,15,78,78
 Algeria,F. Ghoulam,DEF,64,78,76
-Algeria,R. Mahrez,MED,81,38,60
-Algeria,R. Mahrez,DEL,83,38,60
+Algeria,R. Mahrez,DEL,60,38,60
+Algeria,R. Mahrez,DEL,60,38,60
 Angola,Hugo Marques,POR,15,68,68
 Angola,Clinton Mata,DEF,61,78,80
 Angola,Wilson Eduardo,MED,79,31,67
@@ -162,7 +162,7 @@ Fiji,R. Krishna,DEL,67,48,74
 France,H. Lloris,POR,15,88,88
 France,A. Laporte,DEF,50,88,81
 France,N. Kanté,MED,66,87,83
-France,K. Mbappé,DEL,90,36,78
+France,K. Mbappé,DEL,63,36,78
 Gambia,B. Gaye,POR,15,61,61
 Gambia,O. Colley,DEF,31,75,83
 Gambia,M. Barrow,MED,74,31,63
@@ -323,10 +323,10 @@ Scotland,A. McGregor,POR,15,77,77
 Scotland,A. Robertson,MED,56,56,76
 Scotland,R. Fraser,MED,73,46,61
 Scotland,S. Naismith,DEL,73,49,79
-Senegal,É. Mendy,POR,15,47,86
-Senegal,K. Koulibaly,DEF,28,47,87
-Senegal,S. Mané,MED,83,44,77
-Senegal,S. Mané,DEL,85,44,76
+Senegal,É. Mendy,POR,15,45,86
+Senegal,K. Koulibaly,DEF,28,52,87
+Senegal,S. Mané,DEL,67,44,77
+Senegal,S. Mané,DEL,67,44,76
 Serbia,M. Dmitrović,POR,15,81,81
 Serbia,N. Vidić,DEF,39,84,83
 Serbia,N. Matić,MED,71,83,83
@@ -734,45 +734,45 @@ New Zealand,Surman,DEF,59,67,75
 New Zealand,Payne,DEF,51,58,75
 New Zealand,Crocombe,POR,45,47,75
 France,Kounde,DEF,58,58,75
-France,Maignan,POR,46,46,75
-France,Upamecano,DEF,68,68,75
-France,Saliba,DEF,55,55,75
+France,Maignan,POR,46,52,75
+France,Upamecano,DEF,68,54,75
+France,Saliba,DEF,55,58,75
 France,Tchouameni,MED,62,62,75
-France,Olise,MED,66,66,75
+France,Olise,MED,51,51,75
 France,Dembele,DEL,56,56,75
 France,Mbappe,DEL,73,73,75
 France,Hernandez,DEF,55,55,75
-France,Rabiot,MED,59,59,75
+France,Rabiot,MED,50,50,75
 France,Doue,MED,52,52,75
 Senegal,Mane,DEL,58,58,75
-Senegal,Jackson,DEL,53,53,75
-Senegal,Sarr,DEL,47,47,75
+Senegal,Jackson,DEL,60,53,75
+Senegal,Sarr,DEL,76,47,75
 Senegal,Gueye,MED,49,49,75
-Senegal,Diouf,MED,48,48,75
+Senegal,Diouf,DEF,48,59,75
 Senegal,Niakhate,DEF,48,48,75
-Senegal,Camara,MED,45,45,75
-Senegal,Diatta,DEF,61,61,75
-Iraq,Ali,MED,56,56,75
-Iraq,Tahseen,MED,56,56,75
+Senegal,Camara,MED,60,60,75
+Senegal,Diatta,DEF,61,59,75
+Iraq,Ali,DEF,56,54,75
+Iraq,Tahseen,DEF,56,52,75
 Iraq,Hasan,MED,45,45,75
-Iraq,Hashim,MED,59,59,75
-Iraq,Doski,MED,69,69,75
-Iraq,Bayesh,MED,61,61,75
-Iraq,Al-Ammari,MED,69,69,75
-Iraq,Ismael,MED,57,57,75
+Iraq,Hashim,DEF,59,57,75
+Iraq,Doski,DEF,69,61,75
+Iraq,Bayesh,MED,50,50,75
+Iraq,Al-Ammari,MED,48,48,75
+Iraq,Ismael,DEF,57,45,75
 Iraq,Jasim,MED,63,63,75
-Iraq,Hussein,MED,64,64,75
+Iraq,Hussein,DEL,48,64,75
 Iraq,Nusa,MED,68,68,75
-Norway,Haaland,MED,88,88,75
-Norway,Aursnes,MED,68,68,75
-Norway,Wolfe,MED,68,68,75
-Norway,Heggem,MED,68,68,75
-Norway,Berge,MED,72,72,75
-Norway,Nyland,MED,69,69,75
+Norway,Haaland,DEL,80,88,75
+Norway,Aursnes,MED,58,58,75
+Norway,Wolfe,DEF,68,57,75
+Norway,Heggem,DEF,68,57,75
+Norway,Berge,MED,61,61,75
+Norway,Nyland,POR,69,53,75
 Norway,Sorloth,MED,67,67,75
 Norway,Odegaard,MED,71,71,75
-Norway,Ajer,MED,69,69,75
-Norway,Ryerson,MED,72,72,75
+Norway,Ajer,DEF,69,62,75
+Norway,Ryerson,DEF,72,60,75
 Argentina,Montiel,DEF,70,70,75
 Argentina,Martinez,DEF,73,73,75
 Argentina,Romero,DEF,66,66,75
@@ -782,16 +782,16 @@ Argentina,Medina,DEF,65,58,75
 Argentina,Fernandez,MED,65,65,75
 Argentina,Almada,MED,65,65,75
 Algeria,Chaibi,MED,60,60,75
-Algeria,Gouiri,DEL,59,59,75
+Algeria,Gouiri,DEL,67,59,75
 Algeria,Bentaleb,MED,61,61,75
-Algeria,Maza,MED,58,58,75
+Algeria,Maza,MED,60,60,75
 Algeria,Moussa,DEF,58,58,75
-Algeria,Boudaoui,MED,56,56,75
+Algeria,Boudaoui,MED,61,61,75
 Algeria,Ait-Nouri,DEF,56,56,75
-Algeria,Bensebaini,DEF,59,59,75
-Algeria,Mandi,DEF,61,61,75
-Algeria,Belghali,DEF,53,53,75
-Algeria,Zidane,POR,45,45,75
+Algeria,Bensebaini,DEF,59,75,75
+Algeria,Mandi,DEF,61,60,75
+Algeria,Belghali,DEF,53,46,75
+Algeria,Zidane,POR,45,47,75
 Austria,Posch,DEF,59,45,75
 Austria,Laimer,MED,54,54,75
 Austria,Schlager,MED,62,62,75
@@ -801,16 +801,16 @@ Austria,Mwene,MED,63,63,75
 Austria,Schmid,MED,60,60,75
 Austria,Kalajdzic,MED,65,65,75
 Jordan,Al-Fakhouri,MED,71,71,75
-Jordan,Olwan,MED,72,72,75
-Jordan,Al-Taamari,MED,60,60,75
-Jordan,Abu Taha,MED,70,70,75
-Jordan,Al-Rashdan,MED,67,67,75
-Jordan,Al-Rawabdeh,MED,65,65,75
-Jordan,Al-Arab,MED,65,65,75
+Jordan,Olwan,DEL,48,72,75
+Jordan,Al-Taamari,DEL,51,60,75
+Jordan,Abu Taha,MED,59,59,75
+Jordan,Al-Rashdan,MED,60,60,75
+Jordan,Al-Rawabdeh,MED,56,56,75
+Jordan,Al-Arab,DEF,65,45,75
 Jordan,Abualnadi,MED,57,57,75
-Jordan,Abulaila,MED,45,45,75
-Jordan,Haddad,MED,56,56,75
-Jordan,Nasib,MED,61,61,75
+Jordan,Abulaila,POR,45,60,75
+Jordan,Haddad,DEF,56,48,75
+Jordan,Nasib,DEF,61,46,75
 Portugal,Cancelo,DEF,60,60,75
 Portugal,Araujo,DEF,47,47,75
 Portugal,Neves,MED,70,70,75
@@ -1018,3 +1018,22 @@ Austria,Danso,DEF,50,58,75
 Austria,X. Schlager,MED,58,58,75
 Austria,Wanner,MED,61,61,75
 Austria,Gregoritsch,DEL,63,50,75
+France,Koundé,DEF,50,53,75
+France,Digne,DEF,50,53,75
+France,Koné,MED,56,56,75
+France,Dembélé,DEL,47,50,75
+France,Barcola,DEL,53,50,75
+Iraq,Basil,POR,50,49,75
+Iraq,Qasem,MED,51,51,75
+Iraq,Iqbal,MED,50,50,75
+Norway,Ødegaard,MED,63,63,75
+Norway,Sørloth,DEL,58,50,75
+Norway,Nusa,DEL,64,50,75
+Senegal,Niakhaté,DEF,50,68,75
+Senegal,I. Gueye,MED,66,66,75
+Senegal,P. Gueye,MED,56,56,75
+Jordan,Abu Dahab,DEF,50,48,75
+Jordan,Al-Mardi,MED,54,54,75
+Algeria,Aït-Nouri,DEF,50,52,75
+Algeria,Chaïbi,MED,54,54,75
+Algeria,Zerrouki,MED,56,56,75
