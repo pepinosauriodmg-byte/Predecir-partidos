@@ -399,7 +399,7 @@ with col_principal:
         
         partidos_manana = [
             ('Switzerland', 'Canada'), 
-            ('Bosinia and Herzegovina', 'Qatar'),     
+            ('Bosnia and Herzegovina', 'Qatar'),     
             ('Morocco', 'Haiti'),
             ('Scotland', 'Brazil'), 
             ('South Africa', 'South Korea'),     
