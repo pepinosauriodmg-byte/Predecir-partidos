@@ -196,6 +196,16 @@ def obtener_historial_reciente(equipo, limite=10):
         return [f"Error al cargar historial: {e}"]
 
 def obtener_top_jugadores(equipo, top=3):
+    # 1. El normalizador ahora es el cadenero principal
+    def normalizar_texto(t):
+        reemplazos = {'á':'a', 'é':'e', 'í':'i', 'ó':'o', 'ú':'u', 'ñ':'n', 'ç':'c'}
+        t = str(t).strip().lower()
+        for a, b in reemplazos.items(): t = t.replace(a, b)
+        
+        if 'dr congo' in t or 'congo dr' in t: return 'congo dr'
+        if 'curaçao' in t or 'curacao' in t: return 'curacao'
+        return t
+
     try:
         df_jugadores = pd.read_csv('rendimiento_jugadores.csv')
         df_jugadores.columns = df_jugadores.columns.str.strip().str.lower()
@@ -206,35 +216,19 @@ def obtener_top_jugadores(equipo, top=3):
         col_rat_atq = [c for c in df_jugadores.columns if 'ataque' in c or 'atq' in c][0]
         col_rat_def = [c for c in df_jugadores.columns if 'defensa' in c or 'def' in c][0]
         
-        plantilla = df_jugadores[df_jugadores[col_eq].astype(str).str.contains(equipo, case=False, na=False)].copy()
+        # 2. Limpiamos el nombre del equipo y toda la columna del CSV antes de buscar
+        equipo_norm = normalizar_texto(equipo)
+        df_jugadores['equipo_limpio'] = df_jugadores[col_eq].apply(normalizar_texto)
+        
+        # 3. Búsqueda infalible (curacao == curacao)
+        plantilla = df_jugadores[df_jugadores['equipo_limpio'] == equipo_norm].copy()
         
         if plantilla.empty:
             return [f"Sin datos registrados para {equipo}"]
 
-        # -----------------------------------------------------------------
-        # 🚧 FILTRO AUTOMÁTICO DE LA FIFA (CERO LISTAS MANUALES) 🚧
-        # -----------------------------------------------------------------
+        # --- FILTRO 100% AUTOMÁTICO DE LA FIFA ---
         try:
             df_oficial = pd.read_csv('convocados_oficiales.csv')
-            
-# Normalizador absoluto de texto con homologación de nombres
-            def normalizar_texto(t):
-                # ¡AGREGAMOS LA 'ç' AQUÍ!
-                reemplazos = {'á':'a', 'é':'e', 'í':'i', 'ó':'o', 'ú':'u', 'ñ':'n', 'ç':'c'}
-                t = str(t).strip().lower()
-                for a, b in reemplazos.items(): t = t.replace(a, b)
-                
-                # Homologación para RD Congo
-                if 'dr congo' in t or 'congo dr' in t:
-                    return 'congo dr'
-                
-                # Homologación para Curazao
-                if 'curaçao' in t or 'curacao' in t:
-                    return 'curacao'
-                    
-                return t
-            
-            equipo_norm = normalizar_texto(equipo)
             df_oficial['Equipo_Norm'] = df_oficial['Equipo'].apply(normalizar_texto)
             plantilla_oficial = df_oficial[df_oficial['Equipo_Norm'] == equipo_norm]
             
@@ -244,11 +238,9 @@ def obtener_top_jugadores(equipo, top=3):
                 def es_convocado(nombre_db):
                     nom_db_limpio = normalizar_texto(nombre_db)
                     for nom_oficial in nombres_oficiales:
-                        if re.search(rf'\b{re.escape(nom_oficial)}\b', nom_db_limpio):
-                            return True
+                        if re.search(rf'\b{re.escape(nom_oficial)}\b', nom_db_limpio): return True
                     return False
                 
-                # Criba estricta: si no empatas con el PDF, te borra.
                 plantilla_filtrada = plantilla[plantilla[col_nom].apply(es_convocado)]
                 
                 if not plantilla_filtrada.empty:
@@ -260,7 +252,7 @@ def obtener_top_jugadores(equipo, top=3):
                 
         except FileNotFoundError:
             return ["⚠️ Error: Archivo 'convocados_oficiales.csv' no encontrado."]
-        # -----------------------------------------------------------------
+        # -------------------------------------------
         
         def calcular_rating_real(fila):
             pos = str(fila[col_pos]).upper()
