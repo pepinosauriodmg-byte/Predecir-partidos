@@ -219,13 +219,18 @@ def obtener_top_jugadores(equipo, top=3):
             
 # Normalizador absoluto de texto con homologación de nombres
             def normalizar_texto(t):
-                reemplazos = {'á':'a', 'é':'e', 'í':'i', 'ó':'o', 'ú':'u', 'ñ':'n'}
+                # ¡AGREGAMOS LA 'ç' AQUÍ!
+                reemplazos = {'á':'a', 'é':'e', 'í':'i', 'ó':'o', 'ú':'u', 'ñ':'n', 'ç':'c'}
                 t = str(t).strip().lower()
                 for a, b in reemplazos.items(): t = t.replace(a, b)
                 
-                # 🇨🇩 Homologación automática para la República Democrática del Congo
+                # Homologación para RD Congo
                 if 'dr congo' in t or 'congo dr' in t:
                     return 'congo dr'
+                
+                # Homologación para Curazao
+                if 'curaçao' in t or 'curacao' in t:
+                    return 'curacao'
                     
                 return t
             
