@@ -132,8 +132,8 @@ Dominican Republic,Junior Firpo,DEF,58,74,69
 Dominican Republic,H. Mörschel,MED,65,37,61
 Dominican Republic,Mariano,DEL,81,45,82
 Ecuador,M. Ramírez,POR,15,75,75
-Ecuador,A. Valencia,DEL,61,58,85
-Ecuador,A. Valencia,DEL,61,58,75
+Ecuador,A. Valencia,DEL,64,58,85
+Ecuador,A. Valencia,DEL,64,58,75
 Ecuador,S. Mandíquez,DEL,80,29,80
 Egypt,M. El Shenawy,POR,15,73,73
 Egypt,A. Hegazi,DEF,20,77,86
@@ -167,7 +167,7 @@ Georgia,G. Mamardashvili,POR,15,80,80
 Georgia,G. Kashia,DEF,28,77,80
 Georgia,Vako,MED,73,36,62
 Georgia,K. Kvaratskhelia,DEL,80,41,71
-Germany,M. Neuer,POR,15,72,92
+Germany,M. Neuer,POR,15,45,92
 Germany,J. Boateng,DEF,50,90,85
 Germany,T. Kroos,MED,72,72,69
 Germany,T. Müller,DEL,83,46,72
@@ -571,26 +571,26 @@ Türkiye,Cakir,MED,45,45,75
 Türkiye,Calhanoglu,MED,61,61,75
 Türkiye,Demiral,DEF,64,59,75
 Türkiye,Celik,MED,49,49,75
-Germany,Kimmich,DEF,87,65,75
-Germany,Tah,DEF,77,77,75
+Germany,Kimmich,DEF,87,59,75
+Germany,Tah,DEF,77,54,75
 Germany,Schlotterbeck,DEF,85,85,75
 Germany,Brown,DEF,88,88,75
 Germany,Pavlovic,MED,81,81,75
-Germany,Nmecha,MED,94,94,75
+Germany,Nmecha,MED,57,57,75
 Germany,Sane,DEL,80,80,75
-Germany,Musiala,MED,85,85,75
-Germany,Wirtz,MED,80,80,75
-Germany,Havertz,DEL,91,91,75
-Curaçao,Locadia,DEL,50,74,75
+Germany,Musiala,MED,55,55,75
+Germany,Wirtz,MED,55,55,75
+Germany,Havertz,DEL,58,91,75
+Curaçao,Locadia,DEL,59,74,75
 Curaçao,Bacuna,MED,68,68,75
-Curaçao,Comenencia,MED,45,45,75
+Curaçao,Comenencia,MED,61,61,75
 Curaçao,Hansen,DEL,77,77,75
-Curaçao,Chong,DEL,61,77,75
-Curaçao,Fonville,MED,48,48,75
-Curaçao,Obispo,DEF,68,67,75
+Curaçao,Chong,MED,63,63,75
+Curaçao,Fonville,MED,61,61,75
+Curaçao,Obispo,DEF,68,58,75
 Curaçao,Bazoer,MED,71,71,75
-Curaçao,Floranus,DEF,70,62,75
-Curaçao,Room,POR,45,80,75
+Curaçao,Floranus,DEF,70,59,75
+Curaçao,Room,POR,45,54,75
 Netherlands,Dumfries,DEF,60,78,75
 Netherlands,Verbruggen,POR,45,89,75
 Netherlands,van Hecke,DEF,60,78,75
@@ -615,16 +615,16 @@ Ivory Coast,Singo,MED,60,60,75
 Ivory Coast,Pepe,MED,55,55,75
 Ivory Coast,Wahi,MED,62,62,75
 Ivory Coast,Kessie,MED,63,63,75
-Ivory Coast,Fofana,MED,65,65,75
+Ivory Coast,Fofana,POR,65,76,75
 Ivory Coast,Agbadou,MED,65,65,75
 Ivory Coast,Konan,DEF,55,55,75
 Ivory Coast,Diomande,MED,66,66,75
 Ivory Coast,Toure,MED,59,59,75
-Ecuador,Yeboah,MED,67,67,75
-Ecuador,Plata,DEL,66,65,75
-Ecuador,Vite,MED,65,65,75
-Ecuador,Caicedo,MED,69,69,75
-Ecuador,Franco,DEF,61,62,75
+Ecuador,Yeboah,MED,65,65,75
+Ecuador,Plata,DEL,71,65,75
+Ecuador,Vite,MED,74,74,75
+Ecuador,Caicedo,MED,63,63,75
+Ecuador,Franco,DEF,61,56,75
 Ecuador,Minda,MED,59,59,75
 Ecuador,Hincapie,MED,45,45,75
 Ecuador,Pacho,DEF,55,69,75
@@ -942,28 +942,28 @@ Netherlands,Brobbey,DEL,89,50,75
 Sweden,Lindelöf,DEF,50,67,75
 Sweden,Karlström,MED,70,70,75
 Sweden,Gyökeres,DEL,76,50,75
-Germany,Rüdiger,DEF,50,80,75
+Germany,Rüdiger,DEF,50,58,75
 Germany,Süle,DEF,50,68,75
-Germany,Raum,DEF,50,70,75
+Germany,Raum,DEF,50,61,75
 Germany,Gündoğan,MED,68,68,75
 Germany,Goretzka,MED,70,70,75
-Germany,Sané,DEL,84,50,75
+Germany,Sané,MED,67,67,75
 Germany,Gnabry,DEL,78,50,75
 Germany,Füllkrug,DEL,80,50,75
-Ivory Coast,Kossounou,DEF,50,58,75
+Ivory Coast,Kossounou,DEF,50,66,75
 Ivory Coast,Ndicka,DEF,50,62,75
 Ivory Coast,Aurier,DEF,50,65,75
-Ivory Coast,Kessié,MED,72,72,75
-Ivory Coast,Sangaré,MED,68,68,75
-Ivory Coast,Pépé,DEL,70,50,75
+Ivory Coast,Kessié,MED,62,62,75
+Ivory Coast,Sangaré,MED,69,69,75
+Ivory Coast,Pépé,DEL,79,50,75
 Ivory Coast,Zaha,DEL,68,50,75
-Ecuador,Hincapié,DEF,50,68,75
+Ecuador,Hincapié,DEF,50,56,75
 Ecuador,Estupiñán,DEF,50,56,75
 Ecuador,Alcivar,MED,55,55,75
-Curaçao,Gaari,DEF,50,57,75
-Curaçao,Brenet,DEF,50,58,75
-Curaçao,J. Bacuna,MED,54,54,75
-Curaçao,L. Bacuna,MED,56,56,75
+Curaçao,Gaari,DEF,50,45,75
+Curaçao,Brenet,DEF,50,53,75
+Curaçao,J. Bacuna,DEL,55,54,75
+Curaçao,L. Bacuna,MED,58,58,75
 Tunisia,Dahmen,POR,50,45,75
 Tunisia,Bronn,DEF,50,61,75
 Tunisia,Tounekti,DEL,65,50,75
@@ -1122,3 +1122,13 @@ South Korea,T.S. Lee,MED,55,55,75
 South Korea,I.B. Hwang,MED,51,51,75
 South Korea,Oh,DEL,50,50,75
 South Korea,H.C. Hwang,DEL,47,50,75
+Ivory Coast,Opéri,DEF,50,66,75
+Ivory Coast,O. Diomande,DEF,50,66,75
+Ivory Coast,Doué,DEF,50,68,75
+Ivory Coast,Y. Diomandé,MED,62,62,75
+Ivory Coast,Diallo,MED,61,61,75
+Ivory Coast,Bonny,DEL,63,50,75
+Ecuador,Galíndez,POR,50,64,75
+Ecuador,Ordóñez,DEF,50,72,75
+Ecuador,Angulo,MED,66,66,75
+Germany,Pavlović,MED,58,58,75
