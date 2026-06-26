@@ -479,21 +479,21 @@ USA,Freeman,DEF,72,82,75
 USA,Richards,DEF,75,70,75
 USA,Ream,DEF,76,78,75
 USA,Adams,MED,70,70,75
-USA,Robinson,DEF,69,64,75
+USA,Robinson,DEF,69,65,75
 USA,Tillman,MED,72,72,75
 USA,Dest,MED,66,66,75
 USA,McKennie,MED,62,62,75
 USA,Balogun,DEL,57,87,75
 Paraguay,Almiron,DEL,60,60,75
-Paraguay,Enciso,MED,66,66,75
+Paraguay,Enciso,DEL,47,66,75
 Paraguay,Bobadilla,MED,59,59,75
 Paraguay,Sanabria,DEL,64,64,75
-Paraguay,Cubas,MED,58,58,75
+Paraguay,Cubas,MED,67,67,75
 Paraguay,Gomez,DEF,58,58,75
 Paraguay,Alonso,DEF,62,57,75
-Paraguay,Alderete,DEF,61,62,75
+Paraguay,Alderete,DEF,61,72,75
 Paraguay,Caceres,DEF,59,59,75
-Paraguay,Gill,POR,45,76,75
+Paraguay,Gill,POR,45,69,75
 Qatar,Abunada,POR,45,45,75
 Qatar,Al-Oui,DEF,56,56,75
 Qatar,Miguel,DEF,68,68,75
@@ -549,16 +549,16 @@ Scotland,Hendry,DEF,55,45,75
 Scotland,Hanley,DEF,64,55,75
 Scotland,Hickey,MED,58,58,75
 Scotland,Gunn,POR,65,47,75
-Australia,Beach,POR,84,45,75
+Australia,Beach,POR,84,64,75
 Australia,Italiano,DEF,58,55,75
-Australia,Circati,DEF,64,65,75
-Australia,Souttar,DEF,71,55,75
+Australia,Circati,DEF,64,56,75
+Australia,Souttar,DEF,71,59,75
 Australia,Burgess,DEF,64,49,75
-Australia,Bos,DEF,54,53,75
-Australia,Metcalfe,MED,72,72,75
+Australia,Bos,MED,62,62,75
+Australia,Metcalfe,MED,56,56,75
 Australia,Okon-Engstler,MED,58,58,75
-Australia,O'Neill,MED,59,59,75
-Australia,Irankunda,MED,69,69,75
+Australia,O'Neill,MED,55,55,75
+Australia,Irankunda,DEL,49,69,75
 Australia,Toure,MED,52,52,75
 Türkiye,Akturkoglu,MED,56,56,75
 Türkiye,Yilmaz,MED,52,52,75
@@ -909,7 +909,7 @@ Canada,Larin,DEL,51,84,75
 Mexico,Sánchez,DEF,56,74,75
 Mexico,Álvarez,MED,64,64,75
 Mexico,Romo,MED,64,64,75
-USA,Pepi,MED,61,61,75
+USA,Pepi,DEL,61,61,75
 Australia,Velupillay,MED,60,60,75
 Australia,Leckie,MED,56,56,75
 Australia,Touré,DEL,60,50,75
@@ -934,10 +934,10 @@ Türkiye,Güler,MED,61,61,75
 Türkiye,Yıldız,MED,56,56,75
 Türkiye,Aktürkoğlu,DEL,59,50,75
 Paraguay,Pitta,DEL,52,50,75
-Paraguay,D. Gómez,MED,54,54,75
-Paraguay,Galarza,MED,67,67,75
-Paraguay,G. Gómez,DEF,50,64,75
-Paraguay,Cáceres,DEF,50,72,75
+Paraguay,D. Gómez,MED,56,56,75
+Paraguay,Galarza,MED,66,66,75
+Paraguay,G. Gómez,DEF,50,68,75
+Paraguay,Cáceres,DEF,50,52,75
 Netherlands,Brobbey,DEL,70,50,75
 Sweden,Lindelöf,DEF,50,58,75
 Sweden,Karlström,MED,70,70,75
@@ -1140,3 +1140,29 @@ Japan,Seko,DEF,50,60,75
 Sweden,Widell Zetterström,POR,50,55,75
 Sweden,Stroud,MED,58,58,75
 Sweden,Elanga,DEL,73,50,75
+Paraguay,Velázquez,DEF,50,58,75
+Paraguay,Maidana,MED,57,57,75
+Paraguay,Ávalos,DEL,53,50,75
+Australia,Herrington,DEF,50,63,75
+Australia,Behich,DEF,50,52,75
+Australia,Irvine,MED,51,51,75
+Australia,Volpato,DEL,45,50,75
+Turkiye,Çakır,POR,50,71,75
+Turkiye,Çelik,DEF,50,71,75
+Turkiye,Kabak,DEF,50,59,75
+Turkiye,Bardakcı,DEF,50,65,75
+Turkiye,Elmalı,DEF,50,65,75
+Turkiye,Kökçü,MED,70,70,75
+Turkiye,Özcan,MED,62,62,75
+Turkiye,Aydın,MED,73,73,75
+Turkiye,Güler,MED,71,71,75
+Turkiye,Yıldız,DEL,58,50,75
+Turkiye,Yılmaz,DEL,59,50,75
+USA,Turner,POR,50,45,75
+USA,Scally,DEF,50,65,75
+USA,McKenzie,DEF,50,62,75
+USA,Trusty,DEF,50,69,75
+USA,Berhalter,MED,82,82,75
+USA,Reyna,MED,56,56,75
+USA,Weah,DEL,55,50,75
+USA,Aaronson,DEL,58,50,75
