@@ -121,6 +121,26 @@ def calcular_probabilidades_poisson(xg_local, xg_visita, max_goles=10):
                 p_visita += prob
             else:
                 p_empate += prob
+
+def obtener_top_marcadores(xg_local, xg_visita, top=10):
+    """
+    Cruza los goles esperados usando Poisson para obtener 
+    los marcadores exactos más probables.
+    """
+    probabilidades_marcadores = []
+    
+    # Calculamos combinaciones del 0 al 7 (cubre el 99.9% de escenarios)
+    for gl in range(8):
+        for gv in range(8):
+            prob = poisson.pmf(gl, xg_local) * poisson.pmf(gv, xg_visita)
+            probabilidades_marcadores.append({
+                'marcador': f"{gl} - {gv}",
+                'probabilidad': prob * 100
+            })
+            
+    # Ordenamos de mayor a menor probabilidad
+    probabilidades_marcadores.sort(key=lambda x: x['probabilidad'], reverse=True)
+    return probabilidades_marcadores[:top]
                 
     # Retornamos en el mismo orden que el ML: [Visita(0), Empate(1), Local(2)]
     return p_visita, p_empate, p_local
@@ -171,5 +191,6 @@ def predecir_partido(equipo_A, equipo_B):
     prob_final_l = (poisson_l * PESO_PRESENTE) + (ml_l * PESO_HISTORIA)
     
     probs_hibridas = [prob_final_v, prob_final_e, prob_final_l]
+    top_marcadores = obtener_top_marcadores(xg_a, xg_b, top=10)
 
-    return xg_a, xg_b, probs_hibridas
+    return xg_a, xg_b, probs_hibridas, top_marcadores

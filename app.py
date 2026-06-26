@@ -308,7 +308,7 @@ with col_principal:
             visitante = st.selectbox("Equipo Visitante:", equipos, index=idx_visita)
             
         if st.button("CALCULAR PREDICCIÓN AI", use_container_width=True):
-            xg_l, xg_v, paquete_probs = mh.predecir_partido(local, visitante)
+            xg_l, xg_v, paquete_probs, top_marcadores = mh.predecir_partido(local, visitante)
             probs_flat = np.array(paquete_probs).flatten()
             
             p_visita = float(probs_flat[0]) 
@@ -341,8 +341,27 @@ with col_principal:
             
             st.markdown(f"<p style='margin-bottom: 5px; margin-top: 10px;'><b>Probabilidad Gana {visitante} {bandera_v}: {p_visita*100:.1f}%</b></p>", unsafe_allow_html=True)
             st.progress(p_visita)
-            
             st.divider()
+
+# --- NUEVO: TOP 10 MARCADORES ---
+            with st.expander("🎯 Ver Top 10 Marcadores Más Probables"):
+                col1, col2 = st.columns(2)
+                for i, resultado in enumerate(top_marcadores):
+                    marcador = resultado['marcador']
+                    prob = resultado['probabilidad']
+                    
+                    # Top 3 con brillo especial Aero
+                    if i < 3:
+                        html_marcador = f"<div style='font-size: 1.1rem; margin-bottom: 5px;'><b>#{i+1}</b> | <b>{marcador}</b> ➔ <span style='color: #a4e67d;'>{prob:.1f}%</span></div>"
+                    else:
+                        html_marcador = f"<div style='font-size: 0.95rem; margin-bottom: 5px; color: #8ebce3;'>#{i+1} | {marcador} ➔ {prob:.1f}%</div>"
+                        
+                    if i < 5:
+                        col1.markdown(html_marcador, unsafe_allow_html=True)
+                    else:
+                        col2.markdown(html_marcador, unsafe_allow_html=True)
+            # --------------------------------
+
             st.markdown(f"<h5 style='color:white;'>{icon('search', 24)} Justificación Estadística en Vivo</h5>", unsafe_allow_html=True)
             col_info_l, col_info_v = st.columns(2)
             
@@ -412,7 +431,7 @@ with col_principal:
             b_v = obtener_bandera(eq_v)
             
             with st.expander(f"🏟️ {b_l} {eq_l} vs {eq_v} {b_v}"):
-                xg_l, xg_v, paquete_probs = mh.predecir_partido(eq_l, eq_v)
+                xg_l, xg_v, paquete_probs, top_marcadores = mh.predecir_partido(eq_l, eq_v) 
                 probs_flat = np.array(paquete_probs).flatten()
                 
                 p_v = float(probs_flat[0])
@@ -431,6 +450,26 @@ with col_principal:
                 m3.metric(label=f"Gana {eq_v} {b_v}", value=f"{p_v*100:.1f}%")
                 
                 st.divider()
+
+# --- NUEVO: TOP 10 MARCADORES PARA JORNADAS AUTOMÁTICAS ---
+                st.write("") # Espacio
+                with st.expander("🎯 Ver Top 10 Marcadores Más Probables"):
+                    col1, col2 = st.columns(2)
+                    for i, resultado in enumerate(top_marcadores):
+                        marcador = resultado['marcador']
+                        prob = resultado['probabilidad']
+                        
+                        if i < 3:
+                            html_marcador = f"<div style='font-size: 1.05rem; margin-bottom: 5px;'><b>#{i+1}</b> | <b>{marcador}</b> ➔ <span style='color: #a4e67d;'>{prob:.1f}%</span></div>"
+                        else:
+                            html_marcador = f"<div style='font-size: 0.9rem; margin-bottom: 5px; color: #8ebce3;'>#{i+1} | {marcador} ➔ {prob:.1f}%</div>"
+                            
+                        if i < 5:
+                            col1.markdown(html_marcador, unsafe_allow_html=True)
+                        else:
+                            col2.markdown(html_marcador, unsafe_allow_html=True)
+                # ----------------------------------------------------------
+
                 st.markdown(f"<h5 style='color:white;'>{icon('search', 24)} Justificación Estadística en Vivo</h5>", unsafe_allow_html=True)
                 
                 col_info_l, col_info_v = st.columns(2)
