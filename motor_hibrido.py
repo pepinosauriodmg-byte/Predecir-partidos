@@ -145,10 +145,11 @@ def obtener_top_marcadores(xg_local, xg_visita, top=10):
     # Retornamos en el mismo orden que el ML: [Visita(0), Empate(1), Local(2)]
     return p_visita, p_empate, p_local
 
-
 def predecir_partido(equipo_A, equipo_B):
     if equipo_A not in dict_fa or equipo_B not in dict_fa:
-        return None, None, [0.33, 0.33, 0.34]
+        # Pestaña de emergencia blindada con 4 variables
+        marcador_vacio = [{'marcador': 'N/D', 'probabilidad': 0.0}] * 10
+        return None, None, [0.33, 0.33, 0.34], marcador_vacio
 
     fa_a, fd_a = dict_fa[equipo_A], dict_fd[equipo_A]
     fa_b, fd_b = dict_fa[equipo_B], dict_fd[equipo_B]

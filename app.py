@@ -307,7 +307,7 @@ with col_principal:
             idx_visita = equipos.index('Morocco') if 'Morocco' in equipos else 1
             visitante = st.selectbox("Equipo Visitante:", equipos, index=idx_visita)
             
-        if st.button("CALCULAR PREDICCIÓN AI", use_container_width=True):
+        if st.button("CALCULAR PREDICCIÓN AI", width='stretch'):
             xg_l, xg_v, paquete_probs, top_marcadores = mh.predecir_partido(local, visitante)
             probs_flat = np.array(paquete_probs).flatten()
             
