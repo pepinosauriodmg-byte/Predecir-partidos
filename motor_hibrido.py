@@ -186,7 +186,7 @@ def predecir_partido(equipo_A, equipo_B):
     ml_e = probs_ml[1]
     ml_l = probs_ml[2]
 
-    # 4. LA VOTACIÓN SUAVE (BLENDING)
+# 4. LA VOTACIÓN SUAVE (BLENDING)
     # 60% peso a la forma actual de los jugadores, 40% a la historia del equipo
     PESO_PRESENTE = 0.60
     PESO_HISTORIA = 0.40
@@ -196,6 +196,19 @@ def predecir_partido(equipo_A, equipo_B):
     prob_final_l = (poisson_l * PESO_PRESENTE) + (ml_l * PESO_HISTORIA)
     
     probs_hibridas = [prob_final_v, prob_final_e, prob_final_l]
-    top_marcadores = obtener_top_marcadores(xg_a, xg_b, top=10)
 
-    return xg_a, xg_b, probs_hibridas, top_marcadores
+    # === NUEVO: ALINEACIÓN MATEMÁTICA DE GOLES ESPERADOS (CONGRUENCIA) ===
+    # Comparamos qué tanto alteró la Red Neuronal la predicción original
+    # Usamos max(0.01) para evitar que el código explote por división entre cero
+    factor_ajuste_l = prob_final_l / max(0.01, poisson_l)
+    factor_ajuste_v = prob_final_v / max(0.01, poisson_v)
+    
+    # "Dopamos" o castigamos los Goles Esperados según el veredicto del Machine Learning
+    xg_a_hibrido = xg_a * factor_ajuste_l
+    xg_b_hibrido = xg_b * factor_ajuste_v
+    
+    # Ahora calculamos los marcadores usando estos nuevos goles alineados a la IA
+    top_marcadores = obtener_top_marcadores(xg_a_hibrido, xg_b_hibrido, top=10)
+
+    # Devolvemos los Goles Híbridos para que la Interfaz Aero también los actualice visualmente
+    return xg_a_hibrido, xg_b_hibrido, probs_hibridas, top_marcadores
