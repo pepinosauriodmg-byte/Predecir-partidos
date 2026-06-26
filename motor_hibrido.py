@@ -121,6 +121,10 @@ def calcular_probabilidades_poisson(xg_local, xg_visita, max_goles=10):
                 p_visita += prob
             else:
                 p_empate += prob
+                
+    # ¡ESTE RETURN ES EL QUE SE HABÍA BORRADO!
+    return p_visita, p_empate, p_local
+
 
 def obtener_top_marcadores(xg_local, xg_visita, top=10):
     """
