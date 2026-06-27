@@ -43,9 +43,9 @@ Barbados,Reserva POR,POR,60,60,60
 Barbados,E. Boyce,DEF,56,71,73
 Barbados,J. Forte,MED,63,28,66
 Barbados,J. Forte,DEL,61,28,70
-Belgium,T. Courtois,POR,15,59,90
+Belgium,T. Courtois,POR,15,71,90
 Belgium,J. Vertonghen,DEF,63,88,79
-Belgium,K. De Bruyne,MED,46,46,78
+Belgium,K. De Bruyne,DEL,78,46,78
 Belgium,E. Hazard,DEL,83,35,66
 Belize,Reserva POR,POR,60,60,60
 Belize,Reserva DEF,DEF,60,60,60
@@ -138,7 +138,7 @@ Ecuador,S. Mandíquez,DEL,80,29,80
 Egypt,M. El Shenawy,POR,15,73,73
 Egypt,A. Hegazi,DEF,20,77,86
 Egypt,M. Elneny,MED,62,73,75
-Egypt,M. Salah,DEL,78,45,75
+Egypt,M. Salah,DEL,62,45,75
 El Salvador,T. Romero,POR,15,61,61
 El Salvador,A. Roldan,DEF,56,60,69
 El Salvador,D. Cerén,MED,57,64,74
@@ -208,9 +208,9 @@ Hungary,W. Orban,DEF,36,85,81
 Hungary,D. Szoboszlai,MED,82,34,64
 Hungary,N. Nikolić,DEL,76,24,73
 Iran,A. Abedzadeh,POR,15,73,73
-Iran,M. Mohammadi,DEF,57,54,71
+Iran,M. Mohammadi,MED,56,56,71
 Iran,A. Jahanbakhsh,MED,76,42,71
-Iran,M. Taremi,DEL,53,38,74
+Iran,M. Taremi,DEL,64,38,74
 Italy,G. Donnarumma,POR,15,89,89
 Italy,G. Chiellini,DEF,46,90,82
 Italy,M. Verratti,MED,61,79,66
@@ -265,8 +265,8 @@ New Caledonia,W. Lautoa,MED,36,74,79
 New Caledonia,C. Zeoula,DEL,63,38,52
 New Zealand,S. Marinović,POR,15,71,71
 New Zealand,W. Reid,DEF,52,82,80
-New Zealand,R. Thomas,MED,66,60,66
-New Zealand,C. Wood,DEL,56,40,81
+New Zealand,R. Thomas,MED,64,64,66
+New Zealand,C. Wood,DEL,69,40,81
 Nicaragua,Reserva POR,POR,60,60,60
 Nicaragua,L. Copete,DEF,43,65,74
 Nicaragua,J. Barrera,MED,54,34,53
@@ -673,23 +673,23 @@ Cabo Verde,Moreira,DEF,45,57,75
 Cabo Verde,Vozinha,POR,85,63,75
 Belgium,Meunier,DEF,52,45,75
 Belgium,Ngoy,DEF,59,49,75
-Belgium,Mechele,DEF,61,53,75
+Belgium,Mechele,DEF,61,73,75
 Belgium,Onana,MED,51,51,75
-Belgium,Castagne,MED,53,53,75
-Belgium,Tielemans,MED,53,53,75
-Belgium,Trossard,DEL,56,51,75
-Belgium,Doku,MED,45,45,75
-Belgium,De Ketelaere,MED,54,54,75
+Belgium,Castagne,DEF,53,72,75
+Belgium,Tielemans,MED,70,70,75
+Belgium,Trossard,MED,90,90,75
+Belgium,Doku,DEL,74,45,75
+Belgium,De Ketelaere,DEL,76,54,75
 Egypt,Marmoush,DEL,63,48,75
-Egypt,Ziko,DEL,72,50,75
-Egypt,Ashour,MED,62,62,75
+Egypt,Ziko,MED,55,55,75
+Egypt,Ashour,DEL,58,62,75
 Egypt,Attia,MED,62,62,75
-Egypt,Fotouh,DEF,52,72,75
+Egypt,Fotouh,DEF,52,62,75
 Egypt,Fathy,MED,59,59,75
 Egypt,Ibrahim,MED,60,60,75
-Egypt,Shobeir,POR,55,72,75
-Egypt,Lasheen,MED,73,73,75
-Egypt,Hany,DEF,56,73,75
+Egypt,Shobeir,POR,55,66,75
+Egypt,Lasheen,MED,61,61,75
+Egypt,Hany,DEF,56,69,75
 Saudi Arabia,Al-Owais,POR,75,66,75
 Saudi Arabia,Abdulhamid,DEF,47,61,75
 Saudi Arabia,Tambakti,DEF,47,59,75
@@ -710,25 +710,25 @@ Uruguay,Ugarte,MED,55,55,75
 Uruguay,Olivera,DEF,62,56,75
 Uruguay,Caceres,MED,58,58,75
 Uruguay,Varela,DEF,69,46,75
-Iran,Beiranvand,POR,48,79,75
-Iran,Rezaeian,DEF,83,61,75
-Iran,Khalilzadeh,DEF,55,69,75
-Iran,Nemati,DEL,59,57,75
-Iran,Mohebi,DEL,53,62,75
-Iran,Ghoddos,MED,48,48,75
-Iran,Ezatolahi,MED,57,57,75
+Iran,Beiranvand,POR,48,56,75
+Iran,Rezaeian,DEF,83,65,75
+Iran,Khalilzadeh,DEF,55,63,75
+Iran,Nemati,DEF,59,57,75
+Iran,Mohebi,DEL,51,62,75
+Iran,Ghoddos,MED,53,53,75
+Iran,Ezatolahi,MED,58,58,75
 Iran,Yousefi,MED,61,61,75
 Iran,Moghanlou,MED,61,61,75
 New Zealand,McCowatt,DEL,54,57,75
-New Zealand,Singh,MED,47,47,75
-New Zealand,Just,DEL,60,80,75
+New Zealand,Singh,DEL,63,47,75
+New Zealand,Just,MED,75,75,75
 New Zealand,Stamenic,MED,54,54,75
-New Zealand,Cacace,DEF,56,61,75
+New Zealand,Cacace,DEF,56,63,75
 New Zealand,Boxall,DEF,56,55,75
-New Zealand,Bell,MED,54,54,75
-New Zealand,Surman,DEF,59,67,75
-New Zealand,Payne,DEF,51,58,75
-New Zealand,Crocombe,POR,45,47,75
+New Zealand,Bell,MED,64,64,75
+New Zealand,Surman,DEF,59,62,75
+New Zealand,Payne,DEF,51,64,75
+New Zealand,Crocombe,POR,45,45,75
 France,Kounde,DEF,58,58,75
 France,Maignan,POR,46,61,75
 France,Upamecano,DEF,68,65,75
@@ -981,12 +981,12 @@ Spain,Baena,DEL,64,50,75
 Saudi Arabia,Alawjami,DEF,50,65,75
 Saudi Arabia,N. Al Dawsari,MED,47,47,75
 Saudi Arabia,S. Al-Dawsari,DEL,45,50,75
-Belgium,De Cuyper,DEF,50,53,75
+Belgium,De Cuyper,DEF,50,78,75
 Belgium,Raskin,MED,52,52,75
 Belgium,Saelemaekers,MED,46,46,75
 Belgium,Lukaku,DEL,46,50,75
 Iran,Hardani,DEF,50,50,75
-Iran,Kanaanizadegan,DEF,50,61,75
+Iran,Kanaanizadegan,DEF,50,54,75
 Iran,Hajsafi,MED,52,52,75
 Uruguay,Cáceres,DEF,50,74,75
 Uruguay,Sanabria,MED,62,62,75
@@ -1209,3 +1209,11 @@ Spain,Merino,MED,59,59,75
 Cabo Verde,W. Pina,DEF,50,53,75
 Cabo Verde,J.P. Fernandes,DEF,50,54,75
 Cabo Verde,Semedo,DEL,53,50,75
+Egypt,Rabia,DEF,50,63,75
+Egypt,Abdelmonem,DEF,50,45,75
+Egypt,Saber,MED,65,65,75
+Egypt,Trézéguet,DEL,60,50,75
+Iran,Ghorbani,MED,54,54,75
+New Zealand,Bindon,DEF,50,54,75
+Belgium,Theate,DEF,50,72,75
+Belgium,Vanaken,MED,75,75,75
