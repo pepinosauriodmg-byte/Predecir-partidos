@@ -160,18 +160,42 @@ def predecir_partido(equipo_A, equipo_B):
     atq_a, def_a = dict_plantilla_atq.get(equipo_A, 50.0), dict_plantilla_def.get(equipo_A, 50.0)
     atq_b, def_b = dict_plantilla_atq.get(equipo_B, 50.0), dict_plantilla_def.get(equipo_B, 50.0)
 
-    # 1. CÁLCULO DEL PRESENTE (xG y Probabilidades de Poisson)
-    xg_a = fa_a * fd_b * promedio_global
-    xg_b = fa_b * fd_a * promedio_global
-    poisson_v, poisson_e, poisson_l = calcular_probabilidades_poisson(xg_a, xg_b)
-
-    # 2. CARGA DE ELO EN VIVO
+    # 1. CARGA DE ELO EN VIVO (Movido hacia arriba para que Poisson lo pueda usar de ancla)
     try:
-        df_elo_vivo = pd.read_csv('ranking_elo_vivo.csv').set_index('equipo')
-        elo_l = df_elo_vivo.loc[equipo_A, 'elo_actual'] if equipo_A in df_elo_vivo.index else 1100.0
-        elo_v = df_elo_vivo.loc[equipo_B, 'elo_actual'] if equipo_B in df_elo_vivo.index else 1100.0
-    except FileNotFoundError:
-        elo_l, elo_v = 1100.0, 1100.0
+        df_elo_vivo = pd.read_csv('ranking_elo_vivo.csv')
+        df_elo_vivo.columns = df_elo_vivo.columns.str.strip().str.lower()
+        col_eq_elo = [c for c in df_elo_vivo.columns if 'equip' in c or 'team' in c or 'selec' in c][0]
+        col_val_elo = [c for c in df_elo_vivo.columns if 'elo' in c or 'punt' in c or 'score' in c or 'rank' in c][0]
+        df_elo_vivo = df_elo_vivo.set_index(col_eq_elo)
+        
+        # Extraer el valor blindando errores de formato
+        val_l = df_elo_vivo.loc[equipo_A, col_val_elo] if equipo_A in df_elo_vivo.index else 1500.0
+        elo_l = float(val_l.iloc[0]) if isinstance(val_l, pd.Series) else float(val_l)
+        
+        val_v = df_elo_vivo.loc[equipo_B, col_val_elo] if equipo_B in df_elo_vivo.index else 1500.0
+        elo_v = float(val_v.iloc[0]) if isinstance(val_v, pd.Series) else float(val_v)
+    except Exception:
+        elo_l, elo_v = 1500.0, 1500.0
+
+    # 2. CÁLCULO DEL PRESENTE CON "LAZO CERRADO" (xG y Probabilidades de Poisson)
+    # Calculamos los Goles Esperados Crudos
+    xg_a_crudo = fa_a * fd_b * promedio_global
+    xg_b_crudo = fa_b * fd_a * promedio_global
+    
+    # ATENUADOR MATEMÁTICO: Diferencia de ELO dividida entre constante de suavizado
+    atenuador_l = 1 + ((elo_l - elo_v) / 1000.0)
+    atenuador_v = 1 + ((elo_v - elo_l) / 1000.0)
+
+    # Límite de seguridad: El ELO te puede dar máximo un +/- 50% de bonus/castigo a los goles
+    atenuador_l = max(0.5, min(atenuador_l, 1.5))
+    atenuador_v = max(0.5, min(atenuador_v, 1.5))
+
+    # Ajustamos los Goles Esperados frenando las goleadas atípicas
+    xg_a = xg_a_crudo * atenuador_l
+    xg_b = xg_b_crudo * atenuador_v
+
+    # Calculamos probabilidades usando los xG ya controlados
+    poisson_v, poisson_e, poisson_l = calcular_probabilidades_poisson(xg_a, xg_b)
 
     # 3. CÁLCULO DEL PASADO (Probabilidades de la Red Neuronal)
     vector = pd.DataFrame([{
@@ -186,7 +210,7 @@ def predecir_partido(equipo_A, equipo_B):
     ml_e = probs_ml[1]
     ml_l = probs_ml[2]
 
-# 4. LA VOTACIÓN SUAVE (BLENDING)
+    # 4. LA VOTACIÓN SUAVE (BLENDING)
     # 60% peso a la forma actual de los jugadores, 40% a la historia del equipo
     PESO_PRESENTE = 0.60
     PESO_HISTORIA = 0.40
@@ -197,13 +221,10 @@ def predecir_partido(equipo_A, equipo_B):
     
     probs_hibridas = [prob_final_v, prob_final_e, prob_final_l]
 
-    # === NUEVO: ALINEACIÓN MATEMÁTICA DE GOLES ESPERADOS (CONGRUENCIA) ===
-    # Comparamos qué tanto alteró la Red Neuronal la predicción original
-    # Usamos max(0.01) para evitar que el código explote por división entre cero
+    # === ALINEACIÓN MATEMÁTICA DE GOLES ESPERADOS (CONGRUENCIA) ===
     factor_ajuste_l = prob_final_l / max(0.01, poisson_l)
     factor_ajuste_v = prob_final_v / max(0.01, poisson_v)
     
-    # "Dopamos" o castigamos los Goles Esperados según el veredicto del Machine Learning
     xg_a_hibrido = xg_a * factor_ajuste_l
     xg_b_hibrido = xg_b * factor_ajuste_v
     
