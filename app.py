@@ -88,13 +88,19 @@ def obtener_bandera(equipo):
     return DICT_BANDERAS.get(equipo, '⚽')
 
 # ==========================================
-# 3. MOTOR DE POWER RANKING
+# 3. MOTOR DE POWER RANKING (HÍBRIDO VERDADERO)
 # ==========================================
 @st.cache_data(ttl=3600)
 def calcular_power_ranking():
     ranking = []
     stats_df = mh.estadisticas.set_index('equipo')
     
+    # Intentamos leer la jerarquía histórica (ELO)
+    try:
+        df_elo = pd.read_csv('ranking_elo_vivo.csv').set_index('equipo')
+    except FileNotFoundError:
+        df_elo = pd.DataFrame()
+        
     try:
         df_manuales = pd.read_csv('partidos_manuales.csv')
         equipos_clasificados = pd.concat([df_manuales['local'], df_manuales['visita']]).unique()
@@ -109,20 +115,42 @@ def calcular_power_ranking():
         except KeyError:
             partidos_jugados = 0
             
-        if partidos_jugados < 15:
+        if partidos_jugados < 10: # Ajustado a 10 para no excluir injustamente
             continue
             
-        fa = mh.dict_fa.get(equipo, 1.0)
-        fd = mh.dict_fd.get(equipo, 1.0) 
+        # 1. LA JERARQUÍA (Memoria Larga)
+        # Obtenemos el ELO y lo normalizamos a una escala compatible (0-100)
+        if not df_elo.empty and equipo in df_elo.index:
+            elo_actual = df_elo.loc[equipo, 'elo']
+        else:
+            elo_actual = 1500 # Si no hay datos, es un equipo promedio
+            
+        peso_jerarquia = max(10, min(100, (elo_actual - 1100) / 10.5))
+            
+        # 2. EL MOMENTO ACTUAL (Memoria Corta - Poisson)
+        fa_crudo = mh.dict_fa.get(equipo, 1.0)
+        fd_crudo = mh.dict_fd.get(equipo, 1.0) 
+        
+        # Freno Matemático de Goleadas (El "Anti-Senegal")
+        # Si el FA sube de 1.5, empezamos a recortar el exceso drásticamente
+        fa_suave = 1.5 + (fa_crudo - 1.5) * 0.3 if fa_crudo > 1.5 else fa_crudo
+        
         atq = mh.dict_plantilla_atq.get(equipo, 50.0)
         dfn = mh.dict_plantilla_def.get(equipo, 50.0)
         
-        poder_ofensivo = fa * atq
-        vulnerabilidad_plantilla = max(1.0, (100.0 - dfn))
-        fragilidad_defensiva = (fd + 1.0) * vulnerabilidad_plantilla
+        poder_ofensivo = fa_suave * atq
+        vulnerabilidad = max(1.0, (100.0 - dfn))
+        fragilidad = (fd_crudo + 1.0) * vulnerabilidad
         
-        power_index = (poder_ofensivo / fragilidad_defensiva) * 100
-        ranking.append({'Equipo': equipo, 'Power Index': round(power_index, 2)})
+        # El puntaje de cómo están jugando *hoy*
+        peso_momento = (poder_ofensivo / fragilidad) * 100
+        
+        # 3. EL ÍNDICE DEFINITIVO
+        # Castigamos a Inglaterra por jugar mal (65% del peso es su mal momento actual)
+        # Frenamos a Senegal (35% del peso les recuerda que no tienen ELO de campeones)
+        true_power_index = (peso_momento * 0.65) + (peso_jerarquia * 0.35)
+        
+        ranking.append({'Equipo': equipo, 'Power Index': round(true_power_index, 2)})
         
     df_ranking = pd.DataFrame(ranking).sort_values(by='Power Index', ascending=False).head(5)
     df_ranking.reset_index(drop=True, inplace=True)
