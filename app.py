@@ -88,26 +88,23 @@ def obtener_bandera(equipo):
     return DICT_BANDERAS.get(equipo, '⚽')
 
 # ==========================================
-# 3. MOTOR DE POWER RANKING (HÍBRIDO VERDADERO)
+# 3. MOTOR DE POWER RANKING (HÍBRIDO VERDADERO - ANCLADO A ELO)
 # ==========================================
 @st.cache_data(ttl=3600)
 def calcular_power_ranking():
     ranking = []
     stats_df = mh.estadisticas.set_index('equipo')
     
-    # 1. Blindaje de lectura del CSV (Ignora mayúsculas y espacios)
+    # 1. Lectura blindada del CSV de ELO
     try:
         df_elo = pd.read_csv('ranking_elo_vivo.csv')
         df_elo.columns = df_elo.columns.str.strip().str.lower()
-        
-        # Buscamos dinámicamente las columnas correctas
         col_eq_elo = [c for c in df_elo.columns if 'equip' in c or 'team' in c or 'selec' in c][0]
         col_val_elo = [c for c in df_elo.columns if 'elo' in c or 'punt' in c or 'score' in c or 'rank' in c][0]
-        
         df_elo = df_elo.set_index(col_eq_elo)
     except Exception:
         df_elo = pd.DataFrame()
-        col_val_elo = 'elo' # Valor de respaldo
+        col_val_elo = 'elo'
         
     try:
         df_manuales = pd.read_csv('partidos_manuales.csv')
@@ -126,34 +123,37 @@ def calcular_power_ranking():
         if partidos_jugados < 10:
             continue
             
-        # 2. LA JERARQUÍA (Memoria Larga)
+        # 2. EL ANCLA (Jerarquía ELO - Escala base 0 a 100)
         if not df_elo.empty and equipo in df_elo.index:
-            # Extraemos el valor blindando contra posibles equipos duplicados en el CSV
             val = df_elo.loc[equipo, col_val_elo]
             elo_actual = float(val.iloc[0]) if isinstance(val, pd.Series) else float(val)
         else:
-            elo_actual = 1500 # Si no hay datos, es un equipo promedio
+            elo_actual = 1500
             
-        peso_jerarquia = max(10, min(100, (elo_actual - 1100) / 10.5))
-            
-        # 3. EL MOMENTO ACTUAL (Memoria Corta - Poisson)
-        fa_crudo = mh.dict_fa.get(equipo, 1.0)
-        fd_crudo = mh.dict_fd.get(equipo, 1.0) 
+        # Convertimos el ELO (ej. 1000 - 2000) a una escala manejable de 10 a 110 puntos
+        base_elo = (elo_actual - 900) / 10.0 
         
-        # Freno Matemático de Goleadas (El "Anti-Senegal")
-        fa_suave = 1.5 + (fa_crudo - 1.5) * 0.3 if fa_crudo > 1.5 else fa_crudo
-        
+        # 3. LA CALIDAD DE PLANTILLA (Ratings de jugadores extraídos de FIFA)
         atq = mh.dict_plantilla_atq.get(equipo, 50.0)
         dfn = mh.dict_plantilla_def.get(equipo, 50.0)
+        calidad_plantilla = (atq + dfn) / 2.0
         
-        poder_ofensivo = fa_suave * atq
-        vulnerabilidad = max(1.0, (100.0 - dfn))
-        fragilidad = (fd_crudo + 1.0) * vulnerabilidad
+        # 4. EL FRENO DE GOLEADAS (Modificador Poisson estrictamente controlado)
+        fa_crudo = mh.dict_fa.get(equipo, 1.0)
+        fd_crudo = mh.dict_fd.get(equipo, 1.0)
         
-        peso_momento = (poder_ofensivo / fragilidad) * 100
+        # Relación de dominio (maximizamos FD a 0.5 para jamás dividir entre cero)
+        ratio_forma = fa_crudo / max(fd_crudo, 0.5)
         
-        # 4. EL ÍNDICE DEFINITIVO
-        true_power_index = (peso_momento * 0.65) + (peso_jerarquia * 0.35)
+        # Mapeamos el ratio a un multiplicador estricto (de 0.85x a 1.15x)
+        # Un 5-0 contra Irak solo te dará un +15% extra como máximo, no multiplicará tu puntaje
+        multiplicador_momento = 1.0 + (min(max(ratio_forma, 0.5), 2.5) - 1.0) * 0.1
+        
+        # 5. CÁLCULO FINAL ESTRUCTURADO
+        # 75% del peso es la jerarquía ELO histórica
+        # 25% del peso es la calidad en cancha
+        # Todo se multiplica por el momento actual para dar el toque final
+        true_power_index = ((base_elo * 0.75) + (calidad_plantilla * 0.25)) * multiplicador_momento
         
         ranking.append({'Equipo': equipo, 'Power Index': round(true_power_index, 2)})
         
