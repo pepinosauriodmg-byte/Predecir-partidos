@@ -414,12 +414,7 @@ with col_principal:
         st.markdown("<p style='color: #aedef7; font-size: 0.9rem; margin-bottom: 20px;'>Análisis avanzado y contexto histórico de los contendientes.</p>", unsafe_allow_html=True)
         
         partidos_manana = [
-            ('Panama', 'England'), 
-            ('Croatia', 'Ghana'),     
-            ('Colombia', 'Portugal'),
-            ('DR Congo', 'Uzbekistan'), 
-            ('Algeria', 'Austria'),     
-            ('Jordan', 'Argentina')
+            ('South Africa', 'Canada')
         ]
         
         # ELIMINAMOS LAS FUNCIONES DUPLICADAS AQUÍ ADENTRO. AHORA USA LAS DE ARRIBA.
