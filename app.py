@@ -95,11 +95,19 @@ def calcular_power_ranking():
     ranking = []
     stats_df = mh.estadisticas.set_index('equipo')
     
-    # Intentamos leer la jerarquía histórica (ELO)
+    # 1. Blindaje de lectura del CSV (Ignora mayúsculas y espacios)
     try:
-        df_elo = pd.read_csv('ranking_elo_vivo.csv').set_index('equipo')
-    except FileNotFoundError:
+        df_elo = pd.read_csv('ranking_elo_vivo.csv')
+        df_elo.columns = df_elo.columns.str.strip().str.lower()
+        
+        # Buscamos dinámicamente las columnas correctas
+        col_eq_elo = [c for c in df_elo.columns if 'equip' in c or 'team' in c or 'selec' in c][0]
+        col_val_elo = [c for c in df_elo.columns if 'elo' in c or 'punt' in c or 'score' in c or 'rank' in c][0]
+        
+        df_elo = df_elo.set_index(col_eq_elo)
+    except Exception:
         df_elo = pd.DataFrame()
+        col_val_elo = 'elo' # Valor de respaldo
         
     try:
         df_manuales = pd.read_csv('partidos_manuales.csv')
@@ -115,24 +123,24 @@ def calcular_power_ranking():
         except KeyError:
             partidos_jugados = 0
             
-        if partidos_jugados < 10: # Ajustado a 10 para no excluir injustamente
+        if partidos_jugados < 10:
             continue
             
-        # 1. LA JERARQUÍA (Memoria Larga)
-        # Obtenemos el ELO y lo normalizamos a una escala compatible (0-100)
+        # 2. LA JERARQUÍA (Memoria Larga)
         if not df_elo.empty and equipo in df_elo.index:
-            elo_actual = df_elo.loc[equipo, 'elo']
+            # Extraemos el valor blindando contra posibles equipos duplicados en el CSV
+            val = df_elo.loc[equipo, col_val_elo]
+            elo_actual = float(val.iloc[0]) if isinstance(val, pd.Series) else float(val)
         else:
             elo_actual = 1500 # Si no hay datos, es un equipo promedio
             
         peso_jerarquia = max(10, min(100, (elo_actual - 1100) / 10.5))
             
-        # 2. EL MOMENTO ACTUAL (Memoria Corta - Poisson)
+        # 3. EL MOMENTO ACTUAL (Memoria Corta - Poisson)
         fa_crudo = mh.dict_fa.get(equipo, 1.0)
         fd_crudo = mh.dict_fd.get(equipo, 1.0) 
         
         # Freno Matemático de Goleadas (El "Anti-Senegal")
-        # Si el FA sube de 1.5, empezamos a recortar el exceso drásticamente
         fa_suave = 1.5 + (fa_crudo - 1.5) * 0.3 if fa_crudo > 1.5 else fa_crudo
         
         atq = mh.dict_plantilla_atq.get(equipo, 50.0)
@@ -142,12 +150,9 @@ def calcular_power_ranking():
         vulnerabilidad = max(1.0, (100.0 - dfn))
         fragilidad = (fd_crudo + 1.0) * vulnerabilidad
         
-        # El puntaje de cómo están jugando *hoy*
         peso_momento = (poder_ofensivo / fragilidad) * 100
         
-        # 3. EL ÍNDICE DEFINITIVO
-        # Castigamos a Inglaterra por jugar mal (65% del peso es su mal momento actual)
-        # Frenamos a Senegal (35% del peso les recuerda que no tienen ELO de campeones)
+        # 4. EL ÍNDICE DEFINITIVO
         true_power_index = (peso_momento * 0.65) + (peso_jerarquia * 0.35)
         
         ranking.append({'Equipo': equipo, 'Power Index': round(true_power_index, 2)})
