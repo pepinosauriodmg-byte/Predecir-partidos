@@ -61,7 +61,7 @@ Bolivia,A. Chumacero,MED,68,64,74
 Bolivia,M. Moreno Martins,DEL,77,29,74
 Brazil,Alisson,POR,15,90,90
 Brazil,Thiago Silva,DEF,57,56,79
-Brazil,Casemiro,MED,66,66,91
+Brazil,Casemiro,MED,72,72,91
 Brazil,Neymar Jr,DEL,84,30,60
 British Virgin Islands,Portero British Virgin Islands,POR,10,70,70
 British Virgin Islands,Defensa British Virgin Islands,DEF,30,70,70
@@ -78,7 +78,7 @@ Cameroon,S. Eto'o,DEL,81,37,72
 Canada,M. Borjan,POR,15,77,77
 Canada,A. Davies,DEF,66,76,77
 Canada,A. Hutchinson,MED,65,77,79
-Canada,J. David,DEL,51,34,75
+Canada,J. David,DEL,50,34,75
 Cape Verde Islands,Thierry Graça,POR,15,63,63
 Cape Verde Islands,Varela,DEF,44,76,82
 Cape Verde Islands,Garry Rodrigues,MED,71,43,69
@@ -223,7 +223,7 @@ Jamaica,A. Blake,POR,15,78,78
 Jamaica,E. Pinnock,DEF,37,80,82
 Jamaica,L. Bailey,MED,78,33,64
 Jamaica,L. Bailey,DEL,77,33,64
-Japan,K. Nakamura,MED,64,64,76
+Japan,K. Nakamura,MED,52,52,76
 Japan,M. Hasebe,DEF,51,81,69
 Japan,S. Kagawa,MED,73,32,49
 Japan,T. Kubo,MED,60,60,60
@@ -429,15 +429,15 @@ Mexico,Alvarado,MED,62,62,75
 Mexico,Quiñones,DEL,69,56,75
 Mexico,Reyes,DEF,66,67,75
 Mexico,Fidalgo,MED,74,74,75
-South Africa,Williams,POR,51,64,75
-South Africa,Mokoena,MED,76,76,75
-South Africa,Sithole,MED,67,67,75
+South Africa,Williams,POR,51,78,75
+South Africa,Mokoena,MED,55,55,75
+South Africa,Sithole,MED,63,63,75
 South Africa,Adams,MED,55,55,75
-South Africa,Modiba,DEF,62,59,75
-South Africa,Mbokazi,DEF,57,75,75
+South Africa,Modiba,DEF,62,60,75
+South Africa,Mbokazi,DEF,57,56,75
 South Africa,Sibisi,MED,45,45,75
-South Africa,Okon,DEF,57,58,75
-South Africa,Mudau,DEF,58,62,75
+South Africa,Okon,DEF,57,60,75
+South Africa,Mudau,DEF,58,75,75
 South Korea,Lee,DEL,57,47,75
 South Korea,Seol,DEF,45,57,75
 South Korea,Hwang,MED,50,50,75
@@ -454,15 +454,15 @@ Czechia,Hranac,DEF,58,58,75
 Czechia,Kovar,POR,50,50,75
 Czechia,Chaloupek,MED,45,45,75
 Canada,Crepeau,POR,79,79,75
-Canada,Johnston,DEF,85,57,75
+Canada,Johnston,DEF,85,60,75
 Canada,de Fougerolles,DEF,78,56,75
-Canada,Cornelius,DEF,74,53,75
-Canada,Laryea,DEF,81,46,75
-Canada,Buchanan,MED,57,57,75
+Canada,Cornelius,DEF,74,58,75
+Canada,Laryea,DEF,81,54,75
+Canada,Buchanan,MED,58,58,75
 Canada,Eustaquio,MED,81,81,75
 Canada,Kone,MED,81,81,75
-Canada,Millar,MED,58,58,75
-Canada,Oluwaseyi,MED,58,58,75
+Canada,Millar,MED,52,52,75
+Canada,Oluwaseyi,DEL,55,58,75
 Bosnia and Herzegovina,Lukic,MED,63,63,75
 Bosnia and Herzegovina,Demirovic,DEL,65,65,75
 Bosnia and Herzegovina,Memic,MED,58,58,75
@@ -512,12 +512,12 @@ Switzerland,Aebischer,MED,67,67,75
 Switzerland,Elvedi,DEF,66,69,75
 Switzerland,Zakaria,MED,55,55,75
 Brazil,Ibanez,DEF,50,50,75
-Brazil,Becker,POR,58,79,75
-Brazil,Marquinhos,DEF,59,70,75
+Brazil,Becker,POR,58,46,75
+Brazil,Marquinhos,DEF,59,68,75
 Brazil,Magalhaes,DEF,59,59,75
 Brazil,Raphinha,DEL,69,57,75
 Brazil,Paqueta,MED,61,61,75
-Brazil,Santos,DEF,66,66,75
+Brazil,Santos,DEF,66,61,75
 Brazil,Guimaraes,MED,54,54,75
 Brazil,Júnior,MED,77,77,75
 Morocco,Saibari,MED,75,75,75
@@ -601,13 +601,13 @@ Netherlands,Malen,DEL,57,63,75
 Netherlands,van de Ven,DEF,56,74,75
 Netherlands,Reijnders,MED,68,68,75
 Netherlands,Gakpo,DEL,56,63,75
-Japan,Maeda,DEL,69,59,75
-Japan,Ueda,DEL,55,60,75
-Japan,Kamada,MED,65,65,75
+Japan,Maeda,DEL,58,59,75
+Japan,Ueda,DEL,46,60,75
+Japan,Kamada,MED,49,49,75
 Japan,Ito,DEF,55,62,75
-Japan,Taniguchi,DEF,60,60,75
-Japan,Suzuki,POR,58,51,75
-Japan,Sano,MED,76,76,75
+Japan,Taniguchi,DEF,60,52,75
+Japan,Suzuki,POR,58,59,75
+Japan,Sano,MED,59,59,75
 Japan,Doan,MED,63,63,75
 Japan,Watanabe,DEF,61,61,75
 Ivory Coast,Doue,MED,62,62,75
@@ -896,9 +896,9 @@ Czechia,Cerv,MED,59,59,75
 Czechia,Sadilek,MED,65,65,75
 Czechia,Hlozek,DEL,49,49,75
 South Africa,Rayners,DEL,49,49,75
-South Africa,Appollis,DEL,57,52,75
+South Africa,Appollis,DEL,63,52,75
 South Africa,Mbatha,MED,53,53,75
-South Africa,Maseko,MED,63,63,75
+South Africa,Maseko,MED,56,56,75
 Switzerland,Widmer,DEF,66,66,75
 Switzerland,Rieder,DEL,69,69,75
 Bosnia and Herzegovina,Dzeko,DEL,63,63,75
@@ -916,11 +916,11 @@ Australia,Touré,DEL,60,50,75
 Scotland,Tierney,DEF,50,54,75
 Scotland,Patterson,DEF,53,50,75
 Scotland,Christie,MED,52,52,75
-Brazil,Danilo,DEF,50,65,75
-Brazil,Magalhães,DEF,50,74,75
+Brazil,Danilo,DEF,50,50,75
+Brazil,Magalhães,DEF,50,64,75
 Brazil,Paquetá,MED,65,65,75
-Brazil,Guimarães,MED,67,67,75
-Brazil,Cunha,DEL,78,50,75
+Brazil,Guimarães,MED,64,64,75
+Brazil,Cunha,DEL,54,50,75
 Haiti,Casimir,MED,61,61,75
 Haiti,Expérience,DEF,50,63,75
 Haiti,Duverne,DEF,50,61,75
@@ -967,9 +967,9 @@ Curaçao,L. Bacuna,MED,58,58,75
 Tunisia,Dahmen,POR,50,52,75
 Tunisia,Bronn,DEF,50,61,75
 Tunisia,Tounekti,DEL,65,50,75
-Japan,H. Ito,DEF,50,62,75
+Japan,H. Ito,DEF,50,51,75
 Japan,Itakura,DEF,50,56,75
-Japan,Tomiyasu,DEF,50,79,75
+Japan,Tomiyasu,DEF,50,48,75
 Japan,Tanaka,MED,70,70,75
 Japan,J. Ito,DEF,77,62,75
 Spain,Simón,POR,50,66,75
@@ -1070,8 +1070,8 @@ Switzerland,Jaquez,DEF,50,45,75
 Switzerland,Rodríguez,DEF,50,54,75
 Switzerland,Sow,MED,53,53,75
 Switzerland,Manzambi,DEL,63,50,75
-Canada,Crépeau,POR,50,50,75
-Canada,Saliba,MED,65,65,75
+Canada,Crépeau,POR,50,65,75
+Canada,Saliba,MED,47,47,75
 Canada,Choinière,MED,55,55,75
 Bosnia and Herzegovina,Malić,DEF,50,65,75
 Bosnia and Herzegovina,Katić,DEF,50,69,75
@@ -1096,8 +1096,8 @@ Haiti,Joseph,DEL,51,50,75
 Haiti,Isidor,DEL,72,50,75
 Scotland,McKenna,DEF,50,53,75
 Scotland,McLean,MED,48,48,75
-Brazil,V. Júnior,DEL,93,50,75
-Brazil,Rayan,DEL,74,50,75
+Brazil,V. Júnior,DEL,67,50,75
+Brazil,Rayan,DEL,66,50,75
 Czechia,Kovář,POR,50,45,75
 Czechia,Holeš,DEF,50,64,75
 Czechia,Hranáč,DEF,50,50,75
@@ -1111,8 +1111,8 @@ Czechia,Šulc,DEL,45,50,75
 Mexico,Mora,MED,62,62,75
 Mexico,Chávez,MED,75,75,75
 Mexico,Martínez,DEL,64,50,75
-South Africa,Mofokeng,MED,53,53,75
-South Africa,Makgopa,DEL,49,50,75
+South Africa,Mofokeng,MED,52,52,75
+South Africa,Makgopa,DEL,50,50,75
 South Korea,S.G. Kim,POR,50,53,75
 South Korea,L. Gi-Hyuk,DEF,50,56,75
 South Korea,M.J. Kim,DEF,50,56,75
@@ -1252,3 +1252,8 @@ Argentina,Lo Celso,MED,73,73,75
 Argentina,Simeone,DEL,60,50,75
 Argentina,J. Álvarez,DEL,64,50,75
 Argentina,L. Martínez,DEL,80,50,75
+Canada,Bombito,DEF,50,48,75
+Canada,Eustáquio,MED,87,87,75
+Brazil,Lucas Paquetá,MED,54,54,75
+Japan,Dōan,MED,49,49,75
+Japan,J. Itō,MED,56,56,75
