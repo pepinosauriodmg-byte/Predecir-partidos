@@ -524,18 +524,19 @@ with col_principal:
 
         st.markdown("</div>", unsafe_allow_html=True)
 
-# --- PESTAÑA 4: BRACKET DE ELIMINATORIAS (FLEXBOX REAL) ---
+# --- PESTAÑA 4: BRACKET DE ELIMINATORIAS COMPLETO (32 EQUIPOS) ---
     with tab4:
-        st.markdown(f"<h3 style='color: white; margin-bottom: 10px;'>{icon('trophy', 32)} Cuadro de Eliminatorias</h3>", unsafe_allow_html=True)
+        st.markdown(f"<h3 style='color: white; margin-bottom: 10px;'>{icon('trophy', 32)} Cuadro de Eliminatorias (Fase Final)</h3>", unsafe_allow_html=True)
         
         st.markdown("""
         <style>
-            .bracket-container { display: flex; justify-content: space-between; align-items: stretch; width: 100%; min-height: 750px; padding: 10px 0; font-family: Tahoma, sans-serif; }
-            .bracket-col { display: flex; flex-direction: column; justify-content: space-around; width: 22%; }
-            .bracket-center { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 10%; }
-            .b-match { background: rgba(0, 0, 0, 0.45); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 6px; padding: 4px 8px; margin: 4px 0; box-shadow: inset 0 2px 5px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.3); }
-            .b-team { display: flex; justify-content: space-between; align-items: center; margin: 4px 0; font-size: 0.95rem; }
-            .b-score { background: linear-gradient(to bottom, #2098d3, #0570b0); padding: 1px 8px; border-radius: 4px; border: 1px solid #002244; font-weight: bold; font-size: 0.85rem; box-shadow: inset 0 1px 1px rgba(255,255,255,0.4); }
+            .bracket-wrapper { width: 100%; overflow-x: auto; padding-bottom: 20px; }
+            .bracket-container { display: flex; justify-content: space-between; align-items: stretch; min-width: 1300px; min-height: 850px; padding: 10px 0; font-family: Tahoma, sans-serif; }
+            .bracket-col { display: flex; flex-direction: column; justify-content: space-around; flex: 1; padding: 0 4px; }
+            .bracket-center { display: flex; flex-direction: column; justify-content: center; align-items: center; flex: 1.2; padding: 0 10px; }
+            .b-match { background: rgba(0, 0, 0, 0.45); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 6px; padding: 6px 8px; margin: 2px 0; box-shadow: inset 0 2px 5px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.3); }
+            .b-team { display: flex; justify-content: space-between; align-items: center; margin: 3px 0; font-size: 0.85rem; white-space: nowrap; }
+            .b-score { background: linear-gradient(to bottom, #2098d3, #0570b0); padding: 2px 6px; border-radius: 4px; border: 1px solid #002244; font-weight: bold; font-size: 0.8rem; box-shadow: inset 0 1px 1px rgba(255,255,255,0.4); margin-left: 5px; }
             .win-text { color: #ffffff; font-weight: bold; text-shadow: 0 0 5px rgba(255,255,255,0.3); }
             .lose-text { color: #888888; }
             .pend-text { color: #cccccc; }
@@ -544,7 +545,7 @@ with col_principal:
         </style>
         """, unsafe_allow_html=True)
 
-        def render_caja(eq1, eq2, g1=0, g2=0, estado="Pendiente"):
+        def render_caja(eq1, eq2, g1=0, g2=0, estado="Pendiente", etiqueta=""):
             b1, b2 = obtener_bandera(eq1) if eq1 != "TBD" else "❔", obtener_bandera(eq2) if eq2 != "TBD" else "❔"
             
             if estado == "Finalizado":
@@ -557,9 +558,12 @@ with col_principal:
                 score_class = "score-pend"
                 score_text = "vs"
 
-            # SIN ESPACIOS AL INICIO PARA EVITAR EL ERROR DE MARKDOWN
-            return f"<div class='b-match'><div class='b-team'><span class='{c1}'>{b1} {eq1}</span> <span class='b-score {score_class}'>{score_text}</span></div><div class='b-team'><span class='{c2}'>{b2} {eq2}</span></div></div>"
+            # Etiqueta para saber la fase (Cuartos, Semis, etc.)
+            header = f"<div style='text-align: center; font-size: 0.7rem; color: #8ebce3; margin-bottom: 2px;'>{etiqueta}</div>" if etiqueta else ""
 
+            return f"<div class='b-match'>{header}<div class='b-team'><span class='{c1}'>{b1} {eq1}</span> <span class='b-score {score_class}'>{score_text}</span></div><div class='b-team'><span class='{c2}'>{b2} {eq2}</span></div></div>"
+
+        # 16vos Izquierda (R32)
         r32_izq = [
             render_caja('Germany', 'Paraguay'), render_caja('France', 'Sweden'),
             render_caja('South Africa', 'Canada', 0, 1, 'Finalizado'), render_caja('Netherlands', 'Morocco'),
@@ -567,6 +571,7 @@ with col_principal:
             render_caja('USA', 'Bosnia and Herzegovina'), render_caja('Belgium', 'Senegal')
         ]
         
+        # 16vos Derecha (R32)
         r32_der = [
             render_caja('Brazil', 'Japan', 2, 1, 'Finalizado'), render_caja('Ivory Coast', 'Norway'),
             render_caja('Mexico', 'Ecuador'), render_caja('England', 'DR Congo'),
@@ -574,17 +579,36 @@ with col_principal:
             render_caja('Switzerland', 'Algeria'), render_caja('Colombia', 'Ghana')
         ]
 
+        # Octavos Izquierda (R16)
         r16_izq = [
-            render_caja('TBD', 'TBD'), render_caja('Canada', 'TBD'), 
-            render_caja('TBD', 'TBD'), render_caja('TBD', 'TBD')
+            render_caja('TBD', 'TBD', etiqueta="Octavos 1"), 
+            render_caja('Canada', 'TBD', etiqueta="Octavos 2"), 
+            render_caja('TBD', 'TBD', etiqueta="Octavos 3"), 
+            render_caja('TBD', 'TBD', etiqueta="Octavos 4")
         ]
         
+        # Octavos Derecha (R16)
         r16_der = [
-            render_caja('Brazil', 'TBD'), render_caja('TBD', 'TBD'), 
-            render_caja('TBD', 'TBD'), render_caja('TBD', 'TBD')
+            render_caja('Brazil', 'TBD', etiqueta="Octavos 5"), 
+            render_caja('TBD', 'TBD', etiqueta="Octavos 6"), 
+            render_caja('TBD', 'TBD', etiqueta="Octavos 7"), 
+            render_caja('TBD', 'TBD', etiqueta="Octavos 8")
         ]
 
-        # CONTENEDOR FLEXBOX COMPRIMIDO
-        html_bracket = f"<div class='bracket-container'><div class='bracket-col'>{''.join(r32_izq)}</div><div class='bracket-col' style='padding: 40px 0;'>{''.join(r16_izq)}</div><div class='bracket-center'><img src='https://img.icons8.com/3d-fluency/96/trophy.png' width='80'></div><div class='bracket-col' style='padding: 40px 0;'>{''.join(r16_der)}</div><div class='bracket-col'>{''.join(r32_der)}</div></div>"
+        # Cuartos Izquierda (QF)
+        qf_izq = [render_caja('TBD', 'TBD', etiqueta="Cuartos 1"), render_caja('TBD', 'TBD', etiqueta="Cuartos 2")]
+
+        # Cuartos Derecha (QF)
+        qf_der = [render_caja('TBD', 'TBD', etiqueta="Cuartos 3"), render_caja('TBD', 'TBD', etiqueta="Cuartos 4")]
+
+        # Semis Izquierda/Derecha (SF)
+        sf_izq = [render_caja('TBD', 'TBD', etiqueta="Semifinal 1")]
+        sf_der = [render_caja('TBD', 'TBD', etiqueta="Semifinal 2")]
+
+        # Final (Centro)
+        final = render_caja('TBD', 'TBD', etiqueta="🏆 GRAN FINAL")
+
+        # CONTENEDOR FLEXBOX COMPRIMIDO CON TODAS LAS FASES
+        html_bracket = f"<div class='bracket-wrapper'><div class='bracket-container'><div class='bracket-col'>{''.join(r32_izq)}</div><div class='bracket-col' style='padding: 20px 2px;'>{''.join(r16_izq)}</div><div class='bracket-col' style='padding: 80px 2px;'>{''.join(qf_izq)}</div><div class='bracket-col' style='padding: 180px 2px;'>{''.join(sf_izq)}</div><div class='bracket-center'><img src='https://img.icons8.com/3d-fluency/96/trophy.png' width='80' style='margin-bottom: 20px;'>{final}</div><div class='bracket-col' style='padding: 180px 2px;'>{''.join(sf_der)}</div><div class='bracket-col' style='padding: 80px 2px;'>{''.join(qf_der)}</div><div class='bracket-col' style='padding: 20px 2px;'>{''.join(r16_der)}</div><div class='bracket-col'>{''.join(r32_der)}</div></div></div>"
         
         st.markdown(html_bracket, unsafe_allow_html=True)
