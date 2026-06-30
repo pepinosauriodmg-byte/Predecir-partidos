@@ -324,7 +324,7 @@ with col_ranking:
     st.markdown("</div>", unsafe_allow_html=True)
 
 with col_principal:
-    tab1, tab2, tab3 = st.tabs(["Simulador Aero", "Partidos Recientes", "Próxima Jornada"])
+    tab1, tab2, tab3, tab4 = st.tabs(["Simulador Aero", "Partidos Recientes", "Próxima Jornada", "Fase Final"])
 
     # --- PESTAÑA 1: SIMULADOR MANUAL ---
     with tab1:
@@ -522,4 +522,75 @@ with col_principal:
                     for h in obtener_historial_reciente(eq_v):
                         st.write(h, unsafe_allow_html=True)
 
+        st.markdown("</div>", unsafe_allow_html=True)
+
+        # --- PESTAÑA 4: BRACKET DE ELIMINATORIAS ---
+    with tab4:
+        st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
+        st.markdown(f"<h3 style='color: white; margin-bottom: 20px;'>{icon('trophy', 32)} Cuadro de Eliminatorias (Dieciseisavos)</h3>", unsafe_allow_html=True)
+        
+        # Diccionario maestro del bracket (Fácil de actualizar)
+        # Formato: [Equipo L, Equipo V, Goles L, Goles V, Estado]
+        # Estado: "Pendiente" o "Finalizado"
+        bracket_izquierdo = [
+            ['Germany', 'Paraguay', 0, 0, 'Pendiente'],
+            ['France', 'Sweden', 0, 0, 'Pendiente'],
+            ['South Africa', 'Canada', 0, 1, 'Finalizado'], # ¡Partido ya jugado!
+            ['Netherlands', 'Morocco', 0, 0, 'Pendiente'],
+            ['Portugal', 'Croatia', 0, 0, 'Pendiente'],
+            ['Spain', 'Austria', 0, 0, 'Pendiente'],
+            ['USA', 'Bosnia and Herzegovina', 0, 0, 'Pendiente'],
+            ['Belgium', 'Senegal', 0, 0, 'Pendiente']
+        ]
+        
+        bracket_derecho = [
+            ['Brazil', 'Japan', 2, 1, 'Finalizado'], # ¡Partido ya jugado!
+            ['Ivory Coast', 'Norway', 0, 0, 'Pendiente'],
+            ['Mexico', 'Ecuador', 0, 0, 'Pendiente'],
+            ['England', 'DR Congo', 0, 0, 'Pendiente'],
+            ['Argentina', 'Cabo Verde', 0, 0, 'Pendiente'],
+            ['Australia', 'Egypt', 0, 0, 'Pendiente'],
+            ['Switzerland', 'Algeria', 0, 0, 'Pendiente'],
+            ['Colombia', 'Ghana', 0, 0, 'Pendiente']
+        ]
+
+        # Función para dibujar cada tarjeta del bracket en estilo Aero
+        def dibujar_tarjeta_bracket(partido):
+            eq_l, eq_v, gl, gv, estado = partido
+            b_l, b_v = obtener_bandera(eq_l), obtener_bandera(eq_v)
+            
+            if estado == 'Finalizado':
+                color_marcador = "#a4e67d" # Verde brillante si ya terminó
+                marcador_texto = f"{gl} - {gv}"
+                # Resaltar al ganador
+                bold_l = "font-weight: 900; color: #ffffff;" if gl > gv else "color: #a0a0a0;"
+                bold_v = "font-weight: 900; color: #ffffff;" if gv > gl else "color: #a0a0a0;"
+            else:
+                color_marcador = "#8ebce3" # Azul suave si está pendiente
+                marcador_texto = "vs"
+                bold_l = bold_v = "color: #ffffff;"
+
+            html_tarjeta = f"""
+            <div style='background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px; margin-bottom: 12px; box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);'>
+                <div style='display: flex; justify-content: space-between; align-items: center; font-size: 1.05rem;'>
+                    <span style='{bold_l}'>{b_l} {eq_l}</span>
+                    <span style='background: linear-gradient(to bottom, #2098d3, #0570b0); padding: 2px 10px; border-radius: 10px; font-weight: bold; color: {color_marcador}; border: 1px solid #002244;'>{marcador_texto}</span>
+                    <span style='{bold_v}'>{eq_v} {b_v}</span>
+                </div>
+            </div>
+            """
+            return html_tarjeta
+
+        col_izq, col_espacio, col_der = st.columns([10, 1, 10])
+        
+        with col_izq:
+            st.markdown("<h4 style='color: #8ebce3; text-align: center; text-shadow: 1px 1px 2px black;'>Lado Izquierdo</h4>", unsafe_allow_html=True)
+            for partido in bracket_izquierdo:
+                st.markdown(dibujar_tarjeta_bracket(partido), unsafe_allow_html=True)
+                
+        with col_der:
+            st.markdown("<h4 style='color: #8ebce3; text-align: center; text-shadow: 1px 1px 2px black;'>Lado Derecho</h4>", unsafe_allow_html=True)
+            for partido in bracket_derecho:
+                st.markdown(dibujar_tarjeta_bracket(partido), unsafe_allow_html=True)
+                
         st.markdown("</div>", unsafe_allow_html=True)
