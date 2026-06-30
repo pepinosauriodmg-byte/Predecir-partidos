@@ -231,5 +231,34 @@ def predecir_partido(equipo_A, equipo_B):
     # Ahora calculamos los marcadores usando estos nuevos goles alineados a la IA
     top_marcadores = obtener_top_marcadores(xg_a_hibrido, xg_b_hibrido, top=10)
 
-    # Devolvemos los Goles Híbridos para que la Interfaz Aero también los actualice visualmente
-    return xg_a_hibrido, xg_b_hibrido, probs_hibridas, top_marcadores
+
+# === ALINEACIÓN MATEMÁTICA DE GOLES ESPERADOS (CONGRUENCIA) ===
+    factor_ajuste_l = prob_final_l / max(0.01, poisson_l)
+    factor_ajuste_v = prob_final_v / max(0.01, poisson_v)
+    
+    xg_a_hibrido = xg_a * factor_ajuste_l
+    xg_b_hibrido = xg_b * factor_ajuste_v
+    
+    top_marcadores = obtener_top_marcadores(xg_a_hibrido, xg_b_hibrido, top=10)
+
+    # === MÓDULO BINOMIAL DE PENALES (SOLO ELIMINATORIAS) ===
+    hay_alargue = False
+    prob_penales_l = 0.0
+    prob_penales_v = 0.0
+    
+    # Si la probabilidad de empate supera el 28%, se activa la alerta de penales
+    if prob_final_e > 0.28:
+        hay_alargue = True
+        # Usamos la defensa de la plantilla como proxy de la habilidad de bloque/portero
+        # Usamos el ELO como proxy de jerarquía y aguante mental bajo presión
+        sesgo_portero = (def_a - def_b) / 100.0
+        sesgo_mental = (elo_l - elo_v) / 4000.0
+        
+        prob_penales_l = 0.50 + sesgo_portero + sesgo_mental
+        
+        # Un equipo no puede tener más del 85% de probabilidad en penales (sigue siendo azar)
+        prob_penales_l = max(0.15, min(prob_penales_l, 0.85)) 
+        prob_penales_v = 1.0 - prob_penales_l
+
+    # DEVOLVEMOS LAS VARIABLES EXTRAS
+    return xg_a_hibrido, xg_b_hibrido, probs_hibridas, top_marcadores, hay_alargue, prob_penales_l, prob_penales_v

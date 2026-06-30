@@ -341,7 +341,8 @@ with col_principal:
             visitante = st.selectbox("Equipo Visitante:", equipos, index=idx_visita)
             
         if st.button("CALCULAR PREDICCIÓN AI", width='stretch'):
-            xg_l, xg_v, paquete_probs, top_marcadores = mh.predecir_partido(local, visitante)
+            # 1. ACTUALIZADO: Ahora recibe 7 variables en lugar de 4
+            xg_l, xg_v, paquete_probs, top_marcadores, hay_alargue, p_pen_l, p_pen_v = mh.predecir_partido(local, visitante)
             probs_flat = np.array(paquete_probs).flatten()
             
             p_visita = float(probs_flat[0]) 
@@ -374,6 +375,19 @@ with col_principal:
             
             st.markdown(f"<p style='margin-bottom: 5px; margin-top: 10px;'><b>Probabilidad Gana {visitante} {bandera_v}: {p_visita*100:.1f}%</b></p>", unsafe_allow_html=True)
             st.progress(p_visita)
+            
+            # 2. NUEVO: ALERTA DE PENALES
+            if hay_alargue:
+                st.markdown(f"""
+                <div style='background: rgba(255, 138, 138, 0.15); border-left: 4px solid #ff8a8a; padding: 12px; border-radius: 4px; margin-top: 15px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);'>
+                    <b style='color: #ff8a8a; font-size: 1.05rem;'>⚠️ Alta Probabilidad de Prórroga / Penales</b><br>
+                    <span style='font-size: 0.95rem; color: #f8fafc;'>
+                        Probabilidad calculada en tanda de penales (Vía ELO):<br>
+                        <b>{local}:</b> <span style='color: #a4e67d;'>{p_pen_l*100:.1f}%</span> | <b>{visitante}:</b> <span style='color: #a4e67d;'>{p_pen_v*100:.1f}%</span>
+                    </span>
+                </div>
+                """, unsafe_allow_html=True)
+                
             st.divider()
 
 # --- NUEVO: TOP 10 MARCADORES ---
@@ -459,7 +473,8 @@ with col_principal:
             b_v = obtener_bandera(eq_v)
             
             with st.expander(f"🏟️ {b_l} {eq_l} vs {eq_v} {b_v}"):
-                xg_l, xg_v, paquete_probs, top_marcadores = mh.predecir_partido(eq_l, eq_v) 
+                # 1. ACTUALIZADO: Ahora recibe 7 variables
+                xg_l, xg_v, paquete_probs, top_marcadores, hay_alargue, p_pen_l, p_pen_v = mh.predecir_partido(eq_l, eq_v) 
                 probs_flat = np.array(paquete_probs).flatten()
                 
                 p_v = float(probs_flat[0])
@@ -477,6 +492,17 @@ with col_principal:
                 m2.metric(label="Empate 🤝", value=f"{p_e*100:.1f}%")
                 m3.metric(label=f"Gana {eq_v} {b_v}", value=f"{p_v*100:.1f}%")
                 
+                # 2. NUEVO: ALERTA DE PENALES
+                if hay_alargue:
+                    st.markdown(f"""
+                    <div style='background: rgba(255, 138, 138, 0.15); border-left: 4px solid #ff8a8a; padding: 10px; border-radius: 4px; margin-top: 10px;'>
+                        <b style='color: #ff8a8a;'>⚠️ Alta Probabilidad de Prórroga / Penales</b><br>
+                        <span style='font-size: 0.9rem; color: #e2e2e2;'>
+                            <b>{eq_l}:</b> {p_pen_l*100:.1f}% | <b>{eq_v}:</b> {p_pen_v*100:.1f}%
+                        </span>
+                    </div>
+                    """, unsafe_allow_html=True)
+                    
                 st.divider()
 
 # --- NUEVO: TOP 10 MARCADORES PARA JORNADAS AUTOMÁTICAS ---
@@ -545,28 +571,35 @@ with col_principal:
         </style>
         """, unsafe_allow_html=True)
 
-        def render_caja(eq1, eq2, g1=0, g2=0, estado="Pendiente", etiqueta=""):
+# NUEVA FUNCIÓN RENDER CAJA (Soporta penales)
+        def render_caja(eq1, eq2, g1=0, g2=0, p1=None, p2=None, estado="Pendiente", etiqueta=""):
             b1, b2 = obtener_bandera(eq1) if eq1 != "TBD" else "❔", obtener_bandera(eq2) if eq2 != "TBD" else "❔"
             
             if estado == "Finalizado":
-                c1 = "win-text" if g1 > g2 else "lose-text"
-                c2 = "win-text" if g2 > g1 else "lose-text"
+                # Si hubo penales, decidimos al ganador por los penales
+                if p1 is not None and p2 is not None:
+                    c1 = "win-text" if p1 > p2 else "lose-text"
+                    c2 = "win-text" if p2 > p1 else "lose-text"
+                    score_text = f"{g1}({p1}) - {g2}({p2})"
+                else: # Si ganaron en 90 mins
+                    c1 = "win-text" if g1 > g2 else "lose-text"
+                    c2 = "win-text" if g2 > g1 else "lose-text"
+                    score_text = f"{g1} - {g2}"
                 score_class = "score-win"
-                score_text = f"{g1} - {g2}"
             else:
                 c1 = c2 = "pend-text"
                 score_class = "score-pend"
                 score_text = "vs"
 
-            # Etiqueta para saber la fase (Cuartos, Semis, etc.)
             header = f"<div style='text-align: center; font-size: 0.7rem; color: #8ebce3; margin-bottom: 2px;'>{etiqueta}</div>" if etiqueta else ""
-
             return f"<div class='b-match'>{header}<div class='b-team'><span class='{c1}'>{b1} {eq1}</span> <span class='b-score {score_class}'>{score_text}</span></div><div class='b-team'><span class='{c2}'>{b2} {eq2}</span></div></div>"
 
-        # 16vos Izquierda (R32)
+# ACTUALIZACIÓN DE DIECISEISAVOS Y OCTAVOS (Izquierda)
         r32_izq = [
-            render_caja('Germany', 'Paraguay'), render_caja('France', 'Sweden'),
-            render_caja('South Africa', 'Canada', 0, 1, 'Finalizado'), render_caja('Netherlands', 'Morocco'),
+            render_caja('Germany', 'Paraguay', 1, 1, 3, 4, 'Finalizado'), # ¡Actualizado!
+            render_caja('France', 'Sweden'),
+            render_caja('South Africa', 'Canada', 0, 1, None, None, 'Finalizado'), 
+            render_caja('Netherlands', 'Morocco', 1, 1, 2, 3, 'Finalizado'), # ¡Actualizado!
             render_caja('Portugal', 'Croatia'), render_caja('Spain', 'Austria'),
             render_caja('USA', 'Bosnia and Herzegovina'), render_caja('Belgium', 'Senegal')
         ]
@@ -581,8 +614,8 @@ with col_principal:
 
         # Octavos Izquierda (R16)
         r16_izq = [
-            render_caja('TBD', 'TBD', etiqueta="Octavos 1"), 
-            render_caja('Canada', 'TBD', etiqueta="Octavos 2"), 
+            render_caja('Paraguay', 'TBD', etiqueta="Octavos 1"), # Paraguay avanza
+            render_caja('Canada', 'Morocco', etiqueta="Octavos 2"), # Se arma el Canadá vs Marruecos
             render_caja('TBD', 'TBD', etiqueta="Octavos 3"), 
             render_caja('TBD', 'TBD', etiqueta="Octavos 4")
         ]

@@ -167,7 +167,7 @@ Georgia,G. Mamardashvili,POR,15,80,80
 Georgia,G. Kashia,DEF,28,77,80
 Georgia,Vako,MED,73,36,62
 Georgia,K. Kvaratskhelia,DEL,80,41,71
-Germany,M. Neuer,POR,15,45,92
+Germany,M. Neuer,POR,15,63,92
 Germany,J. Boateng,DEF,50,90,85
 Germany,T. Kroos,MED,72,72,69
 Germany,T. Müller,DEL,83,46,72
@@ -243,7 +243,7 @@ Montserrat,Reserva POR,POR,60,60,60
 Montserrat,D. Daniels,DEF,28,67,70
 Montserrat,A. Dyer,MED,59,58,72
 Montserrat,L. Taylor,DEL,67,37,69
-Morocco,Y. Bounou,POR,15,52,85
+Morocco,Y. Bounou,POR,15,53,85
 Morocco,M. Benatia,DEF,45,87,85
 Morocco,H. Ziyech,MED,76,50,66
 Morocco,H. Ziyech,DEL,76,50,65
@@ -256,7 +256,7 @@ Namibia,R. Nyambe,DEF,33,68,76
 Namibia,M. Starke,MED,61,41,61
 Namibia,D. Hotto,DEL,75,29,61
 Netherlands,J. Cillessen,POR,15,83,83
-Netherlands,V. van Dijk,DEF,60,64,86
+Netherlands,V. van Dijk,DEF,60,65,86
 Netherlands,A. Robben,MED,86,32,64
 Netherlands,R. van Persie,DEL,90,33,68
 New Caledonia,Reserva POR,POR,60,60,60
@@ -285,8 +285,8 @@ Papua New Guinea,Reserva MED,MED,60,60,60
 Papua New Guinea,D. Browne,DEL,56,25,51
 Paraguay,J. Villar,POR,15,77,77
 Paraguay,F. Balbuena,DEF,40,81,81
-Paraguay,M. Almirón,MED,45,45,63
-Paraguay,M. Almirón,MED,45,45,64
+Paraguay,M. Almirón,MED,56,56,63
+Paraguay,M. Almirón,MED,56,56,64
 Peru,C. Cáceda,POR,15,75,75
 Peru,C. Zambrano,DEF,49,76,80
 Peru,J. Farfán,MED,77,37,76
@@ -485,15 +485,15 @@ USA,Dest,MED,66,66,75
 USA,McKennie,MED,62,62,75
 USA,Balogun,DEL,57,87,75
 Paraguay,Almiron,DEL,60,60,75
-Paraguay,Enciso,DEL,47,66,75
-Paraguay,Bobadilla,MED,59,59,75
+Paraguay,Enciso,MED,63,63,75
+Paraguay,Bobadilla,MED,65,65,75
 Paraguay,Sanabria,DEL,64,64,75
-Paraguay,Cubas,MED,67,67,75
+Paraguay,Cubas,MED,63,63,75
 Paraguay,Gomez,DEF,58,58,75
-Paraguay,Alonso,DEF,62,57,75
+Paraguay,Alonso,DEF,62,60,75
 Paraguay,Alderete,DEF,61,72,75
 Paraguay,Caceres,DEF,59,59,75
-Paraguay,Gill,POR,45,69,75
+Paraguay,Gill,POR,45,61,75
 Qatar,Abunada,POR,45,45,75
 Qatar,Al-Oui,DEF,56,56,75
 Qatar,Miguel,DEF,68,68,75
@@ -520,16 +520,16 @@ Brazil,Paqueta,MED,61,61,75
 Brazil,Santos,DEF,66,61,75
 Brazil,Guimaraes,MED,54,54,75
 Brazil,Júnior,MED,77,77,75
-Morocco,Saibari,MED,75,75,75
-Morocco,El Khannouss,MED,75,75,75
-Morocco,Ounahi,MED,57,57,75
+Morocco,Saibari,DEL,54,75,75
+Morocco,El Khannouss,MED,57,57,75
+Morocco,Ounahi,MED,65,65,75
 Morocco,Diaz,DEL,71,54,75
-Morocco,El Aynaoui,MED,70,70,75
-Morocco,Mazraoui,DEF,56,60,75
-Morocco,Riad,DEF,57,72,75
-Morocco,Diop,DEF,50,55,75
-Morocco,Bouaddi,MED,53,53,75
-Morocco,Hakimi,DEF,61,86,75
+Morocco,El Aynaoui,MED,65,65,75
+Morocco,Mazraoui,DEF,56,75,75
+Morocco,Riad,DEF,57,66,75
+Morocco,Diop,DEF,50,71,75
+Morocco,Bouaddi,MED,61,61,75
+Morocco,Hakimi,DEF,61,67,75
 Haiti,Arcus,DEF,52,62,75
 Haiti,Ade,MED,65,65,75
 Haiti,Delcroix,DEF,66,63,75
@@ -571,16 +571,16 @@ Türkiye,Cakir,MED,45,45,75
 Türkiye,Calhanoglu,MED,61,61,75
 Türkiye,Demiral,DEF,64,59,75
 Türkiye,Celik,MED,49,49,75
-Germany,Kimmich,DEF,87,59,75
-Germany,Tah,DEF,77,54,75
+Germany,Kimmich,DEF,87,62,75
+Germany,Tah,DEF,77,57,75
 Germany,Schlotterbeck,DEF,85,85,75
-Germany,Brown,DEF,88,88,75
+Germany,Brown,DEF,88,55,75
 Germany,Pavlovic,MED,81,81,75
-Germany,Nmecha,MED,57,57,75
+Germany,Nmecha,MED,52,52,75
 Germany,Sane,DEL,80,80,75
 Germany,Musiala,MED,55,55,75
-Germany,Wirtz,MED,55,55,75
-Germany,Havertz,DEL,58,91,75
+Germany,Wirtz,MED,64,64,75
+Germany,Havertz,DEL,62,91,75
 Curaçao,Locadia,DEL,59,74,75
 Curaçao,Bacuna,MED,68,68,75
 Curaçao,Comenencia,MED,61,61,75
@@ -591,16 +591,16 @@ Curaçao,Obispo,DEF,68,58,75
 Curaçao,Bazoer,MED,71,71,75
 Curaçao,Floranus,DEF,70,59,75
 Curaçao,Room,POR,45,54,75
-Netherlands,Dumfries,DEF,60,53,75
-Netherlands,Verbruggen,POR,45,49,75
-Netherlands,van Hecke,DEF,60,69,75
-Netherlands,Gravenberch,MED,49,49,75
-Netherlands,de Jong,MED,59,59,75
-Netherlands,Summerville,DEL,70,70,75
+Netherlands,Dumfries,DEF,60,45,75
+Netherlands,Verbruggen,POR,45,76,75
+Netherlands,van Hecke,DEF,60,61,75
+Netherlands,Gravenberch,MED,58,58,75
+Netherlands,de Jong,MED,60,60,75
+Netherlands,Summerville,DEL,59,70,75
 Netherlands,Malen,DEL,57,63,75
-Netherlands,van de Ven,DEF,56,74,75
+Netherlands,van de Ven,DEF,56,63,75
 Netherlands,Reijnders,MED,68,68,75
-Netherlands,Gakpo,DEL,56,63,75
+Netherlands,Gakpo,DEL,67,63,75
 Japan,Maeda,DEL,58,59,75
 Japan,Ueda,DEL,46,60,75
 Japan,Kamada,MED,49,49,75
@@ -934,20 +934,20 @@ Türkiye,Güler,MED,61,61,75
 Türkiye,Yıldız,MED,56,56,75
 Türkiye,Aktürkoğlu,DEL,59,50,75
 Paraguay,Pitta,DEL,52,50,75
-Paraguay,D. Gómez,MED,56,56,75
-Paraguay,Galarza,MED,66,66,75
-Paraguay,G. Gómez,DEF,50,68,75
-Paraguay,Cáceres,DEF,50,52,75
-Netherlands,Brobbey,DEL,70,50,75
+Paraguay,D. Gómez,DEF,56,54,75
+Paraguay,Galarza,MED,56,56,75
+Paraguay,G. Gómez,DEF,50,54,75
+Paraguay,Cáceres,DEF,50,64,75
+Netherlands,Brobbey,DEL,59,50,75
 Sweden,Lindelöf,DEF,50,58,75
 Sweden,Karlström,MED,70,70,75
 Sweden,Gyökeres,DEL,53,50,75
-Germany,Rüdiger,DEF,50,58,75
+Germany,Rüdiger,DEF,50,59,75
 Germany,Süle,DEF,50,68,75
 Germany,Raum,DEF,50,61,75
 Germany,Gündoğan,MED,68,68,75
 Germany,Goretzka,MED,70,70,75
-Germany,Sané,MED,67,67,75
+Germany,Sané,MED,48,48,75
 Germany,Gnabry,DEL,78,50,75
 Germany,Füllkrug,DEL,80,50,75
 Ivory Coast,Kossounou,DEF,50,66,75
@@ -1131,10 +1131,10 @@ Ivory Coast,Bonny,DEL,63,50,75
 Ecuador,Galíndez,POR,50,64,75
 Ecuador,Ordóñez,DEF,50,72,75
 Ecuador,Angulo,MED,66,66,75
-Germany,Pavlović,MED,58,58,75
+Germany,Pavlović,MED,52,52,75
 Tunisia,Gharbi,MED,46,46,75
 Tunisia,Mastouri,DEL,68,50,75
-Netherlands,Aké,DEF,50,58,75
+Netherlands,Aké,DEF,50,59,75
 Japan,Sugawara,DEF,50,45,75
 Japan,Seko,DEF,50,60,75
 Sweden,Widell Zetterström,POR,50,55,75
@@ -1142,7 +1142,7 @@ Sweden,Stroud,MED,58,58,75
 Sweden,Elanga,DEL,73,50,75
 Paraguay,Velázquez,DEF,50,58,75
 Paraguay,Maidana,MED,57,57,75
-Paraguay,Ávalos,DEL,53,50,75
+Paraguay,Ávalos,DEL,56,50,75
 Australia,Herrington,DEF,50,63,75
 Australia,Behich,DEF,50,52,75
 Australia,Irvine,MED,51,51,75
@@ -1257,3 +1257,6 @@ Canada,Eustáquio,MED,87,87,75
 Brazil,Lucas Paquetá,MED,54,54,75
 Japan,Dōan,MED,49,49,75
 Japan,J. Itō,MED,56,56,75
+Germany,Undav,MED,54,54,75
+Paraguay,Canale,DEF,50,64,75
+Morocco,Díaz,MED,58,58,75
