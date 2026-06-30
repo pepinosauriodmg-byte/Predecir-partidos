@@ -241,16 +241,16 @@ def predecir_partido(equipo_A, equipo_B):
     
     top_marcadores = obtener_top_marcadores(xg_a_hibrido, xg_b_hibrido, top=10)
 
-    # === MÓDULO BINOMIAL DE PENALES (SOLO ELIMINATORIAS) ===
+# === MÓDULO BINOMIAL DE PENALES (SOLO ELIMINATORIAS) ===
     hay_alargue = False
     prob_penales_l = 0.0
     prob_penales_v = 0.0
     
-    # Si la probabilidad de empate supera el 28%, se activa la alerta de penales
-    if prob_final_e > 0.28:
+    # Bajamos el threshold a 15% para que el motor detecte el alargue más fácilmente
+    if prob_final_e > 0.15:
         hay_alargue = True
-        # Usamos la defensa de la plantilla como proxy de la habilidad de bloque/portero
-        # Usamos el ELO como proxy de jerarquía y aguante mental bajo presión
+        
+        # (El resto del código se queda exactamente igual)
         sesgo_portero = (def_a - def_b) / 100.0
         sesgo_mental = (elo_l - elo_v) / 4000.0
         

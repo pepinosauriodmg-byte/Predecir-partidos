@@ -429,7 +429,7 @@ with col_principal:
                 for h in obtener_historial_reciente(visitante): st.write(h, unsafe_allow_html=True)
         st.markdown("</div>", unsafe_allow_html=True)
 
-    # --- PESTAÑA 2: RESULTADOS RECIENTES ---
+# --- PESTAÑA 2: RESULTADOS RECIENTES ---
     with tab2:
         st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
         st.markdown(f"<h3 style='color: white; margin-bottom: 20px;'>{icon('historial', 32)} Historial de Partidos (Control Manual)</h3>", unsafe_allow_html=True)
@@ -441,10 +441,21 @@ with col_principal:
                 vis = row['visita']
                 gl = row['goles_local']
                 gv = row['goles_visita']
+                
+                # Leemos los penales usando .get() para evitar errores si la columna viene vacía
+                pl = row.get('penales_local', 0)
+                pv = row.get('penales_visita', 0)
+                
+                # Formateamos el marcador: Si hubo penales mayores a 0, ponemos los paréntesis
+                if pd.notna(pl) and pd.notna(pv) and (pl > 0 or pv > 0):
+                    marcador_texto = f"{int(gl)} ({int(pl)}) - {int(gv)} ({int(pv)})"
+                else:
+                    marcador_texto = f"{int(gl)} - {int(gv)}"
+
                 st.markdown(f"""
                 <div class='match-row'>
                     <div class='team-box'>{obtener_bandera(loc)} {loc}</div>
-                    <div class='score-box'>{gl} - {gv}</div>
+                    <div class='score-box'>{marcador_texto}</div>
                     <div class='team-box' style='justify-content: flex-end;'>{vis} {obtener_bandera(vis)}</div>
                 </div>
                 """, unsafe_allow_html=True)
