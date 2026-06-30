@@ -528,21 +528,14 @@ with col_principal:
     with tab4:
         st.markdown(f"<h3 style='color: white; margin-bottom: 10px;'>{icon('trophy', 32)} Cuadro de Eliminatorias</h3>", unsafe_allow_html=True)
         
-        # 1. ESTILOS CSS DEL BRACKET
         st.markdown("""
         <style>
             .bracket-container { display: flex; justify-content: space-between; align-items: stretch; width: 100%; min-height: 750px; padding: 10px 0; font-family: Tahoma, sans-serif; }
             .bracket-col { display: flex; flex-direction: column; justify-content: space-around; width: 22%; }
             .bracket-center { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 10%; }
-            
-            .b-match {
-                background: rgba(0, 0, 0, 0.45); border: 1px solid rgba(255, 255, 255, 0.15);
-                border-radius: 6px; padding: 4px 8px; margin: 4px 0; 
-                box-shadow: inset 0 2px 5px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.3);
-            }
+            .b-match { background: rgba(0, 0, 0, 0.45); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 6px; padding: 4px 8px; margin: 4px 0; box-shadow: inset 0 2px 5px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.3); }
             .b-team { display: flex; justify-content: space-between; align-items: center; margin: 4px 0; font-size: 0.95rem; }
             .b-score { background: linear-gradient(to bottom, #2098d3, #0570b0); padding: 1px 8px; border-radius: 4px; border: 1px solid #002244; font-weight: bold; font-size: 0.85rem; box-shadow: inset 0 1px 1px rgba(255,255,255,0.4); }
-            
             .win-text { color: #ffffff; font-weight: bold; text-shadow: 0 0 5px rgba(255,255,255,0.3); }
             .lose-text { color: #888888; }
             .pend-text { color: #cccccc; }
@@ -551,7 +544,6 @@ with col_principal:
         </style>
         """, unsafe_allow_html=True)
 
-        # 2. GENERADOR DE CAJAS HTML
         def render_caja(eq1, eq2, g1=0, g2=0, estado="Pendiente"):
             b1, b2 = obtener_bandera(eq1) if eq1 != "TBD" else "❔", obtener_bandera(eq2) if eq2 != "TBD" else "❔"
             
@@ -565,76 +557,34 @@ with col_principal:
                 score_class = "score-pend"
                 score_text = "vs"
 
-            return f"""
-            <div class='b-match'>
-                <div class='b-team'><span class='{c1}'>{b1} {eq1}</span> <span class='b-score {score_class}'>{score_text}</span></div>
-                <div class='b-team'><span class='{c2}'>{b2} {eq2}</span></div>
-            </div>
-            """
+            # SIN ESPACIOS AL INICIO PARA EVITAR EL ERROR DE MARKDOWN
+            return f"<div class='b-match'><div class='b-team'><span class='{c1}'>{b1} {eq1}</span> <span class='b-score {score_class}'>{score_text}</span></div><div class='b-team'><span class='{c2}'>{b2} {eq2}</span></div></div>"
 
-        # 3. DATOS DEL TORNEO
-        # DIECISEISAVOS (R32) - Izquierda
         r32_izq = [
-            render_caja('Germany', 'Paraguay'),
-            render_caja('France', 'Sweden'),
-            render_caja('South Africa', 'Canada', 0, 1, 'Finalizado'),
-            render_caja('Netherlands', 'Morocco'),
-            render_caja('Portugal', 'Croatia'),
-            render_caja('Spain', 'Austria'),
-            render_caja('USA', 'Bosnia and Herzegovina'),
-            render_caja('Belgium', 'Senegal')
+            render_caja('Germany', 'Paraguay'), render_caja('France', 'Sweden'),
+            render_caja('South Africa', 'Canada', 0, 1, 'Finalizado'), render_caja('Netherlands', 'Morocco'),
+            render_caja('Portugal', 'Croatia'), render_caja('Spain', 'Austria'),
+            render_caja('USA', 'Bosnia and Herzegovina'), render_caja('Belgium', 'Senegal')
         ]
         
-        # DIECISEISAVOS (R32) - Derecha
         r32_der = [
-            render_caja('Brazil', 'Japan', 2, 1, 'Finalizado'),
-            render_caja('Ivory Coast', 'Norway'),
-            render_caja('Mexico', 'Ecuador'),
-            render_caja('England', 'DR Congo'),
-            render_caja('Argentina', 'Cabo Verde'),
-            render_caja('Australia', 'Egypt'),
-            render_caja('Switzerland', 'Algeria'),
-            render_caja('Colombia', 'Ghana')
+            render_caja('Brazil', 'Japan', 2, 1, 'Finalizado'), render_caja('Ivory Coast', 'Norway'),
+            render_caja('Mexico', 'Ecuador'), render_caja('England', 'DR Congo'),
+            render_caja('Argentina', 'Cabo Verde'), render_caja('Australia', 'Egypt'),
+            render_caja('Switzerland', 'Algeria'), render_caja('Colombia', 'Ghana')
         ]
 
-        # OCTAVOS (R16) - Cajas vacías esperando a los ganadores
         r16_izq = [
-            render_caja('TBD', 'TBD'),
-            render_caja('Canada', 'TBD'), # Canadá ya avanzó a esta llave
-            render_caja('TBD', 'TBD'),
-            render_caja('TBD', 'TBD')
+            render_caja('TBD', 'TBD'), render_caja('Canada', 'TBD'), 
+            render_caja('TBD', 'TBD'), render_caja('TBD', 'TBD')
         ]
         
         r16_der = [
-            render_caja('Brazil', 'TBD'), # Brasil ya avanzó a esta llave
-            render_caja('TBD', 'TBD'),
-            render_caja('TBD', 'TBD'),
-            render_caja('TBD', 'TBD')
+            render_caja('Brazil', 'TBD'), render_caja('TBD', 'TBD'), 
+            render_caja('TBD', 'TBD'), render_caja('TBD', 'TBD')
         ]
 
-        # 4. RENDERIZADO DEL ESQUELETO FLEXBOX
-        html_bracket = f"""
-        <div class="bracket-container">
-            <div class="bracket-col">
-                {''.join(r32_izq)}
-            </div>
-            
-            <div class="bracket-col" style="padding: 40px 0;">
-                {''.join(r16_izq)}
-            </div>
-            
-            <div class="bracket-center">
-                <img src="https://img.icons8.com/3d-fluency/96/trophy.png" width="80">
-            </div>
-            
-            <div class="bracket-col" style="padding: 40px 0;">
-                {''.join(r16_der)}
-            </div>
-            
-            <div class="bracket-col">
-                {''.join(r32_der)}
-            </div>
-        </div>
-        """
+        # CONTENEDOR FLEXBOX COMPRIMIDO
+        html_bracket = f"<div class='bracket-container'><div class='bracket-col'>{''.join(r32_izq)}</div><div class='bracket-col' style='padding: 40px 0;'>{''.join(r16_izq)}</div><div class='bracket-center'><img src='https://img.icons8.com/3d-fluency/96/trophy.png' width='80'></div><div class='bracket-col' style='padding: 40px 0;'>{''.join(r16_der)}</div><div class='bracket-col'>{''.join(r32_der)}</div></div>"
         
         st.markdown(html_bracket, unsafe_allow_html=True)
