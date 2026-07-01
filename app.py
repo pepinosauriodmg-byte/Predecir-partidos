@@ -610,34 +610,34 @@ with col_principal:
 # ACTUALIZACIÓN DE DIECISEISAVOS Y OCTAVOS (Izquierda)
         r32_izq = [
             render_caja('Germany', 'Paraguay', 1, 1, 3, 4, 'Finalizado'), # ¡Actualizado!
-            render_caja('France', 'Sweden'),
-            render_caja('South Africa', 'Canada', 0, 1, None, None, 'Finalizado'), 
+            render_caja('France', 'Sweden', 3, 0, None, None, 'Finalizado'), # ¡Actualizado!
+            render_caja('South Africa', 'Canada', 0, 1, None, None, 'Finalizado'),
             render_caja('Netherlands', 'Morocco', 1, 1, 2, 3, 'Finalizado'), # ¡Actualizado!
             render_caja('Portugal', 'Croatia'), render_caja('Spain', 'Austria'),
             render_caja('USA', 'Bosnia and Herzegovina'), render_caja('Belgium', 'Senegal')
         ]
-        
+
         # 16vos Derecha (R32)
         r32_der = [
-            render_caja('Brazil', 'Japan', 2, 1, 'Finalizado'), render_caja('Ivory Coast', 'Norway'),
-            render_caja('Mexico', 'Ecuador'), render_caja('England', 'DR Congo'),
+            render_caja('Brazil', 'Japan', 2, 1, None, None, 'Finalizado'), render_caja('Ivory Coast', 'Norway', 1, 2, None, None, 'Finalizado'), # ¡Actualizados!
+            render_caja('Mexico', 'Ecuador', 2, 0, None, None, 'Finalizado'), render_caja('England', 'DR Congo'), # ¡Actualizado!
             render_caja('Argentina', 'Cabo Verde'), render_caja('Australia', 'Egypt'),
             render_caja('Switzerland', 'Algeria'), render_caja('Colombia', 'Ghana')
         ]
 
         # Octavos Izquierda (R16)
         r16_izq = [
-            render_caja('Paraguay', 'TBD', etiqueta="Octavos 1"), # Paraguay avanza
+            render_caja('Paraguay', 'France', etiqueta="Octavos 1"), # ¡Francia avanza!
             render_caja('Canada', 'Morocco', etiqueta="Octavos 2"), # Se arma el Canadá vs Marruecos
-            render_caja('TBD', 'TBD', etiqueta="Octavos 3"), 
+            render_caja('TBD', 'TBD', etiqueta="Octavos 3"),
             render_caja('TBD', 'TBD', etiqueta="Octavos 4")
         ]
-        
+
         # Octavos Derecha (R16)
         r16_der = [
-            render_caja('Brazil', 'TBD', etiqueta="Octavos 5"), 
-            render_caja('TBD', 'TBD', etiqueta="Octavos 6"), 
-            render_caja('TBD', 'TBD', etiqueta="Octavos 7"), 
+            render_caja('Brazil', 'Norway', etiqueta="Octavos 5"), # ¡Noruega avanza y va contra Brasil!
+            render_caja('Mexico', 'TBD', etiqueta="Octavos 6"), # ¡México avanza a octavos y espera rival!
+            render_caja('TBD', 'TBD', etiqueta="Octavos 7"),
             render_caja('TBD', 'TBD', etiqueta="Octavos 8")
         ]
 
