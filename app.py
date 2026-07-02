@@ -472,9 +472,9 @@ with col_principal:
         st.markdown("<p style='color: #aedef7; font-size: 0.9rem; margin-bottom: 20px;'>Análisis avanzado y contexto histórico de los contendientes.</p>", unsafe_allow_html=True)
         
         partidos_manana = [
-            ('England', 'DR Congo'),
-            ('Belgium', 'Senegal'),
-            ('USA', 'Bosnia and Herzegovina')
+            ('Ivory Coast', 'Norway'),
+            ('France', 'Sweden'),
+            ('Mexico', 'Ecuador')
         ]
         
         # ELIMINAMOS LAS FUNCIONES DUPLICADAS AQUÍ ADENTRO. AHORA USA LAS DE ARRIBA.
@@ -614,10 +614,10 @@ with col_principal:
             render_caja('South Africa', 'Canada', 0, 1, None, None, 'Finalizado'),
             render_caja('Netherlands', 'Morocco', 1, 1, 2, 3, 'Finalizado'),
             render_caja('Portugal', 'Croatia'), render_caja('Spain', 'Austria'),
-            render_caja('USA', 'Bosnia and Herzegovina'), render_caja('Belgium', 'Senegal', 3, 2, None, None, 'Finalizado')
+            render_caja('USA', 'Bosnia and Herzegovina', 2, 0, None, None, 'Finalizado'), render_caja('Belgium', 'Senegal', 3, 2, None, None, 'Finalizado') # ¡USA Avanza!
         ]
 
-        # 16vos Derecha (R32)
+        # 16vos Derecha (R32) (Ovo ostaje isto, ali ga ostavi radi poravnanja)
         r32_der = [
             render_caja('Brazil', 'Japan', 2, 1, None, None, 'Finalizado'), render_caja('Ivory Coast', 'Norway', 1, 2, None, None, 'Finalizado'),
             render_caja('Mexico', 'Ecuador', 2, 0, None, None, 'Finalizado'), render_caja('England', 'DR Congo', 2, 1, None, None, 'Finalizado'),
@@ -630,7 +630,7 @@ with col_principal:
             render_caja('Paraguay', 'France', etiqueta="Octavos 1"),
             render_caja('Canada', 'Morocco', etiqueta="Octavos 2"),
             render_caja('TBD', 'TBD', etiqueta="Octavos 3"),
-            render_caja('TBD', 'Belgium', etiqueta="Octavos 4")
+            render_caja('USA', 'Belgium', etiqueta="Octavos 4") # ¡Se armó el USA vs Belgium!
         ]
 
         # Octavos Derecha (R16)
