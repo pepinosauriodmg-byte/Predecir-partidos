@@ -43,9 +43,9 @@ Barbados,Reserva POR,POR,60,60,60
 Barbados,E. Boyce,DEF,56,71,73
 Barbados,J. Forte,MED,63,28,66
 Barbados,J. Forte,DEL,61,28,70
-Belgium,T. Courtois,POR,15,71,90
+Belgium,T. Courtois,POR,15,54,90
 Belgium,J. Vertonghen,DEF,63,88,79
-Belgium,K. De Bruyne,DEL,78,46,78
+Belgium,K. De Bruyne,MED,53,53,78
 Belgium,E. Hazard,DEL,83,35,66
 Belize,Reserva POR,POR,60,60,60
 Belize,Reserva DEF,DEF,60,60,60
@@ -321,8 +321,8 @@ Scotland,R. Fraser,MED,73,46,61
 Scotland,S. Naismith,DEL,73,49,79
 Senegal,É. Mendy,POR,15,45,86
 Senegal,K. Koulibaly,DEF,28,52,87
-Senegal,S. Mané,DEL,77,44,77
-Senegal,S. Mané,DEL,77,44,76
+Senegal,S. Mané,DEL,60,44,77
+Senegal,S. Mané,DEL,60,44,76
 Serbia,M. Dmitrović,POR,15,81,81
 Serbia,N. Vidić,DEF,39,84,83
 Serbia,N. Matić,MED,71,83,83
@@ -671,15 +671,15 @@ Cabo Verde,Lopes,DEF,58,61,75
 Cabo Verde,Diney,DEF,63,63,75
 Cabo Verde,Moreira,DEF,45,57,75
 Cabo Verde,Vozinha,POR,85,63,75
-Belgium,Meunier,DEF,52,45,75
+Belgium,Meunier,SUP,52,45,75
 Belgium,Ngoy,DEF,59,49,75
-Belgium,Mechele,DEF,61,73,75
-Belgium,Onana,MED,51,51,75
-Belgium,Castagne,DEF,53,72,75
-Belgium,Tielemans,MED,70,70,75
-Belgium,Trossard,MED,90,90,75
-Belgium,Doku,DEL,74,45,75
-Belgium,De Ketelaere,DEL,76,54,75
+Belgium,Mechele,DEF,61,60,75
+Belgium,Onana,SUP,51,51,75
+Belgium,Castagne,DEF,53,70,75
+Belgium,Tielemans,MED,76,76,75
+Belgium,Trossard,DEL,68,90,75
+Belgium,Doku,MED,61,61,75
+Belgium,De Ketelaere,DEL,55,54,75
 Egypt,Marmoush,DEL,63,48,75
 Egypt,Ziko,MED,55,55,75
 Egypt,Ashour,DEL,58,62,75
@@ -741,13 +741,13 @@ France,Hernandez,DEF,55,55,75
 France,Rabiot,MED,64,64,75
 France,Doue,MED,52,52,75
 Senegal,Mane,DEL,58,58,75
-Senegal,Jackson,DEL,60,53,75
-Senegal,Sarr,DEL,87,47,75
+Senegal,Jackson,SUP,60,53,75
+Senegal,Sarr,DEL,70,47,75
 Senegal,Gueye,MED,77,77,75
-Senegal,Diouf,DEF,48,59,75
+Senegal,Diouf,SUP,48,59,75
 Senegal,Niakhate,DEF,48,48,75
-Senegal,Camara,MED,83,83,75
-Senegal,Diatta,DEF,61,82,75
+Senegal,Camara,SUP,83,83,75
+Senegal,Diatta,DEF,61,52,75
 Iraq,Ali,DEF,56,54,75
 Iraq,Tahseen,DEF,56,52,75
 Iraq,Hasan,MED,45,45,75
@@ -816,27 +816,27 @@ Portugal,Mendes,DEF,54,45,75
 Portugal,Vitinha,MED,56,56,75
 Portugal,Fernandes,MED,49,49,75
 Portugal,Neto,MED,46,46,75
-DR Congo,Wissa,DEL,84,68,75
-DR Congo,Kayembe,MED,50,50,75
-DR Congo,Moutoussamy,MED,65,65,75
-DR Congo,Masuaku,DEF,62,68,75
+DR Congo,Wissa,DEL,55,68,75
+DR Congo,Kayembe,SUP,50,50,75
+DR Congo,Moutoussamy,MED,51,51,75
+DR Congo,Masuaku,DEF,62,46,75
 DR Congo,Kapuadi,DEF,57,52,75
 DR Congo,Bakambu,DEL,60,55,75
-DR Congo,Mukau,MED,55,55,75
-DR Congo,Tuanzebe,DEF,57,63,75
-DR Congo,Mbemba,DEF,55,69,75
-DR Congo,Wan-Bissaka,DEF,65,71,75
+DR Congo,Mukau,MED,49,49,75
+DR Congo,Tuanzebe,DEF,57,52,75
+DR Congo,Mbemba,DEF,55,60,75
+DR Congo,Wan-Bissaka,DEF,65,51,75
 DR Congo,Mpasi,POR,45,61,75
 England,James,DEF,59,58,75
-England,Anderson,MED,73,73,75
-England,Madueke,DEL,52,75,75
-England,Pickford,POR,56,71,75
-England,Stones,DEF,60,60,75
-England,Konsa,DEF,59,72,75
-England,Bellingham,MED,88,88,75
-England,Rice,MED,51,51,75
-England,O'Reilly,DEF,63,75,75
-England,Gordon,DEL,53,66,75
+England,Anderson,MED,63,63,75
+England,Madueke,MED,60,60,75
+England,Pickford,POR,56,52,75
+England,Stones,SUP,60,60,75
+England,Konsa,DEF,59,54,75
+England,Bellingham,MED,56,56,75
+England,Rice,MED,64,64,75
+England,O'Reilly,DEF,63,51,75
+England,Gordon,SUP,53,66,75
 Croatia,Pasalic,MED,56,56,75
 Croatia,Perisic,DEL,60,60,75
 Croatia,Musa,DEL,54,68,75
@@ -981,10 +981,10 @@ Spain,Baena,DEL,64,50,75
 Saudi Arabia,Alawjami,DEF,50,65,75
 Saudi Arabia,N. Al Dawsari,MED,47,47,75
 Saudi Arabia,S. Al-Dawsari,DEL,45,50,75
-Belgium,De Cuyper,DEF,50,78,75
-Belgium,Raskin,MED,52,52,75
+Belgium,De Cuyper,DEF,50,46,75
+Belgium,Raskin,SUP,52,52,75
 Belgium,Saelemaekers,MED,46,46,75
-Belgium,Lukaku,DEL,46,50,75
+Belgium,Lukaku,SUP,46,50,75
 Iran,Hardani,DEF,50,50,75
 Iran,Kanaanizadegan,DEF,50,54,75
 Iran,Hajsafi,MED,52,52,75
@@ -1025,9 +1025,9 @@ Iraq,Iqbal,MED,67,67,75
 Norway,Ødegaard,MED,56,56,75
 Norway,Sørloth,DEL,57,50,75
 Norway,Nusa,DEL,63,50,75
-Senegal,Niakhaté,DEF,50,75,75
-Senegal,I. Gueye,MED,77,77,75
-Senegal,P. Gueye,MED,77,77,75
+Senegal,Niakhaté,DEF,50,57,75
+Senegal,I. Gueye,MED,56,56,75
+Senegal,P. Gueye,MED,54,54,75
 Jordan,Abu Dahab,DEF,50,45,75
 Jordan,Al-Mardi,MED,54,54,75
 Algeria,Aït-Nouri,DEF,50,52,75
@@ -1037,8 +1037,8 @@ Portugal,Félix,DEL,49,50,75
 Uzbekistan,Nematov,POR,50,45,75
 Uzbekistan,Hamrobekov,MED,45,45,75
 Uzbekistan,Ganiev,MED,45,45,75
-England,Guéhi,DEF,50,77,75
-England,Spence,DEF,50,60,75
+England,Guéhi,DEF,50,60,75
+England,Spence,DEF,50,45,75
 Ghana,Asare,POR,50,45,75
 Ghana,Sibo,MED,55,55,75
 Panama,Córdoba,DEF,50,53,75
@@ -1180,11 +1180,11 @@ France,Lacroix,DEF,50,65,75
 France,Hernández,DEF,50,60,75
 France,Tchouaméni,MED,69,69,75
 France,Doué,SUP,75,50,75
-Senegal,Diaw,POR,50,77,75
+Senegal,Diaw,POR,50,45,75
 Senegal,Seck,DEF,50,77,75
-Senegal,Jakobs,DEF,50,74,75
-Senegal,Diarra,MED,83,83,75
-Senegal,Mbaye,DEL,75,50,75
+Senegal,Jakobs,DEF,50,55,75
+Senegal,Diarra,MED,70,70,75
+Senegal,Mbaye,SUP,75,50,75
 Iraq,Putros,DEF,50,66,75
 Iraq,Sulaka,DEF,50,52,75
 Iraq,Al-Hamadi,DEL,68,50,75
@@ -1215,17 +1215,17 @@ Egypt,Saber,MED,65,65,75
 Egypt,Trézéguet,DEL,60,50,75
 Iran,Ghorbani,MED,54,54,75
 New Zealand,Bindon,DEF,50,54,75
-Belgium,Theate,DEF,50,72,75
-Belgium,Vanaken,MED,75,75,75
+Belgium,Theate,DEF,50,63,75
+Belgium,Vanaken,MED,57,57,75
 Panama,Escobar,DEF,50,66,75
 Panama,Gutiérrez,MED,48,48,75
 Panama,J.L. Rodríguez,DEL,49,50,75
 Panama,T. Rodríguez,DEL,50,50,75
 England,Quansah,DEF,50,56,75
-England,Saka,MED,59,59,75
+England,Saka,SUP,59,59,75
 England,Rogers,MED,65,65,75
-England,Rashford,DEL,54,50,75
-England,Harry Kane,DEL,70,50,75
+England,Rashford,DEL,53,50,75
+England,Harry Kane,DEL,76,50,75
 Croatia,Vlašić,MED,73,73,75
 Croatia,Sučić,MED,77,77,75
 Croatia,Budimir,DEL,57,50,75
@@ -1233,9 +1233,9 @@ Ghana,Luckassen,DEF,50,67,75
 Colombia,Machado,DEF,50,53,75
 Colombia,J. Arias,MED,63,63,75
 Colombia,Córdoba,DEL,52,50,75
-DR Congo,Cipenga,MED,52,52,75
-DR Congo,Sadiki,MED,76,76,75
-DR Congo,Mbuku,MED,65,65,75
+DR Congo,Cipenga,DEL,58,52,75
+DR Congo,Sadiki,MED,49,49,75
+DR Congo,Mbuku,DEL,50,65,75
 Uzbekistan,Urozov,DEF,50,55,75
 Uzbekistan,Alijonov,DEF,50,51,75
 Uzbekistan,Khamdamov,DEL,58,50,75
@@ -1288,3 +1288,14 @@ Ecuador,K. Rodríguez,SUP,50,50,75
 Ecuador,J. Caicedo,SUP,50,50,75
 Ecuador,Á. Preciado,SUP,50,50,75
 Ecuador,Y. Medina,SUP,50,50,75
+England,Eze,SUP,50,50,75
+DR Congo,Bongonda,SUP,50,50,75
+DR Congo,Elia,SUP,50,50,75
+DR Congo,Mayele,SUP,50,50,75
+DR Congo,E. Kayembe,SUP,50,50,75
+Belgium,Lukébakio,SUP,50,50,75
+Belgium,Moreira,SUP,50,50,75
+Senegal,Ciss,DEF,50,60,75
+Senegal,Ndiaye,DEL,54,50,75
+Senegal,P.M. Sarr,SUP,50,50,75
+Senegal,Sapoko Ndiaye,SUP,50,50,75
