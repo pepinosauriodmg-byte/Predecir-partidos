@@ -474,7 +474,7 @@ with col_principal:
         partidos_manana = [
             ('Spain', 'Austria'),
             ('Portugal', 'Croatia'),
-            ('Switzerland', 'Argelia')
+            ('Switzerland', 'Algeria')
         ]
         
         # ELIMINAMOS LAS FUNCIONES DUPLICADAS AQUÍ ADENTRO. AHORA USA LAS DE ARRIBA.
