@@ -472,9 +472,9 @@ with col_principal:
         st.markdown("<p style='color: #aedef7; font-size: 0.9rem; margin-bottom: 20px;'>Análisis avanzado y contexto histórico de los contendientes.</p>", unsafe_allow_html=True)
         
         partidos_manana = [
-            ('Spain', 'Austria'),
-            ('Portugal', 'Croatia'),
-            ('Switzerland', 'Algeria')
+            ('Ivory Coast', 'Norway'),
+            ('France', 'Sweden'),
+            ('Mexico', 'Ecuador')
         ]
         
         # ELIMINAMOS LAS FUNCIONES DUPLICADAS AQUÍ ADENTRO. AHORA USA LAS DE ARRIBA.
@@ -613,31 +613,37 @@ with col_principal:
             render_caja('France', 'Sweden', 3, 0, None, None, 'Finalizado'),
             render_caja('South Africa', 'Canada', 0, 1, None, None, 'Finalizado'),
             render_caja('Netherlands', 'Morocco', 1, 1, 2, 3, 'Finalizado'),
-            render_caja('Portugal', 'Croatia'), render_caja('Spain', 'Austria'),
-            render_caja('USA', 'Bosnia and Herzegovina', 2, 0, None, None, 'Finalizado'), render_caja('Belgium', 'Senegal', 3, 2, None, None, 'Finalizado') # ¡USA Avanza!
+            render_caja('Portugal', 'Croatia', 2, 1, None, None, 'Finalizado'), # ¡Actualizado!
+            render_caja('Spain', 'Austria', 3, 0, None, None, 'Finalizado'),    # ¡Actualizado!
+            render_caja('USA', 'Bosnia and Herzegovina', 2, 0, None, None, 'Finalizado'),
+            render_caja('Belgium', 'Senegal', 3, 2, None, None, 'Finalizado')
         ]
 
-        # 16vos Derecha (R32) (Ovo ostaje isto, ali ga ostavi radi poravnanja)
+        # 16vos Derecha (R32)
         r32_der = [
-            render_caja('Brazil', 'Japan', 2, 1, None, None, 'Finalizado'), render_caja('Ivory Coast', 'Norway', 1, 2, None, None, 'Finalizado'),
-            render_caja('Mexico', 'Ecuador', 2, 0, None, None, 'Finalizado'), render_caja('England', 'DR Congo', 2, 1, None, None, 'Finalizado'),
-            render_caja('Argentina', 'Cabo Verde'), render_caja('Australia', 'Egypt'),
-            render_caja('Switzerland', 'Algeria'), render_caja('Colombia', 'Ghana')
+            render_caja('Brazil', 'Japan', 2, 1, None, None, 'Finalizado'),
+            render_caja('Ivory Coast', 'Norway', 1, 2, None, None, 'Finalizado'),
+            render_caja('Mexico', 'Ecuador', 2, 0, None, None, 'Finalizado'),
+            render_caja('England', 'DR Congo', 2, 1, None, None, 'Finalizado'),
+            render_caja('Argentina', 'Cabo Verde'),
+            render_caja('Australia', 'Egypt'),
+            render_caja('Switzerland', 'Algeria', 2, 0, None, None, 'Finalizado'), # ¡Actualizado!
+            render_caja('Colombia', 'Ghana')
         ]
 
         # Octavos Izquierda (R16)
         r16_izq = [
             render_caja('Paraguay', 'France', etiqueta="Octavos 1"),
             render_caja('Canada', 'Morocco', etiqueta="Octavos 2"),
-            render_caja('TBD', 'TBD', etiqueta="Octavos 3"),
-            render_caja('USA', 'Belgium', etiqueta="Octavos 4") # ¡Se armó el USA vs Belgium!
+            render_caja('Portugal', 'Spain', etiqueta="Octavos 3"), # ¡El derbi ibérico!
+            render_caja('USA', 'Belgium', etiqueta="Octavos 4")
         ]
 
         # Octavos Derecha (R16)
         r16_der = [
             render_caja('Brazil', 'Norway', etiqueta="Octavos 5"),
             render_caja('Mexico', 'England', etiqueta="Octavos 6"),
-            render_caja('TBD', 'TBD', etiqueta="Octavos 7"),
+            render_caja('Switzerland', 'TBD', etiqueta="Octavos 7"), # ¡Suiza avanza y espera rival!
             render_caja('TBD', 'TBD', etiqueta="Octavos 8")
         ]
 
