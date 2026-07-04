@@ -472,9 +472,9 @@ with col_principal:
         st.markdown("<p style='color: #aedef7; font-size: 0.9rem; margin-bottom: 20px;'>Análisis avanzado y contexto histórico de los contendientes.</p>", unsafe_allow_html=True)
         
         partidos_manana = [
-            ('Australia', 'Egypt'),
-            ('Argentina', 'Cabo Verde'),
-            ('Colombia', 'Ghana')
+            ('Ivory Coast', 'Norway'),
+            ('France', 'Sweden'),
+            ('Mexico', 'Ecuador')
         ]
         
         # ELIMINAMOS LAS FUNCIONES DUPLICADAS AQUÍ ADENTRO. AHORA USA LAS DE ARRIBA.
@@ -625,10 +625,10 @@ with col_principal:
             render_caja('Ivory Coast', 'Norway', 1, 2, None, None, 'Finalizado'),
             render_caja('Mexico', 'Ecuador', 2, 0, None, None, 'Finalizado'),
             render_caja('England', 'DR Congo', 2, 1, None, None, 'Finalizado'),
-            render_caja('Argentina', 'Cabo Verde'),
-            render_caja('Australia', 'Egypt'),
-            render_caja('Switzerland', 'Algeria', 2, 0, None, None, 'Finalizado'), # ¡Actualizado!
-            render_caja('Colombia', 'Ghana')
+            render_caja('Argentina', 'Cabo Verde', 3, 2, None, None, 'Finalizado'), # ¡Actualizado!
+            render_caja('Australia', 'Egypt', 1, 1, 2, 4, 'Finalizado'),            # ¡Actualizado con penales!
+            render_caja('Switzerland', 'Algeria', 2, 0, None, None, 'Finalizado'),
+            render_caja('Colombia', 'Ghana', 1, 0, None, None, 'Finalizado')        # ¡Actualizado!
         ]
 
         # Octavos Izquierda (R16)
@@ -643,8 +643,8 @@ with col_principal:
         r16_der = [
             render_caja('Brazil', 'Norway', etiqueta="Octavos 5"),
             render_caja('Mexico', 'England', etiqueta="Octavos 6"),
-            render_caja('Switzerland', 'TBD', etiqueta="Octavos 7"), # ¡Suiza avanza y espera rival!
-            render_caja('TBD', 'TBD', etiqueta="Octavos 8")
+            render_caja('Argentina', 'Egypt', etiqueta="Octavos 7"),   # ¡Lista la llave!
+            render_caja('Switzerland', 'Colombia', etiqueta="Octavos 8") # ¡Lista la llave!
         ]
 
         # Cuartos Izquierda (QF)
