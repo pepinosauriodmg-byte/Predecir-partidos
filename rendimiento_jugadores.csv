@@ -230,7 +230,7 @@ Mauritania,P. Ba,DEL,66,26,69
 Mexico,G. Ochoa,POR,63,63,81
 Mexico,M. Layún,DEF,72,74,73
 Mexico,J. Corona,MED,68,77,60
-Mexico,R. Jiménez,DEL,67,49,83
+Mexico,R. Jiménez,DEL,74,49,83
 Montserrat,Reserva POR,POR,60,60,60
 Montserrat,D. Daniels,DEF,28,67,70
 Montserrat,A. Dyer,MED,59,58,72
@@ -411,16 +411,16 @@ Zambia,K. Mweene,POR,15,67,67
 Zambia,S. Sunzu,DEF,38,73,82
 Zambia,E. Mwepu,MED,75,72,78
 Zambia,P. Daka,DEL,78,24,70
-Mexico,Rangel,POR,68,78,75
-Mexico,Montes,DEF,56,71,75
-Mexico,Vásquez,DEF,54,70,75
-Mexico,Lira,MED,64,64,75
-Mexico,Gallardo,DEF,53,60,75
+Mexico,Rangel,POR,68,45,75
+Mexico,Montes,DEF,56,61,75
+Mexico,Vásquez,DEF,54,68,75
+Mexico,Lira,MED,71,71,75
+Mexico,Gallardo,DEF,53,68,75
 Mexico,Gutiérrez,MED,53,53,75
-Mexico,Alvarado,DEL,71,62,75
-Mexico,Quiñones,DEL,75,56,75
+Mexico,Alvarado,DEL,68,62,75
+Mexico,Quiñones,DEL,78,56,75
 Mexico,Reyes,DEF,66,67,75
-Mexico,Fidalgo,MED,74,74,75
+Mexico,Fidalgo,MED,71,71,75
 South Africa,Williams,POR,51,78,75
 South Africa,Mokoena,MED,55,55,75
 South Africa,Sithole,MED,63,63,75
@@ -820,15 +820,15 @@ DR Congo,Mbemba,DEF,55,60,75
 DR Congo,Wan-Bissaka,DEF,65,51,75
 DR Congo,Mpasi,POR,45,61,75
 England,James,DEF,59,58,75
-England,Anderson,MED,63,63,75
+England,Anderson,MED,69,69,75
 England,Madueke,MED,60,60,75
-England,Pickford,POR,56,52,75
-England,Stones,DEF,60,60,75
-England,Konsa,DEF,59,54,75
-England,Bellingham,MED,56,56,75
-England,Rice,MED,64,64,75
-England,O'Reilly,DEF,63,51,75
-England,Gordon,DEL,53,66,75
+England,Pickford,POR,56,76,75
+England,Stones,DEF,60,65,75
+England,Konsa,DEF,59,69,75
+England,Bellingham,MED,82,82,75
+England,Rice,MED,65,65,75
+England,O'Reilly,DEF,63,64,75
+England,Gordon,DEL,76,66,75
 Croatia,Pasalic,MED,56,56,75
 Croatia,Perisic,DEL,60,60,75
 Croatia,Musa,DEL,54,68,75
@@ -900,7 +900,7 @@ Canada,Ahmed,MED,71,71,75
 Canada,Larin,DEL,64,84,75
 Mexico,Sánchez,DEF,56,74,75
 Mexico,Álvarez,MED,64,64,75
-Mexico,Romo,MED,69,69,75
+Mexico,Romo,MED,64,64,75
 USA,Pepi,DEL,61,61,75
 Australia,Velupillay,MED,60,60,75
 Australia,Leckie,MED,56,56,75
@@ -1029,8 +1029,8 @@ Portugal,Félix,DEL,49,50,75
 Uzbekistan,Nematov,POR,50,45,75
 Uzbekistan,Hamrobekov,MED,45,45,75
 Uzbekistan,Ganiev,MED,45,45,75
-England,Guéhi,DEF,50,60,75
-England,Spence,DEF,50,45,75
+England,Guéhi,DEF,50,66,75
+England,Spence,DEF,50,65,75
 Ghana,Asare,POR,50,45,75
 Ghana,Sibo,MED,48,48,75
 Panama,Córdoba,DEF,50,53,75
@@ -1091,7 +1091,7 @@ Czechia,Červ,MED,60,60,75
 Czechia,Višinský,MED,58,58,75
 Czechia,Hložek,DEL,60,50,75
 Czechia,Šulc,DEL,45,50,75
-Mexico,Mora,MED,68,68,75
+Mexico,Mora,MED,61,61,75
 Mexico,Chávez,MED,75,75,75
 Mexico,Martínez,DEL,64,50,75
 South Africa,Mofokeng,MED,52,52,75
@@ -1193,11 +1193,11 @@ Panama,Escobar,DEF,50,66,75
 Panama,Gutiérrez,MED,48,48,75
 Panama,J.L. Rodríguez,DEL,49,50,75
 Panama,T. Rodríguez,DEL,50,50,75
-England,Quansah,DEF,50,56,75
-England,Saka,MED,59,59,75
-England,Rogers,MED,65,65,75
+England,Quansah,DEF,50,58,75
+England,Saka,DEL,66,59,75
+England,Rogers,MED,67,67,75
 England,Rashford,DEL,53,50,75
-England,Harry Kane,DEL,76,50,75
+England,Harry Kane,DEL,73,50,75
 Croatia,Vlašić,MED,57,57,75
 Croatia,Sučić,MED,56,56,75
 Croatia,Budimir,DEL,60,50,75
@@ -1249,12 +1249,12 @@ Sweden,Svanberg,MED,50,50,75
 Sweden,Zeneli,MED,50,50,75
 Sweden,Nilsson,DEL,50,50,75
 Sweden,Ali,MED,50,50,75
-Mexico,J. Sánchez,DEF,50,63,75
-Mexico,S. Giménez,DEL,50,50,75
+Mexico,J. Sánchez,DEF,50,59,75
+Mexico,S. Giménez,DEL,66,50,75
 Mexico,I. Reyes,DEF,50,50,75
 Mexico,O. Pineda,MED,50,50,75
 Mexico,O. Vargas,MED,50,50,75
-Mexico,B. Gutiérrez,MED,50,50,75
+Mexico,B. Gutiérrez,MED,70,70,75
 Ecuador,K. Páez,MED,50,50,75
 Ecuador,K. Rodríguez,DEL,50,50,75
 Ecuador,J. Caicedo,DEL,50,50,75
@@ -1336,3 +1336,6 @@ Brazil,Martinelli,DEL,60,50,75
 Brazil,Éderson,MED,48,48,75
 Brazil,Danilo ,MED,51,51,75
 Brazil,Endrick,DEL,51,50,75
+Mexico,E. Álvarez,MED,62,62,75
+Mexico,G. Martínez,DEL,68,50,75
+England,Burn,DEF,50,64,75

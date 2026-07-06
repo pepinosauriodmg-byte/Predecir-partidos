@@ -472,7 +472,9 @@ with col_principal:
         st.markdown("<p style='color: #aedef7; font-size: 0.9rem; margin-bottom: 20px;'>Análisis avanzado y contexto histórico de los contendientes.</p>", unsafe_allow_html=True)
         
         partidos_manana = [
-            ('Mexico', 'England')
+            ('Ivory Coast', 'Norway'),
+            ('France', 'Sweden'),
+            ('Mexico', 'Ecuador')
         ]
         
         # ELIMINAMOS LAS FUNCIONES DUPLICADAS AQUÍ ADENTRO. AHORA USA LAS DE ARRIBA.
@@ -639,8 +641,8 @@ with col_principal:
 
         # Octavos Derecha (R16)
         r16_der = [
-            render_caja('Brazil', 'Norway', 1, 2, None, None, 'Finalizado'), # ¡Sorpresa histórica, Noruega avanza!
-            render_caja('Mexico', 'England', etiqueta="Octavos 6"),
+            render_caja('Brazil', 'Norway', 1, 2, None, None, 'Finalizado'),
+            render_caja('Mexico', 'England', 2, 3, None, None, 'Finalizado'), # ¡Inglaterra avanza!
             render_caja('Argentina', 'Egypt', etiqueta="Octavos 7"),   
             render_caja('Switzerland', 'Colombia', etiqueta="Octavos 8") 
         ]
@@ -653,7 +655,7 @@ with col_principal:
 
         # Cuartos Derecha (QF)
         qf_der = [
-            render_caja('Norway', 'TBD', etiqueta="Cuartos 3"), # ¡Noruega espera al ganador de México vs Inglaterra!
+            render_caja('Norway', 'England', etiqueta="Cuartos 3"), # ¡Se confirma el Noruega vs Inglaterra!
             render_caja('TBD', 'TBD', etiqueta="Cuartos 4")
         ]
 
