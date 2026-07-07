@@ -472,8 +472,9 @@ with col_principal:
         st.markdown("<p style='color: #aedef7; font-size: 0.9rem; margin-bottom: 20px;'>Análisis avanzado y contexto histórico de los contendientes.</p>", unsafe_allow_html=True)
         
         partidos_manana = [
-            ('Portugal', 'Spain'),
-            ('USA', 'Belgium')
+            ('Ivory Coast', 'Norway'),
+            ('France', 'Sweden'),
+            ('Mexico', 'Ecuador')
         ]
         
         # ELIMINAMOS LAS FUNCIONES DUPLICADAS AQUÍ ADENTRO. AHORA USA LAS DE ARRIBA.
@@ -632,10 +633,10 @@ with col_principal:
 
         # Octavos Izquierda (R16)
         r16_izq = [
-            render_caja('Paraguay', 'France', 0, 1, None, None, 'Finalizado'), # ¡Francia avanza!
-            render_caja('Canada', 'Morocco', 0, 3, None, None, 'Finalizado'), # ¡Marruecos aplasta!
-            render_caja('Portugal', 'Spain', etiqueta="Octavos 3"), 
-            render_caja('USA', 'Belgium', etiqueta="Octavos 4")
+            render_caja('Paraguay', 'France', 0, 1, None, None, 'Finalizado'),
+            render_caja('Canada', 'Morocco', 0, 3, None, None, 'Finalizado'),
+            render_caja('Portugal', 'Spain', 0, 1, None, None, 'Finalizado'), # ¡España avanza!
+            render_caja('USA', 'Belgium', 1, 4, None, None, 'Finalizado')     # ¡Bélgica aplasta!
         ]
 
         # Octavos Derecha (R16)
@@ -648,8 +649,8 @@ with col_principal:
 
         # Cuartos Izquierda (QF)
         qf_izq = [
-            render_caja('France', 'Morocco', etiqueta="Cuartos 1"), # ¡Se arma la revancha de Qatar 2022!
-            render_caja('TBD', 'TBD', etiqueta="Cuartos 2")
+            render_caja('France', 'Morocco', etiqueta="Cuartos 1"),
+            render_caja('Spain', 'Belgium', etiqueta="Cuartos 2") # ¡Lista la llave de España vs Bélgica!
         ]
 
         # Cuartos Derecha (QF)
