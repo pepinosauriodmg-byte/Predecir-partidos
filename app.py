@@ -472,8 +472,9 @@ with col_principal:
         st.markdown("<p style='color: #aedef7; font-size: 0.9rem; margin-bottom: 20px;'>Análisis avanzado y contexto histórico de los contendientes.</p>", unsafe_allow_html=True)
         
         partidos_manana = [
-            ('Argentina', 'Egypt'),
-            ('Switzerland', 'Colombia')
+            ('Ivory Coast', 'Norway'),
+            ('France', 'Sweden'),
+            ('Mexico', 'Ecuador')
         ]
         
         # ELIMINAMOS LAS FUNCIONES DUPLICADAS AQUÍ ADENTRO. AHORA USA LAS DE ARRIBA.
@@ -641,9 +642,9 @@ with col_principal:
         # Octavos Derecha (R16)
         r16_der = [
             render_caja('Brazil', 'Norway', 1, 2, None, None, 'Finalizado'),
-            render_caja('Mexico', 'England', 2, 3, None, None, 'Finalizado'), # ¡Inglaterra avanza!
-            render_caja('Argentina', 'Egypt', etiqueta="Octavos 7"),   
-            render_caja('Switzerland', 'Colombia', etiqueta="Octavos 8") 
+            render_caja('Mexico', 'England', 2, 3, None, None, 'Finalizado'),
+            render_caja('Argentina', 'Egypt', 3, 2, None, None, 'Finalizado'),        # ¡Argentina avanza!
+            render_caja('Switzerland', 'Colombia', 0, 0, 4, 3, 'Finalizado')          # ¡Suiza avanza en penales!
         ]
 
         # Cuartos Izquierda (QF)
@@ -654,8 +655,8 @@ with col_principal:
 
         # Cuartos Derecha (QF)
         qf_der = [
-            render_caja('Norway', 'England', etiqueta="Cuartos 3"), # ¡Se confirma el Noruega vs Inglaterra!
-            render_caja('TBD', 'TBD', etiqueta="Cuartos 4")
+            render_caja('Norway', 'England', etiqueta="Cuartos 3"),
+            render_caja('Argentina', 'Switzerland', etiqueta="Cuartos 4")             # ¡Se arma el Argentina vs Suiza!
         ]
 
         # Semis Izquierda/Derecha (SF)
