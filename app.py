@@ -472,7 +472,9 @@ with col_principal:
         st.markdown("<p style='color: #aedef7; font-size: 0.9rem; margin-bottom: 20px;'>Análisis avanzado y contexto histórico de los contendientes.</p>", unsafe_allow_html=True)
         
         partidos_manana = [
-            ('France', 'Morocco')
+            ('Ivory Coast', 'Norway'),
+            ('France', 'Sweden'),
+            ('Mexico', 'Ecuador')
         ]
         
         # ELIMINAMOS LAS FUNCIONES DUPLICADAS AQUÍ ADENTRO. AHORA USA LAS DE ARRIBA.
@@ -647,8 +649,8 @@ with col_principal:
 
         # Cuartos Izquierda (QF)
         qf_izq = [
-            render_caja('France', 'Morocco', etiqueta="Cuartos 1"),
-            render_caja('Spain', 'Belgium', etiqueta="Cuartos 2") # ¡Lista la llave de España vs Bélgica!
+            render_caja('France', 'Morocco', 2, 0, None, None, 'Finalizado'), # ¡Francia avanza a Semis!
+            render_caja('Spain', 'Belgium', etiqueta="Cuartos 2")
         ]
 
         # Cuartos Derecha (QF)
@@ -658,7 +660,7 @@ with col_principal:
         ]
 
         # Semis Izquierda/Derecha (SF)
-        sf_izq = [render_caja('TBD', 'TBD', etiqueta="Semifinal 1")]
+        sf_izq = [render_caja('France', 'TBD', etiqueta="Semifinal 1")]
         sf_der = [render_caja('TBD', 'TBD', etiqueta="Semifinal 2")]
 
         # Final (Centro)

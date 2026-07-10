@@ -150,7 +150,7 @@ Fiji,R. Krishna,DEL,67,48,74
 France,H. Lloris,POR,15,88,88
 France,A. Laporte,DEF,50,88,81
 France,N. Kanté,MED,66,87,83
-France,K. Mbappé,DEL,81,36,78
+France,K. Mbappé,DEL,85,36,78
 Gambia,B. Gaye,POR,15,61,61
 Gambia,O. Colley,DEF,31,75,83
 Gambia,M. Barrow,MED,74,31,63
@@ -235,7 +235,7 @@ Montserrat,Reserva POR,POR,60,60,60
 Montserrat,D. Daniels,DEF,28,67,70
 Montserrat,A. Dyer,MED,59,58,72
 Montserrat,L. Taylor,DEL,67,37,69
-Morocco,Y. Bounou,POR,15,82,85
+Morocco,Y. Bounou,POR,15,61,85
 Morocco,M. Benatia,DEF,45,87,85
 Morocco,H. Ziyech,MED,76,50,66
 Morocco,H. Ziyech,DEL,76,50,65
@@ -513,15 +513,15 @@ Brazil,Santos,DEF,66,56,75
 Brazil,Guimaraes,MED,54,54,75
 Brazil,Júnior,MED,77,77,75
 Morocco,Saibari,DEL,66,75,75
-Morocco,El Khannouss,MED,65,65,75
-Morocco,Ounahi,MED,83,83,75
-Morocco,Diaz,MED,66,66,75
-Morocco,El Aynaoui,MED,68,68,75
-Morocco,Mazraoui,DEF,56,69,75
+Morocco,El Khannouss,MED,51,51,75
+Morocco,Ounahi,MED,54,54,75
+Morocco,Diaz,MED,52,52,75
+Morocco,El Aynaoui,MED,52,52,75
+Morocco,Mazraoui,DEF,56,49,75
 Morocco,Riad,DEF,57,66,75
-Morocco,Diop,DEF,50,74,75
-Morocco,Bouaddi,MED,67,67,75
-Morocco,Hakimi,DEF,61,69,75
+Morocco,Diop,DEF,50,59,75
+Morocco,Bouaddi,MED,54,54,75
+Morocco,Hakimi,DEF,61,51,75
 Haiti,Arcus,DEF,52,62,75
 Haiti,Ade,MED,65,65,75
 Haiti,Delcroix,DEF,66,63,75
@@ -722,15 +722,15 @@ New Zealand,Surman,DEF,59,62,75
 New Zealand,Payne,DEF,51,64,75
 New Zealand,Crocombe,POR,45,45,75
 France,Kounde,DEF,58,58,75
-France,Maignan,POR,46,62,75
-France,Upamecano,DEF,68,88,75
-France,Saliba,DEF,55,61,75
+France,Maignan,POR,46,59,75
+France,Upamecano,DEF,68,72,75
+France,Saliba,DEF,55,66,75
 France,Tchouameni,MED,62,62,75
-France,Olise,DEL,54,51,75
+France,Olise,DEL,65,51,75
 France,Dembele,DEL,56,56,75
 France,Mbappe,DEL,73,73,75
 France,Hernandez,DEF,55,55,75
-France,Rabiot,MED,57,57,75
+France,Rabiot,MED,60,60,75
 France,Doue,MED,52,52,75
 Senegal,Mane,DEL,58,58,75
 Senegal,Jackson,DEL,60,53,75
@@ -1005,11 +1005,11 @@ Austria,Danso,DEF,50,60,75
 Austria,X. Schlager,MED,46,46,75
 Austria,Wanner,MED,48,48,75
 Austria,Gregoritsch,DEL,58,50,75
-France,Koundé,DEF,50,64,75
-France,Digne,DEF,50,56,75
-France,Koné,MED,60,60,75
-France,Dembélé,MED,48,48,75
-France,Barcola,DEL,54,50,75
+France,Koundé,DEF,50,59,75
+France,Digne,DEF,50,62,75
+France,Koné,MED,65,65,75
+France,Dembélé,MED,77,77,75
+France,Barcola,DEL,63,50,75
 Iraq,Basil,POR,50,62,75
 Iraq,Qasem,DEL,68,51,75
 Iraq,Iqbal,MED,67,67,75
@@ -1071,8 +1071,8 @@ Qatar,Boudiaf,MED,71,71,75
 Qatar,Al-Haydos,DEL,77,50,75
 Qatar,Edmilson Jr,DEL,70,50,75
 Morocco,Haihal,DEF,50,67,75
-Morocco,Salah-Eddine,DEF,50,71,75
-Morocco,Amrabat,MED,65,65,75
+Morocco,Salah-Eddine,DEF,50,57,75
+Morocco,Amrabat,MED,53,53,75
 Morocco,El Kaabi,DEL,67,50,75
 Haiti,Joseph,DEL,51,50,75
 Haiti,Isidor,DEL,72,50,75
@@ -1161,7 +1161,7 @@ Norway,Schjelderup,DEL,60,50,75
 France,Lacroix,DEF,50,65,75
 France,Hernández,DEF,50,60,75
 France,Tchouaméni,MED,69,69,75
-France,Doué,DEL,71,50,75
+France,Doué,DEL,63,50,75
 Senegal,Diaw,POR,50,45,75
 Senegal,Seck,DEF,50,77,75
 Senegal,Jakobs,DEF,50,55,75
@@ -1238,9 +1238,9 @@ Ivory Coast,Diakité,DEL,50,50,75
 Ivory Coast,Guessand,DEL,50,50,75
 Norway,Holmgren Pedersen,DEF,50,53,75
 Norway,Møller Wolfe,DEF,50,57,75
-France,Gusto,DEF,50,50,75
+France,Gusto,DEF,50,60,75
 France,T. Hernández,DEF,50,50,75
-France,Mateta,DEL,50,50,75
+France,Mateta,DEL,59,50,75
 France,Cherki,MED,58,58,75
 Sweden,Svensson,DEF,50,54,75
 Sweden,Bergvall,MED,45,45,75
@@ -1326,8 +1326,8 @@ Canada,P. David,MED,66,66,75
 Canada,Nelson,DEF,50,67,75
 Morocco,Halhal,DEF,50,69,75
 Morocco,Saadane,DEF,50,66,75
-Morocco,Talbi,DEF,50,69,75
-Morocco,Rahimi,DEL,77,50,75
+Morocco,Talbi,DEL,45,69,75
+Morocco,Rahimi,DEL,55,50,75
 Morocco,El Mourabet,MED,67,67,75
 Paraguay,Maurício,MED,55,55,75
 Paraguay,Caballero,MED,53,53,75
@@ -1349,3 +1349,7 @@ Switzerland,Muheim,DEF,50,49,75
 Switzerland,Itten,DEL,50,50,75
 Colombia,Mina,DEF,50,54,75
 Colombia,Hernández,DEF,50,54,75
+France,Zaïre-Emery,MED,58,58,75
+Morocco,El Ouahdi,DEF,50,49,75
+Morocco,Yassine,MED,54,54,75
+Morocco,Sbaï,MED,50,50,75
