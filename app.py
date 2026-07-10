@@ -157,7 +157,7 @@ def calcular_power_ranking():
     
     # --- FILTRO DE EQUIPOS VIVOS ---
     equipos_vivos = [
-        'France', 'Spain', 'Belgium', 'Norway', 
+        'France', 'Spain', 'Norway', 
         'England', 'Argentina', 'Switzerland'
     ]
     df_ranking = df_ranking[df_ranking['Equipo'].isin(equipos_vivos)]
@@ -478,7 +478,8 @@ with col_principal:
         st.markdown("<p style='color: #aedef7; font-size: 0.9rem; margin-bottom: 20px;'>Análisis avanzado y contexto histórico de los contendientes.</p>", unsafe_allow_html=True)
         
         partidos_manana = [
-            ('Spain', 'Belgium')
+            ('Norway', 'England'),
+            ('Argentina', 'Switzerland')
         ]
         
         # ELIMINAMOS LAS FUNCIONES DUPLICADAS AQUÍ ADENTRO. AHORA USA LAS DE ARRIBA.
@@ -653,8 +654,8 @@ with col_principal:
 
         # Cuartos Izquierda (QF)
         qf_izq = [
-            render_caja('France', 'Morocco', 2, 0, None, None, 'Finalizado'), # ¡Francia avanza a Semis!
-            render_caja('Spain', 'Belgium', etiqueta="Cuartos 2")
+            render_caja('France', 'Morocco', 2, 0, None, None, 'Finalizado'), 
+            render_caja('Spain', 'Belgium', 2, 1, None, None, 'Finalizado') # ¡España avanza a Semis!
         ]
 
         # Cuartos Derecha (QF)
@@ -664,7 +665,7 @@ with col_principal:
         ]
 
         # Semis Izquierda/Derecha (SF)
-        sf_izq = [render_caja('France', 'TBD', etiqueta="Semifinal 1")]
+        sf_izq = [render_caja('France', 'Spain', etiqueta="Semifinal 1")]
         sf_der = [render_caja('TBD', 'TBD', etiqueta="Semifinal 2")]
 
         # Final (Centro)
