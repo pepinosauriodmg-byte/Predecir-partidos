@@ -217,16 +217,42 @@ def obtener_historial_reciente(equipo, limite=10):
         for _, p in ultimos.iterrows():
             es_local = (p[col_local] == equipo)
             rival = p[col_visita] if es_local else p[col_local]
+            
+            # Goles regulares
             gf = int(p[col_g_loc] if es_local else p[col_g_vis])
             gc = int(p[col_g_vis] if es_local else p[col_g_loc])
             
-            if gf > gc: res = f"{icon('check', 18)} <span style='color:#a4e67d; font-weight:bold;'>Victoria</span>"
-            elif gf < gc: res = f"{icon('cross', 18)} <span style='color:#ff8a8a; font-weight:bold;'>Derrota</span>"
-            else: res = f"{icon('empate', 18)} <span style='color:#cdeaf8; font-weight:bold;'>Empate</span>"
+            # Extracción segura de penales
+            try:
+                pl = int(p.get('penales_local', 0)) if pd.notna(p.get('penales_local', 0)) else 0
+                pv = int(p.get('penales_visita', 0)) if pd.notna(p.get('penales_visita', 0)) else 0
+            except:
+                pl, pv = 0, 0
+                
+            pen_f = pl if es_local else pv
+            pen_c = pv if es_local else pl
+            
+            # Lógica de estados incluyendo penales
+            if gf > gc: 
+                res = f"{icon('check', 18)} <span style='color:#a4e67d; font-weight:bold;'>Victoria</span>"
+            elif gf < gc: 
+                res = f"{icon('cross', 18)} <span style='color:#ff8a8a; font-weight:bold;'>Derrota</span>"
+            else:
+                if pen_f > pen_c:
+                    res = f"{icon('check', 18)} <span style='color:#a4e67d; font-weight:bold;'>Victoria (Pen)</span>"
+                elif pen_c > pen_f:
+                    res = f"{icon('cross', 18)} <span style='color:#ff8a8a; font-weight:bold;'>Derrota (Pen)</span>"
+                else:
+                    res = f"{icon('empate', 18)} <span style='color:#cdeaf8; font-weight:bold;'>Empate</span>"
+            
+            # Formateo del marcador final
+            marcador_txt = f"({gf} - {gc})"
+            if pen_f > 0 or pen_c > 0:
+                marcador_txt = f"({gf} - {gc}) [{pen_f}-{pen_c} Pen]"
             
             fecha_str = p['fecha_exacta']
             if fecha_str == '1900': fecha_str = "N/D"
-            resultados.append(f"<div style='margin-bottom: 5px; font-size: 0.95rem;'>{icon('calendar', 16)} <span style='color:#8ebce3;'>{fecha_str}</span> | {res} vs <b>{rival}</b> ({gf} - {gc})</div>")
+            resultados.append(f"<div style='margin-bottom: 5px; font-size: 0.95rem;'>{icon('calendar', 16)} <span style='color:#8ebce3;'>{fecha_str}</span> | {res} vs <b>{rival}</b> {marcador_txt}</div>")
             
         if not resultados:
             return ["Aún no hay historial registrado."]
