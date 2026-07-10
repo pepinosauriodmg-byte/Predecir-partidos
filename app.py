@@ -146,18 +146,24 @@ def calcular_power_ranking():
         ratio_forma = fa_crudo / max(fd_crudo, 0.5)
         
         # Mapeamos el ratio a un multiplicador estricto (de 0.85x a 1.15x)
-        # Un 5-0 contra Irak solo te dará un +15% extra como máximo, no multiplicará tu puntaje
         multiplicador_momento = 1.0 + (min(max(ratio_forma, 0.5), 2.5) - 1.0) * 0.1
         
         # 5. CÁLCULO FINAL ESTRUCTURADO
-        # 75% del peso es la jerarquía ELO histórica
-        # 25% del peso es la calidad en cancha
-        # Todo se multiplica por el momento actual para dar el toque final
         true_power_index = ((base_elo * 0.75) + (calidad_plantilla * 0.25)) * multiplicador_momento
         
         ranking.append({'Equipo': equipo, 'Power Index': round(true_power_index, 2)})
         
-    df_ranking = pd.DataFrame(ranking).sort_values(by='Power Index', ascending=False).head(5)
+    df_ranking = pd.DataFrame(ranking)
+    
+    # --- FILTRO DE EQUIPOS VIVOS ---
+    equipos_vivos = [
+        'France', 'Spain', 'Belgium', 'Norway', 
+        'England', 'Argentina', 'Switzerland'
+    ]
+    df_ranking = df_ranking[df_ranking['Equipo'].isin(equipos_vivos)]
+    # -------------------------------
+    
+    df_ranking = df_ranking.sort_values(by='Power Index', ascending=False).head(5)
     df_ranking.reset_index(drop=True, inplace=True)
     df_ranking.index += 1
     return df_ranking
