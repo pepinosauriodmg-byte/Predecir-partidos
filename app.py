@@ -7,7 +7,7 @@ import re
 # ==========================================
 # 1. CONFIGURACIÓN DE LA PÁGINA Y ESTILO WINDOWS VISTA AERO
 # ==========================================
-st.set_page_config(page_title="AI Football Predictor 2026", layout="wide", page_icon="⚽")
+st.set_page_config(page_title="Football Predictor 2026", layout="wide", page_icon="⚽")
 
 st.markdown("""
 <style>
