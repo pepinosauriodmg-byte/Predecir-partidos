@@ -19,10 +19,10 @@ Antigua and Barbuda,N. Townsend,POR,15,62,62
 Antigua and Barbuda,M. Romeo,DEF,47,69,70
 Antigua and Barbuda,M. Weston,MED,55,30,57
 Antigua and Barbuda,D. Blackstock,DEL,65,40,77
-Argentina,E. Martínez,POR,15,45,85
-Argentina,N. Otamendi,DEF,57,57,80
+Argentina,E. Martínez,POR,15,66,85
+Argentina,N. Otamendi,DEF,57,61,80
 Argentina,P. Dybala,MED,85,28,66
-Argentina,L. Messi,DEL,81,24,62
+Argentina,L. Messi,DEL,78,24,62
 Aruba,Reserva POR,POR,60,60,60
 Aruba,D. Dumfries,DEF,35,64,78
 Aruba,G. Breinburg,MED,56,63,74
@@ -355,9 +355,9 @@ Suriname,W. Hahn,POR,15,69,69
 Suriname,R. Haps,DEF,63,68,72
 Suriname,D. Biseswar,MED,69,33,60
 Suriname,S. Becker,DEL,76,35,69
-Switzerland,G. Kobel,POR,15,84,87
-Switzerland,M. Akanji,DEF,45,63,80
-Switzerland,G. Xhaka,MED,58,58,77
+Switzerland,G. Kobel,POR,15,45,87
+Switzerland,M. Akanji,DEF,45,53,80
+Switzerland,G. Xhaka,MED,56,56,77
 Switzerland,X. Shaqiri,DEL,77,46,69
 Tahiti,Portero Tahiti,POR,10,70,70
 Tahiti,Defensa Tahiti,DEF,30,70,70
@@ -495,14 +495,14 @@ Qatar,Laye,DEF,54,63,75
 Qatar,Junior,MED,63,63,75
 Qatar,Madibo,MED,65,65,75
 Qatar,Abdurisag,DEL,70,70,75
-Switzerland,Ndoye,DEL,57,63,75
-Switzerland,Embolo,DEL,53,70,75
-Switzerland,Vargas,DEL,54,69,75
+Switzerland,Ndoye,DEL,66,63,75
+Switzerland,Embolo,DEL,56,70,75
+Switzerland,Vargas,DEL,56,69,75
 Switzerland,Rodriguez,DEF,68,68,75
-Switzerland,Freuler,MED,55,55,75
+Switzerland,Freuler,MED,56,56,75
 Switzerland,Aebischer,MED,62,62,75
-Switzerland,Elvedi,DEF,66,68,75
-Switzerland,Zakaria,MED,55,55,75
+Switzerland,Elvedi,DEF,66,62,75
+Switzerland,Zakaria,MED,47,47,75
 Brazil,Ibanez,DEF,50,50,75
 Brazil,Becker,POR,58,56,75
 Brazil,Marquinhos,DEF,59,50,75
@@ -751,24 +751,24 @@ Iraq,Ismael,DEF,57,45,75
 Iraq,Jasim,DEL,65,63,75
 Iraq,Hussein,DEL,48,64,75
 Iraq,Nusa,MED,68,68,75
-Norway,Haaland,DEL,76,88,75
-Norway,Aursnes,MED,57,57,75
+Norway,Haaland,DEL,53,88,75
+Norway,Aursnes,MED,53,53,75
 Norway,Wolfe,DEF,68,57,75
-Norway,Heggem,DEF,68,64,75
-Norway,Berge,MED,62,62,75
-Norway,Nyland,POR,69,62,75
+Norway,Heggem,DEF,68,45,75
+Norway,Berge,MED,47,47,75
+Norway,Nyland,POR,69,54,75
 Norway,Sorloth,MED,67,67,75
 Norway,Odegaard,MED,71,71,75
-Norway,Ajer,DEF,69,49,75
-Norway,Ryerson,DEF,72,51,75
-Argentina,Montiel,DEF,70,61,75
+Norway,Ajer,DEF,69,56,75
+Norway,Ryerson,DEF,72,59,75
+Argentina,Montiel,DEF,70,57,75
 Argentina,Martinez,DEF,73,73,75
-Argentina,Romero,DEF,66,75,75
-Argentina,De Paul,MED,62,62,75
-Argentina,Mac Allister,MED,64,64,75
+Argentina,Romero,DEF,66,70,75
+Argentina,De Paul,MED,65,65,75
+Argentina,Mac Allister,MED,76,76,75
 Argentina,Medina,DEF,65,58,75
 Argentina,Fernandez,MED,65,65,75
-Argentina,Almada,MED,57,57,75
+Argentina,Almada,MED,64,64,75
 Algeria,Chaibi,MED,60,60,75
 Algeria,Gouiri,DEL,55,59,75
 Algeria,Bentaleb,MED,59,59,75
@@ -818,16 +818,16 @@ DR Congo,Tuanzebe,DEF,57,52,75
 DR Congo,Mbemba,DEF,55,60,75
 DR Congo,Wan-Bissaka,DEF,65,51,75
 DR Congo,Mpasi,POR,45,61,75
-England,James,DEF,59,58,75
-England,Anderson,MED,69,69,75
-England,Madueke,MED,60,60,75
-England,Pickford,POR,56,76,75
-England,Stones,DEF,60,65,75
-England,Konsa,DEF,59,69,75
-England,Bellingham,MED,82,82,75
-England,Rice,MED,65,65,75
-England,O'Reilly,DEF,63,64,75
-England,Gordon,DEL,76,66,75
+England,James,DEF,59,53,75
+England,Anderson,MED,67,67,75
+England,Madueke,DEL,54,60,75
+England,Pickford,POR,56,63,75
+England,Stones,DEF,60,58,75
+England,Konsa,DEF,59,56,75
+England,Bellingham,MED,77,77,75
+England,Rice,MED,54,54,75
+England,O'Reilly,DEF,63,57,75
+England,Gordon,DEL,52,66,75
 Croatia,Pasalic,MED,56,56,75
 Croatia,Perisic,DEL,60,60,75
 Croatia,Musa,DEL,54,68,75
@@ -890,8 +890,8 @@ South Africa,Rayners,DEL,49,49,75
 South Africa,Appollis,DEL,63,52,75
 South Africa,Mbatha,MED,53,53,75
 South Africa,Maseko,MED,56,56,75
-Switzerland,Widmer,DEF,66,52,75
-Switzerland,Rieder,MED,45,45,75
+Switzerland,Widmer,DEF,66,54,75
+Switzerland,Rieder,MED,50,50,75
 Bosnia and Herzegovina,Dzeko,DEL,63,63,75
 Bosnia and Herzegovina,Alajbegovic,MED,60,60,75
 Bosnia and Herzegovina,Sunjic,MED,58,58,75
@@ -995,9 +995,9 @@ Cabo Verde,G. Tavares,DEL,62,50,75
 New Zealand,Stamenić,MED,64,64,75
 Egypt,Y. Ibrahim,DEF,50,68,75
 Egypt,H. Fathy,MED,55,55,75
-Argentina,N. Molina,DEF,50,66,75
-Argentina,C. Romero,DEF,50,75,75
-Argentina,E. Fernández,MED,73,73,75
+Argentina,N. Molina,DEF,50,61,75
+Argentina,C. Romero,DEF,50,70,75
+Argentina,E. Fernández,MED,62,62,75
 Argentina,Lisandro Martínez,DEF,50,68,75
 Argentina,Lautaro Martínez,DEL,69,50,75
 Austria,A. Schlager,POR,50,60,75
@@ -1014,8 +1014,8 @@ Iraq,Basil,POR,50,62,75
 Iraq,Qasem,DEL,68,51,75
 Iraq,Iqbal,MED,67,67,75
 Norway,Ødegaard,MED,49,49,75
-Norway,Sørloth,DEL,53,50,75
-Norway,Nusa,DEL,58,50,75
+Norway,Sørloth,DEL,51,50,75
+Norway,Nusa,DEL,53,50,75
 Senegal,Niakhaté,DEF,50,57,75
 Senegal,I. Gueye,MED,56,56,75
 Senegal,P. Gueye,MED,54,54,75
@@ -1028,8 +1028,8 @@ Portugal,Félix,DEL,69,50,75
 Uzbekistan,Nematov,POR,50,45,75
 Uzbekistan,Hamrobekov,MED,45,45,75
 Uzbekistan,Ganiev,MED,45,45,75
-England,Guéhi,DEF,50,66,75
-England,Spence,DEF,50,65,75
+England,Guéhi,DEF,50,58,75
+England,Spence,DEF,50,59,75
 Ghana,Asare,POR,50,45,75
 Ghana,Sibo,MED,48,48,75
 Panama,Córdoba,DEF,50,53,75
@@ -1049,8 +1049,8 @@ Colombia,Lucumí,DEF,50,66,75
 Colombia,Díaz,DEL,56,50,75
 Colombia,Suárez,DEL,51,50,75
 Switzerland,Jaquez,DEF,50,45,75
-Switzerland,Rodríguez,DEF,50,49,75
-Switzerland,Sow,MED,53,53,75
+Switzerland,Rodríguez,DEF,50,62,75
+Switzerland,Sow,MED,56,56,75
 Switzerland,Manzambi,DEL,62,50,75
 Canada,Crépeau,POR,50,45,75
 Canada,Saliba,MED,47,47,75
@@ -1150,14 +1150,14 @@ USA,Weah,DEL,55,50,75
 USA,Aaronson,DEL,58,50,75
 Norway,Selvik,POR,50,45,75
 Norway,Falchener,DEF,50,54,75
-Norway,Østigård,DEF,50,45,75
+Norway,Østigård,DEF,50,48,75
 Norway,Bjørkan,DEF,50,50,75
 Norway,Thorstvedt,MED,53,53,75
-Norway,Berg,MED,58,58,75
+Norway,Berg,MED,47,47,75
 Norway,Aasgaard,MED,66,66,75
-Norway,Bobb,DEL,56,50,75
-Norway,Strand Larsen,DEL,57,50,75
-Norway,Schjelderup,DEL,60,50,75
+Norway,Bobb,DEL,52,50,75
+Norway,Strand Larsen,DEL,53,50,75
+Norway,Schjelderup,DEL,73,50,75
 France,Lacroix,DEF,50,65,75
 France,Hernández,DEF,50,60,75
 France,Tchouaméni,MED,69,69,75
@@ -1193,10 +1193,10 @@ Panama,Gutiérrez,MED,48,48,75
 Panama,J.L. Rodríguez,DEL,49,50,75
 Panama,T. Rodríguez,DEL,50,50,75
 England,Quansah,DEF,50,58,75
-England,Saka,DEL,66,59,75
-England,Rogers,MED,67,67,75
+England,Saka,DEL,61,59,75
+England,Rogers,MED,52,52,75
 England,Rashford,DEL,53,50,75
-England,Harry Kane,DEL,73,50,75
+England,Harry Kane,DEL,57,50,75
 Croatia,Vlašić,MED,57,57,75
 Croatia,Sučić,MED,56,56,75
 Croatia,Budimir,DEL,60,50,75
@@ -1215,14 +1215,14 @@ Algeria,Hadjam,DEF,50,52,75
 Algeria,Aouar,MED,54,54,75
 Jordan,Azaizeh,MED,61,61,75
 Argentina,Senesi,DEF,50,64,75
-Argentina,Tagliafico,DEF,50,61,75
+Argentina,Tagliafico,DEF,50,57,75
 Argentina,Paz,MED,64,64,75
-Argentina,Paredes,MED,69,69,75
+Argentina,Paredes,MED,66,66,75
 Argentina,Palacios,MED,64,64,75
 Argentina,Lo Celso,MED,73,73,75
 Argentina,Simeone,DEL,60,50,75
-Argentina,J. Álvarez,DEL,64,50,75
-Argentina,L. Martínez,DEL,67,74,75
+Argentina,J. Álvarez,DEL,71,50,75
+Argentina,L. Martínez,DEL,71,57,75
 Canada,Bombito,DEF,50,56,75
 Canada,Eustáquio,MED,70,70,75
 Brazil,Lucas Paquetá,MED,54,54,75
@@ -1236,8 +1236,8 @@ Ivory Coast,G. Doué,DEF,50,71,75
 Ivory Coast,Inao Oulaï,MED,67,67,75
 Ivory Coast,Diakité,DEL,50,50,75
 Ivory Coast,Guessand,DEL,50,50,75
-Norway,Holmgren Pedersen,DEF,50,53,75
-Norway,Møller Wolfe,DEF,50,57,75
+Norway,Holmgren Pedersen,DEF,50,45,75
+Norway,Møller Wolfe,DEF,50,49,75
 France,Gusto,DEF,50,60,75
 France,T. Hernández,DEF,50,50,75
 France,Mateta,DEL,59,50,75
@@ -1259,7 +1259,7 @@ Ecuador,K. Rodríguez,DEL,50,50,75
 Ecuador,J. Caicedo,DEL,50,50,75
 Ecuador,Á. Preciado,DEF,50,50,75
 Ecuador,Y. Medina,MED,50,50,75
-England,Eze,MED,50,50,75
+England,Eze,MED,57,57,75
 DR Congo,Bongonda,DEL,50,50,75
 DR Congo,Elia,DEL,50,50,75
 DR Congo,Mayele,DEL,50,50,75
@@ -1294,7 +1294,7 @@ Portugal,Conceição,DEL,56,50,75
 Croatia,Kramarić,DEL,59,50,75
 Croatia,Matanović,DEL,57,50,75
 Switzerland,Okafor,DEL,61,50,75
-Switzerland,Amdouni,DEL,50,50,75
+Switzerland,Amdouni,DEL,58,50,75
 Algeria,L. Zidane,POR,50,45,75
 Algeria,Hadj Moussa,DEL,55,50,75
 Algeria,Boulbina,DEL,58,50,75
@@ -1305,7 +1305,7 @@ Egypt,Hafez,DEF,50,57,75
 Egypt,Abdelmaguid,DEF,50,53,75
 Egypt,Abdelkarim,DEF,50,48,75
 Egypt,Hassan,DEL,60,50,75
-Argentina,González,DEL,62,50,75
+Argentina,González,DEL,66,50,75
 Cabo Verde,L. Duarte,MED,57,57,75
 Cabo Verde,D. Duarte,MED,72,72,75
 Cabo Verde,da Costa,DEL,57,50,75
@@ -1337,15 +1337,15 @@ Brazil,Danilo ,MED,51,51,75
 Brazil,Endrick,DEL,51,50,75
 Mexico,E. Álvarez,MED,62,62,75
 Mexico,G. Martínez,DEL,68,50,75
-England,Burn,DEF,50,64,75
+England,Burn,DEF,50,49,75
 Portugal,Dalot,DEF,50,47,75
 Spain,B. Iglesias,DEL,55,50,75
 USA,Arfsten,MED,57,57,75
 USA,Wright,DEL,57,50,75
 Belgium,Witsel,MED,53,53,75
 Egypt,Zizo,MED,57,57,75
-Switzerland,Jashari,MED,49,49,75
-Switzerland,Muheim,DEF,50,49,75
+Switzerland,Jashari,MED,54,54,75
+Switzerland,Muheim,DEF,50,50,75
 Switzerland,Itten,DEL,50,50,75
 Colombia,Mina,DEF,50,54,75
 Colombia,Hernández,DEF,50,54,75
@@ -1356,3 +1356,5 @@ Morocco,Sbaï,MED,50,50,75
 Spain,N. Williams,DEL,58,50,75
 Belgium,Lammens,POR,50,45,75
 Belgium,Seys,DEF,50,57,75
+Argentina,J. López,MED,63,63,75
+Switzerland,Cömert,DEF,50,50,75

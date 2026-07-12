@@ -7,7 +7,7 @@ import re
 # ==========================================
 # 1. CONFIGURACIÓN DE LA PÁGINA Y ESTILO WINDOWS VISTA AERO
 # ==========================================
-st.set_page_config(page_title="Football Predictor 2026", layout="wide", page_icon="⚽")
+st.set_page_config(page_title="AI Football Predictor 2026", layout="wide", page_icon="⚽")
 
 st.markdown("""
 <style>
@@ -497,101 +497,141 @@ with col_principal:
             st.error("Error leyendo las columnas del CSV.")
         st.markdown("</div>", unsafe_allow_html=True)
         
-    # --- PESTAÑA 3: PRÓXIMA JORNADA ---
+    # --- PESTAÑA 3: PRÓXIMA JORNADA (LA RECTA FINAL) ---
     with tab3:
-        st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
-        st.markdown(f"<h3 style='color: white; margin-bottom: 5px;'>{icon('calendar', 32)} Predicciones automáticas para Mañana</h3>", unsafe_allow_html=True)
-        st.markdown("<p style='color: #aedef7; font-size: 0.9rem; margin-bottom: 20px;'>Análisis avanzado y contexto histórico de los contendientes.</p>", unsafe_allow_html=True)
+        import datetime # Importamos la librería para el contador
         
-        partidos_manana = [
-            ('Norway', 'England'),
-            ('Argentina', 'Switzerland')
+        st.markdown("<div class='frutiger-card'>", unsafe_allow_html=True)
+        st.markdown(f"<h3 style='color: white; margin-bottom: 5px; text-align: center;'>{icon('trophy', 40)} La Recta Final</h3>", unsafe_allow_html=True)
+        st.markdown("<p style='color: #aedef7; font-size: 1rem; margin-bottom: 30px; text-align: center;'>El camino a la gloria. Análisis estadístico de los últimos contendientes.</p>", unsafe_allow_html=True)
+        
+        # 1. Definir los últimos 3 partidos con sus fechas de julio de 2026
+        partidos_finales = [
+            ('France', 'Spain', 'Semifinal 1', '2026-07-14 14:00:00'),
+            ('England', 'Argentina', 'Semifinal 2', '2026-07-15 14:00:00'),
+            ('TBD', 'TBD', '🏆 GRAN FINAL', '2026-07-19 13:00:00')
         ]
         
-        # ELIMINAMOS LAS FUNCIONES DUPLICADAS AQUÍ ADENTRO. AHORA USA LAS DE ARRIBA.
+        ahora = datetime.datetime.now()
         
-        # --- RENDERIZADO DE PARTIDOS ---
-        for eq_l, eq_v in partidos_manana:
-            # Quitamos la restricción de que deban existir en 'equipos' por si no tienen partidos previos
-            b_l = obtener_bandera(eq_l)
-            b_v = obtener_bandera(eq_v)
+        for eq_l, eq_v, fase, fecha_str in partidos_finales:
+            fecha_partido = datetime.datetime.strptime(fecha_str, '%Y-%m-%d %H:%M:%S')
+            diferencia = fecha_partido - ahora
             
-            with st.expander(f"🏟️ {b_l} {eq_l} vs {eq_v} {b_v}"):
-                # 1. ACTUALIZADO: Ahora recibe 7 variables
-                xg_l, xg_v, paquete_probs, top_marcadores, hay_alargue, p_pen_l, p_pen_v = mh.predecir_partido(eq_l, eq_v) 
-                probs_flat = np.array(paquete_probs).flatten()
+            # 2. Lógica matemática del Contador de Tiempo
+            if diferencia.total_seconds() > 0:
+                dias = diferencia.days
+                horas, rem = divmod(diferencia.seconds, 3600)
+                minutos, _ = divmod(rem, 60)
+                tiempo_restante = f"{dias}d {horas}h {minutos}m"
+                color_tiempo = "#a4e67d" # Verde neón
+            else:
+                tiempo_restante = "¡EN JUEGO!"
+                color_tiempo = "#ff8a8a" # Rojo alerta
                 
-                p_v = float(probs_flat[0])
-                p_e = float(probs_flat[1])
-                p_l = float(probs_flat[2])
-                
-                st.markdown(f"""
-                <div style='text-align: center; margin-bottom: 15px; font-family: Tahoma; font-size: 1.1rem; color: #a4e67d; text-shadow: 1px 1px 2px black;'>
-                    <b>xG Esperado de Poisson:</b> {float(xg_l):.2f} - {float(xg_v):.2f}
+            b_l = obtener_bandera(eq_l) if eq_l != 'TBD' else "❔"
+            b_v = obtener_bandera(eq_v) if eq_v != 'TBD' else "❔"
+            
+            # 3. Tarjeta Gigante y Vistosa estilo Cartelera
+            st.markdown(f"""
+            <div style='background: linear-gradient(135deg, rgba(2, 17, 29, 0.8) 0%, rgba(3, 43, 56, 0.9) 100%); border: 2px solid #8ebce3; border-radius: 15px; padding: 25px; margin-bottom: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.5), inset 0 2px 5px rgba(255,255,255,0.2);'>
+                <div style='text-align: center; margin-bottom: 15px;'>
+                    <span style='background: #002244; color: #aedef7; padding: 5px 15px; border-radius: 20px; font-weight: bold; border: 1px solid #0570b0; font-size: 1rem;'>{fase} | {fecha_partido.strftime('%d de Julio')}</span>
                 </div>
-                """, unsafe_allow_html=True)
-                
-                m1, m2, m3 = st.columns(3)
-                m1.metric(label=f"Gana {eq_l} {b_l}", value=f"{p_l*100:.1f}%")
-                m2.metric(label="Empate 🤝", value=f"{p_e*100:.1f}%")
-                m3.metric(label=f"Gana {eq_v} {b_v}", value=f"{p_v*100:.1f}%")
-                
-                # 2. NUEVO: ALERTA DE PENALES
-                if hay_alargue:
+                <div style='display: flex; justify-content: space-around; align-items: center;'>
+                    <div style='text-align: center; width: 35%;'>
+                        <div style='font-size: 4.5rem; line-height: 1; text-shadow: 2px 2px 5px rgba(0,0,0,0.8); margin-bottom: 10px;'>{b_l}</div>
+                        <div style='font-size: 1.8rem; font-weight: bold; color: white;'>{eq_l}</div>
+                    </div>
+                    <div style='text-align: center; width: 30%;'>
+                        <div style='font-size: 2rem; color: #a4e67d; font-weight: 900; text-shadow: 0 0 10px rgba(164,230,125,0.5);'>VS</div>
+                        <div style='background: rgba(0,0,0,0.6); padding: 10px; border-radius: 10px; margin-top: 15px; border: 1px solid #555;'>
+                            <div style='font-size: 0.75rem; color: #ccc; letter-spacing: 1px;'>TIEMPO RESTANTE</div>
+                            <div style='font-size: 1.3rem; font-weight: bold; color: {color_tiempo}; font-family: monospace;'>{tiempo_restante}</div>
+                        </div>
+                    </div>
+                    <div style='text-align: center; width: 35%;'>
+                        <div style='font-size: 4.5rem; line-height: 1; text-shadow: 2px 2px 5px rgba(0,0,0,0.8); margin-bottom: 10px;'>{b_v}</div>
+                        <div style='font-size: 1.8rem; font-weight: bold; color: white;'>{eq_v}</div>
+                    </div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # 4. Acordeón de Predicción Neuronal (Oculto para mantener limpieza visual)
+            if eq_l != 'TBD' and eq_v != 'TBD':
+                with st.expander(f"🤖 Ver Análisis Predictivo de la IA: {eq_l} vs {eq_v}"):
+                    xg_l, xg_v, paquete_probs, top_marcadores, hay_alargue, p_pen_l, p_pen_v = mh.predecir_partido(eq_l, eq_v) 
+                    probs_flat = np.array(paquete_probs).flatten()
+                    
+                    p_v = float(probs_flat[0])
+                    p_e = float(probs_flat[1])
+                    p_l = float(probs_flat[2])
+                    
                     st.markdown(f"""
-                    <div style='background: rgba(255, 138, 138, 0.15); border-left: 4px solid #ff8a8a; padding: 10px; border-radius: 4px; margin-top: 10px;'>
-                        <b style='color: #ff8a8a;'>⚠️ Alta Probabilidad de Prórroga / Penales</b><br>
-                        <span style='font-size: 0.9rem; color: #e2e2e2;'>
-                            <b>{eq_l}:</b> {p_pen_l*100:.1f}% | <b>{eq_v}:</b> {p_pen_v*100:.1f}%
-                        </span>
+                    <div style='text-align: center; margin-bottom: 15px; font-family: Tahoma; font-size: 1.1rem; color: #a4e67d; text-shadow: 1px 1px 2px black;'>
+                        <b>xG Esperado de Poisson:</b> {float(xg_l):.2f} - {float(xg_v):.2f}
                     </div>
                     """, unsafe_allow_html=True)
                     
-                st.divider()
-
-# --- NUEVO: TOP 10 MARCADORES PARA JORNADAS AUTOMÁTICAS ---
-                st.write("") # Espacio
-                with st.expander("🎯 Ver Top 10 Marcadores Más Probables"):
-                    col1, col2 = st.columns(2)
-                    for i, resultado in enumerate(top_marcadores):
-                        marcador = resultado['marcador']
-                        prob = resultado['probabilidad']
+                    m1, m2, m3 = st.columns(3)
+                    m1.metric(label=f"Gana {eq_l} {b_l}", value=f"{p_l*100:.1f}%")
+                    m2.metric(label="Empate 🤝", value=f"{p_e*100:.1f}%")
+                    m3.metric(label=f"Gana {eq_v} {b_v}", value=f"{p_v*100:.1f}%")
+                    
+                    if hay_alargue:
+                        st.markdown(f"""
+                        <div style='background: rgba(255, 138, 138, 0.15); border-left: 4px solid #ff8a8a; padding: 10px; border-radius: 4px; margin-top: 10px;'>
+                            <b style='color: #ff8a8a;'>⚠️ Alta Probabilidad de Prórroga / Penales</b><br>
+                            <span style='font-size: 0.9rem; color: #e2e2e2;'>
+                                <b>{eq_l}:</b> {p_pen_l*100:.1f}% | <b>{eq_v}:</b> {p_pen_v*100:.1f}%
+                            </span>
+                        </div>
+                        """, unsafe_allow_html=True)
                         
-                        if i < 3:
-                            html_marcador = f"<div style='font-size: 1.05rem; margin-bottom: 5px;'><b>#{i+1}</b> | <b>{marcador}</b> ➔ <span style='color: #a4e67d;'>{prob:.1f}%</span></div>"
-                        else:
-                            html_marcador = f"<div style='font-size: 0.9rem; margin-bottom: 5px; color: #8ebce3;'>#{i+1} | {marcador} ➔ {prob:.1f}%</div>"
+                    st.divider()
+
+                    st.write("") 
+                    with st.expander("🎯 Ver Top 10 Marcadores Más Probables"):
+                        col1, col2 = st.columns(2)
+                        for i, resultado in enumerate(top_marcadores):
+                            marcador = resultado['marcador']
+                            prob = resultado['probabilidad']
                             
-                        if i < 5:
-                            col1.markdown(html_marcador, unsafe_allow_html=True)
-                        else:
-                            col2.markdown(html_marcador, unsafe_allow_html=True)
-                # ----------------------------------------------------------
+                            if i < 3:
+                                html_marcador = f"<div style='font-size: 1.05rem; margin-bottom: 5px;'><b>#{i+1}</b> | <b>{marcador}</b> ➔ <span style='color: #a4e67d;'>{prob:.1f}%</span></div>"
+                            else:
+                                html_marcador = f"<div style='font-size: 0.9rem; margin-bottom: 5px; color: #8ebce3;'>#{i+1} | {marcador} ➔ {prob:.1f}%</div>"
+                                
+                            if i < 5:
+                                col1.markdown(html_marcador, unsafe_allow_html=True)
+                            else:
+                                col2.markdown(html_marcador, unsafe_allow_html=True)
 
-                st.markdown(f"<h5 style='color:white;'>{icon('search', 24)} Justificación Estadística en Vivo</h5>", unsafe_allow_html=True)
-                
-                col_info_l, col_info_v = st.columns(2)
-                
-                with col_info_l:
-                    st.markdown(f"<strong style='font-size: 1.1rem; color: #ffffff;'>{b_l} Estado de {eq_l}</strong>", unsafe_allow_html=True)
-                    st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('trophy', 16)} MVPs del Torneo:</p>", unsafe_allow_html=True)
-                    for j in obtener_top_jugadores(eq_l):
-                        st.write(j, unsafe_allow_html=True)
-                    st.write("") 
-                    st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('chart', 16)} Últimos 10 Partidos:</p>", unsafe_allow_html=True)
-                    for h in obtener_historial_reciente(eq_l):
-                        st.write(h, unsafe_allow_html=True)
+                    st.markdown(f"<h5 style='color:white;'>{icon('search', 24)} Justificación Estadística en Vivo</h5>", unsafe_allow_html=True)
+                    
+                    col_info_l, col_info_v = st.columns(2)
+                    
+                    with col_info_l:
+                        st.markdown(f"<strong style='font-size: 1.1rem; color: #ffffff;'>{b_l} Estado de {eq_l}</strong>", unsafe_allow_html=True)
+                        st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('trophy', 16)} MVPs del Torneo:</p>", unsafe_allow_html=True)
+                        for j in obtener_top_jugadores(eq_l):
+                            st.write(j, unsafe_allow_html=True)
+                        st.write("") 
+                        st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('chart', 16)} Últimos 10 Partidos:</p>", unsafe_allow_html=True)
+                        for h in obtener_historial_reciente(eq_l):
+                            st.write(h, unsafe_allow_html=True)
 
-                with col_info_v:
-                    st.markdown(f"<strong style='font-size: 1.1rem; color: #ffffff;'>{b_v} Estado de {eq_v}</strong>", unsafe_allow_html=True)
-                    st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('trophy', 16)} MVPs del Torneo:</p>", unsafe_allow_html=True)
-                    for j in obtener_top_jugadores(eq_v):
-                        st.write(j, unsafe_allow_html=True)
-                    st.write("") 
-                    st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('chart', 16)} Últimos 10 Partidos:</p>", unsafe_allow_html=True)
-                    for h in obtener_historial_reciente(eq_v):
-                        st.write(h, unsafe_allow_html=True)
-
+                    with col_info_v:
+                        st.markdown(f"<strong style='font-size: 1.1rem; color: #ffffff;'>{b_v} Estado de {eq_v}</strong>", unsafe_allow_html=True)
+                        st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('trophy', 16)} MVPs del Torneo:</p>", unsafe_allow_html=True)
+                        for j in obtener_top_jugadores(eq_v):
+                            st.write(j, unsafe_allow_html=True)
+                        st.write("") 
+                        st.markdown(f"<p style='color: #8ebce3; margin-top:10px; margin-bottom:5px; font-weight:bold;'>{icon('chart', 16)} Últimos 10 Partidos:</p>", unsafe_allow_html=True)
+                        for h in obtener_historial_reciente(eq_v):
+                            st.write(h, unsafe_allow_html=True)
+            st.markdown("<br>", unsafe_allow_html=True)
         st.markdown("</div>", unsafe_allow_html=True)
 
 # --- PESTAÑA 4: BRACKET DE ELIMINATORIAS COMPLETO (32 EQUIPOS) ---
@@ -686,13 +726,13 @@ with col_principal:
 
         # Cuartos Derecha (QF)
         qf_der = [
-            render_caja('Norway', 'England', etiqueta="Cuartos 3"),
-            render_caja('Argentina', 'Switzerland', etiqueta="Cuartos 4")             # ¡Se arma el Argentina vs Suiza!
+            render_caja('Norway', 'England', 1, 2, None, None, 'Finalizado'), # ¡Inglaterra sobrevive en tiempos extras!
+            render_caja('Argentina', 'Switzerland', 3, 1, None, None, 'Finalizado') # ¡Argentina impone su jerarquía!
         ]
 
         # Semis Izquierda/Derecha (SF)
         sf_izq = [render_caja('France', 'Spain', etiqueta="Semifinal 1")]
-        sf_der = [render_caja('TBD', 'TBD', etiqueta="Semifinal 2")]
+        sf_der = [render_caja('England', 'Argentina', etiqueta="Semifinal 2")]
 
         # Final (Centro)
         final = render_caja('TBD', 'TBD', etiqueta="🏆 GRAN FINAL")
