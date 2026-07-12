@@ -157,8 +157,8 @@ def calcular_power_ranking():
     
     # --- FILTRO DE EQUIPOS VIVOS ---
     equipos_vivos = [
-        'France', 'Spain', 'Norway', 
-        'England', 'Argentina', 'Switzerland'
+        'France', 'Spain', 
+        'England', 'Argentina'
     ]
     df_ranking = df_ranking[df_ranking['Equipo'].isin(equipos_vivos)]
     # -------------------------------
