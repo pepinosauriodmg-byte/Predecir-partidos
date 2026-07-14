@@ -157,7 +157,7 @@ def calcular_power_ranking():
     
     # --- FILTRO DE EQUIPOS VIVOS ---
     equipos_vivos = [
-        'France', 'Spain', 
+        'Spain',
         'England', 'Argentina'
     ]
     df_ranking = df_ranking[df_ranking['Equipo'].isin(equipos_vivos)]
@@ -731,7 +731,10 @@ with col_principal:
         ]
 
         # Semis Izquierda/Derecha (SF)
-        sf_izq = [render_caja('France', 'Spain', etiqueta="Semifinal 1")]
+        # Semifinales Izquierda (SF)
+        sf_izq = [
+            render_caja('France', 'Spain', 0, 2, None, None, 'Finalizado') # ¡España avanza a la Gran Final!
+        ]
         sf_der = [render_caja('England', 'Argentina', etiqueta="Semifinal 2")]
 
         # Final (Centro)
