@@ -738,7 +738,7 @@ with col_principal:
         sf_der = [render_caja('England', 'Argentina', etiqueta="Semifinal 2")]
 
         # Final (Centro)
-        final = render_caja('TBD', 'TBD', etiqueta="🏆 GRAN FINAL")
+        final = render_caja('Spain', 'TBD', etiqueta="🏆 GRAN FINAL")
 
         # CONTENEDOR FLEXBOX COMPRIMIDO CON TODAS LAS FASES
         html_bracket = f"<div class='bracket-wrapper'><div class='bracket-container'><div class='bracket-col'>{''.join(r32_izq)}</div><div class='bracket-col' style='padding: 20px 2px;'>{''.join(r16_izq)}</div><div class='bracket-col' style='padding: 80px 2px;'>{''.join(qf_izq)}</div><div class='bracket-col' style='padding: 180px 2px;'>{''.join(sf_izq)}</div><div class='bracket-center'><img src='https://img.icons8.com/3d-fluency/96/trophy.png' width='80' style='margin-bottom: 20px;'>{final}</div><div class='bracket-col' style='padding: 180px 2px;'>{''.join(sf_der)}</div><div class='bracket-col' style='padding: 80px 2px;'>{''.join(qf_der)}</div><div class='bracket-col' style='padding: 20px 2px;'>{''.join(r16_der)}</div><div class='bracket-col'>{''.join(r32_der)}</div></div></div>"
